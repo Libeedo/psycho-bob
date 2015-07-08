@@ -1,0 +1,156 @@
+fileFormatVersion: 2
+guid: 210499e350f34314cadd3da417f7064e
+timeCreated: 1429629299
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: dickBat
+    21300002: dickBat_thigh
+    21300004: dickBat_wingR1
+    21300006: dickBat_wingL1
+    21300008: dickBat_leg
+    21300010: dickBat_wingR2
+    21300012: dickBat_wingL2
+    21300014: dickBat_foot
+    21300016: dickBat_ass
+    21300018: dickBat_thigh2
+    21300020: dickBat_leg2
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: 2
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: dickBat_thigh
+      rect:
+        serializedVersion: 2
+        x: 794
+        y: 583
+        width: 159
+        height: 62
+      alignment: 9
+      pivot: {x: .910642624, y: .224376068}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dickBat_wingR1
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 452
+        width: 288
+        height: 257
+      alignment: 9
+      pivot: {x: .93759346, y: .0699841678}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dickBat_wingL1
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 504
+        width: 166
+        height: 172
+      alignment: 9
+      pivot: {x: .145014748, y: .0910062566}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dickBat_leg
+      rect:
+        serializedVersion: 2
+        x: 849
+        y: 732
+        width: 67
+        height: 184
+      alignment: 9
+      pivot: {x: .832423866, y: .963499308}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dickBat_wingR2
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 33
+        width: 320
+        height: 391
+      alignment: 9
+      pivot: {x: .942501426, y: .0440320373}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dickBat_wingL2
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 80
+        width: 220
+        height: 316
+      alignment: 9
+      pivot: {x: .10713473, y: .0699782073}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dickBat_ass
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 425
+        width: 152
+        height: 151
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dickBat_thigh2
+      rect:
+        serializedVersion: 2
+        x: 797
+        y: 647
+        width: 159
+        height: 63
+      alignment: 9
+      pivot: {x: .137461483, y: .352593571}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dickBat_leg2
+      rect:
+        serializedVersion: 2
+        x: 933
+        y: 732
+        width: 66
+        height: 184
+      alignment: 9
+      pivot: {x: .157834142, y: .950270951}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

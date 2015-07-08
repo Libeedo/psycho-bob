@@ -1,0 +1,142 @@
+fileFormatVersion: 2
+guid: 3a10f2b6ddc733f488326a8ed5afec8c
+timeCreated: 1427138668
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: ass
+    100002: black
+    100004: clit
+    100006: legL
+    100008: legR
+    100010: majoraL
+    100012: majoraR
+    100014: minoraL
+    100016: minoraR
+    100018: //RootNode
+    100020: vulva
+    100022: group2
+    100024: light
+    100026: lightBase
+    100028: lightCage
+    100030: lightCage 1
+    100032: pSphere3
+    100034: transform1
+    100036: transform2
+    400000: ass
+    400002: black
+    400004: clit
+    400006: legL
+    400008: legR
+    400010: majoraL
+    400012: majoraR
+    400014: minoraL
+    400016: minoraR
+    400018: //RootNode
+    400020: vulva
+    400022: group2
+    400024: light
+    400026: lightBase
+    400028: lightCage
+    400030: lightCage 1
+    400032: pSphere3
+    400034: transform1
+    400036: transform2
+    2300000: ass
+    2300002: black
+    2300004: clit
+    2300006: legL
+    2300008: legR
+    2300010: majoraL
+    2300012: majoraR
+    2300014: minoraL
+    2300016: minoraR
+    2300018: vulva
+    2300020: light
+    2300022: lightBase
+    2300024: lightCage
+    3300000: ass
+    3300002: black
+    3300004: clit
+    3300006: legL
+    3300008: legR
+    3300010: majoraL
+    3300012: majoraR
+    3300014: minoraL
+    3300016: minoraR
+    3300018: vulva
+    3300020: light
+    3300022: lightBase
+    3300024: lightCage
+    4300000: majoraR
+    4300002: minoraR
+    4300004: vulva
+    4300006: clit
+    4300008: legR
+    4300010: ass
+    4300012: majoraL
+    4300014: minoraL
+    4300016: black
+    4300018: legL
+    4300020: lightBase
+    4300022: light
+    4300024: lightCage
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

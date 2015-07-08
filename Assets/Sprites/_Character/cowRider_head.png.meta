@@ -1,0 +1,95 @@
+fileFormatVersion: 2
+guid: 5a334eb485536cc4b83c18579a5e2994
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: cowRider_head_0
+    21300002: cowRider_head_1
+    21300004: cowRider_head_2
+    21300006: cowRider_hat
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings:
+  - buildTarget: iPhone
+    maxTextureSize: 1024
+    textureFormat: -2
+    compressionQuality: 50
+  spriteSheet:
+    sprites:
+    - name: cowRider_head_0
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 539
+        width: 394
+        height: 465
+      alignment: 9
+      pivot: {x: .545783877, y: .234393939}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cowRider_head_1
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 504
+        width: 401
+        height: 520
+      alignment: 9
+      pivot: {x: .59349972, y: .298899174}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cowRider_head_2
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 16
+        width: 397
+        height: 488
+      alignment: 9
+      pivot: {x: .673810303, y: .2737616}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cowRider_hat
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 132
+        width: 446
+        height: 325
+      alignment: 9
+      pivot: {x: .578819215, y: .309936434}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

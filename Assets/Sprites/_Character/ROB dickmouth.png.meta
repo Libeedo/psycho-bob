@@ -1,0 +1,158 @@
+fileFormatVersion: 2
+guid: 146134ac04724e942a000efa0983f483
+timeCreated: 1429984771
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: dickMouth_tongue
+    21300002: ROB dickmouthBOT
+    21300004: ROB dick1
+    21300006: ROB dick2
+    21300008: ROB dick3
+    21300010: ROB dickmouthMID
+    21300012: ROB ass1
+    21300014: ROB ass2
+    21300016: fetusBullet
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: 2
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings:
+  - buildTarget: iPhone
+    maxTextureSize: 1024
+    textureFormat: -2
+    compressionQuality: 50
+  spriteSheet:
+    sprites:
+    - name: dickMouth_tongue
+      rect:
+        serializedVersion: 2
+        x: 661
+        y: 93
+        width: 331
+        height: 106
+      alignment: 9
+      pivot: {x: .105119586, y: .395766258}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ROB dickmouthBOT
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 389
+        width: 127
+        height: 196
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ROB dick1
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 775
+        width: 244
+        height: 160
+      alignment: 9
+      pivot: {x: .0618471242, y: .389597714}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ROB dick2
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 262
+        width: 368
+        height: 292
+      alignment: 9
+      pivot: {x: .0536042936, y: .39824447}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ROB dick3
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 603
+        width: 525
+        height: 417
+      alignment: 9
+      pivot: {x: .0324109457, y: .379230022}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ROB dickmouthMID
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 768
+        width: 160
+        height: 212
+      alignment: 9
+      pivot: {x: .512882054, y: .373887599}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ROB ass1
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 32
+        width: 260
+        height: 265
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ROB ass2
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 0
+        width: 284
+        height: 302
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fetusBullet
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 440
+        width: 251
+        height: 301
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

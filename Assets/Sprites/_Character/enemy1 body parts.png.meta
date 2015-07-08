@@ -1,0 +1,161 @@
+fileFormatVersion: 2
+guid: 07bd43381020ac141b52f2ebe303345d
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: enemy1 body
+    21300002: enemy1 arm
+    21300004: enemy1 hand
+    21300006: enemy1 foot
+    21300008: enemy1 leg
+    21300010: enemy1_stump
+    21300012: enemy1_stump2
+    21300014: enemy1 body jihaded
+    21300016: enemy1 body pants
+    21300018: enemy1 handL
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings:
+  - buildTarget: iPhone
+    maxTextureSize: 1024
+    textureFormat: -2
+    compressionQuality: 50
+  spriteSheet:
+    sprites:
+    - name: enemy1 body
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 274
+        width: 193
+        height: 335
+      alignment: 9
+      pivot: {x: .518326104, y: .324884027}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: enemy1 arm
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 476
+        width: 47
+        height: 116
+      alignment: 9
+      pivot: {x: .589283586, y: .892991662}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: enemy1 hand
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 459
+        width: 58
+        height: 135
+      alignment: 9
+      pivot: {x: .385493845, y: .926251471}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: enemy1 foot
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 471
+        width: 77
+        height: 130
+      alignment: 9
+      pivot: {x: .324716479, y: .831100345}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: enemy1 leg
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 98
+        width: 91
+        height: 168
+      alignment: 9
+      pivot: {x: .500000179, y: .800199032}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: enemy1_stump
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 390
+        width: 57
+        height: 73
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: enemy1_stump2
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 398
+        width: 74
+        height: 57
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: enemy1 body jihaded
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 10
+        width: 203
+        height: 336
+      alignment: 9
+      pivot: {x: .488259822, y: .307460964}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: enemy1 body pants
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 2
+        width: 152
+        height: 83
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: enemy1 handL
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 98
+        width: 86
+        height: 153
+      alignment: 9
+      pivot: {x: .462847978, y: .921342492}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

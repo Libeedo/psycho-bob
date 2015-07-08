@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &100034
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400034}
+  - 114: {fileID: 11400000}
+  m_Layer: 0
+  m_Name: eDamageGO
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &400034
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100034}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 116.185829, y: -2.14942288, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddee0e107bf3e874baa1c723e09f3873, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyCS: {fileID: 0}
+  t: {fileID: 0}
+  blownUp: 0
+  scoreDeath: 0
+  bulletHitClips:
+  - {fileID: 8300000, guid: 6e80d500195377a4f99356dc64630b3a, type: 3}
+  - {fileID: 8300000, guid: 1c442170f0809874e81691fabdb7f0e7, type: 3}
+  - {fileID: 8300000, guid: cc9bc3e42ccb0484a95c137068153917, type: 3}
+  - {fileID: 8300000, guid: a69665f690a405647ab4ead9d3ef974a, type: 3}
+  - {fileID: 8300000, guid: ca1f29f6a968b5a41b0796d0e74402af, type: 3}
+  - {fileID: 8300000, guid: 80df4b4b9ef704a42a2ddff046444b6c, type: 3}
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 100034}
+  m_IsPrefabParent: 1

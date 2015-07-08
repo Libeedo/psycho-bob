@@ -1,0 +1,121 @@
+fileFormatVersion: 2
+guid: 648bcc8e3f3add84b8dc332eb8f04af6
+timeCreated: 1431654245
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: shotGun_bullet
+    21300002: bullet
+    21300004: bullet_Shell
+    21300006: shoGun_shell
+    21300008: laserBeam
+    21300010: enemy_Bullet
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: shotGun_bullet
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 972
+        width: 56
+        height: 52
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: bullet
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 924
+        width: 325
+        height: 100
+      alignment: 9
+      pivot: {x: .801054299, y: .483714074}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: bullet_Shell
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 840
+        width: 88
+        height: 37
+      alignment: 9
+      pivot: {x: .312959015, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: shoGun_shell
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 820
+        width: 124
+        height: 58
+      alignment: 9
+      pivot: {x: .300183117, y: .515547335}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: laserBeam
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 650
+        width: 142
+        height: 142
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: enemy_Bullet
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 877
+        width: 131
+        height: 135
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

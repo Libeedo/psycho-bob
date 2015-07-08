@@ -1,0 +1,136 @@
+fileFormatVersion: 2
+guid: 139f7adfe157758449e0864daad6a55c
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: hearGear_weasle
+    21300002: hearGear_weasle_head
+    21300004: hearGear_weasle_bLeg
+    21300006: hearGear_weasle_fLeg
+    21300008: hearGear_weasle_fLeg2
+    21300010: hearGear_weasle_bLeg2
+    21300012: hearGear_weasle_body
+    21300014: hearGear_weasle_tail
+    21300016: earGear_crossHair
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: hearGear_weasle_head
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 717
+        width: 598
+        height: 299
+      alignment: 9
+      pivot: {x: .763618767, y: .331895292}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: hearGear_weasle_bLeg
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 645
+        width: 179
+        height: 335
+      alignment: 9
+      pivot: {x: .563818216, y: .813719273}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: hearGear_weasle_fLeg
+      rect:
+        serializedVersion: 2
+        x: 859
+        y: 636
+        width: 137
+        height: 356
+      alignment: 9
+      pivot: {x: .500000417, y: .840137124}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: hearGear_weasle_fLeg2
+      rect:
+        serializedVersion: 2
+        x: 872
+        y: 252
+        width: 140
+        height: 356
+      alignment: 9
+      pivot: {x: .548957586, y: .814466298}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: hearGear_weasle_bLeg2
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 261
+        width: 180
+        height: 334
+      alignment: 9
+      pivot: {x: .601542175, y: .848860502}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: hearGear_weasle_body
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 261
+        width: 611
+        height: 440
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: hearGear_weasle_tail
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 3
+        width: 654
+        height: 209
+      alignment: 9
+      pivot: {x: .0947637409, y: .751425624}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: earGear_crossHair
+      rect:
+        serializedVersion: 2
+        x: 794
+        y: 47
+        width: 139
+        height: 140
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

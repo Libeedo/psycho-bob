@@ -1,0 +1,722 @@
+fileFormatVersion: 2
+guid: 3f87b49f456442243b0fee36f4a634ca
+ModelImporter:
+  serializedVersion: 15
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: ear
+    100004: earBttm
+    100006: earTop
+    100008: eyeBttm
+    100010: eyeTop
+    100012: head
+    100014: head2
+    100016: jaw
+    100018: joint10
+    100020: joint13
+    100022: joint15
+    100024: joint18
+    100026: joint19
+    100028: joint20
+    100030: joint21
+    100032: joint23
+    100034: joint24
+    100036: joint25
+    100038: joint26
+    100040: joint27
+    100042: joint28
+    100044: joint29
+    100046: joint30
+    100048: joint31
+    100050: joint4
+    100052: joint6
+    100054: joint8
+    100056: neck1
+    100058: polySurface4
+    100060: spine
+    100062: tail1
+    100064: utter
+    100066: earBone
+    100068: jaw1
+    100070: jaw2
+    100072: joint11
+    100074: joint12
+    100076: joint22
+    100078: joint32
+    100080: joint33
+    100082: joint34
+    100084: joint35
+    100086: joint37
+    100088: joint38
+    100090: joint39
+    100092: joint40
+    100094: joint41
+    100096: joint9
+    100098: neck2
+    100100: spineRoot
+    100102: tail
+    400000: //RootNode
+    400002: ear
+    400004: earBttm
+    400006: earTop
+    400008: eyeBttm
+    400010: eyeTop
+    400012: head
+    400014: head2
+    400016: jaw
+    400018: joint10
+    400020: joint13
+    400022: joint15
+    400024: joint18
+    400026: joint19
+    400028: joint20
+    400030: joint21
+    400032: joint23
+    400034: joint24
+    400036: joint25
+    400038: joint26
+    400040: joint27
+    400042: joint28
+    400044: joint29
+    400046: joint30
+    400048: joint31
+    400050: joint4
+    400052: joint6
+    400054: joint8
+    400056: neck1
+    400058: polySurface4
+    400060: spine
+    400062: tail1
+    400064: utter
+    400066: earBone
+    400068: jaw1
+    400070: jaw2
+    400072: joint11
+    400074: joint12
+    400076: joint22
+    400078: joint32
+    400080: joint33
+    400082: joint34
+    400084: joint35
+    400086: joint37
+    400088: joint38
+    400090: joint39
+    400092: joint40
+    400094: joint41
+    400096: joint9
+    400098: neck2
+    400100: spineRoot
+    400102: tail
+    4300000: polySurface4
+    7400000: Boss_cowMan_idle
+    7400002: Boss_cowMan_forward
+    7400004: Boss_cowMan_backward
+    7400006: Boss_cowMan_openHead
+    7400008: Boss_cowMan_closeHead
+    7400010: Boss_cowMan_idleHead
+    9500000: //RootNode
+    13700000: polySurface4
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Boss_cowMan_idle
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 1.10000002
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 0
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: polySurface4
+        weight: 1
+      - path: spine
+        weight: 0
+      - path: spine/joint31
+        weight: 0
+      - path: spine/joint31/neck1
+        weight: 0
+      - path: spine/joint31/neck1/head
+        weight: 0
+      - path: spine/joint31/neck1/head/head2
+        weight: 0
+      - path: spine/joint31/neck1/head/head2/ear
+        weight: 0
+      - path: spine/joint31/neck1/head/head2/ear/earBttm
+        weight: 0
+      - path: spine/joint31/neck1/head/head2/ear/earBttm/joint15
+        weight: 0
+      - path: spine/joint31/neck1/head/head2/ear/earTop
+        weight: 0
+      - path: spine/joint31/neck1/head/head2/ear/earTop/joint13
+        weight: 0
+      - path: spine/joint31/neck1/head/head2/eyeBttm
+        weight: 0
+      - path: spine/joint31/neck1/head/head2/eyeBttm/joint8
+        weight: 0
+      - path: spine/joint31/neck1/head/head2/eyeTop
+        weight: 0
+      - path: spine/joint31/neck1/head/head2/eyeTop/joint6
+        weight: 0
+      - path: spine/joint31/neck1/head/head2/joint4
+        weight: 0
+      - path: spine/joint31/neck1/head/jaw
+        weight: 0
+      - path: spine/joint31/neck1/head/jaw/joint10
+        weight: 0
+      - path: spine/tail1
+        weight: 1
+      - path: spine/tail1/joint18
+        weight: 1
+      - path: spine/tail1/joint18/joint19
+        weight: 1
+      - path: spine/tail1/joint18/joint19/joint20
+        weight: 1
+      - path: spine/tail1/joint18/joint19/joint20/joint21
+        weight: 1
+      - path: spine/utter
+        weight: 1
+      - path: spine/utter/joint23
+        weight: 1
+      - path: spine/utter/joint23/joint24
+        weight: 1
+      - path: spine/utter/joint25
+        weight: 1
+      - path: spine/utter/joint25/joint26
+        weight: 1
+      - path: spine/utter/joint27
+        weight: 1
+      - path: spine/utter/joint27/joint28
+        weight: 1
+      - path: spine/utter/joint29
+        weight: 1
+      - path: spine/utter/joint29/joint30
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Boss_cowMan_forward
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 19
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 0
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: polySurface4
+        weight: 1
+      - path: spine
+        weight: 1
+      - path: spine/joint31
+        weight: 1
+      - path: spine/joint31/neck1
+        weight: 0
+      - path: spine/joint31/neck1/head
+        weight: 0
+      - path: spine/joint31/neck1/head/head2
+        weight: 0
+      - path: spine/joint31/neck1/head/head2/ear
+        weight: 0
+      - path: spine/joint31/neck1/head/head2/ear/earBttm
+        weight: 0
+      - path: spine/joint31/neck1/head/head2/ear/earBttm/joint15
+        weight: 0
+      - path: spine/joint31/neck1/head/head2/ear/earTop
+        weight: 0
+      - path: spine/joint31/neck1/head/head2/ear/earTop/joint13
+        weight: 0
+      - path: spine/joint31/neck1/head/head2/eyeBttm
+        weight: 0
+      - path: spine/joint31/neck1/head/head2/eyeBttm/joint8
+        weight: 0
+      - path: spine/joint31/neck1/head/head2/eyeTop
+        weight: 0
+      - path: spine/joint31/neck1/head/head2/eyeTop/joint6
+        weight: 0
+      - path: spine/joint31/neck1/head/head2/joint4
+        weight: 0
+      - path: spine/joint31/neck1/head/jaw
+        weight: 0
+      - path: spine/joint31/neck1/head/jaw/joint10
+        weight: 0
+      - path: spine/tail1
+        weight: 1
+      - path: spine/tail1/joint18
+        weight: 1
+      - path: spine/tail1/joint18/joint19
+        weight: 1
+      - path: spine/tail1/joint18/joint19/joint20
+        weight: 1
+      - path: spine/tail1/joint18/joint19/joint20/joint21
+        weight: 1
+      - path: spine/utter
+        weight: 1
+      - path: spine/utter/joint23
+        weight: 1
+      - path: spine/utter/joint23/joint24
+        weight: 1
+      - path: spine/utter/joint25
+        weight: 1
+      - path: spine/utter/joint25/joint26
+        weight: 1
+      - path: spine/utter/joint27
+        weight: 1
+      - path: spine/utter/joint27/joint28
+        weight: 1
+      - path: spine/utter/joint29
+        weight: 1
+      - path: spine/utter/joint29/joint30
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Boss_cowMan_backward
+      takeName: Take 001
+      firstFrame: 20
+      lastFrame: 39
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 0
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: polySurface4
+        weight: 1
+      - path: spine
+        weight: 1
+      - path: spine/joint31
+        weight: 0
+      - path: spine/joint31/neck1
+        weight: 0
+      - path: spine/joint31/neck1/head
+        weight: 0
+      - path: spine/joint31/neck1/head/head2
+        weight: 0
+      - path: spine/joint31/neck1/head/head2/ear
+        weight: 0
+      - path: spine/joint31/neck1/head/head2/ear/earBttm
+        weight: 0
+      - path: spine/joint31/neck1/head/head2/ear/earBttm/joint15
+        weight: 0
+      - path: spine/joint31/neck1/head/head2/ear/earTop
+        weight: 0
+      - path: spine/joint31/neck1/head/head2/ear/earTop/joint13
+        weight: 0
+      - path: spine/joint31/neck1/head/head2/eyeBttm
+        weight: 0
+      - path: spine/joint31/neck1/head/head2/eyeBttm/joint8
+        weight: 0
+      - path: spine/joint31/neck1/head/head2/eyeTop
+        weight: 0
+      - path: spine/joint31/neck1/head/head2/eyeTop/joint6
+        weight: 0
+      - path: spine/joint31/neck1/head/head2/joint4
+        weight: 0
+      - path: spine/joint31/neck1/head/jaw
+        weight: 0
+      - path: spine/joint31/neck1/head/jaw/joint10
+        weight: 0
+      - path: spine/tail1
+        weight: 1
+      - path: spine/tail1/joint18
+        weight: 1
+      - path: spine/tail1/joint18/joint19
+        weight: 1
+      - path: spine/tail1/joint18/joint19/joint20
+        weight: 1
+      - path: spine/tail1/joint18/joint19/joint20/joint21
+        weight: 1
+      - path: spine/utter
+        weight: 1
+      - path: spine/utter/joint23
+        weight: 1
+      - path: spine/utter/joint23/joint24
+        weight: 1
+      - path: spine/utter/joint25
+        weight: 1
+      - path: spine/utter/joint25/joint26
+        weight: 1
+      - path: spine/utter/joint27
+        weight: 1
+      - path: spine/utter/joint27/joint28
+        weight: 1
+      - path: spine/utter/joint29
+        weight: 1
+      - path: spine/utter/joint29/joint30
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Boss_cowMan_openHead
+      takeName: Take 001
+      firstFrame: 40
+      lastFrame: 45
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 0
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: polySurface4
+        weight: 1
+      - path: spine
+        weight: 1
+      - path: spine/joint31
+        weight: 1
+      - path: spine/joint31/neck1
+        weight: 1
+      - path: spine/joint31/neck1/head
+        weight: 1
+      - path: spine/joint31/neck1/head/head2
+        weight: 1
+      - path: spine/joint31/neck1/head/head2/ear
+        weight: 1
+      - path: spine/joint31/neck1/head/head2/ear/earBttm
+        weight: 1
+      - path: spine/joint31/neck1/head/head2/ear/earBttm/joint15
+        weight: 1
+      - path: spine/joint31/neck1/head/head2/ear/earTop
+        weight: 1
+      - path: spine/joint31/neck1/head/head2/ear/earTop/joint13
+        weight: 1
+      - path: spine/joint31/neck1/head/head2/eyeBttm
+        weight: 1
+      - path: spine/joint31/neck1/head/head2/eyeBttm/joint8
+        weight: 1
+      - path: spine/joint31/neck1/head/head2/eyeTop
+        weight: 1
+      - path: spine/joint31/neck1/head/head2/eyeTop/joint6
+        weight: 1
+      - path: spine/joint31/neck1/head/head2/joint4
+        weight: 1
+      - path: spine/joint31/neck1/head/jaw
+        weight: 1
+      - path: spine/joint31/neck1/head/jaw/joint10
+        weight: 1
+      - path: spine/tail1
+        weight: 0
+      - path: spine/tail1/joint18
+        weight: 0
+      - path: spine/tail1/joint18/joint19
+        weight: 0
+      - path: spine/tail1/joint18/joint19/joint20
+        weight: 0
+      - path: spine/tail1/joint18/joint19/joint20/joint21
+        weight: 0
+      - path: spine/utter
+        weight: 0
+      - path: spine/utter/joint23
+        weight: 0
+      - path: spine/utter/joint23/joint24
+        weight: 0
+      - path: spine/utter/joint25
+        weight: 0
+      - path: spine/utter/joint25/joint26
+        weight: 0
+      - path: spine/utter/joint27
+        weight: 0
+      - path: spine/utter/joint27/joint28
+        weight: 0
+      - path: spine/utter/joint29
+        weight: 0
+      - path: spine/utter/joint29/joint30
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Boss_cowMan_closeHead
+      takeName: Take 001
+      firstFrame: 45
+      lastFrame: 48
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 0
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: polySurface4
+        weight: 1
+      - path: spine
+        weight: 1
+      - path: spine/joint31
+        weight: 1
+      - path: spine/joint31/neck1
+        weight: 1
+      - path: spine/joint31/neck1/head
+        weight: 1
+      - path: spine/joint31/neck1/head/head2
+        weight: 1
+      - path: spine/joint31/neck1/head/head2/ear
+        weight: 1
+      - path: spine/joint31/neck1/head/head2/ear/earBttm
+        weight: 1
+      - path: spine/joint31/neck1/head/head2/ear/earBttm/joint15
+        weight: 1
+      - path: spine/joint31/neck1/head/head2/ear/earTop
+        weight: 1
+      - path: spine/joint31/neck1/head/head2/ear/earTop/joint13
+        weight: 1
+      - path: spine/joint31/neck1/head/head2/eyeBttm
+        weight: 1
+      - path: spine/joint31/neck1/head/head2/eyeBttm/joint8
+        weight: 1
+      - path: spine/joint31/neck1/head/head2/eyeTop
+        weight: 1
+      - path: spine/joint31/neck1/head/head2/eyeTop/joint6
+        weight: 1
+      - path: spine/joint31/neck1/head/head2/joint4
+        weight: 1
+      - path: spine/joint31/neck1/head/jaw
+        weight: 1
+      - path: spine/joint31/neck1/head/jaw/joint10
+        weight: 1
+      - path: spine/tail1
+        weight: 1
+      - path: spine/tail1/joint18
+        weight: 1
+      - path: spine/tail1/joint18/joint19
+        weight: 1
+      - path: spine/tail1/joint18/joint19/joint20
+        weight: 1
+      - path: spine/tail1/joint18/joint19/joint20/joint21
+        weight: 1
+      - path: spine/utter
+        weight: 1
+      - path: spine/utter/joint23
+        weight: 1
+      - path: spine/utter/joint23/joint24
+        weight: 1
+      - path: spine/utter/joint25
+        weight: 1
+      - path: spine/utter/joint25/joint26
+        weight: 1
+      - path: spine/utter/joint27
+        weight: 1
+      - path: spine/utter/joint27/joint28
+        weight: 1
+      - path: spine/utter/joint29
+        weight: 1
+      - path: spine/utter/joint29/joint30
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Boss_cowMan_idleHead
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 1.10000002
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: polySurface4
+        weight: 1
+      - path: spine
+        weight: 1
+      - path: spine/joint31
+        weight: 1
+      - path: spine/joint31/neck1
+        weight: 1
+      - path: spine/joint31/neck1/head
+        weight: 1
+      - path: spine/joint31/neck1/head/head2
+        weight: 1
+      - path: spine/joint31/neck1/head/head2/ear
+        weight: 1
+      - path: spine/joint31/neck1/head/head2/ear/earBttm
+        weight: 1
+      - path: spine/joint31/neck1/head/head2/ear/earBttm/joint15
+        weight: 1
+      - path: spine/joint31/neck1/head/head2/ear/earTop
+        weight: 1
+      - path: spine/joint31/neck1/head/head2/ear/earTop/joint13
+        weight: 1
+      - path: spine/joint31/neck1/head/head2/eyeBttm
+        weight: 1
+      - path: spine/joint31/neck1/head/head2/eyeBttm/joint8
+        weight: 1
+      - path: spine/joint31/neck1/head/head2/eyeTop
+        weight: 1
+      - path: spine/joint31/neck1/head/head2/eyeTop/joint6
+        weight: 1
+      - path: spine/joint31/neck1/head/head2/joint4
+        weight: 1
+      - path: spine/joint31/neck1/head/jaw
+        weight: 1
+      - path: spine/joint31/neck1/head/jaw/joint10
+        weight: 1
+      - path: spine/tail1
+        weight: 1
+      - path: spine/tail1/joint18
+        weight: 1
+      - path: spine/tail1/joint18/joint19
+        weight: 1
+      - path: spine/tail1/joint18/joint19/joint20
+        weight: 1
+      - path: spine/tail1/joint18/joint19/joint20/joint21
+        weight: 1
+      - path: spine/utter
+        weight: 1
+      - path: spine/utter/joint23
+        weight: 1
+      - path: spine/utter/joint23/joint24
+        weight: 1
+      - path: spine/utter/joint25
+        weight: 1
+      - path: spine/utter/joint25/joint26
+        weight: 1
+      - path: spine/utter/joint27
+        weight: 1
+      - path: spine/utter/joint27/joint28
+        weight: 1
+      - path: spine/utter/joint29
+        weight: 1
+      - path: spine/utter/joint29/joint30
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .300000012
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: spineRoot
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  userData: 

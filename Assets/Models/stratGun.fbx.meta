@@ -1,0 +1,132 @@
+fileFormatVersion: 2
+guid: fbb92974663b0344d98ad9676e1a529a
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: chamber
+    100002: charge1
+    100004: charge2
+    100006: charge3
+    100008: charge4
+    100010: charge5
+    100012: charge6
+    100014: group2
+    100016: neck
+    100018: rayGun
+    100020: strat
+    100022: //RootNode
+    100024: chamberThing
+    100026: cord
+    100028: ffd1Base
+    100030: ffd1Lattice
+    400000: chamber
+    400002: charge1
+    400004: charge2
+    400006: charge3
+    400008: charge4
+    400010: charge5
+    400012: charge6
+    400014: group2
+    400016: neck
+    400018: rayGun
+    400020: strat
+    400022: //RootNode
+    400024: chamberThing
+    400026: cord
+    400028: ffd1Base
+    400030: ffd1Lattice
+    2300000: chamber
+    2300002: charge1
+    2300004: charge2
+    2300006: charge3
+    2300008: charge4
+    2300010: charge5
+    2300012: charge6
+    2300014: neck
+    2300016: rayGun
+    2300018: strat
+    2300020: chamberThing
+    2300022: cord
+    3300000: chamber
+    3300002: charge1
+    3300004: charge2
+    3300006: charge3
+    3300008: charge4
+    3300010: charge5
+    3300012: charge6
+    3300014: neck
+    3300016: rayGun
+    3300018: strat
+    3300020: chamberThing
+    3300022: cord
+    4300000: chamber
+    4300002: charge3
+    4300004: charge2
+    4300006: charge1
+    4300008: charge6
+    4300010: charge5
+    4300012: charge4
+    4300014: rayGun
+    4300016: neck
+    4300018: strat
+    4300020: chamberThing
+    4300022: cord
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

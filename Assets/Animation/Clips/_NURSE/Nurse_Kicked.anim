@@ -1,0 +1,5046 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!74 &7400000
+AnimationClip:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Nurse_Kicked
+  serializedVersion: 4
+  m_AnimationType: 2
+  m_Compressed: 0
+  m_UseHighQualityCurve: 1
+  m_RotationCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 0, y: 0, z: .041265361, w: -.99914825}
+        inSlope: {x: 0, y: 0, z: 2.62494898, w: .166110978}
+        outSlope: {x: 0, y: 0, z: 2.62494898, w: .166110978}
+        tangentMode: 151
+      - time: .0166666675
+        value: {x: 0, y: 0, z: .0850145146, w: -.996379733}
+        inSlope: {x: 0, y: 0, z: 2.62005472, w: .223553181}
+        outSlope: {x: 0, y: 0, z: 2.62005472, w: .223553181}
+        tangentMode: 0
+      - time: .0333333351
+        value: {x: 0, y: 0, z: .128600523, w: -.991696477}
+        inSlope: {x: 0, y: 0, z: 2.60773969, w: .33816573}
+        outSlope: {x: 0, y: 0, z: 2.60773969, w: .33816573}
+        tangentMode: -594861622
+      - time: .0500000045
+        value: {x: 0, y: 0, z: .171939179, w: -.985107541}
+        inSlope: {x: 0, y: 0, z: 2.59041381, w: .452127457}
+        outSlope: {x: 0, y: 0, z: 2.59041381, w: .452127457}
+        tangentMode: 0
+      - time: .0666666701
+        value: {x: 0, y: 0, z: .214947656, w: -.976625562}
+        inSlope: {x: 0, y: 0, z: 2.56811023, w: .565220177}
+        outSlope: {x: 0, y: 0, z: 2.56811023, w: .565220177}
+        tangentMode: 828620564
+      - time: .0833333358
+        value: {x: 0, y: 0, z: .257542849, w: -.96626687}
+        inSlope: {x: 0, y: 0, z: 2.55571175, w: .621521533}
+        outSlope: {x: 0, y: 0, z: 2.55571175, w: .621521533}
+        tangentMode: 827020932
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: nurse_body/nurse_booty
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 0, y: 0, z: -.00229404494, w: .999997377}
+        inSlope: {x: 0, y: 0, z: .655997097, w: -.0020813942}
+        outSlope: {x: 0, y: 0, z: .655997097, w: -.0020813942}
+        tangentMode: 75
+      - time: .0166666675
+        value: {x: 0, y: 0, z: .00863924064, w: .999962687}
+        inSlope: {x: 0, y: 0, z: .655966163, w: -.00566840125}
+        outSlope: {x: 0, y: 0, z: .655966163, w: -.00566840125}
+        tangentMode: 0
+      - time: .0333333351
+        value: {x: 0, y: 0, z: .0195714943, w: .999808431}
+        inSlope: {x: 0, y: 0, z: .655864954, w: -.0128388386}
+        outSlope: {x: 0, y: 0, z: .655864954, w: -.0128388386}
+        tangentMode: 1018903703
+      - time: .0500000045
+        value: {x: 0, y: 0, z: .0305014085, w: .999534726}
+        inSlope: {x: 0, y: 0, z: .655685544, w: -.0200074911}
+        outSlope: {x: 0, y: 0, z: .655685544, w: -.0200074911}
+        tangentMode: 0
+      - time: .0666666701
+        value: {x: 0, y: 0, z: .0414276794, w: .999141514}
+        inSlope: {x: 0, y: 0, z: .655427337, w: -.0271761436}
+        outSlope: {x: 0, y: 0, z: .655427337, w: -.0271761436}
+        tangentMode: 828892376
+      - time: .0833333358
+        value: {x: 0, y: 0, z: .0523489863, w: .998628855}
+        inSlope: {x: 0, y: 0, z: .655278444, w: -.0307595748}
+        outSlope: {x: 0, y: 0, z: .655278444, w: -.0307595748}
+        tangentMode: 2
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: nurse_body/nurse_booty/nurse_thighL
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 0, y: 0, z: .0289318282, w: .999581397}
+        inSlope: {x: 0, y: 0, z: 2.60173893, w: -.131882429}
+        outSlope: {x: 0, y: 0, z: 2.60173893, w: -.131882429}
+        tangentMode: 75
+      - time: .0166666675
+        value: {x: 0, y: 0, z: .0722941458, w: .997383356}
+        inSlope: {x: 0, y: 0, z: 2.59765053, w: -.188287497}
+        outSlope: {x: 0, y: 0, z: 2.59765053, w: -.188287497}
+        tangentMode: 0
+      - time: .0333333351
+        value: {x: 0, y: 0, z: .115520187, w: .993305147}
+        inSlope: {x: 0, y: 0, z: 2.5870297, w: -.30086872}
+        outSlope: {x: 0, y: 0, z: 2.5870297, w: -.30086872}
+        tangentMode: 1856695485
+      - time: .0500000045
+        value: {x: 0, y: 0, z: .158528477, w: .987354398}
+        inSlope: {x: 0, y: 0, z: 2.57153082, w: -.412883162}
+        outSlope: {x: 0, y: 0, z: 2.57153082, w: -.412883162}
+        tangentMode: 0
+      - time: .0666666701
+        value: {x: 0, y: 0, z: .201237887, w: .979542375}
+        inSlope: {x: 0, y: 0, z: 2.55118418, w: -.524116218}
+        outSlope: {x: 0, y: 0, z: 2.55118418, w: -.524116218}
+        tangentMode: 830754320
+      - time: .0833333358
+        value: {x: 0, y: 0, z: .243567944, w: .969883859}
+        inSlope: {x: 0, y: 0, z: 2.5398035, w: -.579510987}
+        outSlope: {x: 0, y: 0, z: 2.5398035, w: -.579510987}
+        tangentMode: 822738336
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: nurse_body/nurse_booty/nurse_thighR/nurse_legR
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 0, y: 0, z: .00790204946, w: .999968767}
+        inSlope: {x: 0, y: 0, z: -2.59802675, w: -.0357305966}
+        outSlope: {x: 0, y: 0, z: -2.59802675, w: -.0357305966}
+        tangentMode: 287
+      - time: .0166666675
+        value: {x: 0, y: 0, z: -.0353984013, w: .999373257}
+        inSlope: {x: 0, y: 0, z: -2.59603548, w: -.0919532701}
+        outSlope: {x: 0, y: 0, z: -2.59603548, w: -.0919532701}
+        tangentMode: 0
+      - time: .0333333351
+        value: {x: 0, y: 0, z: -.0786324739, w: .996903658}
+        inSlope: {x: 0, y: 0, z: -2.58962011, w: -.204259127}
+        outSlope: {x: 0, y: 0, z: -2.58962011, w: -.204259127}
+        tangentMode: -1522834327
+      - time: .0500000045
+        value: {x: 0, y: 0, z: -.121719077, w: .992564619}
+        inSlope: {x: 0, y: 0, z: -2.57834888, w: -.316184163}
+        outSlope: {x: 0, y: 0, z: -2.57834888, w: -.316184163}
+        tangentMode: 0
+      - time: .0666666701
+        value: {x: 0, y: 0, z: -.164577439, w: .986364186}
+        inSlope: {x: 0, y: 0, z: -2.56224155, w: -.427517325}
+        outSlope: {x: 0, y: 0, z: -2.56224155, w: -.427517325}
+        tangentMode: 826599524
+      - time: .0833333358
+        value: {x: 0, y: 0, z: -.207127124, w: .978314042}
+        inSlope: {x: 0, y: 0, z: -2.55298114, w: -.483008653}
+        outSlope: {x: 0, y: 0, z: -2.55298114, w: -.483008653}
+        tangentMode: 4
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: nurse_body/nurse_armB/nurse_fArmB
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 0, y: 0, z: .180682555, w: .983541489}
+        inSlope: {x: 0, y: 0, z: 1.11916244, w: -.216608033}
+        outSlope: {x: 0, y: 0, z: 1.11916244, w: -.216608033}
+        tangentMode: 128613056
+      - time: .0166666675
+        value: {x: 0, y: 0, z: .199335262, w: .979931355}
+        inSlope: {x: 0, y: 0, z: 1.12932086, w: -.229972586}
+        outSlope: {x: 0, y: 0, z: 1.12932086, w: -.229972586}
+        tangentMode: 128614580
+      - time: .0333333351
+        value: {x: 0, y: 0, z: .218326584, w: .975875735}
+        inSlope: {x: 0, y: 0, z: 1.13087869, w: -.252880424}
+        outSlope: {x: 0, y: 0, z: 1.13087869, w: -.252880424}
+        tangentMode: 128616008
+      - time: .0500000045
+        value: {x: 0, y: 0, z: .237031221, w: .971502006}
+        inSlope: {x: 0, y: 0, z: 1.09524739, w: -.266734958}
+        outSlope: {x: 0, y: 0, z: 1.09524739, w: -.266734958}
+        tangentMode: 128617532
+      - time: .0666666701
+        value: {x: 0, y: 0, z: .254834831, w: .96698457}
+        inSlope: {x: 0, y: 0, z: 1.02312779, w: -.268823534}
+        outSlope: {x: 0, y: 0, z: 1.02312779, w: -.268823534}
+        tangentMode: 128619080
+      - time: .0833333358
+        value: {x: 0, y: 0, z: .271135479, w: .962541223}
+        inSlope: {x: 0, y: 0, z: .938770533, w: -.263788134}
+        outSlope: {x: 0, y: 0, z: .938770533, w: -.263788134}
+        tangentMode: 128620792
+      - time: .100000001
+        value: {x: 0, y: 0, z: .28612718, w: .958191633}
+        inSlope: {x: 0, y: 0, z: .879356921, w: -.262284309}
+        outSlope: {x: 0, y: 0, z: .879356921, w: -.262284309}
+        tangentMode: 128624024
+      - time: .116666667
+        value: {x: 0, y: 0, z: .300447375, w: .953798413}
+        inSlope: {x: 0, y: 0, z: .841212153, w: -.264723271}
+        outSlope: {x: 0, y: 0, z: .841212153, w: -.264723271}
+        tangentMode: 128627384
+      - time: .13333334
+        value: {x: 0, y: 0, z: .314167589, w: .949367523}
+        inSlope: {x: 0, y: 0, z: .807342112, w: -.266949505}
+        outSlope: {x: 0, y: 0, z: .807342112, w: -.266949505}
+        tangentMode: 128630092
+      - time: .150000006
+        value: {x: 0, y: 0, z: .327358782, w: .944900095}
+        inSlope: {x: 0, y: 0, z: .777697623, w: -.269247323}
+        outSlope: {x: 0, y: 0, z: .777697623, w: -.269247323}
+        tangentMode: 128633452
+      - time: .166666672
+        value: {x: 0, y: 0, z: .340090841, w: .940392613}
+        inSlope: {x: 0, y: 0, z: .752222896, w: -.271890193}
+        outSlope: {x: 0, y: 0, z: .752222896, w: -.271890193}
+        tangentMode: 128635256
+      - time: .183333337
+        value: {x: 0, y: 0, z: .352432877, w: .93583709}
+        inSlope: {x: 0, y: 0, z: .730855525, w: -.275121361}
+        outSlope: {x: 0, y: 0, z: .730855525, w: -.275121361}
+        tangentMode: 128638480
+      - time: .200000003
+        value: {x: 0, y: 0, z: .36445269, w: .931221902}
+        inSlope: {x: 0, y: 0, z: .713529348, w: -.27916792}
+        outSlope: {x: 0, y: 0, z: .713529348, w: -.27916792}
+        tangentMode: 128640312
+      - time: .216666669
+        value: {x: 0, y: 0, z: .376217186, w: .926531494}
+        inSlope: {x: 0, y: 0, z: .700181782, w: -.284251601}
+        outSlope: {x: 0, y: 0, z: .700181782, w: -.284251601}
+        tangentMode: 128641852
+      - time: .233333334
+        value: {x: 0, y: 0, z: .387792081, w: .92174685}
+        inSlope: {x: 0, y: 0, z: .690739512, w: -.290574461}
+        outSlope: {x: 0, y: 0, z: .690739512, w: -.290574461}
+        tangentMode: 128643792
+      - time: .25
+        value: {x: 0, y: 0, z: .399241835, w: .916845679}
+        inSlope: {x: 0, y: 0, z: .685128927, w: -.298340201}
+        outSlope: {x: 0, y: 0, z: .685128927, w: -.298340201}
+        tangentMode: 128646448
+      - time: .266666681
+        value: {x: 0, y: 0, z: .410629719, w: .911802173}
+        inSlope: {x: 0, y: 0, z: .683267117, w: -.307738543}
+        outSlope: {x: 0, y: 0, z: .683267117, w: -.307738543}
+        tangentMode: 128648128
+      - time: .283333361
+        value: {x: 0, y: 0, z: .422017425, w: .90658772}
+        inSlope: {x: 0, y: 0, z: .685067773, w: -.318957299}
+        outSlope: {x: 0, y: 0, z: .685067773, w: -.318957299}
+        tangentMode: 128650688
+      - time: .300000042
+        value: {x: 0, y: 0, z: .433465332, w: .901170254}
+        inSlope: {x: 0, y: 0, z: .690440238, w: -.332193077}
+        outSlope: {x: 0, y: 0, z: .690440238, w: -.332193077}
+        tangentMode: 1015580809
+      - time: .316666722
+        value: {x: 0, y: 0, z: .44503212, w: .895514607}
+        inSlope: {x: 0, y: 0, z: .699278474, w: -.347634315}
+        outSlope: {x: 0, y: 0, z: .699278474, w: -.347634315}
+        tangentMode: 0
+      - time: .333333343
+        value: {x: 0, y: 0, z: .456774592, w: .889582455}
+        inSlope: {x: 0, y: 0, z: .704550266, w: -.35593012}
+        outSlope: {x: 0, y: 0, z: .704550266, w: -.35593012}
+        tangentMode: -1101576225
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: nurse_body/nurse_arm/nurse_fArm
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 0, y: 0, z: .0998830497, w: -.99499917}
+        inSlope: {x: 0, y: 0, z: 8.52776909, w: 1.48356187}
+        outSlope: {x: 0, y: 0, z: 8.52776909, w: 1.48356187}
+        tangentMode: 126370108
+      - time: .0166666675
+        value: {x: 0, y: 0, z: .242012545, w: -.970273137}
+        inSlope: {x: 0, y: 0, z: 8.70688629, w: 2.22696114}
+        outSlope: {x: 0, y: 0, z: 8.70688629, w: 2.22696114}
+        tangentMode: 126383884
+      - time: .0333333351
+        value: {x: 0, y: 0, z: .390112609, w: -.920767128}
+        inSlope: {x: 0, y: 0, z: 8.44851971, w: 3.54981923}
+        outSlope: {x: 0, y: 0, z: 8.44851971, w: 3.54981923}
+        tangentMode: 126387632
+      - time: .0500000045
+        value: {x: 0, y: 0, z: .523629904, w: -.851945817}
+        inSlope: {x: 0, y: 0, z: 7.10456944, w: 4.2507844}
+        outSlope: {x: 0, y: 0, z: 7.10456944, w: 4.2507844}
+        tangentMode: 126393868
+      - time: .0666666701
+        value: {x: 0, y: 0, z: .626931608, w: -.779074311}
+        inSlope: {x: 0, y: 0, z: 5.01030254, w: 3.8624115}
+        outSlope: {x: 0, y: 0, z: 5.01030254, w: 3.8624115}
+        tangentMode: 126404648
+      - time: .0833333358
+        value: {x: 0, y: 0, z: .690639973, w: -.723198771}
+        inSlope: {x: 0, y: 0, z: 2.93518257, w: 2.70253515}
+        outSlope: {x: 0, y: 0, z: 2.93518257, w: 2.70253515}
+        tangentMode: 126393128
+      - time: .100000001
+        value: {x: 0, y: 0, z: .724771023, w: -.688989818}
+        inSlope: {x: 0, y: 0, z: 1.6429677, w: 1.69762564}
+        outSlope: {x: 0, y: 0, z: 1.6429677, w: 1.69762564}
+        tangentMode: 126375264
+      - time: .116666667
+        value: {x: 0, y: 0, z: .745405555, w: -.666611254}
+        inSlope: {x: 0, y: 0, z: .907455623, w: .998625696}
+        outSlope: {x: 0, y: 0, z: .907455623, w: .998625696}
+        tangentMode: 126374996
+      - time: .13333334
+        value: {x: 0, y: 0, z: .755019546, w: -.655702293}
+        inSlope: {x: 0, y: 0, z: .300788164, w: .34152019}
+        outSlope: {x: 0, y: 0, z: .300788164, w: .34152019}
+        tangentMode: 126376148
+      - time: .150000006
+        value: {x: 0, y: 0, z: .755431831, w: -.655227244}
+        inSlope: {x: 0, y: 0, z: -.21111311, w: -.240485102}
+        outSlope: {x: 0, y: 0, z: -.21111311, w: -.240485102}
+        tangentMode: 126392152
+      - time: .166666672
+        value: {x: 0, y: 0, z: .747982442, w: -.663718462}
+        inSlope: {x: 0, y: 0, z: -.651301205, w: -.726682007}
+        outSlope: {x: 0, y: 0, z: -.651301205, w: -.726682007}
+        tangentMode: 126397656
+      - time: .183333337
+        value: {x: 0, y: 0, z: .733721793, w: -.679449975}
+        inSlope: {x: 0, y: 0, z: -1.03196752, w: -1.10555124}
+        outSlope: {x: 0, y: 0, z: -1.03196752, w: -1.10555124}
+        tangentMode: 126389140
+      - time: .200000003
+        value: {x: 0, y: 0, z: .713583529, w: -.700570166}
+        inSlope: {x: 0, y: 0, z: -1.35587287, w: -1.37284946}
+        outSlope: {x: 0, y: 0, z: -1.35587287, w: -1.37284946}
+        tangentMode: 126377588
+      - time: .216666669
+        value: {x: 0, y: 0, z: .688526034, w: -.72521162}
+        inSlope: {x: 0, y: 0, z: -1.61843431, w: -1.53045964}
+        outSlope: {x: 0, y: 0, z: -1.61843431, w: -1.53045964}
+        tangentMode: 128619424
+      - time: .233333334
+        value: {x: 0, y: 0, z: .659635723, w: -.751585484}
+        inSlope: {x: 0, y: 0, z: -1.8100549, w: -1.58543062}
+        outSlope: {x: 0, y: 0, z: -1.8100549, w: -1.58543062}
+        tangentMode: 128639268
+      - time: .25
+        value: {x: 0, y: 0, z: .628190875, w: -.778059304}
+        inSlope: {x: 0, y: 0, z: -1.91853333, w: -1.54898763}
+        outSlope: {x: 0, y: 0, z: -1.91853333, w: -1.54898763}
+        tangentMode: 128640548
+      - time: .266666681
+        value: {x: 0, y: 0, z: .595684588, w: -.803218424}
+        inSlope: {x: 0, y: 0, z: -1.93129253, w: -1.43526483}
+        outSlope: {x: 0, y: 0, z: -1.93129253, w: -1.43526483}
+        tangentMode: 128613188
+      - time: .283333361
+        value: {x: 0, y: 0, z: .563814402, w: -.825901508}
+        inSlope: {x: 0, y: 0, z: -1.83717227, w: -1.25953567}
+        outSlope: {x: 0, y: 0, z: -1.83717227, w: -1.25953567}
+        tangentMode: 128647908
+      - time: .300000042
+        value: {x: 0, y: 0, z: .534445465, w: -.845202982}
+        inSlope: {x: 0, y: 0, z: -1.62776518, w: -1.03608823}
+        outSlope: {x: 0, y: 0, z: -1.62776518, w: -1.03608823}
+        tangentMode: 22480
+      - time: .316666722
+        value: {x: 0, y: 0, z: .509555519, w: -.86043781}
+        inSlope: {x: 0, y: 0, z: -1.29820251, w: -.775788307}
+        outSlope: {x: 0, y: 0, z: -1.29820251, w: -.775788307}
+        tangentMode: 24912
+      - time: .333333343
+        value: {x: 0, y: 0, z: .491172075, w: -.871062577}
+        inSlope: {x: 0, y: 0, z: -1.10300958, w: -.63748771}
+        outSlope: {x: 0, y: 0, z: -1.10300958, w: -.63748771}
+        tangentMode: 20878
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: nurse_body/nurse_arm
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 0, y: 0, z: .0915500969, w: .995800495}
+        inSlope: {x: 0, y: 0, z: -12.7595387, w: -.189675078}
+        outSlope: {x: 0, y: 0, z: -12.7595387, w: -.189675078}
+        tangentMode: 201091828
+      - time: .0166666675
+        value: {x: 0, y: 0, z: -.12110889, w: .992639244}
+        inSlope: {x: 0, y: 0, z: -13.0767956, w: -1.70869935}
+        outSlope: {x: 0, y: 0, z: -13.0767956, w: -1.70869935}
+        tangentMode: 201959232
+      - time: .0333333351
+        value: {x: 0, y: 0, z: -.344343126, w: .938843846}
+        inSlope: {x: 0, y: 0, z: -12.6351185, w: -4.5732317}
+        outSlope: {x: 0, y: 0, z: -12.6351185, w: -4.5732317}
+        tangentMode: 127009652
+      - time: .0500000045
+        value: {x: 0, y: 0, z: -.542279541, w: .840198159}
+        inSlope: {x: 0, y: 0, z: -10.3517628, w: -6.43394327}
+        outSlope: {x: 0, y: 0, z: -10.3517628, w: -6.43394327}
+        tangentMode: 202073604
+      - time: .0666666701
+        value: {x: 0, y: 0, z: -.689401925, w: .724379063}
+        inSlope: {x: 0, y: 0, z: -7.01569557, w: -6.28898144}
+        outSlope: {x: 0, y: 0, z: -7.01569557, w: -6.28898144}
+        tangentMode: 468593744
+      - time: .0833333358
+        value: {x: 0, y: 0, z: -.776136041, w: .630565464}
+        inSlope: {x: 0, y: 0, z: -3.96708918, w: -4.6310935}
+        outSlope: {x: 0, y: 0, z: -3.96708918, w: -4.6310935}
+        tangentMode: 468556476
+      - time: .100000001
+        value: {x: 0, y: 0, z: -.821638227, w: .570009291}
+        inSlope: {x: 0, y: 0, z: -2.191998, w: -3.07494903}
+        outSlope: {x: 0, y: 0, z: -2.191998, w: -3.07494903}
+        tangentMode: 128619080
+      - time: .116666667
+        value: {x: 0, y: 0, z: -.849202633, w: .528067172}
+        inSlope: {x: 0, y: 0, z: -1.25237691, w: -1.96386313}
+        outSlope: {x: 0, y: 0, z: -1.25237691, w: -1.96386313}
+        tangentMode: 468794364
+      - time: .13333334
+        value: {x: 0, y: 0, z: -.863384128, w: .504547179}
+        inSlope: {x: 0, y: 0, z: -.539393842, w: -.902298391}
+        outSlope: {x: 0, y: 0, z: -.539393842, w: -.902298391}
+        tangentMode: 127101224
+      - time: .150000006
+        value: {x: 0, y: 0, z: -.867182434, w: .497990549}
+        inSlope: {x: 0, y: 0, z: .0286817625, w: .0489753485}
+        outSlope: {x: 0, y: 0, z: .0286817625, w: .0489753485}
+        tangentMode: 822664688
+      - time: .166666672
+        value: {x: 0, y: 0, z: -.862428069, w: .50617969}
+        inSlope: {x: 0, y: 0, z: .509360492, w: .853897393}
+        outSlope: {x: 0, y: 0, z: .509360492, w: .853897393}
+        tangentMode: 201853552
+      - time: .183333337
+        value: {x: 0, y: 0, z: -.850203753, w: .526453793}
+        inSlope: {x: 0, y: 0, z: .935670853, w: 1.49206293}
+        outSlope: {x: 0, y: 0, z: .935670853, w: 1.49206293}
+        tangentMode: 202096884
+      - time: .200000003
+        value: {x: 0, y: 0, z: -.831239045, w: .555915117}
+        inSlope: {x: 0, y: 0, z: 1.31888342, w: 1.95400381}
+        outSlope: {x: 0, y: 0, z: 1.31888342, w: 1.95400381}
+        tangentMode: 469100636
+      - time: .216666669
+        value: {x: 0, y: 0, z: -.806240976, w: .591587245}
+        inSlope: {x: 0, y: 0, z: 1.65289354, w: 2.23926926}
+        outSlope: {x: 0, y: 0, z: 1.65289354, w: 2.23926926}
+        tangentMode: 202085884
+      - time: .233333334
+        value: {x: 0, y: 0, z: -.776142597, w: .630557418}
+        inSlope: {x: 0, y: 0, z: 1.91937995, w: 2.35568786}
+        outSlope: {x: 0, y: 0, z: 1.91937995, w: 2.35568786}
+        tangentMode: 201614772
+      - time: .25
+        value: {x: 0, y: 0, z: -.742261648, w: .670110166}
+        inSlope: {x: 0, y: 0, z: 2.093256, w: 2.31864023}
+        outSlope: {x: 0, y: 0, z: 2.093256, w: 2.31864023}
+        tangentMode: 468754868
+      - time: .266666681
+        value: {x: 0, y: 0, z: -.706367373, w: .707845449}
+        inSlope: {x: 0, y: 0, z: 2.14783072, w: 2.14944363}
+        outSlope: {x: 0, y: 0, z: 2.14783072, w: 2.14944363}
+        tangentMode: 201959764
+      - time: .283333361
+        value: {x: 0, y: 0, z: -.670667231, w: .741758347}
+        inSlope: {x: 0, y: 0, z: 2.05917311, w: 1.87247896}
+        outSlope: {x: 0, y: 0, z: 2.05917311, w: 1.87247896}
+        tangentMode: 201914904
+      - time: .300000042
+        value: {x: 0, y: 0, z: -.637728214, w: .770261467}
+        inSlope: {x: 0, y: 0, z: 1.80943274, w: 1.51114106}
+        outSlope: {x: 0, y: 0, z: 1.80943274, w: 1.51114106}
+        tangentMode: 202008988
+      - time: .316666722
+        value: {x: 0, y: 0, z: -.610352755, w: .792129755}
+        inSlope: {x: 0, y: 0, z: 1.38894892, w: 1.08284771}
+        outSlope: {x: 0, y: 0, z: 1.38894892, w: 1.08284771}
+        tangentMode: 468851692
+      - time: .333333343
+        value: {x: 0, y: 0, z: -.591429949, w: .80635637}
+        inSlope: {x: 0, y: 0, z: 1.13537145, w: .85359925}
+        outSlope: {x: 0, y: 0, z: 1.13537145, w: .85359925}
+        tangentMode: 127751184
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: nurse_body/nurse_armB
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 0, y: 0, z: -.000365385698, w: .99999994}
+        inSlope: {x: 0, y: 0, z: -2.64630413, w: -.0593554936}
+        outSlope: {x: 0, y: 0, z: -2.64630413, w: -.0593554936}
+        tangentMode: 75
+      - time: .0166666675
+        value: {x: 0, y: 0, z: -.0444704555, w: .999010682}
+        inSlope: {x: 0, y: 0, z: -2.64370751, w: -.117682807}
+        outSlope: {x: 0, y: 0, z: -2.64370751, w: -.117682807}
+        tangentMode: 0
+      - time: .0333333351
+        value: {x: 0, y: 0, z: -.0884889737, w: .99607718}
+        inSlope: {x: 0, y: 0, z: -2.63594437, w: -.234169334}
+        outSlope: {x: 0, y: 0, z: -2.63594437, w: -.234169334}
+        tangentMode: 344953108
+      - time: .0500000045
+        value: {x: 0, y: 0, z: -.132335275, w: .991205037}
+        inSlope: {x: 0, y: 0, z: -2.62305117, w: -.350203514}
+        outSlope: {x: 0, y: 0, z: -2.62305117, w: -.350203514}
+        tangentMode: 0
+      - time: .0666666701
+        value: {x: 0, y: 0, z: -.175924018, w: .984403729}
+        inSlope: {x: 0, y: 0, z: -2.60505271, w: -.465552866}
+        outSlope: {x: 0, y: 0, z: -2.60505271, w: -.465552866}
+        tangentMode: 829733976
+      - time: .0833333358
+        value: {x: 0, y: 0, z: -.219170362, w: .97568661}
+        inSlope: {x: 0, y: 0, z: -2.59478068, w: -.523027241}
+        outSlope: {x: 0, y: 0, z: -2.59478068, w: -.523027241}
+        tangentMode: 820696532
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: nurse_body
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 0, y: 0, z: -.005368907, w: .999985576}
+        inSlope: {x: 0, y: 0, z: 3.21709514, w: -.0690150261}
+        outSlope: {x: 0, y: 0, z: 3.21709514, w: -.0690150261}
+        tangentMode: 75
+      - time: .0166666675
+        value: {x: 0, y: 0, z: .048249349, w: .998835325}
+        inSlope: {x: 0, y: 0, z: 3.21293211, w: -.155201554}
+        outSlope: {x: 0, y: 0, z: 3.21293211, w: -.155201554}
+        tangentMode: 0
+      - time: .0333333351
+        value: {x: 0, y: 0, z: .101728834, w: .994812191}
+        inSlope: {x: 0, y: 0, z: 3.19999075, w: -.32722947}
+        outSlope: {x: 0, y: 0, z: 3.19999075, w: -.32722947}
+        tangentMode: 1842540491
+      - time: .0500000045
+        value: {x: 0, y: 0, z: .15491572, w: .987927675}
+        inSlope: {x: 0, y: 0, z: 3.17784548, w: -.498315096}
+        outSlope: {x: 0, y: 0, z: 3.17784548, w: -.498315096}
+        tangentMode: 0
+      - time: .0666666701
+        value: {x: 0, y: 0, z: .207657024, w: .978201687}
+        inSlope: {x: 0, y: 0, z: 3.14656043, w: -.667964876}
+        outSlope: {x: 0, y: 0, z: 3.14656043, w: -.667964876}
+        tangentMode: 829914604
+      - time: .0833333358
+        value: {x: 0, y: 0, z: .25980106, w: .965662181}
+        inSlope: {x: 0, y: 0, z: 3.12864232, w: -.752370417}
+        outSlope: {x: 0, y: 0, z: 3.12864232, w: -.752370417}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: nurse_body/nurse_booty/nurse_thighR
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 0, y: 0, z: .0175336208, w: .99984628}
+        inSlope: {x: 0, y: 0, z: 3.00425005, w: -.128045082}
+        outSlope: {x: 0, y: 0, z: 3.00425005, w: -.128045082}
+        tangentMode: 57
+      - time: .0166666675
+        value: {x: 0, y: 0, z: .0676044598, w: .997712195}
+        inSlope: {x: 0, y: 0, z: 2.99915648, w: -.203222036}
+        outSlope: {x: 0, y: 0, z: 2.99915648, w: -.203222036}
+        tangentMode: 0
+      - time: .0333333351
+        value: {x: 0, y: 0, z: .117505506, w: .993072212}
+        inSlope: {x: 0, y: 0, z: 2.98520875, w: -.35322544}
+        outSlope: {x: 0, y: 0, z: 2.98520875, w: -.35322544}
+        tangentMode: 0
+      - time: .0500000045
+        value: {x: 0, y: 0, z: .167111427, w: .985938013}
+        inSlope: {x: 0, y: 0, z: 2.96376276, w: -.502341986}
+        outSlope: {x: 0, y: 0, z: 2.96376276, w: -.502341986}
+        tangentMode: 0
+      - time: .0666666701
+        value: {x: 0, y: 0, z: .216297597, w: .976327479}
+        inSlope: {x: 0, y: 0, z: 2.93487239, w: -.650197923}
+        outSlope: {x: 0, y: 0, z: 2.93487239, w: -.650197923}
+        tangentMode: 0
+      - time: .0833333358
+        value: {x: 0, y: 0, z: .2649405, w: .96426475}
+        inSlope: {x: 0, y: 0, z: 2.91857433, w: -.723763764}
+        outSlope: {x: 0, y: 0, z: 2.91857433, w: -.723763764}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: nurse_body/nurse_booty/nurse_thighL/nurse_legL
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 0, y: 0, z: .14946422, w: .988767147}
+        inSlope: {x: 0, y: 0, z: .745800674, w: -.117541544}
+        outSlope: {x: 0, y: 0, z: .745800674, w: -.117541544}
+        tangentMode: 0
+      - time: .0166666675
+        value: {x: 0, y: 0, z: .161894232, w: .986808121}
+        inSlope: {x: 0, y: 0, z: .745031357, w: -.122228265}
+        outSlope: {x: 0, y: 0, z: .745031357, w: -.122228265}
+        tangentMode: 1065353216
+      - time: .0333333351
+        value: {x: 0, y: 0, z: .174298599, w: .984692872}
+        inSlope: {x: 0, y: 0, z: .743434072, w: -.131594539}
+        outSlope: {x: 0, y: 0, z: .743434072, w: -.131594539}
+        tangentMode: 1065353216
+      - time: .0500000045
+        value: {x: 0, y: 0, z: .18667537, w: .982421637}
+        inSlope: {x: 0, y: 0, z: .741719246, w: -.140939355}
+        outSlope: {x: 0, y: 0, z: .741719246, w: -.140939355}
+        tangentMode: 0
+      - time: .0666666701
+        value: {x: 0, y: 0, z: .199022576, w: .979994893}
+        inSlope: {x: 0, y: 0, z: .739886999, w: -.150259152}
+        outSlope: {x: 0, y: 0, z: .739886999, w: -.150259152}
+        tangentMode: 827865384
+      - time: .0833333358
+        value: {x: 0, y: 0, z: .211338267, w: .977412999}
+        inSlope: {x: 0, y: 0, z: .738941491, w: -.154913679}
+        outSlope: {x: 0, y: 0, z: .738941491, w: -.154913679}
+        tangentMode: 819493344
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: nurse_body/nurse_head1
+  m_CompressedRotationCurves: []
+  m_PositionCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: -.323783875, y: -.0697898865, z: 0}
+        inSlope: {x: -4.56692505, y: 10.2952881, z: 0}
+        outSlope: {x: -4.56692505, y: 10.2952881, z: 0}
+        tangentMode: 0
+      - time: .0833333358
+        value: {x: -.704360962, y: .788150787, z: 0}
+        inSlope: {x: -1.73995972, y: 3.56780243, z: 0}
+        outSlope: {x: -1.73995972, y: 3.56780243, z: 0}
+        tangentMode: 820308972
+      - time: .333333343
+        value: {x: -.432609558, y: -.00177001953, z: 0}
+        inSlope: {x: 1.08700562, y: -3.15968323, z: 0}
+        outSlope: {x: 1.08700562, y: -3.15968323, z: 0}
+        tangentMode: -38500
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: nurse_body/nurse_booty
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 0, y: 0, z: 0}
+        inSlope: {x: -5.32809448, y: -1.75840759, z: 0}
+        outSlope: {x: -5.32809448, y: -1.75840759, z: 0}
+        tangentMode: 819882120
+      - time: .0833333358
+        value: {x: -.444007874, y: -.146533966, z: 0}
+        inSlope: {x: -1.77603149, y: -.586135864, z: 0}
+        outSlope: {x: -1.77603149, y: -.586135864, z: 0}
+        tangentMode: 0
+      - time: .333333343
+        value: {x: 0, y: 0, z: 0}
+        inSlope: {x: 1.77603149, y: .586135864, z: 0}
+        outSlope: {x: 1.77603149, y: .586135864, z: 0}
+        tangentMode: 136450096
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: nurse_body
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: -.820481658, y: -.52045244, z: 0}
+        inSlope: {x: .0010228157, y: .000271081924, z: 0}
+        outSlope: {x: .0010228157, y: .000271081924, z: 0}
+        tangentMode: 0
+      - time: .0833333358
+        value: {x: -.820396423, y: -.52042985, z: 0}
+        inSlope: {x: .0010228157, y: .000271081924, z: 0}
+        outSlope: {x: .0010228157, y: .000271081924, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: nurse_body/nurse_booty/nurse_thighL
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: -.418167114, y: -1.4198761, z: 0}
+        inSlope: {x: .000694155693, y: 4.00543213e-05, z: 0}
+        outSlope: {x: .000694155693, y: 4.00543213e-05, z: 0}
+        tangentMode: 825874624
+      - time: .0833333358
+        value: {x: -.418109268, y: -1.41987276, z: 0}
+        inSlope: {x: .000694155693, y: 4.00543213e-05, z: 0}
+        outSlope: {x: .000694155693, y: 4.00543213e-05, z: 0}
+        tangentMode: 84
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: nurse_body/nurse_arm/nurse_fArm
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 1.22278595, y: 2.07504082, z: 0}
+        inSlope: {x: .0124511719, y: -.00286102295, z: 0}
+        outSlope: {x: .0124511719, y: -.00286102295, z: 0}
+        tangentMode: 0
+      - time: .0833333358
+        value: {x: 1.22382355, y: 2.0748024, z: 0}
+        inSlope: {x: .00790405273, y: -.0018196106, z: 0}
+        outSlope: {x: .00790405273, y: -.0018196106, z: 0}
+        tangentMode: 128437492
+      - time: .333333343
+        value: {x: 1.22466278, y: 2.07460785, z: 0}
+        inSlope: {x: .00335693359, y: -.000778198242, z: 0}
+        outSlope: {x: .00335693359, y: -.000778198242, z: 0}
+        tangentMode: 3342381
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: nurse_body/nurse_armB
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: -.28339681, y: -1.28542817, z: 0}
+        inSlope: {x: -.000303983688, y: .0114526749, z: 0}
+        outSlope: {x: -.000303983688, y: .0114526749, z: 0}
+        tangentMode: 0
+      - time: .0833333358
+        value: {x: -.283422142, y: -1.28447378, z: 0}
+        inSlope: {x: -.000303983688, y: .0114526749, z: 0}
+        outSlope: {x: -.000303983688, y: .0114526749, z: 0}
+        tangentMode: 126812160
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: nurse_body/nurse_armB/nurse_fArmB
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: -.204971313, y: 1.0704422, z: 0}
+        inSlope: {x: -6.20315552, y: -1.63240814, z: 0}
+        outSlope: {x: -6.20315552, y: -1.63240814, z: 0}
+        tangentMode: 829545748
+      - time: .0833333358
+        value: {x: -.72190094, y: .934408188, z: 0}
+        inSlope: {x: -6.20315552, y: -1.63240814, z: 0}
+        outSlope: {x: -6.20315552, y: -1.63240814, z: 0}
+        tangentMode: 827392001
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: nurse_body/nurse_head1/nurse_hair
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: .0657577515, y: 2.04095459, z: 0}
+        inSlope: {x: .00219726562, y: -.000595092773, z: 0}
+        outSlope: {x: .00219726562, y: -.000595092773, z: 0}
+        tangentMode: 1023969417
+      - time: .0833333358
+        value: {x: .0659408569, y: 2.040905, z: 0}
+        inSlope: {x: .00286865234, y: -.000720977783, z: 0}
+        outSlope: {x: .00286865234, y: -.000720977783, z: 0}
+        tangentMode: 1065017586
+      - time: .333333343
+        value: {x: .0668258667, y: 2.04069328, z: 0}
+        inSlope: {x: .00354003906, y: -.000846862793, z: 0}
+        outSlope: {x: .00354003906, y: -.000846862793, z: 0}
+        tangentMode: 823227060
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: nurse_body/nurse_arm
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 1.15897369, y: 3.08863831, z: 0}
+        inSlope: {x: 1.86951113, y: 3.54347992, z: 0}
+        outSlope: {x: 1.86951113, y: 3.54347992, z: 0}
+        tangentMode: 0
+      - time: .0833333358
+        value: {x: 1.31476629, y: 3.3839283, z: 0}
+        inSlope: {x: 1.86951113, y: 3.54347992, z: 0}
+        outSlope: {x: 1.86951113, y: 3.54347992, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: nurse_body/nurse_head1
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: .824520171, y: -.448873699, z: 0}
+        inSlope: {x: -.000216722488, y: -7.22408295e-05, z: 0}
+        outSlope: {x: -.000216722488, y: -7.22408295e-05, z: 0}
+        tangentMode: 0
+      - time: .0833333358
+        value: {x: .82450211, y: -.448879719, z: 0}
+        inSlope: {x: -.000216722488, y: -7.22408295e-05, z: 0}
+        outSlope: {x: -.000216722488, y: -7.22408295e-05, z: 0}
+        tangentMode: 126812160
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: nurse_body/nurse_booty/nurse_thighR
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 1.10389709, y: -1.33198547, z: 0}
+        inSlope: {x: 1.17408514, y: 1.41959667, z: 0}
+        outSlope: {x: 1.17408514, y: 1.41959667, z: 0}
+        tangentMode: 0
+      - time: .0833333358
+        value: {x: 1.20173752, y: -1.21368575, z: 0}
+        inSlope: {x: 1.17408514, y: 1.41959667, z: 0}
+        outSlope: {x: 1.17408514, y: 1.41959667, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: nurse_body/nurse_booty/nurse_thighL/nurse_legL
+  m_ScaleCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: -1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 1701601125
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: nurse_body/nurse_head1
+  m_FloatCurves: []
+  m_PPtrCurves:
+  - curve:
+    - time: 0
+      value: {fileID: 21300010, guid: b6eace784fea4f6469928c5369de5996, type: 3}
+    - time: .333333343
+      value: {fileID: 21300006, guid: b6eace784fea4f6469928c5369de5996, type: 3}
+    attribute: m_Sprite
+    path: nurse_body/nurse_head1
+    classID: 212
+    script: {fileID: 0}
+  m_SampleRate: 60
+  m_WrapMode: 0
+  m_Bounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
+  m_ClipBindingConstant:
+    genericBindings:
+    - path: 3571358884
+      attribute: 1
+      script: {fileID: 0}
+      classID: 4
+      customType: 0
+      isPPtrCurve: 0
+    - path: 3186857001
+      attribute: 1
+      script: {fileID: 0}
+      classID: 4
+      customType: 0
+      isPPtrCurve: 0
+    - path: 4073380309
+      attribute: 1
+      script: {fileID: 0}
+      classID: 4
+      customType: 0
+      isPPtrCurve: 0
+    - path: 2181408843
+      attribute: 1
+      script: {fileID: 0}
+      classID: 4
+      customType: 0
+      isPPtrCurve: 0
+    - path: 2432786154
+      attribute: 1
+      script: {fileID: 0}
+      classID: 4
+      customType: 0
+      isPPtrCurve: 0
+    - path: 1258733937
+      attribute: 1
+      script: {fileID: 0}
+      classID: 4
+      customType: 0
+      isPPtrCurve: 0
+    - path: 2032921223
+      attribute: 1
+      script: {fileID: 0}
+      classID: 4
+      customType: 0
+      isPPtrCurve: 0
+    - path: 1784155434
+      attribute: 1
+      script: {fileID: 0}
+      classID: 4
+      customType: 0
+      isPPtrCurve: 0
+    - path: 3381170840
+      attribute: 1
+      script: {fileID: 0}
+      classID: 4
+      customType: 0
+      isPPtrCurve: 0
+    - path: 147186870
+      attribute: 1
+      script: {fileID: 0}
+      classID: 4
+      customType: 0
+      isPPtrCurve: 0
+    - path: 4259785020
+      attribute: 1
+      script: {fileID: 0}
+      classID: 4
+      customType: 0
+      isPPtrCurve: 0
+    - path: 3571358884
+      attribute: 2
+      script: {fileID: 0}
+      classID: 4
+      customType: 0
+      isPPtrCurve: 0
+    - path: 4073380309
+      attribute: 2
+      script: {fileID: 0}
+      classID: 4
+      customType: 0
+      isPPtrCurve: 0
+    - path: 3804310205
+      attribute: 2
+      script: {fileID: 0}
+      classID: 4
+      customType: 0
+      isPPtrCurve: 0
+    - path: 1258733937
+      attribute: 2
+      script: {fileID: 0}
+      classID: 4
+      customType: 0
+      isPPtrCurve: 0
+    - path: 2181408843
+      attribute: 2
+      script: {fileID: 0}
+      classID: 4
+      customType: 0
+      isPPtrCurve: 0
+    - path: 1784155434
+      attribute: 2
+      script: {fileID: 0}
+      classID: 4
+      customType: 0
+      isPPtrCurve: 0
+    - path: 2432786154
+      attribute: 2
+      script: {fileID: 0}
+      classID: 4
+      customType: 0
+      isPPtrCurve: 0
+    - path: 3186857001
+      attribute: 2
+      script: {fileID: 0}
+      classID: 4
+      customType: 0
+      isPPtrCurve: 0
+    - path: 147186870
+      attribute: 2
+      script: {fileID: 0}
+      classID: 4
+      customType: 0
+      isPPtrCurve: 0
+    - path: 4259785020
+      attribute: 2
+      script: {fileID: 0}
+      classID: 4
+      customType: 0
+      isPPtrCurve: 0
+    - path: 3381170840
+      attribute: 2
+      script: {fileID: 0}
+      classID: 4
+      customType: 0
+      isPPtrCurve: 0
+    - path: 3381170840
+      attribute: 0
+      script: {fileID: 0}
+      classID: 212
+      customType: 23
+      isPPtrCurve: 1
+    - path: 3381170840
+      attribute: 3
+      script: {fileID: 0}
+      classID: 4
+      customType: 0
+      isPPtrCurve: 0
+    pptrCurveMapping:
+    - {fileID: 21300010, guid: b6eace784fea4f6469928c5369de5996, type: 3}
+    - {fileID: 21300006, guid: b6eace784fea4f6469928c5369de5996, type: 3}
+  m_AnimationClipSettings:
+    serializedVersion: 2
+    m_StartTime: 0
+    m_StopTime: .350000024
+    m_OrientationOffsetY: 0
+    m_Level: 0
+    m_CycleOffset: 0
+    m_LoopTime: 1
+    m_LoopBlend: 0
+    m_LoopBlendOrientation: 0
+    m_LoopBlendPositionY: 0
+    m_LoopBlendPositionXZ: 0
+    m_KeepOriginalOrientation: 0
+    m_KeepOriginalPositionY: 1
+    m_KeepOriginalPositionXZ: 0
+    m_HeightFromFeet: 0
+    m_Mirror: 0
+  m_EditorCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: -.323783875
+        inSlope: -4.56692505
+        outSlope: -4.56692505
+        tangentMode: 10
+      - time: .0833333358
+        value: -.704360962
+        inSlope: -1.73995972
+        outSlope: -1.73995972
+        tangentMode: 10
+      - time: .333333343
+        value: -.432609558
+        inSlope: 1.08700562
+        outSlope: 1.08700562
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalPosition.x
+    path: nurse_body/nurse_booty
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: -.0697898865
+        inSlope: 10.2952881
+        outSlope: 10.2952881
+        tangentMode: 10
+      - time: .0833333358
+        value: .788150787
+        inSlope: 3.56780243
+        outSlope: 3.56780243
+        tangentMode: 10
+      - time: .333333343
+        value: -.00177001953
+        inSlope: -3.15968323
+        outSlope: -3.15968323
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalPosition.y
+    path: nurse_body/nurse_booty
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .0833333358
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .333333343
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalPosition.z
+    path: nurse_body/nurse_booty
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: -5.32809448
+        outSlope: -5.32809448
+        tangentMode: 10
+      - time: .0833333358
+        value: -.444007874
+        inSlope: -1.77603149
+        outSlope: -1.77603149
+        tangentMode: 10
+      - time: .333333343
+        value: 0
+        inSlope: 1.77603149
+        outSlope: 1.77603149
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalPosition.x
+    path: nurse_body
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: -1.75840759
+        outSlope: -1.75840759
+        tangentMode: 10
+      - time: .0833333358
+        value: -.146533966
+        inSlope: -.586135864
+        outSlope: -.586135864
+        tangentMode: 10
+      - time: .333333343
+        value: 0
+        inSlope: .586135864
+        outSlope: .586135864
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalPosition.y
+    path: nurse_body
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .0833333358
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .333333343
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalPosition.z
+    path: nurse_body
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .0833333358
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalPosition.z
+    path: nurse_body/nurse_booty/nurse_thighL
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: -.52045244
+        inSlope: .000271081924
+        outSlope: .000271081924
+        tangentMode: 10
+      - time: .0833333358
+        value: -.52042985
+        inSlope: .000271081924
+        outSlope: .000271081924
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalPosition.y
+    path: nurse_body/nurse_booty/nurse_thighL
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: -.820481658
+        inSlope: .0010228157
+        outSlope: .0010228157
+        tangentMode: 10
+      - time: .0833333358
+        value: -.820396423
+        inSlope: .0010228157
+        outSlope: .0010228157
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalPosition.x
+    path: nurse_body/nurse_booty/nurse_thighL
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: -.99914825
+        inSlope: .166110978
+        outSlope: .166110978
+        tangentMode: 0
+      - time: .0166666675
+        value: -.996379733
+        inSlope: .223553181
+        outSlope: .223553181
+        tangentMode: 0
+      - time: .0333333351
+        value: -.991696477
+        inSlope: .33816573
+        outSlope: .33816573
+        tangentMode: 0
+      - time: .0500000045
+        value: -.985107541
+        inSlope: .452127457
+        outSlope: .452127457
+        tangentMode: 0
+      - time: .0666666701
+        value: -.976625562
+        inSlope: .565220177
+        outSlope: .565220177
+        tangentMode: 0
+      - time: .0833333358
+        value: -.96626687
+        inSlope: .621521533
+        outSlope: .621521533
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalRotation.w
+    path: nurse_body/nurse_booty
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: .041265361
+        inSlope: 2.62494898
+        outSlope: 2.62494898
+        tangentMode: 0
+      - time: .0166666675
+        value: .0850145146
+        inSlope: 2.62005472
+        outSlope: 2.62005472
+        tangentMode: 0
+      - time: .0333333351
+        value: .128600523
+        inSlope: 2.60773969
+        outSlope: 2.60773969
+        tangentMode: 0
+      - time: .0500000045
+        value: .171939179
+        inSlope: 2.59041381
+        outSlope: 2.59041381
+        tangentMode: 0
+      - time: .0666666701
+        value: .214947656
+        inSlope: 2.56811023
+        outSlope: 2.56811023
+        tangentMode: 0
+      - time: .0833333358
+        value: .257542849
+        inSlope: 2.55571175
+        outSlope: 2.55571175
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalRotation.z
+    path: nurse_body/nurse_booty
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0166666675
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0333333351
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0500000045
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0666666701
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0833333358
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalRotation.y
+    path: nurse_body/nurse_booty
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0166666675
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0333333351
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0500000045
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0666666701
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0833333358
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalRotation.x
+    path: nurse_body/nurse_booty
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: .999997377
+        inSlope: -.0020813942
+        outSlope: -.0020813942
+        tangentMode: 0
+      - time: .0166666675
+        value: .999962687
+        inSlope: -.00566840125
+        outSlope: -.00566840125
+        tangentMode: 0
+      - time: .0333333351
+        value: .999808431
+        inSlope: -.0128388386
+        outSlope: -.0128388386
+        tangentMode: 0
+      - time: .0500000045
+        value: .999534726
+        inSlope: -.0200074911
+        outSlope: -.0200074911
+        tangentMode: 0
+      - time: .0666666701
+        value: .999141514
+        inSlope: -.0271761436
+        outSlope: -.0271761436
+        tangentMode: 0
+      - time: .0833333358
+        value: .998628855
+        inSlope: -.0307595748
+        outSlope: -.0307595748
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalRotation.w
+    path: nurse_body/nurse_booty/nurse_thighL
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: -.00229404494
+        inSlope: .655997097
+        outSlope: .655997097
+        tangentMode: 0
+      - time: .0166666675
+        value: .00863924064
+        inSlope: .655966163
+        outSlope: .655966163
+        tangentMode: 0
+      - time: .0333333351
+        value: .0195714943
+        inSlope: .655864954
+        outSlope: .655864954
+        tangentMode: 0
+      - time: .0500000045
+        value: .0305014085
+        inSlope: .655685544
+        outSlope: .655685544
+        tangentMode: 0
+      - time: .0666666701
+        value: .0414276794
+        inSlope: .655427337
+        outSlope: .655427337
+        tangentMode: 0
+      - time: .0833333358
+        value: .0523489863
+        inSlope: .655278444
+        outSlope: .655278444
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalRotation.z
+    path: nurse_body/nurse_booty/nurse_thighL
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0166666675
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0333333351
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0500000045
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0666666701
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0833333358
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalRotation.y
+    path: nurse_body/nurse_booty/nurse_thighL
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0166666675
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0333333351
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0500000045
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0666666701
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0833333358
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalRotation.x
+    path: nurse_body/nurse_booty/nurse_thighL
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0166666675
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0333333351
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0500000045
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0666666701
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0833333358
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalRotation.x
+    path: nurse_body/nurse_booty/nurse_thighR/nurse_legR
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0166666675
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0333333351
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0500000045
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0666666701
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0833333358
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalRotation.y
+    path: nurse_body/nurse_booty/nurse_thighR/nurse_legR
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: .0289318282
+        inSlope: 2.60173893
+        outSlope: 2.60173893
+        tangentMode: 0
+      - time: .0166666675
+        value: .0722941458
+        inSlope: 2.59765053
+        outSlope: 2.59765053
+        tangentMode: 0
+      - time: .0333333351
+        value: .115520187
+        inSlope: 2.5870297
+        outSlope: 2.5870297
+        tangentMode: 0
+      - time: .0500000045
+        value: .158528477
+        inSlope: 2.57153082
+        outSlope: 2.57153082
+        tangentMode: 0
+      - time: .0666666701
+        value: .201237887
+        inSlope: 2.55118418
+        outSlope: 2.55118418
+        tangentMode: 0
+      - time: .0833333358
+        value: .243567944
+        inSlope: 2.5398035
+        outSlope: 2.5398035
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalRotation.z
+    path: nurse_body/nurse_booty/nurse_thighR/nurse_legR
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: .999581397
+        inSlope: -.131882429
+        outSlope: -.131882429
+        tangentMode: 0
+      - time: .0166666675
+        value: .997383356
+        inSlope: -.188287497
+        outSlope: -.188287497
+        tangentMode: 0
+      - time: .0333333351
+        value: .993305147
+        inSlope: -.30086872
+        outSlope: -.30086872
+        tangentMode: 0
+      - time: .0500000045
+        value: .987354398
+        inSlope: -.412883162
+        outSlope: -.412883162
+        tangentMode: 0
+      - time: .0666666701
+        value: .979542375
+        inSlope: -.524116218
+        outSlope: -.524116218
+        tangentMode: 0
+      - time: .0833333358
+        value: .969883859
+        inSlope: -.579510987
+        outSlope: -.579510987
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalRotation.w
+    path: nurse_body/nurse_booty/nurse_thighR/nurse_legR
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .0833333358
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalPosition.z
+    path: nurse_body/nurse_arm/nurse_fArm
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: -1.4198761
+        inSlope: 4.00543213e-05
+        outSlope: 4.00543213e-05
+        tangentMode: 10
+      - time: .0833333358
+        value: -1.41987276
+        inSlope: 4.00543213e-05
+        outSlope: 4.00543213e-05
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalPosition.y
+    path: nurse_body/nurse_arm/nurse_fArm
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: -.418167114
+        inSlope: .000694155693
+        outSlope: .000694155693
+        tangentMode: 10
+      - time: .0833333358
+        value: -.418109268
+        inSlope: .000694155693
+        outSlope: .000694155693
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalPosition.x
+    path: nurse_body/nurse_arm/nurse_fArm
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: .999968767
+        inSlope: -.0357305966
+        outSlope: -.0357305966
+        tangentMode: 0
+      - time: .0166666675
+        value: .999373257
+        inSlope: -.0919532701
+        outSlope: -.0919532701
+        tangentMode: 0
+      - time: .0333333351
+        value: .996903658
+        inSlope: -.204259127
+        outSlope: -.204259127
+        tangentMode: 0
+      - time: .0500000045
+        value: .992564619
+        inSlope: -.316184163
+        outSlope: -.316184163
+        tangentMode: 0
+      - time: .0666666701
+        value: .986364186
+        inSlope: -.427517325
+        outSlope: -.427517325
+        tangentMode: 0
+      - time: .0833333358
+        value: .978314042
+        inSlope: -.483008653
+        outSlope: -.483008653
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalRotation.w
+    path: nurse_body/nurse_armB/nurse_fArmB
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: .00790204946
+        inSlope: -2.59802675
+        outSlope: -2.59802675
+        tangentMode: 0
+      - time: .0166666675
+        value: -.0353984013
+        inSlope: -2.59603548
+        outSlope: -2.59603548
+        tangentMode: 0
+      - time: .0333333351
+        value: -.0786324739
+        inSlope: -2.58962011
+        outSlope: -2.58962011
+        tangentMode: 0
+      - time: .0500000045
+        value: -.121719077
+        inSlope: -2.57834888
+        outSlope: -2.57834888
+        tangentMode: 0
+      - time: .0666666701
+        value: -.164577439
+        inSlope: -2.56224155
+        outSlope: -2.56224155
+        tangentMode: 0
+      - time: .0833333358
+        value: -.207127124
+        inSlope: -2.55298114
+        outSlope: -2.55298114
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalRotation.z
+    path: nurse_body/nurse_armB/nurse_fArmB
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0166666675
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0333333351
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0500000045
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0666666701
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0833333358
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalRotation.y
+    path: nurse_body/nurse_armB/nurse_fArmB
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0166666675
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0333333351
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0500000045
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0666666701
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0833333358
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalRotation.x
+    path: nurse_body/nurse_armB/nurse_fArmB
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .0833333358
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .333333343
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalPosition.z
+    path: nurse_body/nurse_armB
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 2.07504082
+        inSlope: -.00286102295
+        outSlope: -.00286102295
+        tangentMode: 10
+      - time: .0833333358
+        value: 2.0748024
+        inSlope: -.0018196106
+        outSlope: -.0018196106
+        tangentMode: 10
+      - time: .333333343
+        value: 2.07460785
+        inSlope: -.000778198242
+        outSlope: -.000778198242
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalPosition.y
+    path: nurse_body/nurse_armB
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 1.22278595
+        inSlope: .0124511719
+        outSlope: .0124511719
+        tangentMode: 10
+      - time: .0833333358
+        value: 1.22382355
+        inSlope: .00790405273
+        outSlope: .00790405273
+        tangentMode: 10
+      - time: .333333343
+        value: 1.22466278
+        inSlope: .00335693359
+        outSlope: .00335693359
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalPosition.x
+    path: nurse_body/nurse_armB
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: .983541489
+        inSlope: -.216608033
+        outSlope: -.216608033
+        tangentMode: 0
+      - time: .0166666675
+        value: .979931355
+        inSlope: -.229972586
+        outSlope: -.229972586
+        tangentMode: 0
+      - time: .0333333351
+        value: .975875735
+        inSlope: -.252880424
+        outSlope: -.252880424
+        tangentMode: 0
+      - time: .0500000045
+        value: .971502006
+        inSlope: -.266734958
+        outSlope: -.266734958
+        tangentMode: 0
+      - time: .0666666701
+        value: .96698457
+        inSlope: -.268823534
+        outSlope: -.268823534
+        tangentMode: 0
+      - time: .0833333358
+        value: .962541223
+        inSlope: -.263788134
+        outSlope: -.263788134
+        tangentMode: 0
+      - time: .100000001
+        value: .958191633
+        inSlope: -.262284309
+        outSlope: -.262284309
+        tangentMode: 0
+      - time: .116666667
+        value: .953798413
+        inSlope: -.264723271
+        outSlope: -.264723271
+        tangentMode: 0
+      - time: .13333334
+        value: .949367523
+        inSlope: -.266949505
+        outSlope: -.266949505
+        tangentMode: 0
+      - time: .150000006
+        value: .944900095
+        inSlope: -.269247323
+        outSlope: -.269247323
+        tangentMode: 0
+      - time: .166666672
+        value: .940392613
+        inSlope: -.271890193
+        outSlope: -.271890193
+        tangentMode: 0
+      - time: .183333337
+        value: .93583709
+        inSlope: -.275121361
+        outSlope: -.275121361
+        tangentMode: 0
+      - time: .200000003
+        value: .931221902
+        inSlope: -.27916792
+        outSlope: -.27916792
+        tangentMode: 0
+      - time: .216666669
+        value: .926531494
+        inSlope: -.284251601
+        outSlope: -.284251601
+        tangentMode: 0
+      - time: .233333334
+        value: .92174685
+        inSlope: -.290574461
+        outSlope: -.290574461
+        tangentMode: 0
+      - time: .25
+        value: .916845679
+        inSlope: -.298340201
+        outSlope: -.298340201
+        tangentMode: 0
+      - time: .266666681
+        value: .911802173
+        inSlope: -.307738543
+        outSlope: -.307738543
+        tangentMode: 0
+      - time: .283333361
+        value: .90658772
+        inSlope: -.318957299
+        outSlope: -.318957299
+        tangentMode: 0
+      - time: .300000042
+        value: .901170254
+        inSlope: -.332193077
+        outSlope: -.332193077
+        tangentMode: 0
+      - time: .316666722
+        value: .895514607
+        inSlope: -.347634315
+        outSlope: -.347634315
+        tangentMode: 0
+      - time: .333333343
+        value: .889582455
+        inSlope: -.35593012
+        outSlope: -.35593012
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalRotation.w
+    path: nurse_body/nurse_arm/nurse_fArm
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: .180682555
+        inSlope: 1.11916244
+        outSlope: 1.11916244
+        tangentMode: 0
+      - time: .0166666675
+        value: .199335262
+        inSlope: 1.12932086
+        outSlope: 1.12932086
+        tangentMode: 0
+      - time: .0333333351
+        value: .218326584
+        inSlope: 1.13087869
+        outSlope: 1.13087869
+        tangentMode: 0
+      - time: .0500000045
+        value: .237031221
+        inSlope: 1.09524739
+        outSlope: 1.09524739
+        tangentMode: 0
+      - time: .0666666701
+        value: .254834831
+        inSlope: 1.02312779
+        outSlope: 1.02312779
+        tangentMode: 0
+      - time: .0833333358
+        value: .271135479
+        inSlope: .938770533
+        outSlope: .938770533
+        tangentMode: 0
+      - time: .100000001
+        value: .28612718
+        inSlope: .879356921
+        outSlope: .879356921
+        tangentMode: 0
+      - time: .116666667
+        value: .300447375
+        inSlope: .841212153
+        outSlope: .841212153
+        tangentMode: 0
+      - time: .13333334
+        value: .314167589
+        inSlope: .807342112
+        outSlope: .807342112
+        tangentMode: 0
+      - time: .150000006
+        value: .327358782
+        inSlope: .777697623
+        outSlope: .777697623
+        tangentMode: 0
+      - time: .166666672
+        value: .340090841
+        inSlope: .752222896
+        outSlope: .752222896
+        tangentMode: 0
+      - time: .183333337
+        value: .352432877
+        inSlope: .730855525
+        outSlope: .730855525
+        tangentMode: 0
+      - time: .200000003
+        value: .36445269
+        inSlope: .713529348
+        outSlope: .713529348
+        tangentMode: 0
+      - time: .216666669
+        value: .376217186
+        inSlope: .700181782
+        outSlope: .700181782
+        tangentMode: 0
+      - time: .233333334
+        value: .387792081
+        inSlope: .690739512
+        outSlope: .690739512
+        tangentMode: 0
+      - time: .25
+        value: .399241835
+        inSlope: .685128927
+        outSlope: .685128927
+        tangentMode: 0
+      - time: .266666681
+        value: .410629719
+        inSlope: .683267117
+        outSlope: .683267117
+        tangentMode: 0
+      - time: .283333361
+        value: .422017425
+        inSlope: .685067773
+        outSlope: .685067773
+        tangentMode: 0
+      - time: .300000042
+        value: .433465332
+        inSlope: .690440238
+        outSlope: .690440238
+        tangentMode: 0
+      - time: .316666722
+        value: .44503212
+        inSlope: .699278474
+        outSlope: .699278474
+        tangentMode: 0
+      - time: .333333343
+        value: .456774592
+        inSlope: .704550266
+        outSlope: .704550266
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalRotation.z
+    path: nurse_body/nurse_arm/nurse_fArm
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0166666675
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0333333351
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0500000045
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0666666701
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0833333358
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .100000001
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .116666667
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .13333334
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .150000006
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .166666672
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .183333337
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .200000003
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .216666669
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .233333334
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .25
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .266666681
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .283333361
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .300000042
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .316666722
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .333333343
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalRotation.y
+    path: nurse_body/nurse_arm/nurse_fArm
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0166666675
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0333333351
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0500000045
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0666666701
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0833333358
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .100000001
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .116666667
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .13333334
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .150000006
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .166666672
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .183333337
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .200000003
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .216666669
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .233333334
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .25
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .266666681
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .283333361
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .300000042
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .316666722
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .333333343
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalRotation.x
+    path: nurse_body/nurse_arm/nurse_fArm
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .0833333358
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalPosition.z
+    path: nurse_body/nurse_armB/nurse_fArmB
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: -1.28542817
+        inSlope: .0114526749
+        outSlope: .0114526749
+        tangentMode: 10
+      - time: .0833333358
+        value: -1.28447378
+        inSlope: .0114526749
+        outSlope: .0114526749
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalPosition.y
+    path: nurse_body/nurse_armB/nurse_fArmB
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: -.28339681
+        inSlope: -.000303983688
+        outSlope: -.000303983688
+        tangentMode: 10
+      - time: .0833333358
+        value: -.283422142
+        inSlope: -.000303983688
+        outSlope: -.000303983688
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalPosition.x
+    path: nurse_body/nurse_armB/nurse_fArmB
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: -.99499917
+        inSlope: 1.48356187
+        outSlope: 1.48356187
+        tangentMode: 0
+      - time: .0166666675
+        value: -.970273137
+        inSlope: 2.22696114
+        outSlope: 2.22696114
+        tangentMode: 0
+      - time: .0333333351
+        value: -.920767128
+        inSlope: 3.54981923
+        outSlope: 3.54981923
+        tangentMode: 0
+      - time: .0500000045
+        value: -.851945817
+        inSlope: 4.2507844
+        outSlope: 4.2507844
+        tangentMode: 0
+      - time: .0666666701
+        value: -.779074311
+        inSlope: 3.8624115
+        outSlope: 3.8624115
+        tangentMode: 0
+      - time: .0833333358
+        value: -.723198771
+        inSlope: 2.70253515
+        outSlope: 2.70253515
+        tangentMode: 0
+      - time: .100000001
+        value: -.688989818
+        inSlope: 1.69762564
+        outSlope: 1.69762564
+        tangentMode: 0
+      - time: .116666667
+        value: -.666611254
+        inSlope: .998625696
+        outSlope: .998625696
+        tangentMode: 0
+      - time: .13333334
+        value: -.655702293
+        inSlope: .34152019
+        outSlope: .34152019
+        tangentMode: 0
+      - time: .150000006
+        value: -.655227244
+        inSlope: -.240485102
+        outSlope: -.240485102
+        tangentMode: 0
+      - time: .166666672
+        value: -.663718462
+        inSlope: -.726682007
+        outSlope: -.726682007
+        tangentMode: 0
+      - time: .183333337
+        value: -.679449975
+        inSlope: -1.10555124
+        outSlope: -1.10555124
+        tangentMode: 0
+      - time: .200000003
+        value: -.700570166
+        inSlope: -1.37284946
+        outSlope: -1.37284946
+        tangentMode: 0
+      - time: .216666669
+        value: -.72521162
+        inSlope: -1.53045964
+        outSlope: -1.53045964
+        tangentMode: 0
+      - time: .233333334
+        value: -.751585484
+        inSlope: -1.58543062
+        outSlope: -1.58543062
+        tangentMode: 0
+      - time: .25
+        value: -.778059304
+        inSlope: -1.54898763
+        outSlope: -1.54898763
+        tangentMode: 0
+      - time: .266666681
+        value: -.803218424
+        inSlope: -1.43526483
+        outSlope: -1.43526483
+        tangentMode: 0
+      - time: .283333361
+        value: -.825901508
+        inSlope: -1.25953567
+        outSlope: -1.25953567
+        tangentMode: 0
+      - time: .300000042
+        value: -.845202982
+        inSlope: -1.03608823
+        outSlope: -1.03608823
+        tangentMode: 0
+      - time: .316666722
+        value: -.86043781
+        inSlope: -.775788307
+        outSlope: -.775788307
+        tangentMode: 0
+      - time: .333333343
+        value: -.871062577
+        inSlope: -.63748771
+        outSlope: -.63748771
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalRotation.w
+    path: nurse_body/nurse_arm
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: .0998830497
+        inSlope: 8.52776909
+        outSlope: 8.52776909
+        tangentMode: 0
+      - time: .0166666675
+        value: .242012545
+        inSlope: 8.70688629
+        outSlope: 8.70688629
+        tangentMode: 0
+      - time: .0333333351
+        value: .390112609
+        inSlope: 8.44851971
+        outSlope: 8.44851971
+        tangentMode: 0
+      - time: .0500000045
+        value: .523629904
+        inSlope: 7.10456944
+        outSlope: 7.10456944
+        tangentMode: 0
+      - time: .0666666701
+        value: .626931608
+        inSlope: 5.01030254
+        outSlope: 5.01030254
+        tangentMode: 0
+      - time: .0833333358
+        value: .690639973
+        inSlope: 2.93518257
+        outSlope: 2.93518257
+        tangentMode: 0
+      - time: .100000001
+        value: .724771023
+        inSlope: 1.6429677
+        outSlope: 1.6429677
+        tangentMode: 0
+      - time: .116666667
+        value: .745405555
+        inSlope: .907455623
+        outSlope: .907455623
+        tangentMode: 0
+      - time: .13333334
+        value: .755019546
+        inSlope: .300788164
+        outSlope: .300788164
+        tangentMode: 0
+      - time: .150000006
+        value: .755431831
+        inSlope: -.21111311
+        outSlope: -.21111311
+        tangentMode: 0
+      - time: .166666672
+        value: .747982442
+        inSlope: -.651301205
+        outSlope: -.651301205
+        tangentMode: 0
+      - time: .183333337
+        value: .733721793
+        inSlope: -1.03196752
+        outSlope: -1.03196752
+        tangentMode: 0
+      - time: .200000003
+        value: .713583529
+        inSlope: -1.35587287
+        outSlope: -1.35587287
+        tangentMode: 0
+      - time: .216666669
+        value: .688526034
+        inSlope: -1.61843431
+        outSlope: -1.61843431
+        tangentMode: 0
+      - time: .233333334
+        value: .659635723
+        inSlope: -1.8100549
+        outSlope: -1.8100549
+        tangentMode: 0
+      - time: .25
+        value: .628190875
+        inSlope: -1.91853333
+        outSlope: -1.91853333
+        tangentMode: 0
+      - time: .266666681
+        value: .595684588
+        inSlope: -1.93129253
+        outSlope: -1.93129253
+        tangentMode: 0
+      - time: .283333361
+        value: .563814402
+        inSlope: -1.83717227
+        outSlope: -1.83717227
+        tangentMode: 0
+      - time: .300000042
+        value: .534445465
+        inSlope: -1.62776518
+        outSlope: -1.62776518
+        tangentMode: 0
+      - time: .316666722
+        value: .509555519
+        inSlope: -1.29820251
+        outSlope: -1.29820251
+        tangentMode: 0
+      - time: .333333343
+        value: .491172075
+        inSlope: -1.10300958
+        outSlope: -1.10300958
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalRotation.z
+    path: nurse_body/nurse_arm
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0166666675
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0333333351
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0500000045
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0666666701
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0833333358
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .100000001
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .116666667
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .13333334
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .150000006
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .166666672
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .183333337
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .200000003
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .216666669
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .233333334
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .25
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .266666681
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .283333361
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .300000042
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .316666722
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .333333343
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalRotation.y
+    path: nurse_body/nurse_arm
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0166666675
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0333333351
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0500000045
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0666666701
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0833333358
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .100000001
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .116666667
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .13333334
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .150000006
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .166666672
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .183333337
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .200000003
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .216666669
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .233333334
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .25
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .266666681
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .283333361
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .300000042
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .316666722
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .333333343
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalRotation.x
+    path: nurse_body/nurse_arm
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: -.204971313
+        inSlope: -6.20315552
+        outSlope: -6.20315552
+        tangentMode: 10
+      - time: .0833333358
+        value: -.72190094
+        inSlope: -6.20315552
+        outSlope: -6.20315552
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalPosition.x
+    path: nurse_body/nurse_head1/nurse_hair
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 1.0704422
+        inSlope: -1.63240814
+        outSlope: -1.63240814
+        tangentMode: 10
+      - time: .0833333358
+        value: .934408188
+        inSlope: -1.63240814
+        outSlope: -1.63240814
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalPosition.y
+    path: nurse_body/nurse_head1/nurse_hair
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .0833333358
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalPosition.z
+    path: nurse_body/nurse_head1/nurse_hair
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .0833333358
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .333333343
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalPosition.z
+    path: nurse_body/nurse_arm
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 2.04095459
+        inSlope: -.000595092773
+        outSlope: -.000595092773
+        tangentMode: 10
+      - time: .0833333358
+        value: 2.040905
+        inSlope: -.000720977783
+        outSlope: -.000720977783
+        tangentMode: 10
+      - time: .333333343
+        value: 2.04069328
+        inSlope: -.000846862793
+        outSlope: -.000846862793
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalPosition.y
+    path: nurse_body/nurse_arm
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: .0657577515
+        inSlope: .00219726562
+        outSlope: .00219726562
+        tangentMode: 10
+      - time: .0833333358
+        value: .0659408569
+        inSlope: .00286865234
+        outSlope: .00286865234
+        tangentMode: 10
+      - time: .333333343
+        value: .0668258667
+        inSlope: .00354003906
+        outSlope: .00354003906
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalPosition.x
+    path: nurse_body/nurse_arm
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0166666675
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0333333351
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0500000045
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0666666701
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0833333358
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .100000001
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .116666667
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .13333334
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .150000006
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .166666672
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .183333337
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .200000003
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .216666669
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .233333334
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .25
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .266666681
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .283333361
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .300000042
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .316666722
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .333333343
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalRotation.x
+    path: nurse_body/nurse_armB
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0166666675
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0333333351
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0500000045
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0666666701
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0833333358
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .100000001
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .116666667
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .13333334
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .150000006
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .166666672
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .183333337
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .200000003
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .216666669
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .233333334
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .25
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .266666681
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .283333361
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .300000042
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .316666722
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .333333343
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalRotation.y
+    path: nurse_body/nurse_armB
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: .0915500969
+        inSlope: -12.7595387
+        outSlope: -12.7595387
+        tangentMode: 0
+      - time: .0166666675
+        value: -.12110889
+        inSlope: -13.0767956
+        outSlope: -13.0767956
+        tangentMode: 0
+      - time: .0333333351
+        value: -.344343126
+        inSlope: -12.6351185
+        outSlope: -12.6351185
+        tangentMode: 0
+      - time: .0500000045
+        value: -.542279541
+        inSlope: -10.3517628
+        outSlope: -10.3517628
+        tangentMode: 0
+      - time: .0666666701
+        value: -.689401925
+        inSlope: -7.01569557
+        outSlope: -7.01569557
+        tangentMode: 0
+      - time: .0833333358
+        value: -.776136041
+        inSlope: -3.96708918
+        outSlope: -3.96708918
+        tangentMode: 0
+      - time: .100000001
+        value: -.821638227
+        inSlope: -2.191998
+        outSlope: -2.191998
+        tangentMode: 0
+      - time: .116666667
+        value: -.849202633
+        inSlope: -1.25237691
+        outSlope: -1.25237691
+        tangentMode: 0
+      - time: .13333334
+        value: -.863384128
+        inSlope: -.539393842
+        outSlope: -.539393842
+        tangentMode: 0
+      - time: .150000006
+        value: -.867182434
+        inSlope: .0286817625
+        outSlope: .0286817625
+        tangentMode: 0
+      - time: .166666672
+        value: -.862428069
+        inSlope: .509360492
+        outSlope: .509360492
+        tangentMode: 0
+      - time: .183333337
+        value: -.850203753
+        inSlope: .935670853
+        outSlope: .935670853
+        tangentMode: 0
+      - time: .200000003
+        value: -.831239045
+        inSlope: 1.31888342
+        outSlope: 1.31888342
+        tangentMode: 0
+      - time: .216666669
+        value: -.806240976
+        inSlope: 1.65289354
+        outSlope: 1.65289354
+        tangentMode: 0
+      - time: .233333334
+        value: -.776142597
+        inSlope: 1.91937995
+        outSlope: 1.91937995
+        tangentMode: 0
+      - time: .25
+        value: -.742261648
+        inSlope: 2.093256
+        outSlope: 2.093256
+        tangentMode: 0
+      - time: .266666681
+        value: -.706367373
+        inSlope: 2.14783072
+        outSlope: 2.14783072
+        tangentMode: 0
+      - time: .283333361
+        value: -.670667231
+        inSlope: 2.05917311
+        outSlope: 2.05917311
+        tangentMode: 0
+      - time: .300000042
+        value: -.637728214
+        inSlope: 1.80943274
+        outSlope: 1.80943274
+        tangentMode: 0
+      - time: .316666722
+        value: -.610352755
+        inSlope: 1.38894892
+        outSlope: 1.38894892
+        tangentMode: 0
+      - time: .333333343
+        value: -.591429949
+        inSlope: 1.13537145
+        outSlope: 1.13537145
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalRotation.z
+    path: nurse_body/nurse_armB
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: .995800495
+        inSlope: -.189675078
+        outSlope: -.189675078
+        tangentMode: 0
+      - time: .0166666675
+        value: .992639244
+        inSlope: -1.70869935
+        outSlope: -1.70869935
+        tangentMode: 0
+      - time: .0333333351
+        value: .938843846
+        inSlope: -4.5732317
+        outSlope: -4.5732317
+        tangentMode: 0
+      - time: .0500000045
+        value: .840198159
+        inSlope: -6.43394327
+        outSlope: -6.43394327
+        tangentMode: 0
+      - time: .0666666701
+        value: .724379063
+        inSlope: -6.28898144
+        outSlope: -6.28898144
+        tangentMode: 0
+      - time: .0833333358
+        value: .630565464
+        inSlope: -4.6310935
+        outSlope: -4.6310935
+        tangentMode: 0
+      - time: .100000001
+        value: .570009291
+        inSlope: -3.07494903
+        outSlope: -3.07494903
+        tangentMode: 0
+      - time: .116666667
+        value: .528067172
+        inSlope: -1.96386313
+        outSlope: -1.96386313
+        tangentMode: 0
+      - time: .13333334
+        value: .504547179
+        inSlope: -.902298391
+        outSlope: -.902298391
+        tangentMode: 0
+      - time: .150000006
+        value: .497990549
+        inSlope: .0489753485
+        outSlope: .0489753485
+        tangentMode: 0
+      - time: .166666672
+        value: .50617969
+        inSlope: .853897393
+        outSlope: .853897393
+        tangentMode: 0
+      - time: .183333337
+        value: .526453793
+        inSlope: 1.49206293
+        outSlope: 1.49206293
+        tangentMode: 0
+      - time: .200000003
+        value: .555915117
+        inSlope: 1.95400381
+        outSlope: 1.95400381
+        tangentMode: 0
+      - time: .216666669
+        value: .591587245
+        inSlope: 2.23926926
+        outSlope: 2.23926926
+        tangentMode: 0
+      - time: .233333334
+        value: .630557418
+        inSlope: 2.35568786
+        outSlope: 2.35568786
+        tangentMode: 0
+      - time: .25
+        value: .670110166
+        inSlope: 2.31864023
+        outSlope: 2.31864023
+        tangentMode: 0
+      - time: .266666681
+        value: .707845449
+        inSlope: 2.14944363
+        outSlope: 2.14944363
+        tangentMode: 0
+      - time: .283333361
+        value: .741758347
+        inSlope: 1.87247896
+        outSlope: 1.87247896
+        tangentMode: 0
+      - time: .300000042
+        value: .770261467
+        inSlope: 1.51114106
+        outSlope: 1.51114106
+        tangentMode: 0
+      - time: .316666722
+        value: .792129755
+        inSlope: 1.08284771
+        outSlope: 1.08284771
+        tangentMode: 0
+      - time: .333333343
+        value: .80635637
+        inSlope: .85359925
+        outSlope: .85359925
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalRotation.w
+    path: nurse_body/nurse_armB
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 1.15897369
+        inSlope: 1.86951113
+        outSlope: 1.86951113
+        tangentMode: 10
+      - time: .0833333358
+        value: 1.31476629
+        inSlope: 1.86951113
+        outSlope: 1.86951113
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalPosition.x
+    path: nurse_body/nurse_head1
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 3.08863831
+        inSlope: 3.54347992
+        outSlope: 3.54347992
+        tangentMode: 10
+      - time: .0833333358
+        value: 3.3839283
+        inSlope: 3.54347992
+        outSlope: 3.54347992
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalPosition.y
+    path: nurse_body/nurse_head1
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .0833333358
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalPosition.z
+    path: nurse_body/nurse_head1
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: .99999994
+        inSlope: -.0593554936
+        outSlope: -.0593554936
+        tangentMode: 0
+      - time: .0166666675
+        value: .999010682
+        inSlope: -.117682807
+        outSlope: -.117682807
+        tangentMode: 0
+      - time: .0333333351
+        value: .99607718
+        inSlope: -.234169334
+        outSlope: -.234169334
+        tangentMode: 0
+      - time: .0500000045
+        value: .991205037
+        inSlope: -.350203514
+        outSlope: -.350203514
+        tangentMode: 0
+      - time: .0666666701
+        value: .984403729
+        inSlope: -.465552866
+        outSlope: -.465552866
+        tangentMode: 0
+      - time: .0833333358
+        value: .97568661
+        inSlope: -.523027241
+        outSlope: -.523027241
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalRotation.w
+    path: nurse_body
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: -.000365385698
+        inSlope: -2.64630413
+        outSlope: -2.64630413
+        tangentMode: 0
+      - time: .0166666675
+        value: -.0444704555
+        inSlope: -2.64370751
+        outSlope: -2.64370751
+        tangentMode: 0
+      - time: .0333333351
+        value: -.0884889737
+        inSlope: -2.63594437
+        outSlope: -2.63594437
+        tangentMode: 0
+      - time: .0500000045
+        value: -.132335275
+        inSlope: -2.62305117
+        outSlope: -2.62305117
+        tangentMode: 0
+      - time: .0666666701
+        value: -.175924018
+        inSlope: -2.60505271
+        outSlope: -2.60505271
+        tangentMode: 0
+      - time: .0833333358
+        value: -.219170362
+        inSlope: -2.59478068
+        outSlope: -2.59478068
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalRotation.z
+    path: nurse_body
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0166666675
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0333333351
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0500000045
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0666666701
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0833333358
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalRotation.y
+    path: nurse_body
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0166666675
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0333333351
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0500000045
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0666666701
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0833333358
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalRotation.x
+    path: nurse_body
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .0833333358
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalPosition.z
+    path: nurse_body/nurse_booty/nurse_thighR
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: -.448873699
+        inSlope: -7.22408295e-05
+        outSlope: -7.22408295e-05
+        tangentMode: 10
+      - time: .0833333358
+        value: -.448879719
+        inSlope: -7.22408295e-05
+        outSlope: -7.22408295e-05
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalPosition.y
+    path: nurse_body/nurse_booty/nurse_thighR
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: .824520171
+        inSlope: -.000216722488
+        outSlope: -.000216722488
+        tangentMode: 10
+      - time: .0833333358
+        value: .82450211
+        inSlope: -.000216722488
+        outSlope: -.000216722488
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalPosition.x
+    path: nurse_body/nurse_booty/nurse_thighR
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0166666675
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0333333351
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0500000045
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0666666701
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0833333358
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalRotation.x
+    path: nurse_body/nurse_booty/nurse_thighR
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0166666675
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0333333351
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0500000045
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0666666701
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0833333358
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalRotation.y
+    path: nurse_body/nurse_booty/nurse_thighR
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: -.005368907
+        inSlope: 3.21709514
+        outSlope: 3.21709514
+        tangentMode: 0
+      - time: .0166666675
+        value: .048249349
+        inSlope: 3.21293211
+        outSlope: 3.21293211
+        tangentMode: 0
+      - time: .0333333351
+        value: .101728834
+        inSlope: 3.19999075
+        outSlope: 3.19999075
+        tangentMode: 0
+      - time: .0500000045
+        value: .15491572
+        inSlope: 3.17784548
+        outSlope: 3.17784548
+        tangentMode: 0
+      - time: .0666666701
+        value: .207657024
+        inSlope: 3.14656043
+        outSlope: 3.14656043
+        tangentMode: 0
+      - time: .0833333358
+        value: .25980106
+        inSlope: 3.12864232
+        outSlope: 3.12864232
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalRotation.z
+    path: nurse_body/nurse_booty/nurse_thighR
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: .999985576
+        inSlope: -.0690150261
+        outSlope: -.0690150261
+        tangentMode: 0
+      - time: .0166666675
+        value: .998835325
+        inSlope: -.155201554
+        outSlope: -.155201554
+        tangentMode: 0
+      - time: .0333333351
+        value: .994812191
+        inSlope: -.32722947
+        outSlope: -.32722947
+        tangentMode: 0
+      - time: .0500000045
+        value: .987927675
+        inSlope: -.498315096
+        outSlope: -.498315096
+        tangentMode: 0
+      - time: .0666666701
+        value: .978201687
+        inSlope: -.667964876
+        outSlope: -.667964876
+        tangentMode: 0
+      - time: .0833333358
+        value: .965662181
+        inSlope: -.752370417
+        outSlope: -.752370417
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalRotation.w
+    path: nurse_body/nurse_booty/nurse_thighR
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .0833333358
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalPosition.z
+    path: nurse_body/nurse_booty/nurse_thighL/nurse_legL
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: -1.33198547
+        inSlope: 1.41959667
+        outSlope: 1.41959667
+        tangentMode: 10
+      - time: .0833333358
+        value: -1.21368575
+        inSlope: 1.41959667
+        outSlope: 1.41959667
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalPosition.y
+    path: nurse_body/nurse_booty/nurse_thighL/nurse_legL
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 1.10389709
+        inSlope: 1.17408514
+        outSlope: 1.17408514
+        tangentMode: 10
+      - time: .0833333358
+        value: 1.20173752
+        inSlope: 1.17408514
+        outSlope: 1.17408514
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalPosition.x
+    path: nurse_body/nurse_booty/nurse_thighL/nurse_legL
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0166666675
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0333333351
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0500000045
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0666666701
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0833333358
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalRotation.x
+    path: nurse_body/nurse_booty/nurse_thighL/nurse_legL
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0166666675
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0333333351
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0500000045
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0666666701
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0833333358
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalRotation.y
+    path: nurse_body/nurse_booty/nurse_thighL/nurse_legL
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: .0175336208
+        inSlope: 3.00425005
+        outSlope: 3.00425005
+        tangentMode: 0
+      - time: .0166666675
+        value: .0676044598
+        inSlope: 2.99915648
+        outSlope: 2.99915648
+        tangentMode: 0
+      - time: .0333333351
+        value: .117505506
+        inSlope: 2.98520875
+        outSlope: 2.98520875
+        tangentMode: 0
+      - time: .0500000045
+        value: .167111427
+        inSlope: 2.96376276
+        outSlope: 2.96376276
+        tangentMode: 0
+      - time: .0666666701
+        value: .216297597
+        inSlope: 2.93487239
+        outSlope: 2.93487239
+        tangentMode: 0
+      - time: .0833333358
+        value: .2649405
+        inSlope: 2.91857433
+        outSlope: 2.91857433
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalRotation.z
+    path: nurse_body/nurse_booty/nurse_thighL/nurse_legL
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: .99984628
+        inSlope: -.128045082
+        outSlope: -.128045082
+        tangentMode: 0
+      - time: .0166666675
+        value: .997712195
+        inSlope: -.203222036
+        outSlope: -.203222036
+        tangentMode: 0
+      - time: .0333333351
+        value: .993072212
+        inSlope: -.35322544
+        outSlope: -.35322544
+        tangentMode: 0
+      - time: .0500000045
+        value: .985938013
+        inSlope: -.502341986
+        outSlope: -.502341986
+        tangentMode: 0
+      - time: .0666666701
+        value: .976327479
+        inSlope: -.650197923
+        outSlope: -.650197923
+        tangentMode: 0
+      - time: .0833333358
+        value: .96426475
+        inSlope: -.723763764
+        outSlope: -.723763764
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalRotation.w
+    path: nurse_body/nurse_booty/nurse_thighL/nurse_legL
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalScale.z
+    path: nurse_body/nurse_head1
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalScale.y
+    path: nurse_body/nurse_head1
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: -1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalScale.x
+    path: nurse_body/nurse_head1
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0166666675
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0333333351
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0500000045
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0666666701
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0833333358
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalRotation.x
+    path: nurse_body/nurse_head1
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0166666675
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0333333351
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0500000045
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0666666701
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0833333358
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalRotation.y
+    path: nurse_body/nurse_head1
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: .14946422
+        inSlope: .745800674
+        outSlope: .745800674
+        tangentMode: 0
+      - time: .0166666675
+        value: .161894232
+        inSlope: .745031357
+        outSlope: .745031357
+        tangentMode: 0
+      - time: .0333333351
+        value: .174298599
+        inSlope: .743434072
+        outSlope: .743434072
+        tangentMode: 0
+      - time: .0500000045
+        value: .18667537
+        inSlope: .741719246
+        outSlope: .741719246
+        tangentMode: 0
+      - time: .0666666701
+        value: .199022576
+        inSlope: .739886999
+        outSlope: .739886999
+        tangentMode: 0
+      - time: .0833333358
+        value: .211338267
+        inSlope: .738941491
+        outSlope: .738941491
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalRotation.z
+    path: nurse_body/nurse_head1
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: .988767147
+        inSlope: -.117541544
+        outSlope: -.117541544
+        tangentMode: 0
+      - time: .0166666675
+        value: .986808121
+        inSlope: -.122228265
+        outSlope: -.122228265
+        tangentMode: 0
+      - time: .0333333351
+        value: .984692872
+        inSlope: -.131594539
+        outSlope: -.131594539
+        tangentMode: 0
+      - time: .0500000045
+        value: .982421637
+        inSlope: -.140939355
+        outSlope: -.140939355
+        tangentMode: 0
+      - time: .0666666701
+        value: .979994893
+        inSlope: -.150259152
+        outSlope: -.150259152
+        tangentMode: 0
+      - time: .0833333358
+        value: .977412999
+        inSlope: -.154913679
+        outSlope: -.154913679
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalRotation.w
+    path: nurse_body/nurse_head1
+    classID: 4
+    script: {fileID: 0}
+  m_EulerEditorCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .0833333358
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: localEulerAnglesBaked.x
+    path: nurse_body/nurse_booty/nurse_thighL
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .0833333358
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: localEulerAnglesBaked.y
+    path: nurse_body/nurse_booty/nurse_thighL
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: -.262878418
+        inSlope: 75.1724854
+        outSlope: 75.1724854
+        tangentMode: 10
+      - time: .0833333358
+        value: 6.00149536
+        inSlope: 75.1724854
+        outSlope: 75.1724854
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: localEulerAnglesBaked.z
+    path: nurse_body/nurse_booty/nurse_thighL
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .0833333358
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: localEulerAnglesBaked.x
+    path: nurse_body/nurse_booty/nurse_thighR
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .0833333358
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: localEulerAnglesBaked.y
+    path: nurse_body/nurse_booty/nurse_thighR
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: -.615234375
+        inSlope: 368.781006
+        outSlope: 368.781006
+        tangentMode: 10
+      - time: .0833333358
+        value: 30.1165161
+        inSlope: 368.781006
+        outSlope: 368.781006
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: localEulerAnglesBaked.z
+    path: nurse_body/nurse_booty/nurse_thighR
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .0833333358
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: localEulerAnglesBaked.x
+    path: nurse_body/nurse_booty/nurse_thighR/nurse_legR
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .0833333358
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: localEulerAnglesBaked.y
+    path: nurse_body/nurse_booty/nurse_thighR/nurse_legR
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 3.31580615
+        inSlope: 298.543579
+        outSlope: 298.543579
+        tangentMode: 10
+      - time: .0833333358
+        value: 28.1944389
+        inSlope: 298.543579
+        outSlope: 298.543579
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: localEulerAnglesBaked.z
+    path: nurse_body/nurse_booty/nurse_thighR/nurse_legR
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .0833333358
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .333333343
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: localEulerAnglesBaked.x
+    path: nurse_body/nurse_arm/nurse_fArm
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .0833333358
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .333333343
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: localEulerAnglesBaked.y
+    path: nurse_body/nurse_arm/nurse_fArm
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 20.8190384
+        inSlope: 127.73584
+        outSlope: 127.73584
+        tangentMode: 10
+      - time: .0833333358
+        value: 31.4636917
+        inSlope: 109.657227
+        outSlope: 109.657227
+        tangentMode: 10
+      - time: .333333343
+        value: 54.358345
+        inSlope: 91.5786133
+        outSlope: 91.5786133
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: localEulerAnglesBaked.z
+    path: nurse_body/nurse_arm/nurse_fArm
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .0833333358
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .333333343
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: localEulerAnglesBaked.x
+    path: nurse_body/nurse_armB
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .0833333358
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .333333343
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: localEulerAnglesBaked.y
+    path: nurse_body/nurse_armB
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 10.505579
+        inSlope: -1347.86243
+        outSlope: -1347.86243
+        tangentMode: 10
+      - time: .0833333358
+        value: -101.816292
+        inSlope: -615.332825
+        outSlope: -615.332825
+        tangentMode: 10
+      - time: .333333343
+        value: -72.5170975
+        inSlope: 117.196777
+        outSlope: 117.196777
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: localEulerAnglesBaked.z
+    path: nurse_body/nurse_armB
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .0833333358
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: localEulerAnglesBaked.x
+    path: nurse_body/nurse_armB/nurse_fArmB
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .0833333358
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: localEulerAnglesBaked.y
+    path: nurse_body/nurse_armB/nurse_fArmB
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: .905517578
+        inSlope: -297.763367
+        outSlope: -297.763367
+        tangentMode: 10
+      - time: .0833333358
+        value: -23.9080963
+        inSlope: -297.763367
+        outSlope: -297.763367
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: localEulerAnglesBaked.z
+    path: nurse_body/nurse_armB/nurse_fArmB
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .0833333358
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .333333343
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: localEulerAnglesBaked.x
+    path: nurse_body/nurse_arm
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .0833333358
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .333333343
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: localEulerAnglesBaked.y
+    path: nurse_body/nurse_arm
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 348.535126
+        inSlope: -910.760376
+        outSlope: -910.760376
+        tangentMode: 10
+      - time: .0833333358
+        value: 272.638428
+        inSlope: -398.327637
+        outSlope: -398.327637
+        tangentMode: 10
+      - time: .333333343
+        value: 301.164703
+        inSlope: 114.105103
+        outSlope: 114.105103
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: localEulerAnglesBaked.z
+    path: nurse_body/nurse_arm
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .0833333358
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: localEulerAnglesBaked.x
+    path: nurse_body/nurse_head1
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .0833333358
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: localEulerAnglesBaked.y
+    path: nurse_body/nurse_head1
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 17.1917572
+        inSlope: 86.5178833
+        outSlope: 86.5178833
+        tangentMode: 10
+      - time: .0833333358
+        value: 24.4015808
+        inSlope: 86.5178833
+        outSlope: 86.5178833
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: localEulerAnglesBaked.z
+    path: nurse_body/nurse_head1
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .0833333358
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: localEulerAnglesBaked.x
+    path: nurse_body/nurse_booty
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .0833333358
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: localEulerAnglesBaked.y
+    path: nurse_body/nurse_booty
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 355.269989
+        inSlope: -301.423462
+        outSlope: -301.423462
+        tangentMode: 10
+      - time: .0833333358
+        value: 330.151367
+        inSlope: -301.423462
+        outSlope: -301.423462
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: localEulerAnglesBaked.z
+    path: nurse_body/nurse_booty
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .0833333358
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: localEulerAnglesBaked.x
+    path: nurse_body/nurse_booty/nurse_thighL/nurse_legL
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .0833333358
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: localEulerAnglesBaked.y
+    path: nurse_body/nurse_booty/nurse_thighL/nurse_legL
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 2.00930786
+        inSlope: 344.610352
+        outSlope: 344.610352
+        tangentMode: 10
+      - time: .0833333358
+        value: 30.7268372
+        inSlope: 344.610352
+        outSlope: 344.610352
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: localEulerAnglesBaked.z
+    path: nurse_body/nurse_booty/nurse_thighL/nurse_legL
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .0833333358
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: localEulerAnglesBaked.x
+    path: nurse_body
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .0833333358
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: localEulerAnglesBaked.y
+    path: nurse_body
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: -.0418701172
+        inSlope: -303.344971
+        outSlope: -303.344971
+        tangentMode: 10
+      - time: .0833333358
+        value: -25.3206177
+        inSlope: -303.344971
+        outSlope: -303.344971
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: localEulerAnglesBaked.z
+    path: nurse_body
+    classID: 4
+    script: {fileID: 0}
+  m_Events: []

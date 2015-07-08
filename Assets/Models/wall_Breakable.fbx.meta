@@ -1,0 +1,142 @@
+fileFormatVersion: 2
+guid: 7c0f8f135779c574090a165ad7d97d9c
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: polySurface37
+    100002: polySurface39
+    100004: polySurface41
+    100006: polySurface43
+    100008: polySurface45
+    100010: polySurface47
+    100012: polySurface49
+    100014: polySurface51
+    100016: polySurface53
+    100018: polySurface55
+    100020: //RootNode
+    100022: wallDebris1
+    100024: wallDebris10
+    100026: wallDebris11
+    100028: wallDebris12
+    100030: wallDebris2
+    100032: wallDebris3
+    100034: wallDebris4
+    100036: wallDebris5
+    100038: wallDebris6
+    100040: wallDebris7
+    100042: wallDebris8
+    100044: wallDebris9
+    400000: polySurface37
+    400002: polySurface39
+    400004: polySurface41
+    400006: polySurface43
+    400008: polySurface45
+    400010: polySurface47
+    400012: polySurface49
+    400014: polySurface51
+    400016: polySurface53
+    400018: polySurface55
+    400020: //RootNode
+    400022: wallDebris1
+    400024: wallDebris10
+    400026: wallDebris11
+    400028: wallDebris12
+    400030: wallDebris2
+    400032: wallDebris3
+    400034: wallDebris4
+    400036: wallDebris5
+    400038: wallDebris6
+    400040: wallDebris7
+    400042: wallDebris8
+    400044: wallDebris9
+    2300000: wallDebris1
+    2300002: wallDebris10
+    2300004: wallDebris11
+    2300006: wallDebris12
+    2300008: wallDebris2
+    2300010: wallDebris3
+    2300012: wallDebris4
+    2300014: wallDebris5
+    2300016: wallDebris6
+    2300018: wallDebris7
+    2300020: wallDebris8
+    2300022: wallDebris9
+    3300000: wallDebris1
+    3300002: wallDebris10
+    3300004: wallDebris11
+    3300006: wallDebris12
+    3300008: wallDebris2
+    3300010: wallDebris3
+    3300012: wallDebris4
+    3300014: wallDebris5
+    3300016: wallDebris6
+    3300018: wallDebris7
+    3300020: wallDebris8
+    3300022: wallDebris9
+    4300000: wallDebris2
+    4300002: wallDebris3
+    4300004: wallDebris1
+    4300006: wallDebris4
+    4300008: wallDebris5
+    4300010: wallDebris7
+    4300012: wallDebris6
+    4300014: wallDebris9
+    4300016: wallDebris8
+    4300018: wallDebris12
+    4300020: wallDebris10
+    4300022: wallDebris11
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  additionalBone: 0
+  userData: 

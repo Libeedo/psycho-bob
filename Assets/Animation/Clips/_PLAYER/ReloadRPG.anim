@@ -1,0 +1,612 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!74 &7400000
+AnimationClip:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: ReloadRPG
+  serializedVersion: 4
+  m_AnimationType: 2
+  m_Compressed: 0
+  m_UseHighQualityCurve: 1
+  m_RotationCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: -0, y: -0, z: -.00236701546, w: -.999997199}
+        inSlope: {x: -3.7479465e-39, y: -4.45003711e-38, z: NaN, w: -3.74790727e-39}
+        outSlope: {x: -0, y: -0, z: -2.75832534, w: .00923178997}
+        tangentMode: 0
+      - time: .716666639
+        value: {x: 0, y: 0, z: .539326966, w: -.842096448}
+        inSlope: {x: 0, y: 0, z: 1.6905818, w: 1.08103418}
+        outSlope: {x: 0, y: 0, z: 1.6958369, w: 1.08701813}
+        tangentMode: 0
+      - time: 1.06666672
+        value: {x: 0, y: 0, z: .539326966, w: -.842096448}
+        inSlope: {x: 0, y: 0, z: -.00170298945, w: -.00119209266}
+        outSlope: {x: 5.89809046e-39, y: 1.48192819e-14, z: 3.74793529e-39, w: 1.55363343e-34}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: weapon Transform/bazooka3D/handRbz
+  m_CompressedRotationCurves: []
+  m_PositionCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 1, y: .150000006, z: .100000001}
+        inSlope: {x: -2.69999981, y: -2.85000014, z: 0}
+        outSlope: {x: -2.69999981, y: -2.85000014, z: 0}
+        tangentMode: 107767200
+      - time: .333333343
+        value: {x: .100000001, y: -.800000012, z: .100000001}
+        inSlope: {x: 2.38043547, y: .570652246, z: 0}
+        outSlope: {x: 2.38043547, y: .570652246, z: 0}
+        tangentMode: 678913552
+      - time: .716666639
+        value: {x: 2.96000004, y: .730000019, z: .100000001}
+        inSlope: {x: 3.11614966, y: 1.73850954, z: 0}
+        outSlope: {x: -1.2285713, y: -.514285624, z: 0}
+        tangentMode: 0
+      - time: 1.06666672
+        value: {x: 2.52999997, y: .550000012, z: .100000001}
+        inSlope: {x: -1.2285713, y: -.514285624, z: 0}
+        outSlope: {x: -1.2285713, y: -.514285624, z: 0}
+        tangentMode: 15
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: weapon Transform/fArmB_R_IK
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: .851043701, y: -.658471584, z: -.13767305}
+        inSlope: {x: 1.50176239, y: -2.76320028, z: 1.82340753}
+        outSlope: {x: 1.50176239, y: -2.76320028, z: 1.82340753}
+        tangentMode: 1
+      - time: .333333343
+        value: {x: 1.35163116, y: -1.57953835, z: .47012943}
+        inSlope: {x: 2.85717154, y: 1.37700343, z: .0438998342}
+        outSlope: {x: 2.85717154, y: 1.37700343, z: .0438998342}
+        tangentMode: 0
+      - time: .716666639
+        value: {x: 2.96645355, y: .535390854, z: -.195186853}
+        inSlope: {x: 4.06157112, y: 7.67434978, z: -1.30217099}
+        outSlope: {x: -.530090213, y: -.177568659, z: .341552079}
+        tangentMode: 1885431159
+      - time: 1.06666672
+        value: {x: 2.78092194, y: .473241806, z: -.075643599}
+        inSlope: {x: -.530090213, y: -.177568659, z: .341552079}
+        outSlope: {x: -.530090213, y: -.177568659, z: .341552079}
+        tangentMode: 676855808
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: weapon Transform/bazooka3D/handRbz
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: -.469999999, y: -.00999999978, z: 0}
+        inSlope: {x: -1.38, y: .75, z: 0}
+        outSlope: {x: -1.38, y: .75, z: 0}
+        tangentMode: 677437988
+      - time: .333333343
+        value: {x: -.930000007, y: .239999995, z: 0}
+        inSlope: {x: -1.38, y: .75, z: 0}
+        outSlope: {x: -1.38, y: .75, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: weapon Transform
+  m_ScaleCurves: []
+  m_FloatCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 31
+      - time: .333333343
+        value: 1
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 31
+      - time: 1.16666663
+        value: 0
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 31
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_IsActive
+    path: weapon Transform/bazooka3D/handRbz/clip_rpg
+    classID: 1
+    script: {fileID: 0}
+  m_PPtrCurves: []
+  m_SampleRate: 60
+  m_WrapMode: 0
+  m_Bounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
+  m_ClipBindingConstant:
+    genericBindings:
+    - path: 3743395854
+      attribute: 1
+      script: {fileID: 0}
+      classID: 4
+      customType: 0
+      isPPtrCurve: 0
+    - path: 1553657995
+      attribute: 1
+      script: {fileID: 0}
+      classID: 4
+      customType: 0
+      isPPtrCurve: 0
+    - path: 281588669
+      attribute: 1
+      script: {fileID: 0}
+      classID: 4
+      customType: 0
+      isPPtrCurve: 0
+    - path: 1553657995
+      attribute: 2
+      script: {fileID: 0}
+      classID: 4
+      customType: 0
+      isPPtrCurve: 0
+    - path: 1819747241
+      attribute: 2086281974
+      script: {fileID: 0}
+      classID: 1
+      customType: 0
+      isPPtrCurve: 0
+    pptrCurveMapping: []
+  m_AnimationClipSettings:
+    serializedVersion: 2
+    m_StartTime: 0
+    m_StopTime: 1.16666663
+    m_OrientationOffsetY: 0
+    m_Level: 0
+    m_CycleOffset: 0
+    m_LoopTime: 0
+    m_LoopBlend: 0
+    m_LoopBlendOrientation: 0
+    m_LoopBlendPositionY: 0
+    m_LoopBlendPositionXZ: 0
+    m_KeepOriginalOrientation: 0
+    m_KeepOriginalPositionY: 1
+    m_KeepOriginalPositionXZ: 0
+    m_HeightFromFeet: 0
+    m_Mirror: 0
+  m_EditorCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 1
+        inSlope: -2.69999981
+        outSlope: -2.69999981
+        tangentMode: 10
+      - time: .333333343
+        value: .100000001
+        inSlope: 2.38043547
+        outSlope: 2.38043547
+        tangentMode: 10
+      - time: .716666639
+        value: 2.96000004
+        inSlope: 3.11614966
+        outSlope: -1.2285713
+        tangentMode: 17
+      - time: 1.06666672
+        value: 2.52999997
+        inSlope: -1.2285713
+        outSlope: -1.2285713
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalPosition.x
+    path: weapon Transform/fArmB_R_IK
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: .150000006
+        inSlope: -2.85000014
+        outSlope: -2.85000014
+        tangentMode: 10
+      - time: .333333343
+        value: -.800000012
+        inSlope: .570652246
+        outSlope: .570652246
+        tangentMode: 10
+      - time: .716666639
+        value: .730000019
+        inSlope: 1.73850954
+        outSlope: -.514285624
+        tangentMode: 17
+      - time: 1.06666672
+        value: .550000012
+        inSlope: -.514285624
+        outSlope: -.514285624
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalPosition.y
+    path: weapon Transform/fArmB_R_IK
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: .100000001
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .333333343
+        value: .100000001
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .716666639
+        value: .100000001
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 1.06666672
+        value: .100000001
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalPosition.z
+    path: weapon Transform/fArmB_R_IK
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: .851043701
+        inSlope: 1.50176239
+        outSlope: 1.50176239
+        tangentMode: 10
+      - time: .333333343
+        value: 1.35163116
+        inSlope: 2.85717154
+        outSlope: 2.85717154
+        tangentMode: 10
+      - time: .716666639
+        value: 2.96645355
+        inSlope: 4.06157112
+        outSlope: -.530090213
+        tangentMode: 17
+      - time: 1.06666672
+        value: 2.78092194
+        inSlope: -.530090213
+        outSlope: -.530090213
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalPosition.x
+    path: weapon Transform/bazooka3D/handRbz
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: -.658471584
+        inSlope: -2.76320028
+        outSlope: -2.76320028
+        tangentMode: 10
+      - time: .333333343
+        value: -1.57953835
+        inSlope: 1.37700343
+        outSlope: 1.37700343
+        tangentMode: 10
+      - time: .716666639
+        value: .535390854
+        inSlope: 7.67434978
+        outSlope: -.177568659
+        tangentMode: 17
+      - time: 1.06666672
+        value: .473241806
+        inSlope: -.177568659
+        outSlope: -.177568659
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalPosition.y
+    path: weapon Transform/bazooka3D/handRbz
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: -.13767305
+        inSlope: 1.82340753
+        outSlope: 1.82340753
+        tangentMode: 10
+      - time: .333333343
+        value: .47012943
+        inSlope: .0438998342
+        outSlope: .0438998342
+        tangentMode: 10
+      - time: .716666639
+        value: -.195186853
+        inSlope: -1.30217099
+        outSlope: .341552079
+        tangentMode: 17
+      - time: 1.06666672
+        value: -.075643599
+        inSlope: .341552079
+        outSlope: .341552079
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalPosition.z
+    path: weapon Transform/bazooka3D/handRbz
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: -.469999999
+        inSlope: -1.38
+        outSlope: -1.38
+        tangentMode: 10
+      - time: .333333343
+        value: -.930000007
+        inSlope: -1.38
+        outSlope: -1.38
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalPosition.x
+    path: weapon Transform
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: -.00999999978
+        inSlope: .75
+        outSlope: .75
+        tangentMode: 10
+      - time: .333333343
+        value: .239999995
+        inSlope: .75
+        outSlope: .75
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalPosition.y
+    path: weapon Transform
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .333333343
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalPosition.z
+    path: weapon Transform
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 31
+      - time: .333333343
+        value: 1
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 31
+      - time: 1.16666663
+        value: 0
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 31
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_IsActive
+    path: weapon Transform/bazooka3D/handRbz/clip_rpg
+    classID: 1
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: -0
+        inSlope: -3.7479465e-39
+        outSlope: -0
+        tangentMode: 0
+      - time: .716666639
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.06666672
+        value: 0
+        inSlope: 0
+        outSlope: 5.89809046e-39
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalRotation.x
+    path: weapon Transform/bazooka3D/handRbz
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: -0
+        inSlope: -4.45003711e-38
+        outSlope: -0
+        tangentMode: 0
+      - time: .716666639
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.06666672
+        value: 0
+        inSlope: 0
+        outSlope: 1.48192819e-14
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalRotation.y
+    path: weapon Transform/bazooka3D/handRbz
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: -.00236701546
+        inSlope: NaN
+        outSlope: -2.75832534
+        tangentMode: 0
+      - time: .716666639
+        value: .539326966
+        inSlope: 1.6905818
+        outSlope: 1.6958369
+        tangentMode: 0
+      - time: 1.06666672
+        value: .539326966
+        inSlope: -.00170298945
+        outSlope: 3.74793529e-39
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalRotation.z
+    path: weapon Transform/bazooka3D/handRbz
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: -.999997199
+        inSlope: -3.74790727e-39
+        outSlope: .00923178997
+        tangentMode: 0
+      - time: .716666639
+        value: -.842096448
+        inSlope: 1.08103418
+        outSlope: 1.08701813
+        tangentMode: 0
+      - time: 1.06666672
+        value: -.842096448
+        inSlope: -.00119209266
+        outSlope: 1.55363343e-34
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalRotation.w
+    path: weapon Transform/bazooka3D/handRbz
+    classID: 4
+    script: {fileID: 0}
+  m_EulerEditorCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: -0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .716666639
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.06666672
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: localEulerAngles.x
+    path: weapon Transform/bazooka3D/handRbz
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .716666639
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.06666672
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: localEulerAngles.y
+    path: weapon Transform/bazooka3D/handRbz
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: .271240234
+        inSlope: 315.249908
+        outSlope: 315.249908
+        tangentMode: 0
+      - time: .716666639
+        value: 294.724335
+        inSlope: -231.300873
+        outSlope: -231.300873
+        tangentMode: 0
+      - time: 1.06666672
+        value: 294.724335
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: localEulerAngles.z
+    path: weapon Transform/bazooka3D/handRbz
+    classID: 4
+    script: {fileID: 0}
+  m_Events: []

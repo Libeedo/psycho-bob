@@ -1,0 +1,127 @@
+fileFormatVersion: 2
+guid: dfc95d817b761e4469fb7866a6781462
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: pickUPcrate_SYMBOLS
+    21300002: pickUPcrate_SYMBOLS_0
+    21300004: pickUPcrate_SYMBOLS_MG
+    21300006: pickUPcrate_SYMBOLS_FLAME
+    21300008: pickUPcrate_SYMBOLS_3
+    21300010: pickUPcrate_SYMBOLS_PUNCH
+    21300012: pickUPcrate_SYMBOLS_BOMB
+    21300014: pickUPcrate_SYMBOLS_RPG
+    21300016: pickUPcrate_SYMBOLS_HEALTH
+    21300018: pickUPcrate_SYMBOLS_SHOTGUN
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: pickUPcrate_SYMBOLS_MG
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 720
+        width: 254
+        height: 253
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pickUPcrate_SYMBOLS_FLAME
+      rect:
+        serializedVersion: 2
+        x: 730
+        y: 720
+        width: 254
+        height: 253
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pickUPcrate_SYMBOLS_PUNCH
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 372
+        width: 255
+        height: 253
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pickUPcrate_SYMBOLS_BOMB
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 723
+        width: 254
+        height: 253
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pickUPcrate_SYMBOLS_RPG
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 381
+        width: 254
+        height: 253
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pickUPcrate_SYMBOLS_HEALTH
+      rect:
+        serializedVersion: 2
+        x: 730
+        y: 372
+        width: 254
+        height: 253
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pickUPcrate_SYMBOLS_SHOTGUN
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 55
+        width: 254
+        height: 253
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

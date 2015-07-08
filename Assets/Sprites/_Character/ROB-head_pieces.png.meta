@@ -1,0 +1,209 @@
+fileFormatVersion: 2
+guid: aca6eb644bec34c0bad9315be31529fa
+timeCreated: 1426551210
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: ROB-head_pieces_0
+    21300002: ROB-head_pieces_1
+    21300004: ROB-head_pieces_2
+    21300006: ROB-head_pieces_3
+    21300008: ROB-head_pieces_4
+    21300010: ROB-head_pieces_5
+    21300012: ROB-head_pieces_6
+    21300014: ROB-head_pieces_7
+    21300016: ROB-head_pieces_8
+    21300018: enemyHead_damage1
+    21300020: enemyHead_damage2
+    21300022: enemyHead_damage3
+    21300024: enemyHead_damage4
+    21300026: enemyHead_damage5
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: ROB-head_pieces_0
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 1283
+        width: 286
+        height: 243
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ROB-head_pieces_1
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 767
+        width: 233
+        height: 248
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ROB-head_pieces_2
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 578
+        width: 247
+        height: 181
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ROB-head_pieces_3
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 0
+        width: 154
+        height: 292
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ROB-head_pieces_4
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 314
+        width: 230
+        height: 250
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ROB-head_pieces_5
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 355
+        width: 275
+        height: 293
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ROB-head_pieces_6
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 29
+        width: 265
+        height: 266
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ROB-head_pieces_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 688
+        width: 291
+        height: 336
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ROB-head_pieces_8
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 44
+        width: 176
+        height: 261
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: enemyHead_damage1
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 847
+        width: 102
+        height: 154
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: enemyHead_damage2
+      rect:
+        serializedVersion: 2
+        x: 809
+        y: 859
+        width: 135
+        height: 144
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: enemyHead_damage3
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 671
+        width: 116
+        height: 156
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: enemyHead_damage4
+      rect:
+        serializedVersion: 2
+        x: 824
+        y: 648
+        width: 117
+        height: 174
+      alignment: 9
+      pivot: {x: .406582296, y: .561770082}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: enemyHead_damage5
+      rect:
+        serializedVersion: 2
+        x: 699
+        y: 512
+        width: 101
+        height: 125
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

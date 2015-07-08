@@ -1,0 +1,353 @@
+fileFormatVersion: 2
+guid: b6eace784fea4f6469928c5369de5996
+timeCreated: 1428608348
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: nurse
+    21300002: nurse_body
+    21300004: nurse_hair
+    21300006: nurse_head1
+    21300008: nurse_head2
+    21300010: nurse_head3
+    21300012: nurse_arm
+    21300014: nurse_booty
+    21300016: nurse_thighL
+    21300018: nurse_thighR
+    21300020: nurse_fArm
+    21300022: nurse_legR
+    21300024: nurse_legL
+    21300026: nurse_hand
+    21300028: nurse_bondage
+    21300030: nurse_body2
+    21300032: nurse_body3
+    21300034: nurse_purse
+    21300036: nurse_pStrap
+    21300038: nurse_pStrap2
+    21300040: nurse_handPhone1
+    21300042: nurse_handPhone2
+    21300044: nurse_handText1
+    21300046: nurse_handText2
+    21300048: nurse_arm_R
+    21300050: nurse_fArm_R
+    21300052: nurse_UIpointer
+    21300054: nurse_purseBlur
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 2
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: nurse_body
+      rect:
+        serializedVersion: 2
+        x: 637
+        y: 1552
+        width: 443
+        height: 429
+      alignment: 9
+      pivot: {x: .188866332, y: .216831595}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: nurse_hair
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 1555
+        width: 580
+        height: 492
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: nurse_head1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1205
+        width: 331
+        height: 292
+      alignment: 9
+      pivot: {x: .286700845, y: .23961316}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: nurse_head2
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 1163
+        width: 322
+        height: 354
+      alignment: 9
+      pivot: {x: .280739248, y: .285217643}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: nurse_head3
+      rect:
+        serializedVersion: 2
+        x: 739
+        y: 1168
+        width: 340
+        height: 355
+      alignment: 9
+      pivot: {x: .313421816, y: .248203337}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: nurse_arm
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 928
+        width: 102
+        height: 189
+      alignment: 9
+      pivot: {x: .74295181, y: .889189243}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: nurse_booty
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 865
+        width: 357
+        height: 256
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: nurse_thighL
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 902
+        width: 196
+        height: 184
+      alignment: 9
+      pivot: {x: .263238817, y: .775563598}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: nurse_thighR
+      rect:
+        serializedVersion: 2
+        x: 929
+        y: 904
+        width: 126
+        height: 182
+      alignment: 9
+      pivot: {x: .467860281, y: .764917791}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: nurse_fArm
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 712
+        width: 84
+        height: 181
+      alignment: 9
+      pivot: {x: .556692243, y: .8689605}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: nurse_legR
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 605
+        width: 92
+        height: 175
+      alignment: 9
+      pivot: {x: .675299644, y: .883150935}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: nurse_legL
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 601
+        width: 86
+        height: 180
+      alignment: 9
+      pivot: {x: .37405917, y: .843754947}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: nurse_hand
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 594
+        width: 70
+        height: 65
+      alignment: 9
+      pivot: {x: .756607831, y: .759578288}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: nurse_bondage
+      rect:
+        serializedVersion: 2
+        x: 613
+        y: 693
+        width: 204
+        height: 127
+      alignment: 9
+      pivot: {x: .340267181, y: .671051741}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: nurse_body2
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 39
+        width: 454
+        height: 483
+      alignment: 9
+      pivot: {x: .171034589, y: .286360145}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: nurse_body3
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 88
+        width: 465
+        height: 433
+      alignment: 9
+      pivot: {x: .167136967, y: .211520121}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: nurse_purse
+      rect:
+        serializedVersion: 2
+        x: 1046
+        y: 381
+        width: 191
+        height: 124
+      alignment: 9
+      pivot: {x: .408162236, y: .726767778}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: nurse_pStrap
+      rect:
+        serializedVersion: 2
+        x: 1095
+        y: 549
+        width: 168
+        height: 328
+      alignment: 9
+      pivot: {x: .426993221, y: .933522284}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: nurse_pStrap2
+      rect:
+        serializedVersion: 2
+        x: 847
+        y: 536
+        width: 167
+        height: 299
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: nurse_handPhone1
+      rect:
+        serializedVersion: 2
+        x: 1105
+        y: 1876
+        width: 116
+        height: 140
+      alignment: 9
+      pivot: {x: .20006904, y: .206025913}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: nurse_handPhone2
+      rect:
+        serializedVersion: 2
+        x: 1246
+        y: 1874
+        width: 122
+        height: 140
+      alignment: 9
+      pivot: {x: .220082775, y: .186377823}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: nurse_handText1
+      rect:
+        serializedVersion: 2
+        x: 1379
+        y: 1880
+        width: 70
+        height: 96
+      alignment: 9
+      pivot: {x: .191357419, y: .20234935}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: nurse_handText2
+      rect:
+        serializedVersion: 2
+        x: 1463
+        y: 1877
+        width: 73
+        height: 98
+      alignment: 9
+      pivot: {x: .251774192, y: .1870877}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: nurse_arm_R
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 927
+        width: 97
+        height: 179
+      alignment: 9
+      pivot: {x: .316794634, y: .881186008}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: nurse_fArm_R
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 715
+        width: 83
+        height: 179
+      alignment: 9
+      pivot: {x: .408474743, y: .886196375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: nurse_UIpointer
+      rect:
+        serializedVersion: 2
+        x: 1112
+        y: 1211
+        width: 930
+        height: 638
+      alignment: 9
+      pivot: {x: .22580409, y: .482132584}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: nurse_purseBlur
+      rect:
+        serializedVersion: 2
+        x: 1033
+        y: 0
+        width: 1009
+        height: 368
+      alignment: 9
+      pivot: {x: .882274151, y: .735036671}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

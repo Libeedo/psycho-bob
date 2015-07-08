@@ -1,0 +1,92 @@
+fileFormatVersion: 2
+guid: 63ccebc10b11ea04f829919decaf8546
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: psycho bob heads
+    21300002: psycho bob head
+    21300004: psycho bob headHurt
+    21300006: psycho bob headYell
+    21300008: psycho bob headShoot
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: psycho bob head
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 396
+        width: 301
+        height: 373
+      alignment: 9
+      pivot: {x: .609116375, y: .433669686}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: psycho bob headHurt
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 422
+        width: 315
+        height: 363
+      alignment: 9
+      pivot: {x: .623382151, y: .380250365}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: psycho bob headYell
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 313
+        height: 389
+      alignment: 9
+      pivot: {x: .626752257, y: .433334142}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: psycho bob headShoot
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 21
+        width: 315
+        height: 370
+      alignment: 9
+      pivot: {x: .605157733, y: .437698334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

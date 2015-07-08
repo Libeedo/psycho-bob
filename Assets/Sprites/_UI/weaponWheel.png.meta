@@ -1,0 +1,139 @@
+fileFormatVersion: 2
+guid: e47df4298dd0b5b4e943f4bb76a61a5f
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: weaponWheel_0
+    21300002: weaponWheel_1
+    21300004: weaponWheel_2
+    21300006: weaponWheel_3
+    21300008: weaponWheel_4
+    21300010: weaponWheel_5
+    21300012: weaponWheel_6
+    21300014: weaponWheel_7
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings:
+  - buildTarget: iPhone
+    maxTextureSize: 1024
+    textureFormat: -2
+    compressionQuality: 50
+  spriteSheet:
+    sprites:
+    - name: weaponWheel_0
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 1329
+        width: 715
+        height: 470
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: weaponWheel_1
+      rect:
+        serializedVersion: 2
+        x: 1393
+        y: 1205
+        width: 559
+        height: 617
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: weaponWheel_2
+      rect:
+        serializedVersion: 2
+        x: 981
+        y: 1125
+        width: 387
+        height: 697
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: weaponWheel_3
+      rect:
+        serializedVersion: 2
+        x: 1311
+        y: 697
+        width: 641
+        height: 476
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: weaponWheel_4
+      rect:
+        serializedVersion: 2
+        x: 1301
+        y: 73
+        width: 644
+        height: 476
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: weaponWheel_5
+      rect:
+        serializedVersion: 2
+        x: 828
+        y: 9
+        width: 385
+        height: 698
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: weaponWheel_6
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 504
+        width: 561
+        height: 680
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: weaponWheel_7
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 14
+        width: 249
+        height: 454
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
