@@ -159,7 +159,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400018}
   - 61: {fileID: 6100000}
-  - 114: {fileID: 11400000}
+  - 114: {fileID: 11436430}
   m_Layer: 18
   m_Name: stratPickup
   m_TagString: Pickup
@@ -645,9 +645,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: .819999993, y: 0}
+  m_Offset: {x: 1.02999997, y: 0}
   serializedVersion: 2
-  m_Size: {x: 4.75, y: 2.02999997}
+  m_Size: {x: 5.90999985, y: 3.3499999}
 --- !u!108 &10800000
 Light:
   m_ObjectHideFlags: 1
@@ -680,7 +680,7 @@ Light:
   m_ShadowRadius: 0
   m_ShadowAngle: 0
   m_AreaSize: {x: 1, y: 1}
---- !u!114 &11400000
+--- !u!114 &11436430
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -688,7 +688,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 100018}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 519d80ec6126c3a42b36207391bef862, type: 3}
+  m_Script: {fileID: 11500000, guid: 949296b2ab619b5469e654d96b82495c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   pickupMode: 1

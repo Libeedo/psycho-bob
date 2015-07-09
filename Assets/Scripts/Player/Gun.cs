@@ -1344,7 +1344,7 @@ public class Gun : MonoBehaviour
 		int lowNum = 0;//which num in array
 		foreach (Weapon w in weaponsForAmmo) {//get percentage of how full of ammo he is for all guns he has
 			if(w.hasGun){
-				float diff = ((float)w.clip + w.ammo)/w.maxAmmo * 100;
+				float diff = w.ammo/w.maxAmmo * 100;//((float)w.clip + w.ammo)/w.maxAmmo * 100;
 				//print (diff);
 
 				if(diff<low){//Get the lowest
@@ -1379,15 +1379,50 @@ public class Gun : MonoBehaviour
 		//print ("LOW "+lowNum+"  "+low);
 	
 	}
+	public void PickUpAmmoCrate()
+	{
+		if(activeWeapon.ammo<activeWeapon.maxAmmo){
+			Pickup(global::Pickup.PickupMode.AMMO,gunMode,activeWeapon.pickupAmmo);
+			return;
+		}
+		//GunMode gm = GunMode.UNARMED;
+		int count = 0;
+		float low = 110f;//lowest percentage
+		int lowNum = 0;//which num in array
+		foreach (Weapon w in weaponsForAmmo) {//get percentage of how full of ammo he is for all guns he has
+			if(w.hasGun){
+				float diff = w.ammo/w.maxAmmo * 100;
+				//print (diff);
+				
+				if(diff<low){//Get the lowest
+					low = diff;
+					lowNum = count;
+				}
+			}
+			count++;
+		}
+		
+		//Pickup puCS = pu.GetComponent<Pickup>();
+		//if  not full of ammo 
+		if(low < 100){
+			
+				//puCS.gunMode = gunModes[lowNum+2];
+				//puCS.howMuch = weapons[lowNum+2].pickupAmmo;
+			print (gunModes[lowNum+2]);
+			Pickup(global::Pickup.PickupMode.AMMO,gunModes[lowNum+2],weapons[lowNum+2].pickupAmmo);
+		}
+		//print ("LOW "+lowNum+"  "+low);
+		
+	}
 	//pickup guns or ammo
-	public void Pickup(Pickup pickup)
+	public void Pickup(global::Pickup.PickupMode pickupMode, GunMode gMode, int howMuch)
 	{
 		//print (pickup);
 		AudioSource.PlayClipAtPoint(reloadFX[0], transform.position);
-		if(pickup.pickupMode == global::Pickup.PickupMode.WEAPON){
-			GetComponent<Gun>().SwitchToWeapon(pickup.gunMode);
+		if(pickupMode == global::Pickup.PickupMode.WEAPON){
+			GetComponent<Gun>().SwitchToWeapon(gMode);
 			//AudioSource.PlayClipAtPoint(pickupFX[0], transform.position);
-			switch(pickup.gunMode){
+			switch(gMode){
 			case Gun.GunMode.HANDGUN:
 				handGunWeapon.hasGun = true;
 				weaponWheel.transform.Find("1").GetComponent<Toggle>().interactable = true;
@@ -1436,7 +1471,7 @@ public class Gun : MonoBehaviour
 			
 		}else{//ammo
 			Weapon whichAmmo= handGunWeapon;//new Weapon(gunMode,transform);
-			switch(pickup.gunMode){
+			switch(gMode){
 
 				case Gun.GunMode.MACHINEGUN:
 					whichAmmo = machineGunWeapon;
@@ -1457,7 +1492,7 @@ public class Gun : MonoBehaviour
 				whichAmmo = shotGunWeapon;
 				break;
 			}
-			whichAmmo.ammo += pickup.howMuch;
+			whichAmmo.ammo += howMuch;
 			if(whichAmmo.ammo > whichAmmo.maxAmmo){
 				whichAmmo.ammo = whichAmmo.maxAmmo;
 			}

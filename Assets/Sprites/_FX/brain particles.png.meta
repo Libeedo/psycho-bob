@@ -1,6 +1,11 @@
 fileFormatVersion: 2
 guid: 938fab61f81ee244c8128430562b5807
 TextureImporter:
+  fileIDToRecycleName:
+    21300000: brain particles_0
+    21300002: brain particles_1
+    21300004: brain particles_2
+    21300006: brain particles_3
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -19,6 +24,9 @@ TextureImporter:
   isReadable: 0
   grayScaleToAlpha: 0
   generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
   textureFormat: -1
   maxTextureSize: 1024
@@ -29,12 +37,14 @@ TextureImporter:
     wrapMode: 1
   nPOTScale: 0
   lightmap: 0
+  rGBM: 0
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
   alphaIsTransparency: 1
   textureType: 8
@@ -54,6 +64,7 @@ TextureImporter:
         height: 150
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: brain particles_1
       rect:
         serializedVersion: 2
@@ -63,6 +74,7 @@ TextureImporter:
         height: 197
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: brain particles_2
       rect:
         serializedVersion: 2
@@ -72,6 +84,7 @@ TextureImporter:
         height: 201
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: brain particles_3
       rect:
         serializedVersion: 2
@@ -81,5 +94,8 @@ TextureImporter:
         height: 181
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
+  assetBundleName: 
+  assetBundleVariant: 

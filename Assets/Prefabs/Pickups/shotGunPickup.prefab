@@ -57,7 +57,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400006}
   - 61: {fileID: 6100000}
-  - 114: {fileID: 11400000}
+  - 114: {fileID: 11484850}
   m_Layer: 18
   m_Name: shotGunPickup
   m_TagString: Pickup
@@ -127,7 +127,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100006}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 145.347519, y: -12.4875641, z: 1.10000002}
+  m_LocalPosition: {x: 115.5, y: 1143.59998, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400000}
@@ -220,7 +220,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: -.109999999}
   serializedVersion: 2
-  m_Size: {x: 6.82999992, y: 1.75999999}
+  m_Size: {x: 6.82999992, y: 3.23000002}
 --- !u!108 &10800000
 Light:
   m_ObjectHideFlags: 1
@@ -253,7 +253,7 @@ Light:
   m_ShadowRadius: 0
   m_ShadowAngle: 0
   m_AreaSize: {x: 1, y: 1}
---- !u!114 &11400000
+--- !u!114 &11484850
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -261,7 +261,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 100006}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 519d80ec6126c3a42b36207391bef862, type: 3}
+  m_Script: {fileID: 11500000, guid: 949296b2ab619b5469e654d96b82495c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   pickupMode: 1

@@ -1,6 +1,11 @@
 fileFormatVersion: 2
 guid: 45e502d5fb6a929419f47baf56803ade
 TextureImporter:
+  fileIDToRecycleName:
+    21300000: weapon_display_weapons_handgun
+    21300002: weapon_display_rpg
+    21300004: weapon_display_machinegun
+    21300006: weapon_display_bomb
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -19,6 +24,9 @@ TextureImporter:
   isReadable: 0
   grayScaleToAlpha: 0
   generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
   textureFormat: -1
   maxTextureSize: 1024
@@ -29,12 +37,14 @@ TextureImporter:
     wrapMode: 1
   nPOTScale: 0
   lightmap: 0
+  rGBM: 0
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
   alphaIsTransparency: 1
   textureType: 8
@@ -54,6 +64,7 @@ TextureImporter:
         height: 202
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: weapon_display_rpg
       rect:
         serializedVersion: 2
@@ -63,6 +74,7 @@ TextureImporter:
         height: 172
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: weapon_display_machinegun
       rect:
         serializedVersion: 2
@@ -72,6 +84,7 @@ TextureImporter:
         height: 198
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: weapon_display_bomb
       rect:
         serializedVersion: 2
@@ -81,5 +94,8 @@ TextureImporter:
         height: 124
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
+  assetBundleName: 
+  assetBundleVariant: 
