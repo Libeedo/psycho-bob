@@ -5,13 +5,13 @@ public class PickupTrigger : Pickup {
 
 
 	public Sprite[] symbols;
-	private Light lightt;
-	private float lightIntensity = 1.5f;
+	//private Light lightt;
+	//private float lightIntensity = 1.5f;
 	void Start()
 	{
-		lightt = transform.Find ("light").GetComponent<Light>();
+		//lightt = transform.Find ("light").GetComponent<Light>();
 
-		lightt.intensity = 0.3f;
+		//lightt.intensity = 0.3f;
 
 		if(pickupMode == PickupMode.AMMO){
 			SpriteRenderer sr = transform.Find("symbol").GetComponent<SpriteRenderer>();
@@ -32,7 +32,7 @@ public class PickupTrigger : Pickup {
 			transform.Find("symbol").GetComponent<SpriteRenderer>().sprite = symbols[6];
 			howMuch = 40;
 		}
-		InvokeRepeating("PulseLight",0,.1f);
+		//InvokeRepeating("PulseLight",0,.1f);
 	}
 	void OnTriggerEnter2D (Collider2D col) 
 	{
@@ -60,7 +60,7 @@ public class PickupTrigger : Pickup {
 			Destroy(gameObject);
 		}
 	}
-	void PulseLight()
+	/*void PulseLight()
 	{
 		lightt.intensity = Mathf.Lerp(lightt.intensity, lightIntensity, 15f * Time.deltaTime);
 		//light.intensity += lightIntensity;
@@ -70,5 +70,5 @@ public class PickupTrigger : Pickup {
 		}else if(lightt.intensity < 0.5f){
 			lightIntensity = 1.5f;
 		}
-	}
+	}*/
 }

@@ -7,9 +7,9 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: ammoCrate
-  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: _ALPHATEST_ON _EMISSION _NORMALMAP
-  m_LightmapFlags: 2
+  m_Shader: {fileID: 4800000, guid: 77e9a53f1daa9e0488691cd39c5ce1a6, type: 3}
+  m_ShaderKeywords: _ALPHATEST_ON _DETAIL_MULX2 _NORMALMAP
+  m_LightmapFlags: 5
   m_CustomRenderQueue: 2450
   stringTagMap:
     RenderType: TransparentCutOut
@@ -55,7 +55,7 @@ Material:
         first:
           name: _EmissionMap
         second:
-          m_Texture: {fileID: 2800000, guid: 93a726948508cc14eab67fb1abe2daa8, type: 3}
+          m_Texture: {fileID: 2800000, guid: 463790f488c3aca4f99d65aab9c21e65, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
@@ -69,9 +69,9 @@ Material:
         first:
           name: _DetailAlbedoMap
         second:
-          m_Texture: {fileID: 0}
+          m_Texture: {fileID: 2800000, guid: 5b303ff28ad9368468a2edd759cf458d, type: 3}
           m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
+          m_Offset: {x: .879999995, y: 4.15999985}
       data:
         first:
           name: _MetallicGlossMap
@@ -79,6 +79,13 @@ Material:
           m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _MKGlowTex
+        second:
+          m_Texture: {fileID: 2800000, guid: 463790f488c3aca4f99d65aab9c21e65, type: 3}
+          m_Scale: {x: .5, y: .5}
+          m_Offset: {x: 13.9906683, y: 0}
     m_Floats:
       data:
         first:
@@ -128,12 +135,44 @@ Material:
         first:
           name: _Metallic
         second: 0
+      data:
+        first:
+          name: _RimPower
+        second: 1.15999997
+      data:
+        first:
+          name: _MKGlowPower
+        second: 0
+      data:
+        first:
+          name: _MKGlowTexStrength
+        second: 3
+      data:
+        first:
+          name: _MKGlowOffSet
+        second: 0
     m_Colors:
       data:
         first:
           name: _EmissionColor
-        second: {r: .19604826, g: .216999993, b: 0, a: 1}
+        second: {r: 0, g: 0, b: 0, a: 1}
       data:
         first:
           name: _Color
         second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _ColorTint
+        second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _RimColor
+        second: {r: .25, g: .503448009, b: 1, a: 1}
+      data:
+        first:
+          name: _MKGlowColor
+        second: {r: 0, g: .172413826, b: 1, a: 1}
+      data:
+        first:
+          name: _MKGlowTexColor
+        second: {r: 0, g: .660953283, b: .720588207, a: 1}

@@ -9,7 +9,7 @@ public class AmmoCrate : MonoBehaviour {
 
 	void OnTriggerStay2D (Collider2D col) 
 	{
-		print ("hey "+col.name);
+		//print ("hey "+col.name);
 		if(canGiveAmmo){
 			if(col.tag == "Player"){
 				StartCoroutine("CantGiveAmmo");
