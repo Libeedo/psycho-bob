@@ -322,7 +322,9 @@ public class Nurse : MonoBehaviour {
 			//GetComponent<PolygonCollider2D>().enabled = true;
 			GetComponent<Rigidbody2D>().isKinematic = false;
 			gameObject.layer = LayerMask.NameToLayer("Nurse");
-
+			var t = transform.position;
+			t.z = 0;
+			transform.position = t;
 			playerCtrl.GetNurseFeet(transform.Find ("nurse_body").Find ("nurse_booty").Find ("bob_footL"),transform.Find ("nurse_body").Find ("bob_footR"));
 		}
 		GetComponent<Rigidbody2D>().mass = 1;
@@ -333,9 +335,11 @@ public class Nurse : MonoBehaviour {
 	public void DisMounted()
 	{
 		print ("dismounted");
+
 		status = NStatus.IDLE;
 		anim.Play("Nurse_Idle");
 		//GetComponent<Rigidbody2D>().isKinematic = true;
+		GetComponent<Rigidbody2D>().velocity = Vector2.zero;
 		GetComponent<Rigidbody2D>().mass = 20;
 		StartCoroutine("SaddleOn");
 		AudioSource.PlayClipAtPoint(saddleSFX[1],transform.position);

@@ -89,7 +89,7 @@ public class Level : MonoBehaviour {
 		Vector3 spawnSpot = spawnPoint.gameObject.transform.Find("spawnLoc").transform.position;//if error,  one spawnp0int needs to have selected checked in the inspector
 		spawnSpot.z = 0f;
 
-		playerT.transform.position = spawnSpot;
+		//playerT.transform.position = spawnSpot;
 		playerT.gameObject.SetActive(false);
 		GameObject.FindGameObjectWithTag("MainCamera").GetComponent<AudioListener>().enabled = true;
 		StartCoroutine(StartLevel());

@@ -1355,7 +1355,7 @@ public class Gun : MonoBehaviour
 			count++;
 		}
 
-		Pickup puCS = pu.GetComponent<Pickup>();
+		var puCS = pu.GetComponent<PickupTrigger>();
 		//if full of ammo 
 		if(low >= 100){
 			if(playerHealth.health==100){//if full of health
@@ -1365,11 +1365,11 @@ public class Gun : MonoBehaviour
 				puCS.howMuch = weapons[i].pickupAmmo;
 
 			}else{
-				puCS.pickupMode = global::Pickup.PickupMode.HEALTH;
+				puCS.pickupMode = global::PickupTrigger.PickupMode.HEALTH;
 			}
 		}else{ //not full of ammo
 			if(playerHealth.health<low){
-				puCS.pickupMode = global::Pickup.PickupMode.HEALTH;
+				puCS.pickupMode = global::PickupTrigger.PickupMode.HEALTH;
 			}else{
 				puCS.gunMode = gunModes[lowNum+2];
 				puCS.howMuch = weapons[lowNum+2].pickupAmmo;
@@ -1382,7 +1382,7 @@ public class Gun : MonoBehaviour
 	public void PickUpAmmoCrate()
 	{
 		if(activeWeapon.ammo<activeWeapon.maxAmmo){
-			Pickup(global::Pickup.PickupMode.AMMO,gunMode,activeWeapon.pickupAmmo);
+			Pickup(global::PickupTrigger.PickupMode.AMMO,gunMode,activeWeapon.pickupAmmo);
 			return;
 		}
 		//GunMode gm = GunMode.UNARMED;
@@ -1409,17 +1409,17 @@ public class Gun : MonoBehaviour
 				//puCS.gunMode = gunModes[lowNum+2];
 				//puCS.howMuch = weapons[lowNum+2].pickupAmmo;
 			print (gunModes[lowNum+2]);
-			Pickup(global::Pickup.PickupMode.AMMO,gunModes[lowNum+2],weapons[lowNum+2].pickupAmmo);
+			Pickup(global::PickupTrigger.PickupMode.AMMO,gunModes[lowNum+2],weapons[lowNum+2].pickupAmmo);
 		}
 		//print ("LOW "+lowNum+"  "+low);
 		
 	}
 	//pickup guns or ammo
-	public void Pickup(global::Pickup.PickupMode pickupMode, GunMode gMode, int howMuch)
+	public void Pickup(global::PickupTrigger.PickupMode pickupMode, GunMode gMode, int howMuch)
 	{
 		//print (pickup);
 		AudioSource.PlayClipAtPoint(reloadFX[0], transform.position);
-		if(pickupMode == global::Pickup.PickupMode.WEAPON){
+		if(pickupMode == global::PickupTrigger.PickupMode.WEAPON){
 			GetComponent<Gun>().SwitchToWeapon(gMode);
 			//AudioSource.PlayClipAtPoint(pickupFX[0], transform.position);
 			switch(gMode){

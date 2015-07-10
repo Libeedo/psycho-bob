@@ -720,7 +720,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3d28cb150ad86f4a8100312a4aea7a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uvAnimationRate: {x: .5, y: 0}
+  uvAnimationRate: {x: .699999988, y: 0}
   textureName: _MKGlowTex
 --- !u!114 &11440106
 MonoBehaviour:
@@ -733,7 +733,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3d28cb150ad86f4a8100312a4aea7a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uvAnimationRate: {x: .5, y: 0}
+  uvAnimationRate: {x: .699999988, y: 0}
   textureName: _MKGlowTex
 --- !u!114 &11452794
 MonoBehaviour:
@@ -746,7 +746,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3d28cb150ad86f4a8100312a4aea7a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uvAnimationRate: {x: .5, y: 0}
+  uvAnimationRate: {x: .699999988, y: 0}
   textureName: _MKGlowTex
 --- !u!114 &11461754
 MonoBehaviour:
@@ -759,7 +759,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3d28cb150ad86f4a8100312a4aea7a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uvAnimationRate: {x: .5, y: 0}
+  uvAnimationRate: {x: .699999988, y: 0}
   textureName: _MKGlowTex
 --- !u!114 &11467812
 MonoBehaviour:
@@ -772,7 +772,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3d28cb150ad86f4a8100312a4aea7a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uvAnimationRate: {x: .5, y: 0}
+  uvAnimationRate: {x: .699999988, y: 0}
   textureName: _MKGlowTex
 --- !u!114 &11475060
 MonoBehaviour:
@@ -785,7 +785,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3d28cb150ad86f4a8100312a4aea7a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uvAnimationRate: {x: .5, y: 0}
+  uvAnimationRate: {x: .699999988, y: 0}
   textureName: _MKGlowTex
 --- !u!114 &11476708
 MonoBehaviour:
@@ -798,7 +798,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3d28cb150ad86f4a8100312a4aea7a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uvAnimationRate: {x: .5, y: 0}
+  uvAnimationRate: {x: .699999988, y: 0}
   textureName: _MKGlowTex
 --- !u!114 &11477610
 MonoBehaviour:
@@ -811,7 +811,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3d28cb150ad86f4a8100312a4aea7a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uvAnimationRate: {x: .5, y: 0}
+  uvAnimationRate: {x: .699999988, y: 0}
   textureName: _MKGlowTex
 --- !u!114 &11482974
 MonoBehaviour:
@@ -824,7 +824,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3d28cb150ad86f4a8100312a4aea7a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uvAnimationRate: {x: .5, y: 0}
+  uvAnimationRate: {x: .699999988, y: 0}
   textureName: _MKGlowTex
 --- !u!114 &11492636
 MonoBehaviour:
@@ -837,7 +837,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3d28cb150ad86f4a8100312a4aea7a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uvAnimationRate: {x: .5, y: 0}
+  uvAnimationRate: {x: .699999988, y: 0}
   textureName: _MKGlowTex
 --- !u!114 &11496010
 MonoBehaviour:
@@ -850,7 +850,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3d28cb150ad86f4a8100312a4aea7a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uvAnimationRate: {x: .5, y: 0}
+  uvAnimationRate: {x: .699999988, y: 0}
   textureName: _MKGlowTex
 --- !u!1001 &100100000
 Prefab:

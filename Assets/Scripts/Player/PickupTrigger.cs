@@ -1,9 +1,18 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PickupTrigger : Pickup {
+public class PickupTrigger : MonoBehaviour{
 
-
+	public enum PickupMode
+	{
+		AMMO,
+		WEAPON,
+		HEALTH
+		
+	}
+	public PickupMode pickupMode = PickupMode.WEAPON;
+	public Gun.GunMode gunMode = Gun.GunMode.HANDGUN;
+	public int howMuch = 5;
 	public Sprite[] symbols;
 	//private Light lightt;
 	//private float lightIntensity = 1.5f;
