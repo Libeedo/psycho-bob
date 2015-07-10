@@ -197,8 +197,12 @@ public class PlayerControl : MonoBehaviour
 			anim.Play("Crouch");
 			status = Status.CROUCH;
 
+			rigidBody.isKinematic = true;// for oneway platform bug, player sinks when collider scales
+
 			boxCollider.size = new Vector2(1,2.4f);
 			boxCollider.offset = new Vector2(0,-0.12f);
+
+			rigidBody.isKinematic = false;
 		}
 		if (Input.GetButtonUp ("Crouch") && status == Status.CROUCH) {
 			if(saddleJoint){
@@ -544,6 +548,7 @@ public class PlayerControl : MonoBehaviour
 
 	void WallJump()
 	{
+		print ("wall jump " + wallJumping);
 		if(wallJumping){return;}
 		rigidBody.velocity = new Vector2(rigidBody.velocity.x,0f);
 		rigidBody.AddForce (new Vector2 (jumpForce*-dir, jumpForce*0.3f));	
@@ -558,6 +563,7 @@ public class PlayerControl : MonoBehaviour
 
 		int i = UnityEngine.Random.Range (0, jumpFX.Length);
 		AudioSource.PlayClipAtPoint(jumpFX[i], transform.position);
+		print ("wall jump2 " + wallJumping);
 	}
 	IEnumerator SwitchWallJumping()
 	{
@@ -609,6 +615,7 @@ public class PlayerControl : MonoBehaviour
 	{
 		var h  = Physics2D.Linecast (transform.position, transform.Find ("groundCheck3").position, groundLayerMsk);
 		if(h){
+			print ("unstuck "+h);
 			var c = groundHit.transform.GetComponent<Collider2D> ();
 			//Physics2D.IgnoreCollision (GetComponent<CircleCollider2D> (), c,true);
 			Physics2D.IgnoreCollision (GetComponent<BoxCollider2D> (), c, true);
@@ -815,7 +822,8 @@ public class PlayerControl : MonoBehaviour
 	}*/
 	public void Flip ()
 	{
-		// Switch the way the player is labelled as facing.
+		//rigidBody.isKinematic = true;//oneway platform bug // cant use this fix.  fucks up wall jumping
+
 		facingRight = !facingRight;
 		dir *= -1;
 		groundCheck2Offset *= -1; 
@@ -824,6 +832,8 @@ public class PlayerControl : MonoBehaviour
 		theScale.x *= -1;
 		transform.localScale = theScale;
 		gunCS.flipHead ();
+
+		//rigidBody.isKinematic = false;
 
 		//push him up a bit to counter one way platform bug. he falls thru one collider each flip,  if u disable weapon/weapon joint he doesnt . weird
 		var p = transform.position;
