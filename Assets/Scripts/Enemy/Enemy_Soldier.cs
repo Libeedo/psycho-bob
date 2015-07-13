@@ -517,7 +517,7 @@ public class Enemy_Soldier : Enemy
 	//}
 	void testFalling()
 	{
-		if(rb2D.velocity.y < -20f){
+		if(rb2D.velocity.y < -5f){
 			bool grounded =Physics2D.Linecast (transform.position, groundCheck.position, layerMsk);  
 			//print ("paracuting "+grounded);
 			if(!grounded){

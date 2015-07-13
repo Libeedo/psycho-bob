@@ -107,7 +107,8 @@ public class PlayerControl : MonoBehaviour
 		CLIMB, //climb a corner
 		GRAB,  // swinging on tail
 		BOUNCE,//dont walljump/slide/climb corner etc
-		RIDE//driving / riding nurse/vehicle
+		RIDE,//driving / riding nurse/vehicle
+		STUCK
 	}
 	private Status status = Status.IDLE;
 	//private Status lastStatus = Status.IDLE;
@@ -158,6 +159,7 @@ public class PlayerControl : MonoBehaviour
 		groundMsk1 = layerMsk1 | layerMsk2 | layerMsk3 | layerMsk4;
 		groundMsk2 = layerMsk1 | layerMsk2 | layerMsk4;//for falling thru OneWayGround
 		groundLayerMsk = groundMsk1;
+
 
 
 	}
@@ -393,7 +395,7 @@ public class PlayerControl : MonoBehaviour
 					tryGrabbing();
 					if(Math.Abs(rigidBody.velocity.y) < 0.0001f){
 						print ("stuck");
-						UnstuckCorner();
+						StartCoroutine("UnstuckCorner");
 						//rigidBody.AddForce(new Vector2(0,20f));
 					}
 					break;
@@ -613,18 +615,24 @@ public class PlayerControl : MonoBehaviour
 	}
 	IEnumerator UnstuckCorner()
 	{
-		var h  = Physics2D.Linecast (transform.position, transform.Find ("groundCheck3").position, groundLayerMsk);
-		if(h){
-			print ("unstuck "+h);
-			var c = groundHit.transform.GetComponent<Collider2D> ();
-			//Physics2D.IgnoreCollision (GetComponent<CircleCollider2D> (), c,true);
-			Physics2D.IgnoreCollision (GetComponent<BoxCollider2D> (), c, true);
-			//groundLayerMsk = groundMsk2;
-			yield return new WaitForSeconds (0.2f);
+
+		//var h  = Physics2D.Linecast (transform.position, transform.Find ("groundCheck3").position, groundLayerMsk);
+		//if(h){
+		print ("unstuck ");
+		//var c = groundHit.transform.GetComponent<Collider2D> ();
+		//Physics2D.IgnoreCollision (GetComponent<CircleCollider2D> (), c,true);
+		//Physics2D.IgnoreCollision (GetComponent<BoxCollider2D> (), c, true);
+		//groundLayerMsk = groundMsk2;
+		Physics2D.IgnoreLayerCollision(9,12,true);
+		status = Status.STUCK;
+		rigidBody.AddForce(Vector2.up*20);
+		yield return new WaitForSeconds (0.1f);
+		Physics2D.IgnoreLayerCollision(9,12,false);
+		status = Status.FALL;
 			//Physics2D.IgnoreCollision (GetComponent<CircleCollider2D> (), c,false);
-			Physics2D.IgnoreCollision (GetComponent<BoxCollider2D> (), c, false);
+			//Physics2D.IgnoreCollision (GetComponent<BoxCollider2D> (), c, false);
 			//groundLayerMsk = groundMsk1;
-		}
+
 	}
 	public void Bounce(Vector2 power)
 	{

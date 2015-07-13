@@ -27,7 +27,7 @@ public class Enemy_Ragdoll : Enemy
 
 
 	public bool grabbed = false;
-
+	public AudioClip[] deathFX;
 	void Awake() 
 	{
 	
@@ -323,8 +323,8 @@ public class Enemy_Ragdoll : Enemy
 		//Level.instance.addBodyCount(gameObject);
 	
 		// Play a random audioclip from the deathClips array.
-		//int i = Random.Range(0, deathClips.Length);
-		//AudioSource.PlayClipAtPoint(deathClips[i], transform.position);
+		int i = Random.Range(0, deathFX.Length);
+		AudioSource.PlayClipAtPoint(deathFX[i], transform.position);
 		
 
 		if(!headLess){

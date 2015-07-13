@@ -187,7 +187,7 @@ public class Gun : MonoBehaviour
 
 
 
-		yellSFX = playerCtrl.jumpFX;//make kick yell SFX same as jump from player control
+		//yellSFX = playerCtrl.jumpFX;//make kick yell SFX same as jump from player control
 
 
 		head = playerT.Find("head Transform");
@@ -629,6 +629,8 @@ public class Gun : MonoBehaviour
 			}
 			weaponWheel.transform.localScale = theScale;
 			weaponWheel.SetActive(true);
+			//InvokeRepeating("WeaponWheelCursor",0,0.1f);
+		
 		}
 
 		//fire button down
@@ -711,7 +713,7 @@ public class Gun : MonoBehaviour
 			weaponWheel.SetActive(false);
 
 			SwitchWeapons();
-			
+
 			Time.timeScale = 1;
 		}
 		//RELOAD
@@ -950,6 +952,7 @@ public class Gun : MonoBehaviour
 	}
 
 	//SWITCHING WEAPONS
+
 	public void SwitchWeaponMode(int mode)//used by event triggers on weapon wheel
 	{
 		if (weapons [mode].hasGun) {

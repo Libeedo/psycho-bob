@@ -20,7 +20,8 @@ public class Enemy_Dickbug : Enemy {
 
 		FALLING,
 		RAGDOLL,
-		ATTACK
+		ATTACK,
+		HURT
 		
 	}
 	public ebStatus status = ebStatus.WALKING;
@@ -137,9 +138,27 @@ public class Enemy_Dickbug : Enemy {
 
 		eDamage.makeBodyBulletHole();
 		base.Shot (headshot, damage,force,pos);
+		//switchToRagdoll();
+		status = ebStatus.HURT;
+		//Vector3 force = GetBlastDirection(transform.position,ePos);
+		StartCoroutine("StopHurt");
+		//var d = GetBlastTorque(force);
+		//force.y = damage/2;
+		
+		rb2D.AddForce (force * damage/10,ForceMode2D.Impulse);
+		//rb2D.AddTorque(damage * d);
+
 		if (died) {
 			Death();
 		}
+	}
+	IEnumerator StopHurt()
+	{
+		yield return new WaitForSeconds(0.3f);
+		if(!dead){
+			status = ebStatus.RAGDOLL;
+		}
+
 	}
 	public override void BlownUp(bool headshot, float damage,Vector3 ePos)
 	{
