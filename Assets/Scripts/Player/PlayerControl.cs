@@ -113,6 +113,10 @@ public class PlayerControl : MonoBehaviour
 	private Status status = Status.IDLE;
 	//private Status lastStatus = Status.IDLE;
 
+	private delegate void State ();
+	private State stateMethod;
+
+
 	private HingeJoint2D saddleJoint;
 	private Transform[] feet = new Transform[4];
 	private SimpleCCD[] legIK = new SimpleCCD[2];
@@ -160,7 +164,7 @@ public class PlayerControl : MonoBehaviour
 		groundMsk2 = layerMsk1 | layerMsk2 | layerMsk4;//for falling thru OneWayGround
 		groundLayerMsk = groundMsk1;
 
-
+		stateMethod = new State (IdleGround);
 
 	}
 
@@ -198,6 +202,7 @@ public class PlayerControl : MonoBehaviour
 		if (Input.GetButton ("Crouch") && grounded){//status == Status.IDLE) {
 			anim.Play("Crouch");
 			status = Status.CROUCH;
+			stateMethod = CrouchGround;
 
 			rigidBody.isKinematic = true;// for oneway platform bug, player sinks when collider scales
 
@@ -212,6 +217,7 @@ public class PlayerControl : MonoBehaviour
 				anim.Play ("BootyRide");
 			}else{
 				status = Status.IDLE;
+				stateMethod = IdleGround;
 				anim.Play("Idle");
 			}
 			boxCollider.size = new Vector2(1,4.3f);
@@ -232,7 +238,8 @@ public class PlayerControl : MonoBehaviour
 		//print (vVel);
 
 		anim.SetFloat ("Speed", Mathf.Abs (hVel));
-
+		stateMethod ();
+		/*return;
 		if(grounded){          /////    ON THE GROUND!!!!!!!!!!!!!!!!!!!
 
 			switch(status)
@@ -340,10 +347,10 @@ public class PlayerControl : MonoBehaviour
 			//case Status.RIDE:
 
 				//break;
-				/*case Status.BOUNCE:
-					status = Status.IDLE;
-					anim.Play ("Idle");
-					break;*/
+				// Status.BOUNCE:
+					//status = Status.IDLE;
+					//anim.Play ("Idle");
+					//break;
 			}
 		}else{////               IN THE AIR!!!!!!
 			switch(status)
@@ -421,7 +428,7 @@ public class PlayerControl : MonoBehaviour
 					break;
 					
 				case Status.CLIMB:
-					Climb ();
+					//Climb ();
 					break;
 				case Status.BOUNCE:
 					Move (hVel/3f);
@@ -430,12 +437,205 @@ public class PlayerControl : MonoBehaviour
 				
 				//break;
 			}
-		}
+		}*/
 		//if(status != lastStatus){             ///GET RID OF THIS !!!!!!!!!!!
 			//print (grabbing+"         "+lastStatus+"  "+status);
 			//lastStatus = status;
 		//}
 
+	}
+	private void IdleGround()
+	{
+		if (CheckGrounded ()) {
+			if (Mathf.Abs (hVel) > 0f) {
+					//print("idle to run");
+					status = Status.RUN;
+					stateMethod = RunGround;
+
+			}//else if(Math.Abs(rigidBody.velocity.x) > 0.001f){
+			//rigidBody.velocity = new Vector2(rigidBody.velocity.x * 0.01f,rigidBody.velocity.y);
+			//}
+			if (sliding) {
+					status = Status.SLIDE;	
+					stateMethod = SlideGround;
+					anim.Play ("Slide");
+			}
+			if (jump) {
+					Jump ();
+			}
+		}
+	}
+	private void RunGround()
+	{
+		if (CheckGrounded ()) {
+			Move (hVel);
+			if (Mathf.Abs (hVel) == 0f) {
+					rigidBody.velocity = new Vector2 (rigidBody.velocity.x * 0.25f, rigidBody.velocity.y);
+					//print("run to dile");
+					status = Status.IDLE;
+					stateMethod = IdleGround;
+					//anim.Play ("Idle");
+			}
+			if (sliding) {
+					status = Status.SLIDE;
+					stateMethod = SlideGround;
+					anim.Play ("Slide");
+			}
+			if (jump) {
+					Jump ();
+			}
+		}
+	}
+	private void CrouchGround()
+	{
+		if (CheckGrounded ()) {
+			if (jump && !saddleJoint) {
+				//var b = GetComponent<BoxCollider2D>();
+				boxCollider.size = new Vector2 (1, 4.3f);
+				boxCollider.offset = new Vector2 (0, 0.9f);
+
+				if (groundHit.transform.GetComponent<PlatformEffector2D> ()) {//if 1 way platform? jump down (crouchJump)
+
+						CrouchJump ();
+				} else {
+						Jump ();
+				}
+			}
+		}
+	}
+	private void SlideGround()
+	{
+		if(CheckGrounded()){
+			SlideMove (hVel);
+			trySliding();
+			if(!sliding){
+				status = Status.IDLE;	
+				stateMethod = IdleGround;
+				anim.Play ("Idle");
+			}
+			if(jump){
+				sliding = false;
+				rigidBody.velocity = new Vector2(rigidBody.velocity.x,0f);//???????????????????
+				Jump ();
+			}
+		}
+	}
+
+	private void JumpAir()
+	{
+		//hit ground>?
+		if(rigidBody.velocity.y <= 0f){
+			if(!CheckAirborne()){
+				return;
+			}
+		}
+
+		Move (hVel * 0.7f);
+		if(jump){//jump button held down - go higher
+			//print ("jumping");
+			Jumping ();
+		}
+		if(rigidBody.velocity.y < 0.001f){
+			sliding = false;
+			status = Status.FALL;
+			stateMethod = FallAir;
+			anim.Play ("Fall");
+		}
+		tryWallSlide(hVel);
+		tryGrabbing();
+
+	}
+	private void FallAir()
+	{
+		//hit ground?
+		if (CheckAirborne ()) {
+			Move (hVel * 0.7f);
+			tryWallSlide (hVel);
+			tryGrabbing ();
+			if (Math.Abs (rigidBody.velocity.y) < 0.0001f) {
+					print ("stuck");
+					StartCoroutine ("UnstuckCorner");
+					//rigidBody.AddForce(new Vector2(0,20f));
+			}
+		}
+	
+	}
+	private void WallAir()
+	{
+		if (CheckAirborne ()) {
+			WallMove (hVel);
+			if (jump) {
+					WallJump ();
+			}
+		} else {
+			onWall = false;
+		}
+	}
+	private void GrabAir()
+	{
+		if (CheckAirborne()) {
+			Move (hVel / 5f);
+			if (jump) {
+				unGrab ();
+				if (Input.GetAxis ("Vertical") < 0) {
+					status = Status.FALL;
+					stateMethod = FallAir;
+					anim.Play ("Fall");
+				} else {
+					Jump ();
+				}
+			}
+		} else {
+			unGrab();
+		}
+	}
+	private void ClimbAir()
+	{
+		if (CheckAirborne ()) {
+			rigidBody.velocity = new Vector2(0f,15f);
+			//float dir = -1;
+			//if(facingRight){
+			//dir =1f;
+			//  }
+			
+			Vector2 pos2 = new Vector2 (groundCheck.position.x+(2f*dir),groundCheck.position.y);
+			bool cornerGrab = Physics2D.Linecast (groundCheck.position, pos2, groundLayerMsk);
+			if(!cornerGrab){
+				status = Status.IDLE;
+				stateMethod = IdleGround;
+				//climbing = false;
+				float vel = 300f;
+				
+				rigidBody.velocity = Vector2.zero;//new Vector2(rigidbody2D.velocity.x,0f);
+				rigidBody.AddForce(new Vector2(vel*dir,20f));
+				
+			}
+		}
+	}
+	private bool CheckAirborne()
+	{
+		//return true;
+		if (grounded) {
+			status = Status.IDLE;
+			stateMethod = IdleGround;
+			aud.volume  = -rigidBody.velocity.y/10f;
+			aud.Play ();
+			anim.Play ("LandGround");
+			rigidBody.velocity = new Vector2(rigidBody.velocity.x * 0.3f,rigidBody.velocity.y);////????????????????
+			return false;
+		}
+		return true;
+	}
+	private bool CheckGrounded()
+	{
+		if (grounded) {
+			return true;
+		}else{
+			status = Status.FALL;
+			stateMethod = FallAir;
+			anim.Play ("Fall");
+			return false;
+		}
 	}
 	void Move(float vel)
 	{
@@ -505,6 +705,7 @@ public class PlayerControl : MonoBehaviour
 		if(awayWallCount < 0f){
 			//print ("away drop");
 			status = Status.FALL;
+			stateMethod = FallAir;
 			anim.Play ("Fall");
 			onWall = false;
 			legs.rotation  = Quaternion.Euler (new Vector3 (0, 0, 0));
@@ -524,6 +725,7 @@ public class PlayerControl : MonoBehaviour
 			anim.Play ("Climb");
 			//climbing = true;
 			status = Status.CLIMB;
+			stateMethod = ClimbAir;
 			legs.rotation  = Quaternion.Euler (new Vector3 (0, 0, 0));
 			onWall = false;
 		}
@@ -555,6 +757,8 @@ public class PlayerControl : MonoBehaviour
 		rigidBody.velocity = new Vector2(rigidBody.velocity.x,0f);
 		rigidBody.AddForce (new Vector2 (jumpForce*-dir, jumpForce*0.3f));	
 		status = Status.JUMP;
+		stateMethod = JumpAir;
+
 		anim.Play ("Jump");
 		onWall = false;
 		legs.rotation  = Quaternion.Euler (new Vector3 (0, 0, 0));
@@ -575,12 +779,11 @@ public class PlayerControl : MonoBehaviour
 	}
 	void Jump()
 	{
-
+		status = Status.JUMP;
+		stateMethod = JumpAir;
+		anim.Play ("Jump");
 		rigidBody.AddForce (new Vector2 (0, jumpForce));	
 		//rigidbody2D.velocity += new Vector2 (PlatformVelocity.x,PlatformVelocity.y);///??????????????????? really needed? for adding moving platform velocity to jump
-
-		status = Status.JUMP;
-		anim.Play ("Jump");
 		stillJumping = true;
 		legs.rotation  = Quaternion.Euler (new Vector3 (0, 0, 0));
 		int i = UnityEngine.Random.Range (0, jumpFX.Length);
@@ -597,6 +800,7 @@ public class PlayerControl : MonoBehaviour
 	private void CrouchJump()
 	{
 		status = Status.FALL;
+		stateMethod = FallAir;
 		anim.Play ("Fall");
 		legs.rotation  = Quaternion.Euler (new Vector3 (0, 0, 0));
 
@@ -625,10 +829,14 @@ public class PlayerControl : MonoBehaviour
 		//groundLayerMsk = groundMsk2;
 		Physics2D.IgnoreLayerCollision(9,12,true);
 		status = Status.STUCK;
+		stateMethod = null;
+
 		rigidBody.AddForce(Vector2.up*20);
 		yield return new WaitForSeconds (0.1f);
 		Physics2D.IgnoreLayerCollision(9,12,false);
+
 		status = Status.FALL;
+		stateMethod = FallAir;
 			//Physics2D.IgnoreCollision (GetComponent<CircleCollider2D> (), c,false);
 			//Physics2D.IgnoreCollision (GetComponent<BoxCollider2D> (), c, false);
 			//groundLayerMsk = groundMsk1;
@@ -639,6 +847,7 @@ public class PlayerControl : MonoBehaviour
 		//print ("status "+status);
 		if(onWall || grabbing || status == Status.RIDE){return;}
 		status = Status.BOUNCE;
+		stateMethod = null;
 		anim.Play ("Jump");
 		//jump = true;
 		legs.rotation  = Quaternion.Euler (new Vector3 (0, 0, 0));
@@ -654,9 +863,10 @@ public class PlayerControl : MonoBehaviour
 		yield return new WaitForSeconds(0.25f);
 		if(status == Status.BOUNCE){
 			status = Status.JUMP;
+			stateMethod = JumpAir;
 		}
 	}
-	void Climb()
+	/*void Climb()
 	{
 		rigidBody.velocity = new Vector2(0f,15f);
 		//float dir = -1;
@@ -675,7 +885,7 @@ public class PlayerControl : MonoBehaviour
 			rigidBody.AddForce(new Vector2(vel*dir,20f));
 
 		}
-	}
+	}*/
 
 
 	void tryGrabbing(){
@@ -685,6 +895,8 @@ public class PlayerControl : MonoBehaviour
 			if (grabHit = Physics2D.Linecast (transform.position, grabCheck.position, 1 << LayerMask.NameToLayer ("Grabbable"))) {
 				print ("grabbed");
 				status = Status.GRAB;
+				stateMethod = GrabAir;
+
 				grabbing = true;
 				jump = false;
 				sliding = false;
@@ -735,6 +947,8 @@ public class PlayerControl : MonoBehaviour
 			//if (!onWall) {//not on wall but should?
 
 				status = Status.WALL;
+				stateMethod = WallAir;
+
 				anim.Play ("WallSlide");
 				aud.volume  = Mathf.Abs(rigidBody.velocity.x)/25f;
 				aud.Play ();
@@ -854,6 +1068,8 @@ public class PlayerControl : MonoBehaviour
 	{
 		anim.Play("heroSpawn");
 		status = Status.FALL;
+		stateMethod = FallAir;
+		anim.Play ("Fall");
 		legs.rotation  = Quaternion.Euler (new Vector3 (0, 0, 0));
 		stillJumping = false;
 		wallJumping = false;
@@ -884,6 +1100,7 @@ public class PlayerControl : MonoBehaviour
 			Flip();
 		}
 		status = Status.RIDE;
+		stateMethod = null;
 		anim.Play("BootyRide");
 		saddleJoint = (HingeJoint2D)gameObject.AddComponent <HingeJoint2D>();
 		saddleJoint.connectedBody = nurse1;
@@ -916,6 +1133,8 @@ public class PlayerControl : MonoBehaviour
 			gameObject.layer = LayerMask.NameToLayer("Player");
 			//Jump ();
 			status = Status.IDLE;
+			stateMethod = IdleGround;
+
 			rigidBody.AddForce(Vector2.up * 600);
 			Level.instance.ToggleNursePointer(false);
 		}
