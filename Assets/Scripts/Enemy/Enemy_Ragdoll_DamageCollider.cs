@@ -21,18 +21,18 @@ public class Enemy_Ragdoll_DamageCollider : MonoBehaviour
 			float vel = Mathf.Abs (GetComponent<Rigidbody2D>().velocity.x) + Mathf.Abs (GetComponent<Rigidbody2D>().velocity.y);
 			if (vel > 3f) {
 				//audio.pitch = Random.Range(-.005f,1.005f);
-				GetComponent<AudioSource>().volume = vel/20f;
+				GetComponent<AudioSource>().volume = vel/10f;
 				GetComponent<AudioSource>().clip = soundFX[Random.Range(0,soundFX.Length)];
 				GetComponent<AudioSource>().Play ();
 				
-				if (vel > 15f) {
+				if (vel > 5f) {
 						float hurt2 = hurt;
 						
-						if(vel >30f){
+						if(vel >20f){
 							hurt2 += 3f;
-						}else if(vel >25f){
+						}else if(vel >15f){
 							hurt2 += 2f;
-						}else if(vel >20f){
+						}else if(vel >10f){
 							hurt2 += 1f;
 						}
 						

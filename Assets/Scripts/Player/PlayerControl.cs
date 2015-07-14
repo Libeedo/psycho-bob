@@ -34,8 +34,8 @@ public class PlayerControl : MonoBehaviour
 	
 	private Transform groundCheck;// A position marking where to check if the player is grounded.
 	private Transform groundCheck2;// A position marking where to check if the player is sliding.
-	//private Transform groundCheck3;// A position marking where to check if the player is only grounded on his front foot. so he doesnt "fall" when hes still on the edge
-	private float groundCheck2Offset = 0.35f;
+	private Transform groundCheckB;// A position marking where to check if the player is only grounded on his back foot
+	private Vector3 groundCheck2Offset = new Vector3(0.35f,0,0);
 
 	private Transform wallCheck;
 	// A position marking where to check if the player is grounded.
@@ -134,7 +134,8 @@ public class PlayerControl : MonoBehaviour
 
 		groundCheck = transform.Find ("groundCheck");
 		groundCheck2 = transform.Find ("groundCheck2");
-		//groundCheck3 = transform.Find ("groundCheck3");
+		groundCheckB = transform.Find ("groundCheckB");
+
 		grabCheck = transform.Find ("grabCheck");
 		wallCheck = transform.Find ("wallCheck");
 		//grabArm = transform.Find ("grabArm");
@@ -173,12 +174,14 @@ public class PlayerControl : MonoBehaviour
 
 		//groundcheck
 		grounded = groundHit = Physics2D.Linecast (transform.position, groundCheck.position, groundLayerMsk);//1 << LayerMask.NameToLayer ("Ground"));  
-			
+		if(!grounded){
+			grounded = groundHit = Physics2D.Linecast (transform.position - groundCheck2Offset, groundCheckB.position, groundLayerMsk);
+		}
 		//ground check slightly ahead
-		grounded2 = groundHit2 = Physics2D.Linecast (new Vector2(transform.position.x + groundCheck2Offset, transform.position.y), groundCheck2.position, groundLayerMsk);
+		grounded2 = groundHit2 = Physics2D.Linecast (transform.position + groundCheck2Offset, groundCheck2.position, groundLayerMsk);
 
-		if(grounded){//left leg hit
-			if(grounded2){//right leg hit lower? should slide?
+		if(grounded){//back leg hit
+			if(grounded2){//front leg hit lower? should slide?
 
 				trySliding ();//also rotates legs
 
@@ -444,6 +447,7 @@ public class PlayerControl : MonoBehaviour
 		//}
 
 	}
+	private void DoNothing(){}
 	private void IdleGround()
 	{
 		if (CheckGrounded ()) {
@@ -518,6 +522,8 @@ public class PlayerControl : MonoBehaviour
 				rigidBody.velocity = new Vector2(rigidBody.velocity.x,0f);//???????????????????
 				Jump ();
 			}
+		}else{
+			legs.rotation  = Quaternion.identity;
 		}
 	}
 
@@ -553,7 +559,7 @@ public class PlayerControl : MonoBehaviour
 			tryWallSlide (hVel);
 			tryGrabbing ();
 			if (Math.Abs (rigidBody.velocity.y) < 0.0001f) {
-					print ("stuck");
+					//print ("stuck");
 					StartCoroutine ("UnstuckCorner");
 					//rigidBody.AddForce(new Vector2(0,20f));
 			}
@@ -591,7 +597,7 @@ public class PlayerControl : MonoBehaviour
 	}
 	private void ClimbAir()
 	{
-		if (CheckAirborne ()) {
+		//if (CheckAirborne ()) {
 			rigidBody.velocity = new Vector2(0f,15f);
 			//float dir = -1;
 			//if(facingRight){
@@ -600,6 +606,7 @@ public class PlayerControl : MonoBehaviour
 			
 			Vector2 pos2 = new Vector2 (groundCheck.position.x+(2f*dir),groundCheck.position.y);
 			bool cornerGrab = Physics2D.Linecast (groundCheck.position, pos2, groundLayerMsk);
+			print ("climb "+cornerGrab);
 			if(!cornerGrab){
 				status = Status.IDLE;
 				stateMethod = IdleGround;
@@ -610,7 +617,7 @@ public class PlayerControl : MonoBehaviour
 				rigidBody.AddForce(new Vector2(vel*dir,20f));
 				
 			}
-		}
+		//}
 	}
 	private bool CheckAirborne()
 	{
@@ -721,7 +728,7 @@ public class PlayerControl : MonoBehaviour
 		Vector2 pos2 = new Vector2 (grabCheck.position.x+(dir*3f),grabCheck.position.y);//-2f);
 		bool cornerGrab = Physics2D.Linecast (grabCheck.position, pos2, 1 << LayerMask.NameToLayer ("Ground"));//Physics2D.Linecast (new Vector2(transform.position.x,transform.position.y+1.2f),	transform.Find ("wallCheck2").transform.position, 1 << LayerMask.NameToLayer ("Ground"));
 		if(!cornerGrab && rigidBody.velocity.y < 0.00001f){
-
+			print ("CLIMB");
 			anim.Play ("Climb");
 			//climbing = true;
 			status = Status.CLIMB;
@@ -761,7 +768,7 @@ public class PlayerControl : MonoBehaviour
 
 		anim.Play ("Jump");
 		onWall = false;
-		legs.rotation  = Quaternion.Euler (new Vector3 (0, 0, 0));
+		legs.rotation  = Quaternion.identity;
 		wallJumping = true;
 		stillJumping = true;
 		StartCoroutine(SwitchWallJumping());
@@ -785,7 +792,7 @@ public class PlayerControl : MonoBehaviour
 		rigidBody.AddForce (new Vector2 (0, jumpForce));	
 		//rigidbody2D.velocity += new Vector2 (PlatformVelocity.x,PlatformVelocity.y);///??????????????????? really needed? for adding moving platform velocity to jump
 		stillJumping = true;
-		legs.rotation  = Quaternion.Euler (new Vector3 (0, 0, 0));
+		legs.rotation  = Quaternion.identity;
 		int i = UnityEngine.Random.Range (0, jumpFX.Length);
 		AudioSource.PlayClipAtPoint(jumpFX[i], transform.position);
 	}
@@ -822,14 +829,14 @@ public class PlayerControl : MonoBehaviour
 
 		//var h  = Physics2D.Linecast (transform.position, transform.Find ("groundCheck3").position, groundLayerMsk);
 		//if(h){
-		print ("unstuck ");
+		//print ("unstuck ");
 		//var c = groundHit.transform.GetComponent<Collider2D> ();
 		//Physics2D.IgnoreCollision (GetComponent<CircleCollider2D> (), c,true);
 		//Physics2D.IgnoreCollision (GetComponent<BoxCollider2D> (), c, true);
 		//groundLayerMsk = groundMsk2;
 		Physics2D.IgnoreLayerCollision(9,12,true);
 		status = Status.STUCK;
-		stateMethod = null;
+		stateMethod = DoNothing;
 
 		rigidBody.AddForce(Vector2.up*20);
 		yield return new WaitForSeconds (0.1f);
@@ -847,7 +854,7 @@ public class PlayerControl : MonoBehaviour
 		//print ("status "+status);
 		if(onWall || grabbing || status == Status.RIDE){return;}
 		status = Status.BOUNCE;
-		stateMethod = null;
+		stateMethod = DoNothing;
 		anim.Play ("Jump");
 		//jump = true;
 		legs.rotation  = Quaternion.Euler (new Vector3 (0, 0, 0));
@@ -1100,7 +1107,7 @@ public class PlayerControl : MonoBehaviour
 			Flip();
 		}
 		status = Status.RIDE;
-		stateMethod = null;
+		stateMethod = DoNothing;
 		anim.Play("BootyRide");
 		saddleJoint = (HingeJoint2D)gameObject.AddComponent <HingeJoint2D>();
 		saddleJoint.connectedBody = nurse1;
