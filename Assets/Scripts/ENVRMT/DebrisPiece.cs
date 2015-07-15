@@ -34,7 +34,7 @@ public class DebrisPiece : MonoBehaviour {
 		GetComponent<Rigidbody2D>().AddTorque(Random.Range(-200f,200f));
 		Destroy (gameObject,4f);
 		gameObject.tag = "Untagged";
-		//gameObject.layer = LayerMask.NameToLayer("Bodies");
+		gameObject.layer = LayerMask.NameToLayer("Debris");
 	}
 
 	

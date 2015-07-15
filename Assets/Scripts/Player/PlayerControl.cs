@@ -111,7 +111,7 @@ public class PlayerControl : MonoBehaviour
 		STUCK
 	}
 	private Status status = Status.IDLE;
-	//private Status lastStatus = Status.IDLE;
+	private Status lastStatus = Status.IDLE;
 
 	private delegate void State ();
 	private State stateMethod;
@@ -242,209 +242,10 @@ public class PlayerControl : MonoBehaviour
 
 		anim.SetFloat ("Speed", Mathf.Abs (hVel));
 		stateMethod ();
-		/*return;
-		if(grounded){          /////    ON THE GROUND!!!!!!!!!!!!!!!!!!!
-
-			switch(status)
-			{
-				case Status.IDLE:
-				//rigidbody2D.velocity = Vector2.zero;
-			
-					if(Mathf.Abs(hVel) > 0f){
-						//print("idle to run");
-						status = Status.RUN;
-
-					}//else if(Math.Abs(rigidBody.velocity.x) > 0.001f){
-						//rigidBody.velocity = new Vector2(rigidBody.velocity.x * 0.01f,rigidBody.velocity.y);
-					//}
-					if(sliding){
-						status = Status.SLIDE;	
-						anim.Play ("Slide");
-					}
-					if(jump){
-						Jump ();
-					}
-
-					break;
-
-				case Status.RUN:
-					Move (hVel);
-					if(Mathf.Abs(hVel) == 0f){
-					rigidBody.velocity = new Vector2(rigidBody.velocity.x * 0.25f,rigidBody.velocity.y);
-						//print("run to dile");
-						status = Status.IDLE;
-						//anim.Play ("Idle");
-					}
-					if(sliding){
-						status = Status.SLIDE;	
-						anim.Play ("Slide");
-					}
-					if(jump){
-						Jump ();
-					}
-					//checkGroundMove();
-					break;
-				case Status.CROUCH:
-					
-					if(jump && !saddleJoint){
-						//var b = GetComponent<BoxCollider2D>();
-						boxCollider.size = new Vector2(1,4.3f);
-						boxCollider.offset = new Vector2(0,0.9f);
-
-						if(groundHit.transform.GetComponent<PlatformEffector2D>()){//if 1 way platform? jump down (crouchJump)
-
-							CrouchJump();
-						}else{
-							Jump();
-						}
-					}
-				break;
-				case Status.SLIDE:
-					SlideMove (hVel);
-					trySliding();
-					if(!sliding){
-						status = Status.IDLE;	
-						anim.Play ("Idle");
-					}
-					if(jump){
-						sliding = false;
-						rigidBody.velocity = new Vector2(rigidBody.velocity.x,0f);//???????????????????
-						Jump ();
-					}
-					break;
-
-				case Status.JUMP:
-					if(rigidBody.velocity.y <= 0f){
-						status = Status.IDLE;
-						aud.volume  = -rigidBody.velocity.y/15f;
-						aud.Play ();
-						anim.Play ("LandGround");
-						rigidBody.velocity = new Vector2(rigidBody.velocity.x * 0.3f,rigidBody.velocity.y);////?????????????
-					}
-					break;
-
-				case Status.FALL:
-					status = Status.IDLE;
-					aud.volume  = -rigidBody.velocity.y/15f;
-					aud.Play ();
-					anim.Play ("LandGround");
-					rigidBody.velocity = new Vector2(rigidBody.velocity.x * 0.3f,rigidBody.velocity.y);////????????????????
-					break;
-
-				case Status.WALL:
-					status = Status.IDLE;
-					anim.Play ("Idle");
-					onWall = false;
-					break;
-
-				case Status.GRAB:
-					status = Status.IDLE;
-					anim.Play ("Idle");
-					unGrab();
-					break;
-
-				case Status.CLIMB:
-					status = Status.IDLE;
-					anim.Play ("LandGround");
-					break;
-			//case Status.RIDE:
-
-				//break;
-				// Status.BOUNCE:
-					//status = Status.IDLE;
-					//anim.Play ("Idle");
-					//break;
-			}
-		}else{////               IN THE AIR!!!!!!
-			switch(status)
-			{
-				case Status.IDLE:
-					Move (hVel);
-					status = Status.FALL;
-					anim.Play ("Fall");
-					legs.rotation  = Quaternion.Euler (new Vector3 (0, 0, 0));
-					break;
-					
-				case Status.RUN:
-					Move (hVel);
-					status = Status.FALL;
-					anim.Play ("Fall");
-					legs.rotation  = Quaternion.Euler (new Vector3 (0, 0, 0));
-					break;
-					
-				case Status.SLIDE:
-					Move (hVel);
-					status = Status.FALL;
-					anim.Play ("Fall");
-					sliding = false;
-					legs.rotation  = Quaternion.Euler (new Vector3 (0, 0, 0));
-					break;
-				case Status.CROUCH:
-					status = Status.FALL;
-					anim.Play ("Fall");
-					legs.rotation  = Quaternion.Euler (new Vector3 (0, 0, 0));
-					break;	
-				case Status.JUMP:
-					Move (hVel * 0.7f);
-					if(jump){//jump button held down - go higher
-					//print ("jumping");
-						Jumping ();
-					}
-					if(rigidBody.velocity.y < 0.001f){
-						sliding = false;
-						status = Status.FALL;
-						anim.Play ("Fall");
-					}
-					tryWallSlide(hVel);
-					tryGrabbing();
-					break;
-					
-				case Status.FALL:
-					Move (hVel * 0.7f);
-					tryWallSlide(hVel);
-					tryGrabbing();
-					if(Math.Abs(rigidBody.velocity.y) < 0.0001f){
-						print ("stuck");
-						StartCoroutine("UnstuckCorner");
-						//rigidBody.AddForce(new Vector2(0,20f));
-					}
-					break;
-					
-				case Status.WALL:
-					WallMove(hVel);
-					if(jump){
-						WallJump ();
-					}
-					break;
-					
-				case Status.GRAB:
-					Move(hVel/5f);
-					if(jump){
-						unGrab();
-						if(Input.GetAxis ("Vertical") < 0){
-							status = Status.FALL;
-							anim.Play("Fall");
-						}else{
-							Jump();
-						}
-					}
-					break;
-					
-				case Status.CLIMB:
-					//Climb ();
-					break;
-				case Status.BOUNCE:
-					Move (hVel/3f);
-					break;	
-			//case Status.RIDE:
-				
-				//break;
-			}
-		}*/
-		//if(status != lastStatus){             ///GET RID OF THIS !!!!!!!!!!!
-			//print (grabbing+"         "+lastStatus+"  "+status);
-			//lastStatus = status;
-		//}
+		if(status != lastStatus){             ///GET RID OF THIS !!!!!!!!!!!
+			print ("SWITCH        "+lastStatus+"  "+status);
+			lastStatus = status;
+		}
 
 	}
 	private void DoNothing(){}
@@ -638,6 +439,7 @@ public class PlayerControl : MonoBehaviour
 		if (grounded) {
 			return true;
 		}else{
+			legs.rotation  = Quaternion.identity;
 			status = Status.FALL;
 			stateMethod = FallAir;
 			anim.Play ("Fall");
@@ -715,7 +517,7 @@ public class PlayerControl : MonoBehaviour
 			stateMethod = FallAir;
 			anim.Play ("Fall");
 			onWall = false;
-			legs.rotation  = Quaternion.Euler (new Vector3 (0, 0, 0));
+			legs.rotation  = Quaternion.identity;
 			wallJumping = true;//not really wall jumping, but need it so he cant just go right back into a wallslide and boost again, going up the walltoo easily
 			StartCoroutine(SwitchWallJumping());
 
@@ -733,7 +535,7 @@ public class PlayerControl : MonoBehaviour
 			//climbing = true;
 			status = Status.CLIMB;
 			stateMethod = ClimbAir;
-			legs.rotation  = Quaternion.Euler (new Vector3 (0, 0, 0));
+			legs.rotation  = Quaternion.identity;
 			onWall = false;
 		}
 
@@ -809,7 +611,7 @@ public class PlayerControl : MonoBehaviour
 		status = Status.FALL;
 		stateMethod = FallAir;
 		anim.Play ("Fall");
-		legs.rotation  = Quaternion.Euler (new Vector3 (0, 0, 0));
+		legs.rotation  = Quaternion.identity;
 
 		StartCoroutine (DontCrouchJump());
 	}
@@ -857,7 +659,7 @@ public class PlayerControl : MonoBehaviour
 		stateMethod = DoNothing;
 		anim.Play ("Jump");
 		//jump = true;
-		legs.rotation  = Quaternion.Euler (new Vector3 (0, 0, 0));
+		legs.rotation  = Quaternion.identity;
 		sliding = false;
 		rigidBody.velocity = new Vector2 (0f,0f);
 		rigidBody.AddForce (power);
@@ -993,7 +795,9 @@ public class PlayerControl : MonoBehaviour
 				anim.Play ("Climb");
 				//climbing = true;
 				status = Status.CLIMB;
-				legs.rotation  = Quaternion.Euler (new Vector3 (0, 0, 0));
+				stateMethod = ClimbAir;
+				legs.rotation  = Quaternion.identity;
+				onWall = false;
 			}
 			//
 	
@@ -1077,7 +881,7 @@ public class PlayerControl : MonoBehaviour
 		status = Status.FALL;
 		stateMethod = FallAir;
 		anim.Play ("Fall");
-		legs.rotation  = Quaternion.Euler (new Vector3 (0, 0, 0));
+		legs.rotation  = Quaternion.identity;
 		stillJumping = false;
 		wallJumping = false;
 		canGrab = true;

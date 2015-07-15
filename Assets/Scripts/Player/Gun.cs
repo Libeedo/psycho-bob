@@ -829,8 +829,7 @@ public class Gun : MonoBehaviour
 	private void ShootStrat(Vector3 angle, Quaternion angleR)
 	{
 		//print (activeWeapon.chargeCount);
-		canShoot = false;
-		StartCoroutine(canShootAgain(1f));
+
 		stratGO.GetComponent<AudioSource>().Stop();
 		anim.SetBool ("shooting", false);
 
@@ -838,6 +837,9 @@ public class Gun : MonoBehaviour
 			aud.Stop();
 			playerAnim.SetTrigger("stopCharge");
 			return;
+		}else{//iff its a false start (0 strat charge) let him shoot again
+			canShoot = false;
+			StartCoroutine(canShootAgain(1f));
 		}
 			
 		playerAnim.Play("heroShootStrat");
@@ -849,10 +851,10 @@ public class Gun : MonoBehaviour
 
 		RaycastHit2D hit;
 		Vector3 length = activeWeapon.shotPos.position+(pos*50f);
-		Debug.DrawLine(activeWeapon.shotPos.position,length, Color.red,5f);
+		//Debug.DrawLine(activeWeapon.shotPos.position,length, Color.red,5f);
 		if(hit = Physics2D.Linecast (activeWeapon.shotPos.position,length , 1 << LayerMask.NameToLayer("Ground")))
 		{
-			Debug.DrawLine(activeWeapon.shotPos.position,hit.point, Color.red);
+			//Debug.DrawLine(activeWeapon.shotPos.position,hit.point, Color.red);
 			length = hit.point;
 		}
 	
@@ -865,9 +867,10 @@ public class Gun : MonoBehaviour
 		aud.clip = stratSFX[4];
 		aud.Play ();
 
-		stratLightning.SetActive (true);
-		lightningCS.SetPoints (lb.transform.position, length); 
-		
+		if(activeWeapon.chargeCount>4){
+			stratLightning.SetActive (true);
+			lightningCS.SetPoints (lb.transform.position, length); 
+		}
 		if(!playerCtrl.grounded){
 			playerCtrl.GetComponent<Rigidbody2D>().AddForce(new Vector2 (-angle.x, -angle.y) * (500f * activeWeapon.chargeCount));
 		}

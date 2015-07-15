@@ -1,11 +1,12 @@
 fileFormatVersion: 2
 guid: 6a26465acf8dd65478a4e92fabb60643
-timeCreated: 1429460421
+timeCreated: 1436923381
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
     21300000: MISC_0
     21300002: UI_options_btn
+    21300004: dangerSign
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -74,6 +75,16 @@ TextureImporter:
         height: 314
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dangerSign
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 1417
+        width: 612
+        height: 631
+      alignment: 9
+      pivot: {x: .909139991, y: .0900975615}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
