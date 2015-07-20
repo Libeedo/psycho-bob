@@ -828,7 +828,8 @@ public class PlayerControl : MonoBehaviour
 		
 
 			//legs.transform.rotation *= Quaternion.AngleAxis( 180, legs.transform.up );
-			if(slideAngle < -25){
+		print(rigidBody.velocity.x);
+		if(slideAngle < -25 && Math.Abs(rigidBody.velocity.x) > 0.05f){
 				//
 
 				sliding =  true;
