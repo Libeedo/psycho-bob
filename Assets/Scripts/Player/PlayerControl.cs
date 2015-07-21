@@ -111,7 +111,7 @@ public class PlayerControl : MonoBehaviour
 		STUCK
 	}
 	private Status status = Status.IDLE;
-	private Status lastStatus = Status.IDLE;
+	//private Status lastStatus = Status.IDLE;
 
 	private delegate void State ();
 	private State stateMethod;
@@ -242,10 +242,10 @@ public class PlayerControl : MonoBehaviour
 
 		anim.SetFloat ("Speed", Mathf.Abs (hVel));
 		stateMethod ();
-		if(status != lastStatus){             ///GET RID OF THIS !!!!!!!!!!!
-			print ("SWITCH        "+lastStatus+"  "+status);
-			lastStatus = status;
-		}
+		//if(status != lastStatus){             ///GET RID OF THIS !!!!!!!!!!!
+			//print ("SWITCH        "+lastStatus+"  "+status);
+			//lastStatus = status;
+		//}
 
 	}
 	private void DoNothing(){}
@@ -828,7 +828,7 @@ public class PlayerControl : MonoBehaviour
 		
 
 			//legs.transform.rotation *= Quaternion.AngleAxis( 180, legs.transform.up );
-		print(rigidBody.velocity.x);
+		//print(rigidBody.velocity.x);
 		if(slideAngle < -25 && Math.Abs(rigidBody.velocity.x) > 0.05f){
 				//
 

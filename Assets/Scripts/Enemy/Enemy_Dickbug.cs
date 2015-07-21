@@ -2,6 +2,8 @@
 using System.Collections;
 
 public class Enemy_Dickbug : Enemy {
+
+	private Animator anim;
 	private Transform dickT;
 	private Animator dickA;
 
@@ -20,6 +22,7 @@ public class Enemy_Dickbug : Enemy {
 
 		FALLING,
 		RAGDOLL,
+		FLIPPED,
 		ATTACK,
 		HURT
 		
@@ -38,6 +41,8 @@ public class Enemy_Dickbug : Enemy {
 		eDamage.enemyCS = this;
 
 		eDamage.AwakeAfter(transform.Find ("damage"));
+
+		anim = GetComponent<Animator> ();
 
 		dickT = transform.Find("dick");
 		dickA = dickT.GetComponent<Animator>();
@@ -115,11 +120,22 @@ public class Enemy_Dickbug : Enemy {
 		var scl = Vector3.one;
 		if (!facingRight) {
 			scl.x = -1;
+			facingRight = true;
 		}
 		rdBody.transform.localScale = scl;
 		rdBody.SetActive (true);
-		rb2D.constraints = RigidbodyConstraints2D.FreezeRotation;
+		rb2D.constraints = RigidbodyConstraints2D.FreezeRotation;/// backwards?????
 		//rb2D.fixedAngle = false;
+		StartCoroutine (switchToFlipped ());
+	}
+	private IEnumerator switchToFlipped()
+	{
+		if (dead) {return false;}
+		yield return new WaitForSeconds (1.5f);
+		transform.rotation = Quaternion.identity;
+		rb2D.constraints = RigidbodyConstraints2D.None;
+		status = ebStatus.FLIPPED;
+		anim.Play ("dickBugFlipped");
 		StartCoroutine (switchToNormal ());
 	}
 	private IEnumerator switchToNormal()
@@ -127,8 +143,9 @@ public class Enemy_Dickbug : Enemy {
 		if (dead) {return false;}
 		yield return new WaitForSeconds (2);
 		transform.rotation = Quaternion.identity;
-		rb2D.constraints = RigidbodyConstraints2D.None;
+		rb2D.constraints = RigidbodyConstraints2D.None;// backwards????
 		//rb2D.fixedAngle = false;
+		anim.Play ("dickBugWalk");
 		status = ebStatus.WALKING;
 		body.SetActive (true);
 		rdBody.SetActive (false);
@@ -185,7 +202,7 @@ public class Enemy_Dickbug : Enemy {
 		
 		if(!eDamage.blownUp){//if not just blownup
 			Instantiate(hitEffect, transform.position, Quaternion.identity);
-			base.BlownUp(headshot,damage,ePos);
+			//base.BlownUp(headshot,damage,ePos);
 			switchToRagdoll();
 			Vector3 force = GetBlastDirection(transform.position,ePos);
 			
