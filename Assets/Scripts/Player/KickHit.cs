@@ -13,7 +13,7 @@ public class KickHit : MonoBehaviour {
 
 	public void KickStart()
 	{
-		bouncePower = 4;
+		bouncePower = 4.5f;
 		InvokeRepeating("OnHit",0,.3f);
 		//bounceDirX = dir;
 		//print (bounceDirX);
@@ -26,7 +26,7 @@ public class KickHit : MonoBehaviour {
 
 		bouncePower -= 0.5f;
 		if(bouncePower<0){
-			bouncePower = 1;
+			bouncePower = 0.5f;
 			CancelInvoke();
 			//print ("stopped");
 		}

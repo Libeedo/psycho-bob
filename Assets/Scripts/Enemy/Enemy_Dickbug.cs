@@ -29,6 +29,13 @@ public class Enemy_Dickbug : Enemy {
 	}
 	public ebStatus status = ebStatus.WALKING;
 
+
+
+
+
+	private GameObject shield;
+	private GameObject shieldFake;
+
 	public AudioClip[] growlFX;
 
 	protected override void Start()
@@ -59,6 +66,15 @@ public class Enemy_Dickbug : Enemy {
 		layerMsk = layerMsk1 | layerMsk2 | layerMsk3;
 		if(Random.Range(0,10)>5){
 			Flip();
+		}
+		shield = body.transform.Find ("shield").gameObject;
+		shieldFake = body.transform.Find ("shieldFake").gameObject;
+		if(equipped == Equipped.SHIELD){
+			shield.SetActive(true);
+			shieldFake.SetActive(true);
+			rdBody.transform.Find("shieldFake").gameObject.SetActive(true);
+		}else if(equipped == Equipped.C4){
+			transform.Find ("c4").gameObject.SetActive(true);
 		}
 	}
 	void FixedUpdate ()
@@ -115,6 +131,7 @@ public class Enemy_Dickbug : Enemy {
 	}
 	private void switchToRagdoll()
 	{
+		gameObject.layer = LayerMask.NameToLayer("EnemyRagdoll");
 		status = ebStatus.RAGDOLL;
 		body.SetActive (false);
 		var scl = Vector3.one;
@@ -124,31 +141,53 @@ public class Enemy_Dickbug : Enemy {
 		}
 		rdBody.transform.localScale = scl;
 		rdBody.SetActive (true);
-		rb2D.constraints = RigidbodyConstraints2D.FreezeRotation;/// backwards?????
+		rb2D.constraints = RigidbodyConstraints2D.None;// backwards????
 		//rb2D.fixedAngle = false;
-		StartCoroutine (switchToFlipped ());
+		//StartCoroutine (switchToFlipped ());
+		InvokeRepeating("switchToFlipped",1.5f,0.3f);
 	}
-	private IEnumerator switchToFlipped()
+	private void switchToFlipped()
 	{
-		if (dead) {return false;}
-		yield return new WaitForSeconds (1.5f);
-		transform.rotation = Quaternion.identity;
-		rb2D.constraints = RigidbodyConstraints2D.None;
-		status = ebStatus.FLIPPED;
-		anim.Play ("dickBugFlipped");
-		StartCoroutine (switchToNormal ());
+
+		//yield return new WaitForSeconds (1.5f);
+
+		var vel = Mathf.Abs(rb2D.velocity.x) + Mathf.Abs(rb2D.velocity.y);
+		if(vel < 0.1f){
+
+			if (dead) {
+				CancelInvoke("switchToFlipped");
+				return;
+			}
+
+			body.SetActive (true);
+			rdBody.SetActive (false);
+			if(equipped == Equipped.SHIELD){
+				shield.SetActive(false);
+				shieldFake.SetActive(true);
+			}
+			transform.rotation = Quaternion.identity;
+			rb2D.constraints = RigidbodyConstraints2D.FreezeRotation;/// backwards?????
+			status = ebStatus.FLIPPED;
+			anim.Play ("dickBugFlipped");
+			StartCoroutine (switchToNormal ());
+
+			CancelInvoke("switchToFlipped");
+		}
 	}
 	private IEnumerator switchToNormal()
 	{
-		if (dead) {return false;}
+
 		yield return new WaitForSeconds (2);
-		transform.rotation = Quaternion.identity;
-		rb2D.constraints = RigidbodyConstraints2D.None;// backwards????
+		if (dead) {return false;}
+		if(equipped == Equipped.SHIELD){
+			shield.SetActive(true);
+			shieldFake.SetActive(false);
+		}
+		gameObject.layer = LayerMask.NameToLayer("Enemies");
 		//rb2D.fixedAngle = false;
 		anim.Play ("dickBugWalk");
 		status = ebStatus.WALKING;
-		body.SetActive (true);
-		rdBody.SetActive (false);
+
 	}
 	public override void Shot(bool headshot, float damage,Vector2 force, Vector2 pos)
 	{
@@ -173,7 +212,7 @@ public class Enemy_Dickbug : Enemy {
 	{
 		yield return new WaitForSeconds(0.3f);
 		if(!dead){
-			status = ebStatus.RAGDOLL;
+			status = ebStatus.WALKING;
 		}
 
 	}
@@ -202,12 +241,13 @@ public class Enemy_Dickbug : Enemy {
 		
 		if(!eDamage.blownUp){//if not just blownup
 			Instantiate(hitEffect, transform.position, Quaternion.identity);
-			//base.BlownUp(headshot,damage,ePos);
+			base.BlownUp(headshot,damage,ePos);
 			switchToRagdoll();
 			Vector3 force = GetBlastDirection(transform.position,ePos);
 			
 			var d = GetBlastTorque(force);
-			force.y = damage/2;
+			damage *=2;
+			//force.y = damage*2;
 			
 			rb2D.AddForce (force * damage * 10 ,ForceMode2D.Impulse);
 			rb2D.AddTorque(damage * d);
@@ -276,8 +316,9 @@ public class Enemy_Dickbug : Enemy {
 		leg2.GetComponent<Rigidbody2D> ().AddTorque (Random.Range (500, 1500));
 		Destroy (gameObject,4f);
 	}
-	public override void HurtPlayer(Vector3 pos)
+	public override bool HurtPlayer(Vector3 pos)
 	{
+
 		status = ebStatus.ATTACK;
 		FlipTowardsPlayer();
 		pos.y += 2f;
@@ -305,7 +346,7 @@ public class Enemy_Dickbug : Enemy {
 		AudioSource.PlayClipAtPoint(growlFX[UnityEngine.Random.Range (0, growlFX.Length)], transform.position);
 
 		StartCoroutine("StopHurtPlayer");
-
+		return true;
 	}
 	IEnumerator StopHurtPlayer()
 	{

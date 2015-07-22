@@ -49,7 +49,15 @@ public class Enemy:MonoBehaviour {
 		//enemyCS = transform.Find ("enemy").GetComponent<Enemy>();
 
 	}
-	
+	public enum Equipped
+	{
+		NOTHING,
+		C4,
+		SHIELD,
+		SNIPER,
+		NIL,//ignore all (jihanding currently) fuck off while he finds his inner piece) 0f ass ) of 72 virgins
+	}
+	public Equipped equipped = Equipped.NOTHING;
 	
 	void takeDamage (float dmg) //returns ture if dead;
 	{
@@ -192,9 +200,9 @@ public class Enemy:MonoBehaviour {
 
 	}
 
-	public virtual void HurtPlayer(Vector3 pos)
+	public virtual bool HurtPlayer(Vector3 pos)
 	{
-
+		return true;
 	}
 	protected Vector3 GetBlastDirection(Vector3 pPos,Vector3 ePos)
 	{

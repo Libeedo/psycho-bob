@@ -31,15 +31,7 @@ public class Enemy_Soldier : Enemy
 
 	private bool parachuting = false;//currently parahcuting? chute still open AS WELL?
 	
-	public enum Equipped
-	{
-		NOTHING,
-		C4,
-		SHIELD,
-		SNIPER,
-		NIL,//ignore all (jihanding currently) fuck off while he finds his inner piece) 0f ass ) of 72 virgins
-	}
-	public Equipped equipped = Equipped.NOTHING;
+
 	
 		
 	//public string Status = "walking";
@@ -392,7 +384,7 @@ public class Enemy_Soldier : Enemy
 
 	}
 
-	public override void HurtPlayer(Vector3 pos)
+	public override bool HurtPlayer(Vector3 pos)
 	{
 		FlipTowardsPlayer();
 		pos.y += 2f;
@@ -427,6 +419,7 @@ public class Enemy_Soldier : Enemy
 
 			AudioSource.PlayClipAtPoint(growlFX[UnityEngine.Random.Range (0, growlFX.Length)], transform.position);
 		}
+		return true;
 	}
 	IEnumerator StopHurtPlayer()
 	{

@@ -86,7 +86,7 @@ public class Explosive : MonoBehaviour
 		print ("explode");
 		Destroy(GetComponent<Collider2D>());
 		if (xMode == XplodeMode.ENEMY){
-			transform.root.GetComponent<Enemy_Soldier>().equipped = Enemy_Soldier.Equipped.NOTHING;
+			transform.root.GetComponent<Enemy>().equipped = Enemy.Equipped.NOTHING;
 		}else if (xMode == XplodeMode.CHUTE) {
 			//print ("WTF "+transform.name+"  "+transform.position);
 			chuteCS.closeChute();
