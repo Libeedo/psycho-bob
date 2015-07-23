@@ -5,7 +5,7 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{636E97AC-D0E3-28D6-E5E7-13BA07C4A55B}</ProjectGuid>
+	<ProjectGuid>{F56C5F24-D1B7-1CEC-154E-2A9C3EEC8A95}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
@@ -39,10 +39,10 @@
 	<Reference Include="System.Core" />
 	<Reference Include="System.Xml.Linq" />
 	<Reference Include="UnityEngine">
-	  <HintPath>C:/Program Files/Unity_51/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	  <HintPath>C:/Program Files/Unity5_1/Editor/Data/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
-	  <HintPath>C:/Program Files/Unity_51/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	  <HintPath>C:/Program Files/Unity5_1/Editor/Data/Managed/UnityEditor.dll</HintPath>
 	</Reference>
   </ItemGroup>
   <ItemGroup>
@@ -75,15 +75,15 @@
      <Compile Include="Assets\Scripts\Enemy\Enemy_Soldier.cs" />
      <Compile Include="Assets\Scripts\Enemy\HitColour.cs" />
      <Compile Include="Assets\Scripts\Enemy\HitZone.cs" />
+     <Compile Include="Assets\Scripts\Enemy\ResetPose.cs" />
      <Compile Include="Assets\Scripts\Enemy\SniperSight.cs" />
      <Compile Include="Assets\Scripts\Enemy\Soldier_Sprites.cs" />
      <Compile Include="Assets\Scripts\Enemy\Vehicle.cs" />
-     <Compile Include="Assets\Scripts\Game Utils\CargoSpawner.cs" />
+     <Compile Include="Assets\Scripts\Game Utils\CombatZone.cs" />
+     <Compile Include="Assets\Scripts\Game Utils\CombatZoneTrigger.cs" />
      <Compile Include="Assets\Scripts\Game Utils\EnableTrigger.cs" />
-     <Compile Include="Assets\Scripts\Game Utils\EnemySpawner.cs" />
      <Compile Include="Assets\Scripts\Game Utils\FadeColour.cs" />
      <Compile Include="Assets\Scripts\Game Utils\GameUtiils.cs" />
-     <Compile Include="Assets\Scripts\Game Utils\GenericSpawner.cs" />
      <Compile Include="Assets\Scripts\Game Utils\HUDFPS.cs" />
      <Compile Include="Assets\Scripts\Game Utils\ImpactDamage.cs" />
      <Compile Include="Assets\Scripts\Game Utils\ImpactSound.cs" />
@@ -91,16 +91,17 @@
      <Compile Include="Assets\Scripts\Game Utils\OffscreenIndicator.cs" />
      <Compile Include="Assets\Scripts\Game Utils\Oscillate.cs" />
      <Compile Include="Assets\Scripts\Game Utils\Pauser.cs" />
-     <Compile Include="Assets\Scripts\Game Utils\PropSpawner.cs" />
      <Compile Include="Assets\Scripts\Game Utils\Remover.cs" />
-     <Compile Include="Assets\Scripts\Game Utils\ResetPose.cs" />
-     <Compile Include="Assets\Scripts\Game Utils\SaddleTrigger.cs" />
      <Compile Include="Assets\Scripts\Game Utils\Score.cs" />
      <Compile Include="Assets\Scripts\Game Utils\SetParticleSortingLayer.cs" />
      <Compile Include="Assets\Scripts\Game Utils\SetRenderQueue.cs" />
      <Compile Include="Assets\Scripts\Game Utils\SimpleCCD.cs" />
-     <Compile Include="Assets\Scripts\Game Utils\Spawner.cs" />
-     <Compile Include="Assets\Scripts\Game Utils\VehicleSpawner.cs" />
+     <Compile Include="Assets\Scripts\Game Utils\Spawn\CargoSpawner.cs" />
+     <Compile Include="Assets\Scripts\Game Utils\Spawn\EnemySpawner.cs" />
+     <Compile Include="Assets\Scripts\Game Utils\Spawn\GenericSpawner.cs" />
+     <Compile Include="Assets\Scripts\Game Utils\Spawn\PropSpawner.cs" />
+     <Compile Include="Assets\Scripts\Game Utils\Spawn\Spawner.cs" />
+     <Compile Include="Assets\Scripts\Game Utils\Spawn\VehicleSpawner.cs" />
      <Compile Include="Assets\Scripts\HitEffect.cs" />
      <Compile Include="Assets\Scripts\Level.cs" />
      <Compile Include="Assets\Scripts\MainMenu.cs" />
@@ -116,6 +117,7 @@
      <Compile Include="Assets\Scripts\Player\PickupTrigger.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerControl.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerHealth.cs" />
+     <Compile Include="Assets\Scripts\Player\SaddleTrigger.cs" />
      <Compile Include="Assets\Scripts\Player\SpawnPoint.cs" />
      <Compile Include="Assets\Scripts\Player\UI_WeaponDisplay.cs" />
      <Compile Include="Assets\Scripts\Projectiles\Bullet.cs" />
@@ -295,30 +297,30 @@
      <None Include="Assets\_MKGlowSystem\_Shader\_MKBase\Reflective\MK_Reflective-DiffuseBumped.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendForBloom.shader" />
  <Reference Include="UnityEngine.UI">
- <HintPath>C:/Program Files/Unity_51/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ <HintPath>C:/Program Files/Unity5_1/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Networking">
- <HintPath>C:/Program Files/Unity_51/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ <HintPath>C:/Program Files/Unity5_1/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Analytics">
- <HintPath>C:/Program Files/Unity_51/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
+ <HintPath>C:/Program Files/Unity5_1/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>
  <Reference Include="MKGlowSystem">
- <HintPath>D:/Unity Files/psycho-bob/Assets/_MKGlowSystem/_Internal/MKGlowSystem.dll</HintPath>
+ <HintPath>D:/Unity Files/psycho bob/Assets/_MKGlowSystem/_Internal/MKGlowSystem.dll</HintPath>
  </Reference>
  <Reference Include="MKGlowSystemHelpWindow">
- <HintPath>D:/Unity Files/psycho-bob/Assets/_MKGlowSystem/_Internal/MKGlowSystemHelpWindow.dll</HintPath>
+ <HintPath>D:/Unity Files/psycho bob/Assets/_MKGlowSystem/_Internal/MKGlowSystemHelpWindow.dll</HintPath>
  </Reference>
  <Reference Include="MKGlowSystemSceneView">
- <HintPath>D:/Unity Files/psycho-bob/Assets/_MKGlowSystem/_Internal/MKGlowSystemSceneView.dll</HintPath>
+ <HintPath>D:/Unity Files/psycho bob/Assets/_MKGlowSystem/_Internal/MKGlowSystemSceneView.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
- <HintPath>C:/Program Files/Unity_51/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+ <HintPath>C:/Program Files/Unity5_1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{8BDD3D3E-5A7C-E4EE-A833-CD4FF619B06E}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+      <Project>{38CD76ED-4209-F9DD-069E-F418448EADFA}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,16 +1,17 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Enemy\Enemy_Dickbug.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Game Utils\CombatZone.cs">
     <Files>
-      <File FileName="Assets\Scripts\Player\PlayerControl.cs" Line="114" Column="4" />
-      <File FileName="Assets\Scripts\Player\PickupTrigger.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Nurse.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Level.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Player\AmmoCrate.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Player\PlayerControl.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Projectiles\Explosion.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Enemy\Boss_cowMan.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Enemy\Enemy_Dickbug.cs" Line="146" Column="66" />
-      <File FileName="Assets\Scripts\ENVRMT\Deflective.cs" Line="10" Column="34" />
+      <File FileName="Assets\Scripts\Enemy\Enemy_Dickbug.cs" Line="39" Column="2" />
+      <File FileName="Assets\Scripts\CameraZone.cs" Line="6" Column="2" />
+      <File FileName="Assets\Scripts\Game Utils\CombatZoneTrigger.cs" Line="13" Column="25" />
+      <File FileName="Assets\Scripts\Game Utils\CombatZone.cs" Line="40" Column="40" />
+      <File FileName="Assets\Scripts\Enemy\Enemy_Dickbat.cs" Line="44" Column="3" />
+      <File FileName="Assets\Scripts\Drone.cs" Line="25" Column="42" />
+      <File FileName="Assets\Scripts\Enemy\Enemy_Soldier.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
