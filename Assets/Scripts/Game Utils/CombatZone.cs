@@ -8,9 +8,13 @@ public class CombatZone : MonoBehaviour {
 
 	public CameraLimits cameraLimits;
 	public float delayNextWave;
+
+	private float delaySeq;
+	private float delayEvnt;
+
 	public Wave[] spawnWaves;
 
-
+	//private Sequence currentSeq;
 	//private SpawnWave currentWave;
 	//public SpawnSequence spawnSequence;
 	//public SpawnEvent spawnEvent;
@@ -40,17 +44,47 @@ public class CombatZone : MonoBehaviour {
 		Camera.main.GetComponent<CameraFollow>().minXAndY = cameraLimits.min;
 		Camera.main.GetComponent<CameraFollow>().levelZoom = cameraLimits.zoom;
 
-		//currentWave = spawnWaves[0];
-		StartCoroutine("WaveUpdate");
+		//StartSeq ();
+
+		StartCoroutine("StartWave");
 	}
-	IEnumerator WaveUpdate()
+
+	IEnumerator StartWave()
 	{
-		yield return new WaitForSeconds(1);
-		var evnt = spawnWaves[waveCount].spawnSeqs[seqCount].spawnEvents[eventCount];
-		if(evnt.enemyType == EnemyType.SOLDIER){
+		var seqs = spawnWaves[waveCount].spawnSeqs; //get sequences
+		delaySeq = spawnWaves [waveCount].delayNextSeq; //delay next sequence
+		
+		foreach (Sequence sq in seqs) { //for each sequence in wave
+			delayEvnt = sq.delayNextEvent;
+			foreach (SpawnEvent evnt in sq.spawnEvents) { //for each event in sequence
+				//currentSeq = sq;
+				//var evnt = sq.spawnEvents[eventCount]; //get spawn event
+				int which = (int)evnt.enemyType; //get enemyType of event;
+				var enemy = enemies [which];
+				var pos = sq.pos + evnt.offset; // spawn position = sequence position + event offset;
+				
+				GameObject go = (GameObject)Instantiate(enemy, pos, Quaternion.identity);
+				if(evnt.enemyType == EnemyType.SOLDIER){
+					var esc = go.GetComponent<Enemy_Soldier>();
+					//esc.
+				}
+				print (go);
+				yield return new WaitForSeconds(delayEvnt);
+				
+			}
+
+		
+			yield return new WaitForSeconds(delaySeq);
 
 		}
+
 	}
+
+	//IEnumerator WaveUpdate()
+	//{
+		//yield return new WaitForSeconds(1);
+
+	//}
 }
 
 [System.Serializable]
@@ -85,5 +119,5 @@ public class SpawnEvent
 	public CombatZone.EnemyType enemyType;
 	public Enemy.Equipped equipped;
 	public Vector2 offset;
-
+	
 }

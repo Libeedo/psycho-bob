@@ -1391,11 +1391,23 @@ Prefab:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11475594, guid: ee267958b3c345647878fc44b4aa3e9e, type: 2}
+      propertyPath: spawnWaves.Array.data[0].spawnSeqs.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11475594, guid: ee267958b3c345647878fc44b4aa3e9e, type: 2}
       propertyPath: spawnWaves.Array.data[0].spawnSeq.Array.data[0].spawnEvent.Array.size
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 11475594, guid: ee267958b3c345647878fc44b4aa3e9e, type: 2}
       propertyPath: spawnWaves.Array.data[0].spawnSeq.Array.data[1].spawnEvent.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11475594, guid: ee267958b3c345647878fc44b4aa3e9e, type: 2}
+      propertyPath: spawnWaves.Array.data[0].spawnSeqs.Array.data[0].spawnEvents.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11475594, guid: ee267958b3c345647878fc44b4aa3e9e, type: 2}
+      propertyPath: spawnWaves.Array.data[0].spawnSeqs.Array.data[1].spawnEvents.Array.size
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 459152, guid: ee267958b3c345647878fc44b4aa3e9e, type: 2}
@@ -1461,6 +1473,54 @@ Prefab:
     - target: {fileID: 11475594, guid: ee267958b3c345647878fc44b4aa3e9e, type: 2}
       propertyPath: spawnWaves.Array.data[0].spawnSeq.Array.data[1].spawnEvent.Array.data[1].offset.x
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11475594, guid: ee267958b3c345647878fc44b4aa3e9e, type: 2}
+      propertyPath: spawnWaves.Array.data[0].spawnSeqs.Array.data[0].spawnEvents.Array.data[0].offset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11475594, guid: ee267958b3c345647878fc44b4aa3e9e, type: 2}
+      propertyPath: spawnWaves.Array.data[0].spawnSeqs.Array.data[0].spawnEvents.Array.data[0].offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11475594, guid: ee267958b3c345647878fc44b4aa3e9e, type: 2}
+      propertyPath: spawnWaves.Array.data[0].spawnSeqs.Array.data[1].spawnEvents.Array.data[0].offset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11475594, guid: ee267958b3c345647878fc44b4aa3e9e, type: 2}
+      propertyPath: spawnWaves.Array.data[0].spawnSeqs.Array.data[1].spawnEvents.Array.data[0].offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11475594, guid: ee267958b3c345647878fc44b4aa3e9e, type: 2}
+      propertyPath: spawnWaves.Array.data[0].spawnSeqs.Array.data[0].pos.x
+      value: 190
+      objectReference: {fileID: 0}
+    - target: {fileID: 11475594, guid: ee267958b3c345647878fc44b4aa3e9e, type: 2}
+      propertyPath: spawnWaves.Array.data[0].spawnSeqs.Array.data[0].pos.y
+      value: 1160
+      objectReference: {fileID: 0}
+    - target: {fileID: 11475594, guid: ee267958b3c345647878fc44b4aa3e9e, type: 2}
+      propertyPath: spawnWaves.Array.data[0].spawnSeqs.Array.data[1].pos.x
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 11475594, guid: ee267958b3c345647878fc44b4aa3e9e, type: 2}
+      propertyPath: spawnWaves.Array.data[0].spawnSeqs.Array.data[1].pos.y
+      value: 1160
+      objectReference: {fileID: 0}
+    - target: {fileID: 11475594, guid: ee267958b3c345647878fc44b4aa3e9e, type: 2}
+      propertyPath: spawnWaves.Array.data[0].spawnSeqs.Array.data[1].spawnEvents.Array.data[0].enemyType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11475594, guid: ee267958b3c345647878fc44b4aa3e9e, type: 2}
+      propertyPath: spawnWaves.Array.data[0].delayNextSeq
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11475594, guid: ee267958b3c345647878fc44b4aa3e9e, type: 2}
+      propertyPath: spawnWaves.Array.data[0].spawnSeqs.Array.data[1].spawnEvents.Array.data[1].enemyType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11475594, guid: ee267958b3c345647878fc44b4aa3e9e, type: 2}
+      propertyPath: spawnWaves.Array.data[0].spawnSeqs.Array.data[1].delayNextEvent
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ee267958b3c345647878fc44b4aa3e9e, type: 2}

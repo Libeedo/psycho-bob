@@ -450,7 +450,7 @@ public class Gun : MonoBehaviour
 
 
 				if(!playerCtrl.grounded){
-					print (angle);
+					//print (angle);
 					playerCtrl.GetComponent<Rigidbody2D>().AddForce(new Vector2 (-angle.x, -angle.y) * 500f);
 				}
 				activeWeapon.clip--;
