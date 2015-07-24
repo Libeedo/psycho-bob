@@ -8,7 +8,7 @@ public class CombatZoneTrigger : MonoBehaviour {
 		if(col.tag == "Player")
 		{
 			if(triggered){return;}
-			transform.parent.GetComponent<CombatZone>().enabled = true;
+			transform.parent.GetComponent<CombatZone>().StartZone();
 			triggered = true;
 			Destroy (gameObject);
 			
