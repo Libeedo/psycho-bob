@@ -1,316 +1,316 @@
-Base path: C:/Program Files/Unity_51/Editor/Data
-Pipe name: \\.\pipe\UnityShaderCompiler-64bit-1-460
+Base path: C:/Program Files/Unity5_1/Editor/Data
+Pipe name: \\.\pipe\UnityShaderCompiler-64bit-1-14076
 Cmd: getPlatforms
 Cmd: preprocess
-  insize=1601 outsize=1600 ok=1
+  insize=1543 outsize=1576 ok=1
 Cmd: preprocess
-  insize=8687 outsize=2135 ok=1
+  insize=8333 outsize=2044 ok=1
 Cmd: preprocess
-  insize=1210 outsize=1261 ok=1
+  insize=1159 outsize=1242 ok=1
 Cmd: preprocess
-  insize=11308 outsize=700 ok=1
+  insize=10964 outsize=662 ok=1
 Cmd: preprocess
-  insize=1305 outsize=357 ok=1
+  insize=1248 outsize=340 ok=1
 Cmd: preprocess
-  insize=452 outsize=452 ok=1
+  insize=435 outsize=435 ok=1
 Cmd: preprocess
-  insize=2258 outsize=772 ok=1
+  insize=2168 outsize=746 ok=1
 Cmd: preprocess
-  insize=1460 outsize=365 ok=1
+  insize=1390 outsize=343 ok=1
 Cmd: preprocess
-  insize=1943 outsize=2190 ok=1
+  insize=1871 outsize=2164 ok=1
 Cmd: preprocess
-  insize=1683 outsize=2324 ok=1
+  insize=1615 outsize=2301 ok=1
 Cmd: preprocess
-  insize=1137 outsize=433 ok=1
+  insize=1063 outsize=406 ok=1
 Cmd: preprocess
-  insize=2847 outsize=1225 ok=1
+  insize=2722 outsize=1181 ok=1
 Cmd: preprocess
-  insize=9900 outsize=835 ok=1
+  insize=9575 outsize=798 ok=1
 Cmd: preprocess
-  insize=1697 outsize=351 ok=1
+  insize=1624 outsize=334 ok=1
 Cmd: preprocess
-  insize=898 outsize=350 ok=1
+  insize=844 outsize=330 ok=1
 Cmd: preprocess
-  insize=1508 outsize=361 ok=1
+  insize=1436 outsize=339 ok=1
 Cmd: preprocess
-  insize=2400 outsize=837 ok=1
+  insize=2309 outsize=810 ok=1
 Cmd: preprocess
-  insize=985 outsize=309 ok=1
+  insize=928 outsize=289 ok=1
 Cmd: preprocess
-  insize=4320 outsize=1045 ok=1
+  insize=4159 outsize=1016 ok=1
 Cmd: preprocess
-  insize=1448 outsize=2096 ok=1
+  insize=1395 outsize=2073 ok=1
 Cmd: preprocess
-  insize=1624 outsize=2055 ok=1
+  insize=1562 outsize=2029 ok=1
 Cmd: preprocess
-  insize=1754 outsize=2135 ok=1
+  insize=1692 outsize=2110 ok=1
 Cmd: preprocess
-  insize=1573 outsize=2191 ok=1
+  insize=1518 outsize=2165 ok=1
 Cmd: preprocess
-  insize=1991 outsize=491 ok=1
+  insize=1923 outsize=467 ok=1
 Cmd: preprocess
-  insize=1284 outsize=407 ok=1
+  insize=1217 outsize=387 ok=1
 Cmd: preprocess
-  insize=3680 outsize=673 ok=1
+  insize=3521 outsize=640 ok=1
 Cmd: preprocess
-  insize=1979 outsize=2255 ok=1
+  insize=1910 outsize=2228 ok=1
 Cmd: preprocess
-  insize=1271 outsize=1987 ok=1
+  insize=1223 outsize=1965 ok=1
 Cmd: preprocess
-  insize=1269 outsize=1497 ok=1
+  insize=1221 outsize=1475 ok=1
 Cmd: preprocess
-  insize=2464 outsize=935 ok=1
+  insize=2367 outsize=902 ok=1
 Cmd: preprocess
-  insize=1518 outsize=2267 ok=1
+  insize=1454 outsize=2247 ok=1
 Cmd: preprocess
-  insize=1659 outsize=1622 ok=1
+  insize=1597 outsize=1593 ok=1
 Cmd: preprocess
-  insize=1699 outsize=2168 ok=1
+  insize=1626 outsize=2131 ok=1
 Cmd: preprocess
-  insize=1108 outsize=1891 ok=1
+  insize=1061 outsize=1868 ok=1
 Cmd: preprocess
-  insize=1223 outsize=404 ok=1
+  insize=1164 outsize=384 ok=1
 Cmd: preprocess
-  insize=6790 outsize=827 ok=1
+  insize=6511 outsize=781 ok=1
 Cmd: preprocess
-  insize=1157 outsize=308 ok=1
+  insize=1097 outsize=289 ok=1
 Cmd: preprocess
-  insize=2256 outsize=2293 ok=1
+  insize=2178 outsize=2265 ok=1
 Cmd: preprocess
-  insize=13263 outsize=2671 ok=1
+  insize=12815 outsize=2575 ok=1
 Cmd: preprocess
-  insize=1097 outsize=1052 ok=1
+  insize=1044 outsize=1035 ok=1
 Cmd: preprocess
-  insize=1496 outsize=2073 ok=1
+  insize=1438 outsize=2048 ok=1
 Cmd: preprocess
-  insize=1524 outsize=723 ok=1
+  insize=1461 outsize=701 ok=1
 Cmd: preprocess
-  insize=2527 outsize=790 ok=1
+  insize=2413 outsize=753 ok=1
 Cmd: preprocess
-  insize=940 outsize=295 ok=1
+  insize=883 outsize=277 ok=1
 Cmd: preprocess
-  insize=1379 outsize=387 ok=1
+  insize=1314 outsize=362 ok=1
 Cmd: preprocess
-  insize=1431 outsize=348 ok=1
+  insize=1353 outsize=326 ok=1
 Cmd: preprocess
-  insize=1230 outsize=267 ok=1
+  insize=1188 outsize=255 ok=1
 Cmd: preprocess
   insize=2379 outsize=1092 ok=1
 Cmd: preprocess
-  insize=1695 outsize=2080 ok=1
+  insize=1632 outsize=2055 ok=1
 Cmd: preprocess
-  insize=1406 outsize=348 ok=1
+  insize=1344 outsize=330 ok=1
 Cmd: preprocess
-  insize=2571 outsize=931 ok=1
+  insize=2472 outsize=897 ok=1
 Cmd: preprocess
-  insize=1336 outsize=1974 ok=1
+  insize=1288 outsize=1952 ok=1
 Cmd: preprocess
-  insize=1262 outsize=322 ok=1
+  insize=1193 outsize=303 ok=1
 Cmd: preprocess
-  insize=2328 outsize=648 ok=1
+  insize=2235 outsize=619 ok=1
 Cmd: preprocess
-  insize=954 outsize=269 ok=1
+  insize=902 outsize=252 ok=1
 Cmd: preprocess
-  insize=2284 outsize=832 ok=1
+  insize=2196 outsize=806 ok=1
 Cmd: preprocess
-  insize=1546 outsize=2032 ok=1
+  insize=1488 outsize=2006 ok=1
 Cmd: preprocess
-  insize=674 outsize=320 ok=1
+  insize=636 outsize=302 ok=1
 Cmd: preprocess
-  insize=6423 outsize=1035 ok=1
+  insize=6131 outsize=973 ok=1
 Cmd: preprocess
-  insize=2340 outsize=1021 ok=1
+  insize=2237 outsize=975 ok=1
 Cmd: preprocess
-  insize=1568 outsize=513 ok=1
+  insize=1496 outsize=490 ok=1
 Cmd: preprocess
-  insize=1011 outsize=1662 ok=1
+  insize=966 outsize=1645 ok=1
 Cmd: preprocess
-  insize=33400 outsize=269 ok=1
+  insize=32573 outsize=255 ok=1
 Cmd: preprocess
-  insize=1219 outsize=261 ok=1
+  insize=1154 outsize=242 ok=1
 Cmd: preprocess
-  insize=4479 outsize=536 ok=1
+  insize=4293 outsize=504 ok=1
 Cmd: preprocess
-  insize=1915 outsize=919 ok=1
+  insize=1829 outsize=882 ok=1
 Cmd: preprocess
-  insize=1050 outsize=267 ok=1
+  insize=992 outsize=248 ok=1
 Cmd: preprocess
-  insize=1382 outsize=2122 ok=1
+  insize=1332 outsize=2098 ok=1
 Cmd: preprocess
-  insize=4990 outsize=1857 ok=1
+  insize=4770 outsize=1779 ok=1
 Cmd: preprocess
-  insize=2116 outsize=1041 ok=1
+  insize=2027 outsize=998 ok=1
 Cmd: preprocess
-  insize=13303 outsize=1949 ok=1
+  insize=12787 outsize=1859 ok=1
 Cmd: preprocess
-  insize=1474 outsize=376 ok=1
+  insize=1406 outsize=354 ok=1
 Cmd: preprocess
-  insize=1021 outsize=353 ok=1
+  insize=963 outsize=333 ok=1
 Cmd: preprocess
-  insize=1254 outsize=1945 ok=1
+  insize=1202 outsize=1920 ok=1
 Cmd: preprocess
-  insize=2116 outsize=1388 ok=1
+  insize=2027 outsize=1337 ok=1
 Cmd: preprocess
-  insize=12408 outsize=2547 ok=1
+  insize=11975 outsize=2457 ok=1
 Cmd: preprocess
-  insize=6260 outsize=773 ok=1
+  insize=6023 outsize=731 ok=1
 Cmd: preprocess
-  insize=2810 outsize=801 ok=1
+  insize=2677 outsize=761 ok=1
 Cmd: preprocess
-  insize=1275 outsize=1951 ok=1
+  insize=1224 outsize=1928 ok=1
 Cmd: preprocess
-  insize=11175 outsize=2600 ok=1
+  insize=10773 outsize=2532 ok=1
 Cmd: preprocess
-  insize=2593 outsize=1205 ok=1
+  insize=2486 outsize=1156 ok=1
 Cmd: preprocess
-  insize=12909 outsize=2439 ok=1
+  insize=12423 outsize=2312 ok=1
 Cmd: preprocess
-  insize=2006 outsize=463 ok=1
+  insize=1909 outsize=438 ok=1
 Cmd: preprocess
-  insize=1423 outsize=670 ok=1
+  insize=1357 outsize=642 ok=1
 Cmd: preprocess
-  insize=14950 outsize=5349 ok=1
+  insize=14490 outsize=5175 ok=1
 Cmd: compileSnippet
   error: 2 plat 1 at UnityStandardCoreMKGlowSystem.cginc(278): invalid output semantic 'TEXCOORD9': Legal indices are in [0,7] invalid vs_2_0 output semantic 'TEXCOORD9'\nCompiling Vertex program with DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF
-  api=1 type=0 insize=2010 outsize=0 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF ok=0
+  api=1 type=0 insize=1965 outsize=0 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF ok=0
 Cmd: preprocess
-  insize=1890 outsize=547 ok=1
+  insize=1802 outsize=527 ok=1
 Cmd: preprocess
-  insize=2455 outsize=933 ok=1
+  insize=2360 outsize=900 ok=1
 Cmd: preprocess
-  insize=1388 outsize=2140 ok=1
+  insize=1338 outsize=2115 ok=1
 Cmd: preprocess
-  insize=1349 outsize=593 ok=1
+  insize=1289 outsize=571 ok=1
 Cmd: preprocess
-  insize=1608 outsize=2139 ok=1
+  insize=1549 outsize=2112 ok=1
 Cmd: preprocess
-  insize=2093 outsize=2186 ok=1
+  insize=2019 outsize=2160 ok=1
 Cmd: preprocess
-  insize=1599 outsize=295 ok=1
+  insize=1530 outsize=277 ok=1
 Cmd: preprocess
-  insize=24902 outsize=4334 ok=1
+  insize=23968 outsize=4108 ok=1
 Cmd: preprocess
-  insize=4094 outsize=562 ok=1
+  insize=3938 outsize=531 ok=1
 Cmd: preprocess
-  insize=1486 outsize=356 ok=1
+  insize=1419 outsize=335 ok=1
 Cmd: preprocess
-  insize=1459 outsize=703 ok=1
+  insize=1396 outsize=678 ok=1
 Cmd: preprocess
-  insize=1760 outsize=300 ok=1
+  insize=1675 outsize=280 ok=1
 Cmd: preprocess
-  insize=1026 outsize=355 ok=1
+  insize=965 outsize=333 ok=1
 Cmd: preprocess
-  insize=1156 outsize=431 ok=1
+  insize=1082 outsize=404 ok=1
 Cmd: preprocess
-  insize=711 outsize=266 ok=1
+  insize=673 outsize=248 ok=1
 Cmd: preprocess
-  insize=2339 outsize=844 ok=1
+  insize=2249 outsize=815 ok=1
 Cmd: preprocess
-  insize=5806 outsize=894 ok=1
+  insize=5564 outsize=855 ok=1
 Cmd: preprocess
-  insize=5373 outsize=778 ok=1
+  insize=5171 outsize=737 ok=1
 Cmd: preprocess
-  insize=1389 outsize=1982 ok=1
+  insize=1335 outsize=1958 ok=1
 Cmd: preprocess
-  insize=1226 outsize=372 ok=1
+  insize=1162 outsize=351 ok=1
 Cmd: preprocess
-  insize=555 outsize=363 ok=1
+  insize=520 outsize=341 ok=1
 Cmd: preprocess
-  insize=6723 outsize=952 ok=1
+  insize=6414 outsize=902 ok=1
 Cmd: preprocess
-  insize=3626 outsize=933 ok=1
+  insize=3433 outsize=885 ok=1
 Cmd: compileSnippet
   error: 2 plat 1 at (22): invalid register semantic 's1', or variable must be bound to multiple register banks (c register binding required)\nCompiling Fragment program
-  api=1 type=1 insize=1222 outsize=0 kw= ok=0
+  api=1 type=1 insize=1181 outsize=0 kw= ok=0
 Cmd: preprocess
-  insize=1367 outsize=391 ok=1
+  insize=1306 outsize=373 ok=1
 Cmd: preprocess
-  insize=33409 outsize=270 ok=1
+  insize=32583 outsize=255 ok=1
 Cmd: preprocess
-  insize=5347 outsize=1767 ok=1
+  insize=5175 outsize=1721 ok=1
 Cmd: preprocess
-  insize=1801 outsize=1062 ok=1
+  insize=1737 outsize=1038 ok=1
 Cmd: preprocess
-  insize=2379 outsize=1086 ok=1
+  insize=2274 outsize=1036 ok=1
 Cmd: preprocess
-  insize=1331 outsize=1571 ok=1
+  insize=1282 outsize=1545 ok=1
 Cmd: preprocess
-  insize=6924 outsize=251 ok=1
+  insize=6737 outsize=236 ok=1
 Cmd: preprocess
-  insize=1193 outsize=1698 ok=1
+  insize=1144 outsize=1674 ok=1
 Cmd: preprocess
-  insize=4414 outsize=445 ok=1
+  insize=4268 outsize=418 ok=1
 Cmd: compileSnippet
   error: 2 plat 1 at (1): Compiled shader code uses too many instruction slots (112). Max. allowed by the target (ps_2_0) is 96.\nCompiling Fragment program
   error: 2 plat 1 at (78): Too many math instructions for SM2.0 (99 needed, max is 64). Try #pragma target 3.0\nCompiling Fragment program
-  api=1 type=1 insize=4239 outsize=0 kw= ok=0
+  api=1 type=1 insize=4125 outsize=0 kw= ok=0
 Cmd: preprocess
-  insize=830 outsize=1969 ok=1
+  insize=795 outsize=1952 ok=1
 Cmd: preprocess
-  insize=1872 outsize=2181 ok=1
+  insize=1803 outsize=2151 ok=1
 Cmd: preprocess
-  insize=4830 outsize=932 ok=1
+  insize=4608 outsize=887 ok=1
 Cmd: preprocess
-  insize=1493 outsize=2023 ok=1
+  insize=1440 outsize=1998 ok=1
 Cmd: preprocess
-  insize=1373 outsize=404 ok=1
+  insize=1310 outsize=384 ok=1
 Cmd: preprocess
-  insize=5974 outsize=1284 ok=1
+  insize=5717 outsize=1219 ok=1
 Cmd: preprocess
-  insize=770 outsize=305 ok=1
+  insize=716 outsize=286 ok=1
 Cmd: preprocess
-  insize=1425 outsize=1548 ok=1
+  insize=1370 outsize=1524 ok=1
 Cmd: preprocess
-  insize=2394 outsize=869 ok=1
+  insize=2301 outsize=838 ok=1
 Cmd: preprocess
-  insize=1097 outsize=1426 ok=1
+  insize=1053 outsize=1403 ok=1
 Cmd: preprocess
-  insize=692 outsize=317 ok=1
+  insize=656 outsize=299 ok=1
 Cmd: preprocess
-  insize=3850 outsize=664 ok=1
+  insize=3696 outsize=630 ok=1
 Cmd: preprocess
-  insize=851 outsize=294 ok=1
+  insize=799 outsize=276 ok=1
 Cmd: preprocess
-  insize=343 outsize=340 ok=1
+  insize=325 outsize=322 ok=1
 Cmd: preprocess
-  insize=14973 outsize=5347 ok=1
+  insize=14509 outsize=5171 ok=1
 Cmd: compileSnippet
   error: 2 plat 1 at UnityStandardCoreMKGlowSystem.cginc(278): invalid output semantic 'TEXCOORD9': Legal indices are in [0,7] invalid vs_2_0 output semantic 'TEXCOORD9'\nCompiling Vertex program with DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF
-  api=1 type=0 insize=1993 outsize=0 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF ok=0
+  api=1 type=0 insize=1948 outsize=0 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF ok=0
 Cmd: preprocess
-  insize=1331 outsize=291 ok=1
+  insize=1265 outsize=272 ok=1
 Cmd: preprocess
-  insize=2135 outsize=1002 ok=1
+  insize=2015 outsize=946 ok=1
 Cmd: preprocess
-  insize=1483 outsize=1621 ok=1
+  insize=1430 outsize=1596 ok=1
 Cmd: preprocess
-  insize=1689 outsize=2074 ok=1
+  insize=1626 outsize=2049 ok=1
 Cmd: preprocess
-  insize=1849 outsize=1725 ok=1
+  insize=1785 outsize=1698 ok=1
 Cmd: preprocess
-  insize=1058 outsize=1646 ok=1
+  insize=1013 outsize=1625 ok=1
 Cmd: preprocess
-  insize=1830 outsize=1076 ok=1
+  insize=1766 outsize=1052 ok=1
 Cmd: preprocess
-  insize=5316 outsize=740 ok=1
+  insize=5095 outsize=700 ok=1
 Cmd: preprocess
-  insize=1329 outsize=2025 ok=1
+  insize=1278 outsize=1998 ok=1
 Cmd: preprocess
-  insize=1072 outsize=494 ok=1
+  insize=1017 outsize=470 ok=1
 Cmd: preprocess
-  insize=1210 outsize=386 ok=1
+  insize=1139 outsize=364 ok=1
 Cmd: preprocess
-  insize=3111 outsize=1532 ok=1
+  insize=2988 outsize=1475 ok=1
 Cmd: preprocess
-  insize=553 outsize=259 ok=1
+  insize=512 outsize=241 ok=1
 Cmd: preprocess
-  insize=698 outsize=312 ok=1
+  insize=650 outsize=290 ok=1
 Cmd: preprocess
-  insize=1181 outsize=2023 ok=1
+  insize=1136 outsize=1999 ok=1
 Cmd: preprocess
-  insize=5240 outsize=920 ok=1
+  insize=5006 outsize=866 ok=1
 Cmd: preprocess
-  insize=1416 outsize=2032 ok=1
+  insize=1364 outsize=2009 ok=1
 Cmd: preprocess
-  insize=1598 outsize=2147 ok=1
+  insize=1542 outsize=2121 ok=1

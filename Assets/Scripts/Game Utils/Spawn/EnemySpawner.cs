@@ -50,7 +50,7 @@ public class EnemySpawner : Spawner {
 				StartCoroutine(passengerBack());
 			}
 			if(randomEquipped){
-				equipped = GameUtiils.GetRandomEnum<Enemy_Soldier.Equipped>();
+				equipped = (Enemy.Equipped)Random.Range(0,4);//GameUtiils.GetRandomEnum<Enemy_Soldier.Equipped>();
 			}
 			if(randomSpeed){
 				speed = Random.Range(0,6);
@@ -107,7 +107,7 @@ public class EnemySpawner : Spawner {
 			for(int i = 0; i <= 2;i++){
 				//pos.x += offset;
 				if(rnd){
-					equipped = GameUtiils.GetRandomEnum<Enemy_Soldier.Equipped>();
+					equipped  = (Enemy.Equipped)Random.Range(0,4);//GameUtiils.GetRandomEnum<Enemy_Soldier.Equipped>();
 				}
 				MakeEnemy(pos);
 				spawnCount++;

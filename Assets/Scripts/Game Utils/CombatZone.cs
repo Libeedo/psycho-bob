@@ -69,7 +69,9 @@ public class CombatZone : MonoBehaviour {
 
 					var esc = go.GetComponent<Enemy_Soldier>();
 					if(evnt.equipped == Enemy.Equipped.RANDOM){
-						esc.equipped = GameUtiils.GetRandomEnum<Enemy.Equipped>();
+						var rnd = Random.Range(0,4);
+						print (rnd);
+						esc.equipped = (Enemy.Equipped)rnd;//GameUtiils.GetRandomEnum<Enemy.Equipped>();
 					}else{
 						esc.equipped = evnt.equipped;
 					}
@@ -86,7 +88,9 @@ public class CombatZone : MonoBehaviour {
 
 					if(evnt.equipped == Enemy.Equipped.RANDOM){
 						var esc = go.GetComponent<Enemy>();
-						esc.equipped = GameUtiils.GetRandomEnum<Enemy.Equipped>();
+						var rnd = Random.Range(0,4);
+						print (rnd);
+						esc.equipped = (Enemy.Equipped)rnd;
 					}
 
 				}
