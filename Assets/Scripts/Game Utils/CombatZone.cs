@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEditor;
 using System.Collections;
+using System.Collections.Generic;
 
 public class CombatZone : MonoBehaviour {
 
@@ -65,8 +66,29 @@ public class CombatZone : MonoBehaviour {
 				
 				GameObject go = (GameObject)Instantiate(enemy, pos, Quaternion.identity);
 				if(evnt.enemyType == EnemyType.SOLDIER){
+
 					var esc = go.GetComponent<Enemy_Soldier>();
-					//esc.
+					if(evnt.equipped == Enemy.Equipped.RANDOM){
+						esc.equipped = GameUtiils.GetRandomEnum<Enemy.Equipped>();
+					}else{
+						esc.equipped = evnt.equipped;
+					}
+					if(evnt.paratrooper){
+						esc.moveSpeed = Random.Range(0,6);
+						esc.paratrooperMode = true;
+					}else{
+						esc.moveSpeed = evnt.speed;
+					}
+
+
+				}else if(evnt.enemyType == EnemyType.DICKBUG){
+
+
+					if(evnt.equipped == Enemy.Equipped.RANDOM){
+						var esc = go.GetComponent<Enemy>();
+						esc.equipped = GameUtiils.GetRandomEnum<Enemy.Equipped>();
+					}
+
 				}
 				print (go);
 				yield return new WaitForSeconds(delayEvnt);
@@ -99,7 +121,7 @@ public class CameraLimits
 public class Wave
 {
 	public float delayNextSeq;
-	public Sequence[] spawnSeqs;
+	public List<Sequence> spawnSeqs = new List<Sequence>();
 
 }
 
@@ -109,7 +131,7 @@ public class Sequence
 
 	public Vector2 pos;
 	public float delayNextEvent;
-	public SpawnEvent[] spawnEvents;
+	public List<SpawnEvent> spawnEvents = new List<SpawnEvent>();
 
 }
 
@@ -118,6 +140,10 @@ public class SpawnEvent
 {
 	public CombatZone.EnemyType enemyType;
 	public Enemy.Equipped equipped;
+	//public bool randomEquipped;
+	public bool paratrooper;
+	public float speed;
+	//public bool randomSpeed;
 	public Vector2 offset;
 	
 }

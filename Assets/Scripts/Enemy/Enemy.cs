@@ -56,6 +56,7 @@ public class Enemy:MonoBehaviour {
 		SHIELD,
 		SNIPER,
 		NIL,//ignore all (jihanding currently) fuck off while he finds his inner piece) 0f ass ) of 72 virgins
+		RANDOM//for battle zone spawner system
 	}
 	public Equipped equipped = Equipped.NOTHING;
 	
