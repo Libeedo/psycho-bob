@@ -1392,7 +1392,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100010}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 267.842133, y: 128.425812, z: 0}
+  m_LocalPosition: {x: 158.199997, y: 1135.19995, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400084}
@@ -2380,7 +2380,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 11564f266ff62064a879e0068dad577a, type: 2}
+  - {fileID: 2100000, guid: e4eab7890e39e8e4ca1ef2d5bd4550fc, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -2761,7 +2761,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: e8141cb10b0f7fb44a4b6949993eb593, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
@@ -2830,13 +2830,13 @@ MonoBehaviour:
   sortingNum: 0
   facingRight: 1
   hitEffect: {fileID: 100394, guid: ca122426c74ad864f97e737641154d37, type: 2}
+  equipped: 3
   explsnRef: {fileID: 100002, guid: 9e2c3a60b3138c5408b8e28724a9cd9a, type: 2}
   chuteRef: {fileID: 100000, guid: 86b8fefb9b5190744b25002c8d8d86bb, type: 2}
   paratrooperMode: 0
   openChuteDelay: 0
-  equipped: 0
   moveSpeed: 10
-  status: 0
+  status: 3
   ragdollRef: {fileID: 100020, guid: 77380240820b6034cbde74e5cdb2f855, type: 2}
   snipeWalk: 0
   eDamageGOref: {fileID: 100034, guid: ecc6493d68fd07742958aeb4edeaad3d, type: 2}
@@ -2950,6 +2950,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 3618ef72cd6c5344ba3f4be06b874136, type: 3}
   - {fileID: 8300000, guid: 45e895740a41d2e4698a3530311ab0a5, type: 3}
   - {fileID: 8300000, guid: b0793c42ec5cff74895fc45743304051, type: 3}
+  - {fileID: 8300000, guid: 8be53f1d5b19dc04d9c4b6b1dbdb2c3b, type: 3}
   soloMode: 0
 --- !u!114 &11400018
 MonoBehaviour:

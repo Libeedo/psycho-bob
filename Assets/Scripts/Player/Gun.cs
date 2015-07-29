@@ -175,7 +175,7 @@ public class Gun : MonoBehaviour
 		playerCtrl = playerT.GetComponent<PlayerControl>();
 		playerHealth = playerT.GetComponent<PlayerHealth>();
 
-		print (playerT.name);
+		//print (playerT.name);
 
 		playerCtrl.gunCS = this;
 		playerAnim = playerT.GetComponent<Animator>();
@@ -822,6 +822,7 @@ public class Gun : MonoBehaviour
 	}
 	private void ChargeStrat()//called by animator
 	{
+
 		activeWeapon.chargeCount++;
 		UpdateAmmoDisp();
 		//print ("charge " + activeWeapon.chargeCount);
@@ -1320,6 +1321,7 @@ public class Gun : MonoBehaviour
 	}
 	public void fixGuns()
 	{
+		aud.Stop ();
 		canShoot = true;
 		if(gunMode==GunMode.ROCKET){
 			rpgGO.SetActive(true);

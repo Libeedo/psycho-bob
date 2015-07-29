@@ -9,6 +9,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 459152}
   - 61: {fileID: 6154132}
+  - 114: {fileID: 11484076}
   - 114: {fileID: 11475594}
   m_Layer: 24
   m_Name: combatZone
@@ -116,7 +117,38 @@ MonoBehaviour:
     min: {x: 150, y: 1130}
     zoom: 2
   delayNextWave: 0
-  spawnWaves: []
+  spawnWaves:
+  - delayNextSeq: 1
+    spawnSeqs:
+    - pos: {x: 190, y: 1160}
+      delayNextEvent: 2
+      spawnEvents: []
+--- !u!114 &11484076
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 136710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b4a8568f9cf1c64f99e6d161249cf2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sequences:
+  - amount: 10
+    pos: {x: 190, y: 1160}
+    eType: 0
+    equipped: 5
+    chute: 1
+    delay: .5
+    offset: {x: 1, y: 1}
+  - amount: 2
+    pos: {x: 0, y: 0}
+    eType: 1
+    equipped: 0
+    chute: 0
+    delay: 0
+    offset: {x: 0, y: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

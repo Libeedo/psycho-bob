@@ -11,8 +11,9 @@ public class SniperSight : MonoBehaviour {
 	public AudioClip[] shootFX;
 	private RaycastHit2D hit;
 	// Use this for initialization
-	public bool soloMode = false; //soloMode = not attached to soldier (ie dickbat or drone)
-	private SpriteRenderer headSR;
+	public bool soloMode = false; //soloMode = not attached to soldier (ie dickbat or drone) //needed still? dont have shooting dickbats really anymore
+
+	private Animator headA;
 	void Awake()
 	{
 		oscCS = GetComponent<Oscillate>();
@@ -20,7 +21,7 @@ public class SniperSight : MonoBehaviour {
 			enemyA = transform.GetComponent<Animator> ();
 		} else {
 				enemyA = transform.root.GetComponent<Animator> ();
-				headSR = enemyA.transform.Find ("head Transform").Find ("head").GetComponent<SpriteRenderer> ();
+				headA = enemyA.transform.Find ("head Transform").Find ("head").GetComponent<Animator> ();
 		}
 	}
 	void Start () {
@@ -59,13 +60,15 @@ public class SniperSight : MonoBehaviour {
 		//StopSniping();
 		CancelInvoke();
 		oscCS.enabled = false;
-		
+
 		enemyA.Play("enemyShootGun");
-		if (headSR) {
-				headSR.sprite = Soldier_Sprites.S.getHead (3);
-		}
-		yield return new WaitForSeconds(0.4f);
-		AudioSource.PlayClipAtPoint(shootFX[Random.Range (0, shootFX.Length)], transform.position);
+		//if (headSR) {
+				//headSR.sprite = Soldier_Sprites.S.getHead (3);
+		//}
+		headA.Play ("enemyShootGunMouth");
+		AudioSource.PlayClipAtPoint(shootFX[shootFX.Length-1], transform.position);
+		yield return new WaitForSeconds(0.6f);
+		AudioSource.PlayClipAtPoint(shootFX[Random.Range (0, shootFX.Length-1)], transform.position);
 		//Vector3  playerPos = hit.transform.position;
 		//playerPos.y += 2;
 		Vector3 pos = new Vector3(transform.position.x + (transform.root.transform.localScale.x *3f),transform.position.y);//-2f,0);
@@ -80,9 +83,9 @@ public class SniperSight : MonoBehaviour {
 		
 
 		enemyA.Play ("enemySnipe");
-		if (headSR) {
-			headSR.sprite = Soldier_Sprites.S.getHead (0);
-		}
+		//if (headSR) {
+			//headSR.sprite = Soldier_Sprites.S.getHead (0);
+		//}
 		yield return new WaitForSeconds(1f);
 		StartSniping();
 	}
