@@ -1,13 +1,18 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Game Utils\CombatZone.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Game Utils\RemoveFromSpawnWave.cs">
     <Files>
-      <File FileName="Assets\Scripts\Enemy\SniperSight.cs" Line="95" Column="38" />
-      <File FileName="Assets\Scripts\Game Utils\CombatZoneManager.cs" Line="36" Column="36" />
-      <File FileName="Assets\Scripts\Game Utils\CombatZone.cs" Line="58" Column="62" />
+      <File FileName="Assets\Scripts\Game Utils\CombatZone.cs" Line="52" Column="18" />
+      <File FileName="Assets\Scripts\Enemy\SniperSight.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Game Utils\CombatZoneManager.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Projectiles\Explosion.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Game Utils\CombatZoneTrigger.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Player\Gun.cs" Line="825" Column="3" />
+      <File FileName="Assets\Scripts\Player\Gun.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Level.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Game Utils\NursePoint.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Enemy\Enemy.cs" Line="214" Column="68" />
+      <File FileName="Assets\Scripts\Game Utils\RemoveFromSpawnWave.cs" Line="11" Column="26" />
+      <File FileName="Assets\Scripts\Enemy\Enemy_Ragdoll.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

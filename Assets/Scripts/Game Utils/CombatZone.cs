@@ -13,16 +13,16 @@ public class CombatZone : MonoBehaviour {
 	private float delaySeq;
 	private float delayEvnt;
 
-	public Wave[] spawnWaves;
-
+	public List<Wave> spawnWaves = new List<Wave>();
+	public List<GameObject> waveEnemies = new List<GameObject> (); //List of current wave of enemies;
 	//private Sequence currentSeq;
 	//private SpawnWave currentWave;
 	//public SpawnSequence spawnSequence;
 	//public SpawnEvent spawnEvent;
 
 	int waveCount = 0;
-	int seqCount = 0;
-	int eventCount = 0;
+	//int seqCount = 0;
+	//int eventCount = 0;
 
 	public enum EnemyType{
 		SOLDIER,
@@ -49,9 +49,15 @@ public class CombatZone : MonoBehaviour {
 
 		StartCoroutine("StartWave");
 	}
-
+	public void NextWave()
+	{
+		StartCoroutine("StartWave");
+	}
 	IEnumerator StartWave()
 	{
+		print ("WAVE " + waveCount);
+		yield return new WaitForSeconds (delayNextWave);
+
 		var seqs = spawnWaves[waveCount].spawnSeqs; //get sequences
 		delaySeq = spawnWaves [waveCount].delayNextSeq; //delay next sequence
 		
@@ -65,6 +71,10 @@ public class CombatZone : MonoBehaviour {
 				var pos = sq.pos + evnt.offset; // spawn position = sequence position + event offset;
 				
 				GameObject go = (GameObject)Instantiate(enemy, pos, Quaternion.identity);
+				waveEnemies.Add(go);
+				var r = go.AddComponent<RemoveFromSpawnWave>();
+				r.combatZone = this;
+
 				if(evnt.enemyType == EnemyType.SOLDIER){
 
 					var esc = go.GetComponent<Enemy_Soldier>();
@@ -101,9 +111,9 @@ public class CombatZone : MonoBehaviour {
 
 		
 			yield return new WaitForSeconds(delaySeq);
-
+			 
 		}
-
+		waveCount++;
 	}
 
 	//IEnumerator WaveUpdate()

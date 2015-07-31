@@ -92,6 +92,7 @@
      <Compile Include="Assets\Scripts\Game Utils\OffscreenIndicator.cs" />
      <Compile Include="Assets\Scripts\Game Utils\Oscillate.cs" />
      <Compile Include="Assets\Scripts\Game Utils\Pauser.cs" />
+     <Compile Include="Assets\Scripts\Game Utils\RemoveFromSpawnWave.cs" />
      <Compile Include="Assets\Scripts\Game Utils\Remover.cs" />
      <Compile Include="Assets\Scripts\Game Utils\Score.cs" />
      <Compile Include="Assets\Scripts\Game Utils\SetParticleSortingLayer.cs" />
