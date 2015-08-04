@@ -8,6 +8,8 @@ public class CombatZone : MonoBehaviour {
 	public GameObject[] enemies;
 
 	public CameraLimits cameraLimits;
+	private CameraLimits levelCameraLimits = new CameraLimits();
+
 	public float delayNextWave;
 
 	private float delaySeq;
@@ -30,9 +32,7 @@ public class CombatZone : MonoBehaviour {
 		DICKBAT
 	}
 
-	//void Start () {
-		//cameraLimits = new CameraLimits ();
-	//}
+
 	
 	// Update is called once per frame
 	//void Update () {
@@ -40,10 +40,15 @@ public class CombatZone : MonoBehaviour {
 	//}
 	public void StartZone()
 	{
-		print("startZone");
-		Camera.main.GetComponent<CameraFollow>().maxXAndY = cameraLimits.max;
-		Camera.main.GetComponent<CameraFollow>().minXAndY = cameraLimits.min;
-		Camera.main.GetComponent<CameraFollow>().levelZoom = cameraLimits.zoom;
+
+		var cam = Camera.main.GetComponent<CameraFollow>();
+		print("startZone "+cam.maxXAndY);
+		levelCameraLimits.max = cam.maxXAndY;
+		levelCameraLimits.min = cam.minXAndY;
+		levelCameraLimits.zoom = cam.levelZoom;
+		cam.maxXAndY = cameraLimits.max;
+		cam.minXAndY = cameraLimits.min;
+		cam.levelZoom = cameraLimits.zoom;
 
 		//StartSeq ();
 
@@ -51,7 +56,18 @@ public class CombatZone : MonoBehaviour {
 	}
 	public void NextWave()
 	{
-		StartCoroutine("StartWave");
+		if(waveCount >= spawnWaves.Count){
+			EndZone();
+		}else{
+			StartCoroutine("StartWave");
+		}
+	}
+	void EndZone()
+	{
+		Camera.main.GetComponent<CameraFollow>().maxXAndY = levelCameraLimits.max;
+		Camera.main.GetComponent<CameraFollow>().minXAndY = levelCameraLimits.min;
+		Camera.main.GetComponent<CameraFollow>().levelZoom = levelCameraLimits.zoom;
+		Destroy (gameObject);
 	}
 	IEnumerator StartWave()
 	{
@@ -95,12 +111,14 @@ public class CombatZone : MonoBehaviour {
 
 				}else if(evnt.enemyType == EnemyType.DICKBUG){
 
-
+					var esc = go.GetComponent<Enemy>();
 					if(evnt.equipped == Enemy.Equipped.RANDOM){
-						var esc = go.GetComponent<Enemy>();
+
 						var rnd = Random.Range(0,4);
 						print (rnd);
 						esc.equipped = (Enemy.Equipped)rnd;
+					}else{
+						esc.equipped = evnt.equipped;
 					}
 
 				}
@@ -128,7 +146,7 @@ public class CameraLimits
 {
 	public Vector2 max;
 	public Vector2 min;
-	public int zoom;
+	public float zoom;
 }
 
 [System.Serializable]

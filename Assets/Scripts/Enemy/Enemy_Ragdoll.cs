@@ -53,7 +53,7 @@ public class Enemy_Ragdoll : Enemy
 					return;
 				}
 				float speed = Mathf.Abs (body.GetComponent<Rigidbody2D>().velocity.x) + Mathf.Abs (body.GetComponent<Rigidbody2D>().velocity.y);
-				//print (speed);
+				print (speed);
 				if (speed < 0.05) {
 					//print ("enemy RD STOPPED");
 					if(dead){
@@ -84,9 +84,9 @@ public class Enemy_Ragdoll : Enemy
 		//return;
 		//GameObject soldier = Instantiate(soldierRef, new Vector3(transform.position.x,transform.position.y + 2.5f,transform.position.z), Quaternion.identity) as GameObject;
 		//print (dead);
-		if(!soldier){
-			Level.instance.pauser.Pause();
-		}
+		//if(!soldier){
+			//Level.instance.pauser.Pause();
+		//}
 		soldier.transform.position = new Vector2(body.position.x - .5f ,body.position.y - 2);
 		Transform hed = transform.Find ("head Transform").Find ("head");
 		//print (hed);
@@ -264,7 +264,7 @@ public class Enemy_Ragdoll : Enemy
 	}
 	public void DestroyLimbs(Vector2 vel)
 	{
-		print ("limbsssssssssss");
+		//print ("limbsssssssssss");
 		HingeJoint2D[] joints = body.GetComponents<HingeJoint2D>();
 		foreach (HingeJoint2D jnt in joints) {
 			Rigidbody2D limb = jnt.connectedBody; 

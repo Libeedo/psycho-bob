@@ -133,9 +133,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 482632}
   - 212: {fileID: 21278908}
-  m_Layer: 20
+  m_Layer: 1
   m_Name: shieldFake
-  m_TagString: Deflective
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1401,7 +1401,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 191586}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 162.279999, y: 1139.18005, z: 0}
+  m_LocalPosition: {x: 183.285629, y: 1135.79907, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 439728}
@@ -2139,7 +2139,7 @@ MonoBehaviour:
   sortingNum: 0
   facingRight: 1
   hitEffect: {fileID: 100394, guid: ca122426c74ad864f97e737641154d37, type: 2}
-  equipped: 1
+  equipped: 0
   status: 0
   growlFX:
   - {fileID: 8300000, guid: 1ccaeb5298063c743976cad05b3865ca, type: 3}

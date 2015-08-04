@@ -62,7 +62,7 @@ public class PlayerControl : MonoBehaviour
 	private float awayWallCount;
 	private float maxOffWallCount = 2.2f;//max time he sticks to the wall before sliding down
 
-	private float maxAwayWallCount = 5f;//amount of time he has to push away to not be on the wall
+	private float maxAwayWallCount = 8f;//amount of time he has to push away to not be on the wall
 	//private Vector2 wallUpPush;//give em a boost when he hit a wall for wallslide
 
 	//private bool nearGrabbable = false;

@@ -36,7 +36,7 @@ public class Explosive : MonoBehaviour
 
 	public void Hurt(int damage,Vector2 vel,Vector2 pos)
 	{
-		print ("damage "+dead);
+		//print ("damage "+dead);
 		//StartCoroutine(BombDetonation());
 		HP -= damage;
 		fireCount += damage;
