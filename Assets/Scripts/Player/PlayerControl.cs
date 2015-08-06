@@ -111,7 +111,7 @@ public class PlayerControl : MonoBehaviour
 		STUCK
 	}
 	private Status status = Status.IDLE;
-	//private Status lastStatus = Status.IDLE;
+	private Status lastStatus = Status.IDLE;
 
 	private delegate void State ();
 	private State stateMethod;
@@ -242,12 +242,15 @@ public class PlayerControl : MonoBehaviour
 
 		anim.SetFloat ("Speed", Mathf.Abs (hVel));
 		stateMethod ();
-		//if(status != lastStatus){             ///GET RID OF THIS !!!!!!!!!!!
-			//print ("SWITCH        "+lastStatus+"  "+status);
-			//lastStatus = status;
-		//}
+
+		if(status != lastStatus){             ///GET RID OF THIS !!!!!!!!!!!
+			print ("SWITCH        "+lastStatus+"  "+status);
+			print (stateMethod);
+			lastStatus = status;
+		}
 
 	}
+	//STATE METHODS FOR DELEGATE
 	private void DoNothing(){}
 	private void IdleGround()
 	{
@@ -330,9 +333,11 @@ public class PlayerControl : MonoBehaviour
 
 	private void JumpAir()
 	{
+		//print ("jump");
 		//hit ground>?
 		if(rigidBody.velocity.y <= 0f){
 			if(!CheckAirborne()){
+				print ("jump return");
 				return;
 			}
 		}
@@ -348,18 +353,19 @@ public class PlayerControl : MonoBehaviour
 			stateMethod = FallAir;
 			anim.Play ("Fall");
 		}
-		tryWallSlide(hVel);
+		//tryWallSlide(hVel);
 		tryGrabbing();
 
 	}
 	private void FallAir()
 	{
+		//print ("fall");
 		//hit ground?
 		if (CheckAirborne ()) {
 			Move (hVel * 0.7f);
 			tryWallSlide (hVel);
 			tryGrabbing ();
-			if (Math.Abs (rigidBody.velocity.y) < 0.0001f) {
+			if (Math.Abs (rigidBody.velocity.y) < 0.0001f && status == Status.FALL) { //if not moving up and still FALLING(could have switchd to wall or grab)
 					//print ("stuck");
 					StartCoroutine ("UnstuckCorner");
 					//rigidBody.AddForce(new Vector2(0,20f));
@@ -369,6 +375,7 @@ public class PlayerControl : MonoBehaviour
 	}
 	private void WallAir()
 	{
+		print ("WALL AIR ");
 		if (CheckAirborne ()) {
 			WallMove (hVel);
 			if (jump) {
@@ -376,6 +383,7 @@ public class PlayerControl : MonoBehaviour
 			}
 		} else {
 			onWall = false;
+			awayWallCount = maxAwayWallCount;
 		}
 	}
 	private void GrabAir()
@@ -420,6 +428,11 @@ public class PlayerControl : MonoBehaviour
 			}
 		//}
 	}
+	//STATE METHODS END
+
+
+
+
 	private bool CheckAirborne()
 	{
 		//return true;
@@ -432,10 +445,12 @@ public class PlayerControl : MonoBehaviour
 			rigidBody.velocity = new Vector2(rigidBody.velocity.x * 0.3f,rigidBody.velocity.y);////????????????????
 			return false;
 		}
+		//print ("true");
 		return true;
 	}
 	private bool CheckGrounded()
 	{
+		//print ("ground "+grounded);
 		if (grounded) {
 			return true;
 		}else{
@@ -510,18 +525,22 @@ public class PlayerControl : MonoBehaviour
 				awayWallCount--;
 			}
 		}
+		print (facingRight+"  "+awayWallCount);
 		//fall off wall
 		if(awayWallCount < 0f){
-			//print ("away drop");
+			print ("away drop");
 			status = Status.FALL;
 			stateMethod = FallAir;
 			anim.Play ("Fall");
-			onWall = false;
+			//onWall = false;
+			//awayWallCount = maxAwayWallCount;
 			legs.rotation  = Quaternion.identity;
-			wallJumping = true;//not really wall jumping, but need it so he cant just go right back into a wallslide and boost again, going up the walltoo easily
-			StartCoroutine(SwitchWallJumping());
+			//walljumping stops movement, cant use this
+			//wallJumping = true;//not really wall jumping, but need it so he cant just go right back into a wallslide and boost again, going up the walltoo easily
+			//StartCoroutine(SwitchWallJumping()); 
 
-
+			//just switch onWall to prevent getting immediately back on the wall
+			StartCoroutine(SwitchOnWall());
 			Flip();
 		}
 
@@ -537,6 +556,7 @@ public class PlayerControl : MonoBehaviour
 			stateMethod = ClimbAir;
 			legs.rotation  = Quaternion.identity;
 			onWall = false;
+			//awayWallCount = maxAwayWallCount;
 		}
 
 
@@ -570,6 +590,7 @@ public class PlayerControl : MonoBehaviour
 
 		anim.Play ("Jump");
 		onWall = false;
+		//awayWallCount = maxAwayWallCount;
 		legs.rotation  = Quaternion.identity;
 		wallJumping = true;
 		stillJumping = true;
@@ -585,6 +606,12 @@ public class PlayerControl : MonoBehaviour
 		yield return new WaitForSeconds(0.5f);
 		//print ("bool back  ");
 		wallJumping = !wallJumping;
+	}
+	IEnumerator SwitchOnWall()
+	{
+		yield return new WaitForSeconds(0.5f);
+		//print ("bool back  ");
+		onWall = false;
 	}
 	void Jump()
 	{
@@ -798,6 +825,7 @@ public class PlayerControl : MonoBehaviour
 				stateMethod = ClimbAir;
 				legs.rotation  = Quaternion.identity;
 				onWall = false;
+				awayWallCount = maxAwayWallCount;
 			}
 			//
 	
@@ -911,6 +939,7 @@ public class PlayerControl : MonoBehaviour
 		if(facingRight != facingR){
 			Flip();
 		}
+		onWall = false;
 		status = Status.RIDE;
 		stateMethod = DoNothing;
 		anim.Play("BootyRide");

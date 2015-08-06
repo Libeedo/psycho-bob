@@ -734,27 +734,27 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 6aa187bc6339843479c03fdfd71404a3, type: 2}
       propertyPath: m_LocalRotation.z
-      value: -.121641882
+      value: -.121470451
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 6aa187bc6339843479c03fdfd71404a3, type: 2}
       propertyPath: m_LocalRotation.w
-      value: -.992574096
+      value: -.992595017
       objectReference: {fileID: 0}
     - target: {fileID: 459292, guid: 6aa187bc6339843479c03fdfd71404a3, type: 2}
       propertyPath: m_LocalRotation.z
-      value: .454011321
+      value: .454011291
       objectReference: {fileID: 0}
     - target: {fileID: 459292, guid: 6aa187bc6339843479c03fdfd71404a3, type: 2}
       propertyPath: m_LocalRotation.w
-      value: -.89099592
+      value: -.890995979
       objectReference: {fileID: 0}
     - target: {fileID: 440024, guid: 6aa187bc6339843479c03fdfd71404a3, type: 2}
       propertyPath: m_LocalRotation.z
-      value: .345184803
+      value: .345346838
       objectReference: {fileID: 0}
     - target: {fileID: 440024, guid: 6aa187bc6339843479c03fdfd71404a3, type: 2}
       propertyPath: m_LocalRotation.w
-      value: .938534737
+      value: .938475132
       objectReference: {fileID: 0}
     - target: {fileID: 11400004, guid: 6aa187bc6339843479c03fdfd71404a3, type: 2}
       propertyPath: angleLimits.Array.data[0].min
@@ -1251,7 +1251,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400006, guid: 32ded5d8f19527645a84b15556780f93, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 126.900002
+      value: 151.600006
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: 32ded5d8f19527645a84b15556780f93, type: 2}
       propertyPath: m_LocalPosition.y
@@ -1434,11 +1434,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 7003011da0fe6424eaeeee1dd4b7a23b, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 175.699997
+      value: 179.399994
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7003011da0fe6424eaeeee1dd4b7a23b, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1092.09998
+      value: 1132.59998
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7003011da0fe6424eaeeee1dd4b7a23b, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1782,7 +1782,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 136710, guid: ee267958b3c345647878fc44b4aa3e9e, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11484076, guid: ee267958b3c345647878fc44b4aa3e9e, type: 2}
       propertyPath: waves.Array.data[0].sequences.Array.data[0].amount
