@@ -407,7 +407,7 @@ public class PlayerControl : MonoBehaviour
 	private void ClimbAir()
 	{
 		//if (CheckAirborne ()) {
-			rigidBody.velocity = new Vector2(0f,15f);
+			rigidBody.velocity = new Vector2(0f,40f);
 			//float dir = -1;
 			//if(facingRight){
 			//dir =1f;
@@ -725,33 +725,46 @@ public class PlayerControl : MonoBehaviour
 
 
 	void tryGrabbing(){
-
+		
 		if (!grabbing && canGrab) {
 			
 			if (grabHit = Physics2D.Linecast (transform.position, grabCheck.position, 1 << LayerMask.NameToLayer ("Grabbable"))) {
 				print ("grabbed");
 				status = Status.GRAB;
 				stateMethod = GrabAir;
-
+				
 				grabbing = true;
 				jump = false;
 				sliding = false;
 				//tail.enabled = false;
 				tail.SetActive(false);
-				grabTail = (GameObject)Instantiate(grabTailRef, new Vector2(transform.position.x - 0.2f,grabHit.transform.position.y - 6f), Quaternion.identity);
-
-				HingeJoint2D grabJoint = (HingeJoint2D)grabTail.transform.Find ("tailLink 5").gameObject.AddComponent <HingeJoint2D>();
-				grabJoint.connectedBody = grabHit.transform.GetComponent<Rigidbody2D>();
-				grabJoint.anchor = new Vector2(0f,0.9f);
-
+				
+				float diffX = grabHit.transform.position.x - transform.position.x;
+				float diffY = grabHit.transform.position.y - transform.position.y;
+				float angle = Mathf.Atan2(diffY, diffX) * Mathf.Rad2Deg;
+				Quaternion angle3 = Quaternion.Euler(new Vector3(0, 0, angle));
+				//var angleZ = Quaternion.AngleAxis(angle,Vector3.up);
+				
+				grabTail = (GameObject)Instantiate(grabTailRef, new Vector2(transform.position.x - 0.4f,transform.position.y + 0.7f), angle3); //new Vector2(transform.position.x - 0.2f,grabHit.transform.position.y - 6f),
+				//grabTail.transform.rotation = angle3;
+				//Level.instance.pauser.Pause();
+				
+				
 				HingeJoint2D grabJoint2 = (HingeJoint2D)grabTail.transform.Find ("tailLink 1").gameObject.AddComponent <HingeJoint2D>();
 				grabJoint2.connectedBody = transform.GetComponent<Rigidbody2D>();
 				grabJoint2.connectedAnchor = new Vector2(-0.4f,0.7f);
 				//grabJoint2.anchor = new Vector2(0.2f,-0.65f);
+				
+				HingeJoint2D grabJoint = (HingeJoint2D)grabTail.transform.Find ("tailLink 5").gameObject.AddComponent <HingeJoint2D>();
+				grabJoint.connectedBody = grabHit.transform.GetComponent<Rigidbody2D>();
+				grabJoint.anchor = new Vector2(0f,0.9f);
+				
+				//Level.instance.pauser.Pause();
+				
 				anim.SetBool ("grabbing",true);
 				anim.Play("Grab");
-
-
+				
+				
 			}
 			//againstWall = false;
 		}

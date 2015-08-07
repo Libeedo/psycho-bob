@@ -435,9 +435,9 @@ public class Gun : MonoBehaviour
 				anim.SetTrigger ("Shoot");
 				playerAnim.SetTrigger("Shoot");
 				// ... instantiate the rocket facing right and set it's velocity to the right. 
-				GameObject bulletInstance = (GameObject)Instantiate (projectiles[0],activeWeapon.shotPos.position, Quaternion.identity);
+				GameObject bulletInstance = (GameObject)Instantiate (projectiles[0],activeWeapon.shotPos.position, angleRot);
 				bulletInstance.GetComponent<Rigidbody2D>().velocity = new Vector2 (angle.x, angle.y) * bulletSpeed;
-				bulletInstance.GetComponent<Rigidbody2D>().transform.rotation = angleRot;
+				//bulletInstance.GetComponent<Rigidbody2D>().transform.rotation = angleRot;
 
 				handGunFlare.Emit (1);
 				handGunFlareLight.enabled = true;
@@ -467,9 +467,9 @@ public class Gun : MonoBehaviour
 				//aud.Play ();
 				anim.SetTrigger ("Shoot");
 				playerAnim.SetTrigger("Shoot");
-				GameObject bullet2 = (GameObject)Instantiate(projectiles[1], activeWeapon.shotPos.position, Quaternion.identity);
+				GameObject bullet2 = (GameObject)Instantiate(projectiles[1], activeWeapon.shotPos.position, angleRot);
 				bullet2.GetComponent<Rigidbody2D>().velocity = new Vector2 (angle.x, angle.y) * bulletSpeed;
-				bullet2.GetComponent<Rigidbody2D>().transform.rotation = angleRot;
+				//bullet2.GetComponent<Rigidbody2D>().transform.rotation = angleRot;
 
 				anim.SetBool ("shooting",true);
 				gunFlare.Emit (100);
@@ -490,8 +490,8 @@ public class Gun : MonoBehaviour
 				aud.Play();
 				anim.SetTrigger ("Shoot");
 				playerAnim.SetTrigger("Shoot");
-				GameObject grenade2 = (GameObject)Instantiate(projectiles[2], activeWeapon.shotPos.position, Quaternion.identity);
-				grenade2.GetComponent<Rigidbody2D>().transform.rotation = angleRot;
+				GameObject grenade2 = (GameObject)Instantiate(projectiles[2], activeWeapon.shotPos.position, angleRot);
+				//grenade2.GetComponent<Rigidbody2D>().transform.rotation = angleRot;
 				float force = (Mathf.Abs(diffX) + Mathf.Abs(diffY))*80f;
 				if(force<1300f){force=1300f;}
 				grenade2.GetComponent<Rigidbody2D>().AddForce(new Vector2 (angle.x, angle.y) * force);
@@ -529,9 +529,9 @@ public class Gun : MonoBehaviour
 				playerAnim.SetTrigger("Shoot");
 				rpgGO.SetActive(false);
 				// ... instantiate the rocket facing right and set it's velocity to the right. 
-				GameObject bulletInstance = (GameObject)Instantiate (projectiles[4],activeWeapon.shotPos.position , Quaternion.identity);
+				GameObject bulletInstance = (GameObject)Instantiate (projectiles[4],activeWeapon.shotPos.position , angleRot);
 				bulletInstance.GetComponent<Rigidbody2D>().velocity = new Vector2 (angle.x, angle.y) * 40;
-				bulletInstance.GetComponent<Rigidbody2D>().transform.rotation = angleRot;
+				//bulletInstance.GetComponent<Rigidbody2D>().transform.rotation = angleRot;
 				rpgSmoke.Play ();//Emit (1000);
 				
 				//canShoot = false;
@@ -546,9 +546,9 @@ public class Gun : MonoBehaviour
 				anim.SetTrigger ("Shoot");
 				playerAnim.SetTrigger("Shoot");
 				// ... instantiate the rocket facing right and set it's velocity to the right. 
-				GameObject bulletInstance = (GameObject)Instantiate (projectiles[5],activeWeapon.shotPos.position, Quaternion.identity);
+				GameObject bulletInstance = (GameObject)Instantiate (projectiles[5],activeWeapon.shotPos.position, angleRot);
 				bulletInstance.GetComponent<Rigidbody2D>().velocity = new Vector2 (angle.x, angle.y) * 50f;
-				bulletInstance.GetComponent<Rigidbody2D>().transform.rotation = angleRot;
+				//bulletInstance.GetComponent<Rigidbody2D>().transform.rotation = angleRot;
 				Destroy(bulletInstance,3f);
 				punchGO.SetActive(false);
 				rpgSmoke.Play ();//Emit (1000);
@@ -644,9 +644,9 @@ public class Gun : MonoBehaviour
 					//aud.Play ();
 					//Debug.Log("shooting");
 					autoCount = Time.time;
-					GameObject bullet2 = (GameObject)Instantiate(projectiles[1], activeWeapon.shotPos.position, Quaternion.Euler (new Vector3 (0, 0, dir)));
+					GameObject bullet2 = (GameObject)Instantiate(projectiles[1], activeWeapon.shotPos.position, angleRot);
 					bullet2.GetComponent<Rigidbody2D>().velocity = new Vector2 (angle.x, angle.y) * bulletSpeed;
-					bullet2.GetComponent<Rigidbody2D>().transform.rotation = angleRot;
+					//bullet2.GetComponent<Rigidbody2D>().transform.rotation = angleRot;
 			
 					anim.SetTrigger ("Shoot");
 					playerAnim.SetTrigger("Shoot");
@@ -670,7 +670,7 @@ public class Gun : MonoBehaviour
 				{
 					//Debug.Log("shooting");
 					autoCount = Time.time;
-					GameObject bullet2 = (GameObject)Instantiate(projectiles[3], activeWeapon.shotPos.position, Quaternion.Euler (new Vector3 (0, 0, dir)));
+					GameObject bullet2 = (GameObject)Instantiate(projectiles[3], activeWeapon.shotPos.position, Quaternion.identity);
 					bullet2.GetComponent<Rigidbody2D>().velocity = new Vector2 (angle.x, angle.y) * fireSpeed;
 					activeWeapon.clip--;
 					if(activeWeapon.clip == 0){

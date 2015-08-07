@@ -321,6 +321,7 @@ public class Nurse : MonoBehaviour {
 			anim.Play("Nurse_Idle");
 			//GetComponent<PolygonCollider2D>().enabled = true;
 			GetComponent<Rigidbody2D>().isKinematic = false;
+			gameObject.tag = "Nurse";
 			gameObject.layer = LayerMask.NameToLayer("Nurse");
 			var t = transform.position;
 			t.z = 0;
@@ -338,6 +339,7 @@ public class Nurse : MonoBehaviour {
 
 		status = NStatus.IDLE;
 		anim.Play("Nurse_Idle");
+		gameObject.tag = "Untagged";
 		//GetComponent<Rigidbody2D>().isKinematic = true;
 		GetComponent<Rigidbody2D>().velocity = Vector2.zero;
 		GetComponent<Rigidbody2D>().mass = 20;
