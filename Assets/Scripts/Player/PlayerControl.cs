@@ -111,7 +111,7 @@ public class PlayerControl : MonoBehaviour
 		STUCK
 	}
 	private Status status = Status.IDLE;
-	private Status lastStatus = Status.IDLE;
+	//private Status lastStatus = Status.IDLE;
 
 	private delegate void State ();
 	private State stateMethod;
@@ -243,11 +243,11 @@ public class PlayerControl : MonoBehaviour
 		anim.SetFloat ("Speed", Mathf.Abs (hVel));
 		stateMethod ();
 
-		if(status != lastStatus){             ///GET RID OF THIS !!!!!!!!!!!
+		/*if(status != lastStatus){             ///GET RID OF THIS !!!!!!!!!!!
 			print ("SWITCH        "+lastStatus+"  "+status);
 			print (stateMethod);
 			lastStatus = status;
-		}
+		}*/
 
 	}
 	//STATE METHODS FOR DELEGATE
@@ -375,7 +375,7 @@ public class PlayerControl : MonoBehaviour
 	}
 	private void WallAir()
 	{
-		print ("WALL AIR ");
+		//print ("WALL AIR ");
 		if (CheckAirborne ()) {
 			WallMove (hVel);
 			if (jump) {
@@ -407,7 +407,7 @@ public class PlayerControl : MonoBehaviour
 	private void ClimbAir()
 	{
 		//if (CheckAirborne ()) {
-			rigidBody.velocity = new Vector2(0f,40f);
+			rigidBody.velocity = new Vector2(0f,30f);
 			//float dir = -1;
 			//if(facingRight){
 			//dir =1f;
@@ -415,7 +415,7 @@ public class PlayerControl : MonoBehaviour
 			
 			Vector2 pos2 = new Vector2 (groundCheck.position.x+(2f*dir),groundCheck.position.y);
 			bool cornerGrab = Physics2D.Linecast (groundCheck.position, pos2, groundLayerMsk);
-			print ("climb "+cornerGrab);
+			//print ("climb "+cornerGrab);
 			if(!cornerGrab){
 				status = Status.IDLE;
 				stateMethod = IdleGround;

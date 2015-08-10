@@ -53,7 +53,7 @@ public class Enemy_Ragdoll : Enemy
 					return;
 				}
 				float speed = Mathf.Abs (body.GetComponent<Rigidbody2D>().velocity.x) + Mathf.Abs (body.GetComponent<Rigidbody2D>().velocity.y);
-				print (speed);
+				///print (speed);
 				if (speed < 0.05) {
 					//print ("enemy RD STOPPED");
 					if(dead){
@@ -178,7 +178,7 @@ public class Enemy_Ragdoll : Enemy
 			
 			//rdTorsoRB.AddForceAtPosition (force * bForce * 120,force,ForceMode2D.Impulse);
 			//damage *= 40;
-			print ("blown up RD "+died);
+			//print ("blown up RD "+died);
 			body.GetComponent<Rigidbody2D>().AddForce (force * damage * 10 ,ForceMode2D.Impulse);
 			body.GetComponent<Rigidbody2D>().AddTorque(damage * d);
 			//body.GetComponent<Rigidbody2D>().AddForceAtPosition (force *damage ,force,ForceMode2D.Impulse);//force);
@@ -265,6 +265,7 @@ public class Enemy_Ragdoll : Enemy
 	public void DestroyLimbs(Vector2 vel)
 	{
 		//print ("limbsssssssssss");
+		//return;
 		HingeJoint2D[] joints = body.GetComponents<HingeJoint2D>();
 		foreach (HingeJoint2D jnt in joints) {
 			Rigidbody2D limb = jnt.connectedBody; 
@@ -305,7 +306,7 @@ public class Enemy_Ragdoll : Enemy
 						destroyed = true;
 					}
 					if(destroyed){
-						print ("destoyee");
+						//print ("destoyee");
 						var vell = Vector2.up * 3000;
 						vell.x += Random.Range(-500,500);
 						limb.AddForce(vell);//+(vel/2f)); 

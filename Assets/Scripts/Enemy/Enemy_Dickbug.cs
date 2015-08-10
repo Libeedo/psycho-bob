@@ -296,9 +296,11 @@ public class Enemy_Dickbug : Enemy {
 			Level.instance.score.UpdateScore(100,new Vector3(transform.position.x,transform.position.y+8f));
 		}
 		Level.instance.enemies.Remove(this);
-		gameObject.layer = 21;
-		gameObject.tag = "Untagged";
+
 		switchToRagdoll();
+		gameObject.layer = LayerMask.NameToLayer("Bodies");
+		gameObject.tag = "Untagged";
+
 		var leg1 = rdBody.transform.Find ("dickBat_thighFL");
 		leg1.Find ("stump").gameObject.SetActive (true);
 		Destroy (leg1.GetComponent<HingeJoint2D>());

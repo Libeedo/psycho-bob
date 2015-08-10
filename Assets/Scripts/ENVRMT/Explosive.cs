@@ -83,7 +83,7 @@ public class Explosive : MonoBehaviour
 
 	public void Explode()
 	{
-		print ("explode");
+		//print ("explode");
 		Destroy(GetComponent<Collider2D>());
 		if (xMode == XplodeMode.ENEMY){
 			transform.root.GetComponent<Enemy>().equipped = Enemy.Equipped.NOTHING;
