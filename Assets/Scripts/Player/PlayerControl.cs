@@ -525,7 +525,7 @@ public class PlayerControl : MonoBehaviour
 				awayWallCount--;
 			}
 		}
-		print (facingRight+"  "+awayWallCount);
+		//print (facingRight+"  "+awayWallCount);
 		//fall off wall
 		if(awayWallCount < 0f){
 			print ("away drop");

@@ -38,7 +38,16 @@ public class Enemy_Ragdoll : Enemy
 		//}
 
 	}
-
+	public void LateAwake()
+	{
+		Enemy_Soldier enemycs = soldier.GetComponent<Enemy_Soldier>();
+		equipped = enemycs.equipped;
+		if(equipped == Enemy_Soldier.Equipped.C4){
+			body.Find ("c4").gameObject.SetActive(true);
+		}else if (equipped == Enemy_Soldier.Equipped.SHIELD){
+			body.Find("shield").gameObject.SetActive(true);
+		}
+	}
 	void FixedUpdate ()
 	{
 		//float speed2 = Mathf.Abs (body.rigidbody2D.velocity.x) + Mathf.Abs (body.rigidbody2D.velocity.y);
@@ -105,6 +114,7 @@ public class Enemy_Ragdoll : Enemy
 
 		soldier.GetComponent<Enemy_Soldier> ().enabled = true;
 		soldier.GetComponent<Enemy_Soldier> ().SwitchProperties (HP);
+
 		//makeUnHittable();
 		//Destroy(this);
 		//Destroy (gameObject);
@@ -123,11 +133,13 @@ public class Enemy_Ragdoll : Enemy
 			Flip ();
 		}
 		eDamage.enemyCS = this;
+
+		//check if C4 is gone
 		Enemy_Soldier enemycs = soldier.GetComponent<Enemy_Soldier>();
-		if(enemycs.equipped == Enemy_Soldier.Equipped.C4){
-			body.Find ("c4").gameObject.SetActive(true);
-		}else if (enemycs.equipped == Enemy_Soldier.Equipped.SHIELD){
-			body.Find("shield").gameObject.SetActive(true);
+		print (equipped+"   "+enemycs.equipped);
+		if(equipped != enemycs.equipped){
+			body.Find ("c4").gameObject.SetActive(false);
+			equipped = Equipped.NOTHING;
 		}
 		//if(!enemycs.facingRight){
 			//Flip ();
@@ -334,7 +346,10 @@ public class Enemy_Ragdoll : Enemy
 		}
 
 			
-			Destroy (body.GetComponent<Enemy_Ragdoll_DamageCollider>());
+		Destroy (body.GetComponent<Enemy_Ragdoll_DamageCollider>());
+		if(equipped == Equipped.C4){
+			body.Find ("c4").gameObject.layer = LayerMask.NameToLayer("Bodies");
+		}
 //		makeLessHeavy();
 		//body.rigidbody2D.AddForce(vel);
 		aliveSwitch = float.MaxValue;

@@ -79,6 +79,9 @@
      <Compile Include="Assets\Scripts\Enemy\SniperSight.cs" />
      <Compile Include="Assets\Scripts\Enemy\Soldier_Sprites.cs" />
      <Compile Include="Assets\Scripts\Enemy\Vehicle.cs" />
+     <Compile Include="Assets\Scripts\Game Utils\CombatZone.cs" />
+     <Compile Include="Assets\Scripts\Game Utils\CombatZoneManager.cs" />
+     <Compile Include="Assets\Scripts\Game Utils\CombatZoneTrigger.cs" />
      <Compile Include="Assets\Scripts\Game Utils\EnableTrigger.cs" />
      <Compile Include="Assets\Scripts\Game Utils\FadeColour.cs" />
      <Compile Include="Assets\Scripts\Game Utils\GameUtiils.cs" />
@@ -89,6 +92,7 @@
      <Compile Include="Assets\Scripts\Game Utils\OffscreenIndicator.cs" />
      <Compile Include="Assets\Scripts\Game Utils\Oscillate.cs" />
      <Compile Include="Assets\Scripts\Game Utils\Pauser.cs" />
+     <Compile Include="Assets\Scripts\Game Utils\RemoveFromSpawnWave.cs" />
      <Compile Include="Assets\Scripts\Game Utils\Remover.cs" />
      <Compile Include="Assets\Scripts\Game Utils\Score.cs" />
      <Compile Include="Assets\Scripts\Game Utils\SetParticleSortingLayer.cs" />

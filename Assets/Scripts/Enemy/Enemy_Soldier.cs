@@ -111,6 +111,7 @@ public class Enemy_Soldier : Enemy
 
 		rdCS.eDamage = eDamage;//ragdoll CS references to eDamage
 		rdCS.eDamageT = eDamageT;
+		rdCS.LateAwake();
 
 		SortSprites();
 		rdGO.SetActive(false);
@@ -437,18 +438,19 @@ public class Enemy_Soldier : Enemy
 		headA.GetComponent<SpriteRenderer>().sprite = Soldier_Sprites.S.getHead(1);
 		yield return new WaitForSeconds(1.2f);
 		
-		
+		if(dead){return false;}
 
 
 		dead = true;
 		switchToRagdoll();
 
 		eDamage.scoreDeath = false;
-
+		equipped = Equipped.NOTHING;
 		rdCS.Death();
 		//if he still has his C4 and whatever mode hes in mofo
 		//print (rdTorsoRB.transform.Find("c4").Find ("explosive"));
 		if(rdTorsoRB.transform.Find("c4")){
+			rdCS.equipped = Equipped.NOTHING;
 			rdTorsoRB.transform.Find("c4").GetComponent<Explosive>().enemyExplosion = true;
 			rdTorsoRB.transform.Find("c4").GetComponent<Explosive>().Explode();
 			rdTorsoRB.transform.Find("c4").GetComponent<SpriteRenderer>().enabled = false;
