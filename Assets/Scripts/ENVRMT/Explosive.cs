@@ -15,7 +15,7 @@ public class Explosive : MonoBehaviour
 
 	public enum XplodeMode{
 		NIL,
-		ENEMY,//used only on enemy soldiers c4,  not ragdoll (soldier switches to ragdoll, ragdolls c4 also explodes! faaak
+		ENEMY,
 		CHUTE,
 	}
 	public XplodeMode xMode = XplodeMode.NIL;
@@ -86,7 +86,7 @@ public class Explosive : MonoBehaviour
 		//print ("explode");
 		Destroy(GetComponent<Collider2D>());
 		if (xMode == XplodeMode.ENEMY){
-			transform.root.GetComponent<Enemy>().equipped = Enemy.Equipped.NOTHING;
+			transform.root.GetComponent<Enemy>().RemoveC4();
 
 		}else if (xMode == XplodeMode.CHUTE) {
 			//print ("WTF "+transform.name+"  "+transform.position);
@@ -100,12 +100,12 @@ public class Explosive : MonoBehaviour
 		}
 		//print ("bomb explicit");
 
-		Destroy (gameObject);
+
 		this.enabled = false;
 		GameObject e = (GameObject)Instantiate(explosion,transform.position, Quaternion.identity);//Quaternion.identity);//new Vector3(transform.position.x,transform.position.y+6f,transform.position.z)
 		if(enemyExplosion){	
 			e.transform.Find("collider").GetComponent<Explosion>().enemyExplosion = true;
 		}
-
+		Destroy (gameObject);
 	}
 }

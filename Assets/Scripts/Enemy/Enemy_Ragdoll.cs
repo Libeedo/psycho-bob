@@ -327,7 +327,14 @@ public class Enemy_Ragdoll : Enemy
 			}
 		}
 	}
+	public override void RemoveC4()
+	{
+		equipped = Equipped.NOTHING;
+		if (!dead) {
+			soldier.GetComponent<Enemy_Soldier> ().RemoveC4 ();
+		}
 
+	}
 	public override void Death()
 		{
 		base.Death ();
@@ -347,9 +354,9 @@ public class Enemy_Ragdoll : Enemy
 
 			
 		Destroy (body.GetComponent<Enemy_Ragdoll_DamageCollider>());
-		if(equipped == Equipped.C4){
-			body.Find ("c4").gameObject.layer = LayerMask.NameToLayer("Bodies");
-		}
+		//if(equipped == Equipped.C4){
+			//body.Find ("c4").gameObject.layer = LayerMask.NameToLayer("Bodies");
+		//}
 //		makeLessHeavy();
 		//body.rigidbody2D.AddForce(vel);
 		aliveSwitch = float.MaxValue;

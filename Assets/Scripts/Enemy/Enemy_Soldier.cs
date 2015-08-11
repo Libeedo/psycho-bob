@@ -450,7 +450,7 @@ public class Enemy_Soldier : Enemy
 		//if he still has his C4 and whatever mode hes in mofo
 		//print (rdTorsoRB.transform.Find("c4").Find ("explosive"));
 		if(rdTorsoRB.transform.Find("c4")){
-			rdCS.equipped = Equipped.NOTHING;
+			RemoveC4();
 			rdTorsoRB.transform.Find("c4").GetComponent<Explosive>().enemyExplosion = true;
 			rdTorsoRB.transform.Find("c4").GetComponent<Explosive>().Explode();
 			rdTorsoRB.transform.Find("c4").GetComponent<SpriteRenderer>().enabled = false;
@@ -461,6 +461,11 @@ public class Enemy_Soldier : Enemy
 		rdCS.DestroyLimbs(new Vector2 (Random.Range(-200,200),Random.Range(-200,200)));
 
 		//Death ();
+	}
+	public override void RemoveC4()
+	{
+		equipped = Equipped.NOTHING;
+		rdCS.RemoveC4();
 	}
 	public override void Bounce(Vector2 vel)
 	{

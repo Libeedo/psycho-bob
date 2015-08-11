@@ -200,7 +200,10 @@ public class Enemy:MonoBehaviour {
 		//print ("remove");
 
 	}
+	public virtual void RemoveC4()
+	{
 
+	}
 	public virtual bool HurtPlayer(Vector3 pos)
 	{
 		return true;
