@@ -354,9 +354,10 @@ public class Enemy_Ragdoll : Enemy
 
 			
 		Destroy (body.GetComponent<Enemy_Ragdoll_DamageCollider>());
-		//if(equipped == Equipped.C4){
-			//body.Find ("c4").gameObject.layer = LayerMask.NameToLayer("Bodies");
-		//}
+		if(equipped == Equipped.C4){
+			body.Find ("c4").GetComponent<Explosive>().xMode = Explosive.XplodeMode.DEADENEMY;//gameObject.layer = LayerMask.NameToLayer("Bodies");
+
+		}
 //		makeLessHeavy();
 		//body.rigidbody2D.AddForce(vel);
 		aliveSwitch = float.MaxValue;

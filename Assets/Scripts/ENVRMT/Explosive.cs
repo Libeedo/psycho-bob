@@ -16,6 +16,7 @@ public class Explosive : MonoBehaviour
 	public enum XplodeMode{
 		NIL,
 		ENEMY,
+		DEADENEMY,
 		CHUTE,
 	}
 	public XplodeMode xMode = XplodeMode.NIL;
@@ -86,7 +87,10 @@ public class Explosive : MonoBehaviour
 		//print ("explode");
 		Destroy(GetComponent<Collider2D>());
 		if (xMode == XplodeMode.ENEMY){
+
 			transform.root.GetComponent<Enemy>().RemoveC4();
+		}else if (xMode == XplodeMode.DEADENEMY){
+			transform.root.GetComponent<FadeColour>().RemoveSprite(GetComponent<SpriteRenderer>());
 
 		}else if (xMode == XplodeMode.CHUTE) {
 			//print ("WTF "+transform.name+"  "+transform.position);
