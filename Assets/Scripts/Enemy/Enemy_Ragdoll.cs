@@ -136,7 +136,7 @@ public class Enemy_Ragdoll : Enemy
 
 		//check if C4 is gone
 		Enemy_Soldier enemycs = soldier.GetComponent<Enemy_Soldier>();
-		print (equipped+"   "+enemycs.equipped);
+		//print (equipped+"   "+enemycs.equipped);
 		if(equipped != enemycs.equipped){
 			body.Find ("c4").gameObject.SetActive(false);
 			equipped = Equipped.NOTHING;

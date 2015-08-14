@@ -37,7 +37,7 @@ public class Enemy_Soldier : Enemy
 	//public string Status = "walking";
 	//[HideInInspector]
 	public float moveSpeed = 8;		// The speed the enemy moves at.
-	private float defaultSpeed = 8;
+	public float defaultSpeed = 8;
 	
 	
 	private Transform frontCheck;		// Reference to the position of the gameobject used for checking if something is in front.
@@ -126,6 +126,10 @@ public class Enemy_Soldier : Enemy
 
 		if(equipped == Equipped.C4){
 			transform.Find ("enemy1_deadBody_body").Find ("c4").gameObject.SetActive(true);
+			defaultSpeed = 13;
+			if(!paratrooperMode){
+				moveSpeed = defaultSpeed;
+			}
 		}else if(equipped == Equipped.SHIELD){
 			transform.Find ("enemy1_deadBody_body").Find ("shield").gameObject.SetActive(true);
 		}else if(equipped == Equipped.SNIPER){

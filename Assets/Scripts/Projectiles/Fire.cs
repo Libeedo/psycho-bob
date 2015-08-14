@@ -3,20 +3,16 @@ using System.Collections;
 
 public class Fire : MonoBehaviour {
 
-	int layerMsk;
+	public float destroyTime;
 	void Start () {
 
 		//InvokeRepeating("Burn",0f,0.25f);
-		Destroy (gameObject,1.6f);
+		Destroy (gameObject,destroyTime);
 	}
 	//void Burn ()
 	void OnTriggerEnter2D (Collider2D col) 
 	{
-		//bool colTrue = false;
-		//col  =  Physics2D.Linecast (transform.position,new Vector2(transform.position.x+2f,transform.position.y), layerMsk);//new Vector2(transform.position.x+2f,transform.position.y), new Vector2(
-		//if(col){// && col.transform.gameObject.tag == "Enemy"){
-			//print ("flamage "+ col.tag);
-		//print ("flame "+col.name);
+		print (col.gameObject.tag);
 		if(col.tag == "Enemy" || col.tag == "EnemyHead"){
 			col.transform.root.GetComponent<Enemy>().Flamed();
 		}else if(col.tag == "Parachute"){

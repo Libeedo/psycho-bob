@@ -11,9 +11,10 @@ public class EnemySpawner : Spawner {
 	
 	public bool vehicleMode = false;
 	
-	public Enemy_Soldier.Equipped equipped = Enemy_Soldier.Equipped.NIL;
-	
-	public bool randomEquipped = false;
+	public Enemy_Soldier.Equipped equipped = Enemy_Soldier.Equipped.NOTHING;
+	private Enemy_Soldier.Equipped defaultEquipped;
+
+	//public bool randomEquipped = false;
 	public bool randomSquadEquipped = false;
 
 	public float speed;
@@ -31,12 +32,14 @@ public class EnemySpawner : Spawner {
 			aud = GetComponent<AudioSource>();
 	
 		}
+		defaultEquipped = equipped;
 	}
 	public override void Spawn()
 	{
 
 		base.Spawn ();
 		if(canSpawn){
+			equipped = defaultEquipped;
 			if(spawnAnim){
 				GetComponent<Animator>().Play ("Spawner");
 
@@ -49,7 +52,8 @@ public class EnemySpawner : Spawner {
 				transform.parent.Find ("passenger").gameObject.SetActive(false);
 				StartCoroutine(passengerBack());
 			}
-			if(randomEquipped){
+			//print ("equipped "+equipped);
+			if(equipped == Enemy.Equipped.RANDOM){
 				equipped = (Enemy.Equipped)Random.Range(0,4);//GameUtiils.GetRandomEnum<Enemy_Soldier.Equipped>();
 			}
 			if(randomSpeed){
@@ -100,7 +104,7 @@ public class EnemySpawner : Spawner {
 		var pos = transform.position;
 		var offset = 2;
 		var rnd = false;
-		if(randomEquipped && !randomSquadEquipped){
+		if(!randomSquadEquipped){
 			rnd = true;
 		}
 		for(int r = 0; r <= 2; r++){

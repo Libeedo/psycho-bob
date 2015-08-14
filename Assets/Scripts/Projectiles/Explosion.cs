@@ -25,7 +25,7 @@ public class Explosion : MonoBehaviour
 
 	void Start ()
 	{
-		print ("explosion!!!!!!!!!!!!!!!!!!");
+		//print ("explosion!!!!!!!!!!!!!!!!!!");
 		AudioSource.PlayClipAtPoint(boom, transform.position);
 		//InvokeRepeating("Explode",0f,0.02f);
 		if(enemyExplosion){
@@ -53,7 +53,7 @@ public class Explosion : MonoBehaviour
 	}*/
 	void OnTriggerEnter2D (Collider2D col) 
 	{
-		print (col.tag+"  exploxed "  +col.gameObject.name);
+		//print (col.tag+"  exploxed "  +col.gameObject.name);
 		if (enemyExplosion) {
 			if(col.tag == "Player" )
 			{

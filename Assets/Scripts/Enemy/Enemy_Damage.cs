@@ -30,6 +30,8 @@ public class Enemy_Damage :MonoBehaviour{
 	private ParticleSystem flames;
 	private ParticleSystem smoke;
 	private GameObject flameLight;
+	public GameObject flameHitRef;
+
 
 	public bool blownUp = false;
 	[HideInInspector]
@@ -151,8 +153,12 @@ public class Enemy_Damage :MonoBehaviour{
 	}
 	void FlameDamage()
 	{
-		enemyCS.FlameDamage (0.5f);
+		//enemyCS.FlameDamage (0.5f);flameHit created below now does its own damage
 		fireCount -=1;
+
+		//GameObject e = (GameObject)
+		Instantiate(flameHitRef,t.position, Quaternion.identity);//make flame hit to start other shit on fire
+
 		if(fireCount == 0){
 			fireCount = -1;
 			CancelInvoke();
