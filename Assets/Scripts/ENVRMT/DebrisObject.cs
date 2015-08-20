@@ -41,7 +41,7 @@ public class DebrisObject : MonoBehaviour
 				//child.GetComponent<DebrisPiece>().Death ();
 				dp.Death();
 			}
-		if(glassMode){
+		if(glassMode && switchModel2){
 			switchModel1.SetActive(false);//switch models
 			switchModel2.SetActive(true);
 			AudioSource.PlayClipAtPoint(SFX, transform.position);

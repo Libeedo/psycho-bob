@@ -12,7 +12,7 @@ public class Fire : MonoBehaviour {
 	//void Burn ()
 	void OnTriggerEnter2D (Collider2D col) 
 	{
-		print (col.gameObject.tag);
+		//print (col.gameObject.tag);
 		if(col.tag == "Enemy" || col.tag == "EnemyHead"){
 			col.transform.root.GetComponent<Enemy>().Flamed();
 		}else if(col.tag == "Parachute"){

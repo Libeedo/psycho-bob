@@ -33,7 +33,8 @@ public class Enemy_Damage :MonoBehaviour{
 	public GameObject flameHitRef;
 
 
-	public bool blownUp = false;
+	public bool blownUp = false; //just blown up? dont blow up again?
+	private bool firedUp = false;
 	[HideInInspector]
 	public bool scoreDeath = false; //add points on death?
 	public AudioClip[] bulletHitClips;
@@ -139,13 +140,19 @@ public class Enemy_Damage :MonoBehaviour{
 		//print ("not blown up");
 	}
 	public  void Flamed(){
+		//print ("flamed " + onFire + "  " + firedUp);
 		fireCount = maxFireCount;
-		if (onFire) {
+		if (firedUp) { //if just recieved flame damage
+			return;
+		}else if (onFire) { //if still on fire, dont start a new one, just damage
+			StartCoroutine("notFiredUp");
 			enemyCS.FlameDamage (0.4f);
 			return;
 		}
 		flames.Play ();
 		onFire = true;
+		StartCoroutine("notFiredUp");// so he doesnt get hurt by the flames he produces
+
 		InvokeRepeating("FlameDamage",0f,0.5f);
 		flameLight.SetActive(true);
 		//enemyCS.FlameDamage (1f);
@@ -154,10 +161,11 @@ public class Enemy_Damage :MonoBehaviour{
 	void FlameDamage()
 	{
 		//enemyCS.FlameDamage (0.5f);flameHit created below now does its own damage
-		fireCount -=1;
+		fireCount--;
 
 		//GameObject e = (GameObject)
 		Instantiate(flameHitRef,t.position, Quaternion.identity);//make flame hit to start other shit on fire
+
 
 		if(fireCount == 0){
 			fireCount = -1;
@@ -171,7 +179,16 @@ public class Enemy_Damage :MonoBehaviour{
 			//stopFire();-->stop smoke
 			
 		}
-		//print (fireCount);
+		print ("flame damage "+fireCount);
+	}
+	IEnumerator notFiredUp()
+	{
+		//print (blownUp);
+		firedUp = true;
+		yield return new WaitForSeconds(1.5f);
+
+		firedUp = false;
+		print ("not fired up");
 	}
 	IEnumerator StopSmoke()
 	{

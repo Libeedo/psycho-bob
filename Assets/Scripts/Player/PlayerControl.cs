@@ -337,7 +337,7 @@ public class PlayerControl : MonoBehaviour
 		//hit ground>?
 		if(rigidBody.velocity.y <= 0f){
 			if(!CheckAirborne()){
-				print ("jump return");
+				//print ("jump return");
 				return;
 			}
 		}
