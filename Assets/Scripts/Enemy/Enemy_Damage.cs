@@ -23,7 +23,8 @@ public class Enemy_Damage :MonoBehaviour{
 
 	//fire 
 	//private float flameDamage = 1f;
-	private bool onFire = false;
+	[HideInInspector]
+	public bool onFire = false;
 	private int maxFireCount = 8;
 	private int fireCount = -1;
 
@@ -185,7 +186,7 @@ public class Enemy_Damage :MonoBehaviour{
 	{
 		//print (blownUp);
 		firedUp = true;
-		yield return new WaitForSeconds(1.5f);
+		yield return new WaitForSeconds(0.4f);
 
 		firedUp = false;
 		print ("not fired up");

@@ -8,14 +8,16 @@ public class CombatZone : MonoBehaviour {
 	public GameObject[] enemies;
 
 	public CameraLimits cameraLimits;
+	public GameObject zoneSpawnPoint;
 	private CameraLimits levelCameraLimits = new CameraLimits();
-
+	[HideInInspector]
 	public float delayNextWave;
 
 	private float delaySeq;
 	private float delayEvnt;
-
+	[HideInInspector]
 	public List<Wave> spawnWaves = new List<Wave>();
+	[HideInInspector]
 	public List<GameObject> waveEnemies = new List<GameObject> (); //List of current wave of enemies;
 	//private Sequence currentSeq;
 	//private SpawnWave currentWave;
@@ -25,7 +27,7 @@ public class CombatZone : MonoBehaviour {
 	int waveCount = 0;
 	//int seqCount = 0;
 	//int eventCount = 0;
-
+	//private Animator
 	public enum EnemyType{
 		SOLDIER,
 		DICKBUG,
@@ -50,6 +52,21 @@ public class CombatZone : MonoBehaviour {
 		cam.minXAndY = cameraLimits.min;
 		cam.levelZoom = cameraLimits.zoom;
 
+		zoneSpawnPoint.GetComponent<SpawnPoint>().EnableSpawn();
+
+		Transform door1;
+		if (door1 = transform.Find ("door1")) {
+			var anim = door1.GetComponent<Animation>(); 
+
+			foreach (AnimationState state in anim) {
+				//state.speed = -1;
+			}
+			anim.enabled = true;
+		}
+		Transform door2;
+		if (door2 = transform.Find ("door2")) {
+			door2.GetComponent<Animation>().enabled = true;
+		}
 		//StartSeq ();
 
 		StartCoroutine("StartWave");
@@ -96,7 +113,7 @@ public class CombatZone : MonoBehaviour {
 					var esc = go.GetComponent<Enemy_Soldier>();
 					if(evnt.equipped == Enemy.Equipped.RANDOM){
 						var rnd = Random.Range(0,4);
-						print (rnd);
+						//print (rnd);
 						esc.equipped = (Enemy.Equipped)rnd;//GameUtiils.GetRandomEnum<Enemy.Equipped>();
 					}else{
 						esc.equipped = evnt.equipped;
@@ -122,7 +139,7 @@ public class CombatZone : MonoBehaviour {
 					}
 
 				}
-				print (go);
+				//print (go);
 				yield return new WaitForSeconds(delayEvnt);
 				
 			}

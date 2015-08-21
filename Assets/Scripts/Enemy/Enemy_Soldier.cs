@@ -59,7 +59,8 @@ public class Enemy_Soldier : Enemy
 		PARACHUTING,
 		FALLING,
 		SHOOTING,
-		IDLE
+		IDLE,
+	
 		
 	}
 	public eStatus status = eStatus.WALKING;
@@ -298,17 +299,22 @@ public class Enemy_Soldier : Enemy
 			enemyA.Play("GetUpAgain");
 			status = eStatus.WALKING;
 		}
+		if (eDamage.onFire) {
 
-		if(equipped == Equipped.SNIPER){
-			//enemyA.Play ("enemySnipe");
-			//if(status != eStatus.PARACHUTING){
-				//status = eStatus.SHOOTING;
-				//moveSpeed = 0;
+				moveSpeed = defaultSpeed = 13;
+				enemyA.SetBool ("onFire", true);
+		} else {
+				if (equipped == Equipped.SNIPER) {
+						//enemyA.Play ("enemySnipe");
+						//if(status != eStatus.PARACHUTING){
+						//status = eStatus.SHOOTING;
+						//moveSpeed = 0;
 
-			//}
-			InvokeRepeating("switchSnipeWalk",1,7);
-			//snipeCS.StartSniping();
+						//}
+						InvokeRepeating ("switchSnipeWalk", 1, 7);
+						//snipeCS.StartSniping();
 
+				}
 		}
 		eDamage.enemyCS = this;
 
@@ -341,7 +347,10 @@ public class Enemy_Soldier : Enemy
 	
 	public override void Flamed(){
 		base.Flamed ();
-			enemyA.SetBool ("onFire",true);
+
+		CancelInvoke("switchSnipeWalk");
+		enemyA.SetBool ("onFire",true);
+		moveSpeed = defaultSpeed = 13;
 			//MakeSpritesBlacker();
 
 	}

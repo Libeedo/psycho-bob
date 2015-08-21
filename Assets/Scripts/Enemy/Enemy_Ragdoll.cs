@@ -267,6 +267,7 @@ public class Enemy_Ragdoll : Enemy
 		}
 		
 	}
+
 	public override void FlameDamage(float dmg)
 	{
 		base.FlameDamage(dmg);
