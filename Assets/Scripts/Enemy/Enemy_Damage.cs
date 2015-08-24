@@ -180,7 +180,7 @@ public class Enemy_Damage :MonoBehaviour{
 			//stopFire();-->stop smoke
 			
 		}
-		print ("flame damage "+fireCount);
+		//print ("flame damage "+fireCount);
 	}
 	IEnumerator notFiredUp()
 	{
@@ -189,7 +189,7 @@ public class Enemy_Damage :MonoBehaviour{
 		yield return new WaitForSeconds(0.4f);
 
 		firedUp = false;
-		print ("not fired up");
+		//print ("not fired up");
 	}
 	IEnumerator StopSmoke()
 	{

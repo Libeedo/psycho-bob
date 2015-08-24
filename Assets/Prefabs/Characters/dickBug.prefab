@@ -1401,7 +1401,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 191586}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 183.285629, y: 1135.79907, z: 0}
+  m_LocalPosition: {x: 179.050003, y: 97.426384, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 439728}
@@ -2111,6 +2111,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyCS: {fileID: 0}
   t: {fileID: 0}
+  onFire: 0
+  flameHitRef: {fileID: 162210, guid: f5de9ccd91247f9488273e13723c578f, type: 2}
   blownUp: 0
   scoreDeath: 1
   bulletHitClips:

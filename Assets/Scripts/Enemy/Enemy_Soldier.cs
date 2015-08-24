@@ -513,6 +513,8 @@ public class Enemy_Soldier : Enemy
 			moveSpeed = defaultSpeed;
 			if(equipped == Equipped.SNIPER){
 				status = eStatus.SHOOTING;
+				InvokeRepeating("switchSnipeWalk",1,2);
+				enemyA.Play("enemySnipe");
 			}else{
 				status = eStatus.WALKING;
 				enemyA.Play ("enemyWalk");

@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-using UnityEditor;
+//using UnityEditor;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -27,14 +27,14 @@ public class CombatZone : MonoBehaviour {
 	int waveCount = 0;
 	//int seqCount = 0;
 	//int eventCount = 0;
-	//private Animator
+	private Animation door2Anim;
 	public enum EnemyType{
 		SOLDIER,
 		DICKBUG,
 		DICKBAT
 	}
 
-
+	private Camera cam;
 	
 	// Update is called once per frame
 	//void Update () {
@@ -42,34 +42,32 @@ public class CombatZone : MonoBehaviour {
 	//}
 	public void StartZone()
 	{
-
-		var cam = Camera.main.GetComponent<CameraFollow>();
-		print("startZone "+cam.maxXAndY);
-		levelCameraLimits.max = cam.maxXAndY;
-		levelCameraLimits.min = cam.minXAndY;
-		levelCameraLimits.zoom = cam.levelZoom;
-		cam.maxXAndY = cameraLimits.max;
-		cam.minXAndY = cameraLimits.min;
-		cam.levelZoom = cameraLimits.zoom;
+		cam = Camera.main;
+		var camm = cam.GetComponent<CameraFollow>();
+		print("startZone "+camm.maxXAndY);
+		levelCameraLimits.max = camm.maxXAndY;
+		levelCameraLimits.min = camm.minXAndY;
+		levelCameraLimits.zoom = camm.levelZoom;
+		camm.maxXAndY = cameraLimits.max;
+		camm.minXAndY = cameraLimits.min;
+		camm.levelZoom = cameraLimits.zoom;
 
 		zoneSpawnPoint.GetComponent<SpawnPoint>().EnableSpawn();
 
-		Transform door1;
-		if (door1 = transform.Find ("door1")) {
-			var anim = door1.GetComponent<Animation>(); 
-
-			foreach (AnimationState state in anim) {
-				//state.speed = -1;
-			}
-			anim.enabled = true;
-		}
 		Transform door2;
 		if (door2 = transform.Find ("door2")) {
-			door2.GetComponent<Animation>().enabled = true;
+			door2Anim = door2.GetComponent<Animation>(); 
+
+
+
+		}
+		Transform door1;
+		if (door1 = transform.Find ("door1")) {
+			door1.GetComponent<Animation>().Play ();
 		}
 		//StartSeq ();
 
-		StartCoroutine("StartWave");
+		StartCoroutine("PreStartWave");
 	}
 	public void NextWave()
 	{
@@ -84,11 +82,34 @@ public class CombatZone : MonoBehaviour {
 		Camera.main.GetComponent<CameraFollow>().maxXAndY = levelCameraLimits.max;
 		Camera.main.GetComponent<CameraFollow>().minXAndY = levelCameraLimits.min;
 		Camera.main.GetComponent<CameraFollow>().levelZoom = levelCameraLimits.zoom;
-		Destroy (gameObject);
+		foreach (AnimationState state in door2Anim) {
+			state.speed = -1;
+		}
+		door2Anim.Rewind();
+		door2Anim.Play();
+		Destroy (this);
+	}
+	IEnumerator PreStartWave()
+	{
+		cam.enabled = false;
+		transform.Find("camera").gameObject.GetComponent<Camera>().enabled = true;
+		transform.Find("camera").GetComponent<Animation>().Play();
+		Level.instance.PausePlayer();
+		
+		yield return new WaitForSeconds (1f);
+		door2Anim.Play();
+		yield return new WaitForSeconds (2f);
+		cam.transform.position = transform.Find("camera").position;
+		cam.enabled = true;
+		transform.Find("camera").gameObject.GetComponent<Camera>().enabled = false;
+		Level.instance.unPausePlayer();
+		StartCoroutine("StartWave");
 	}
 	IEnumerator StartWave()
 	{
-		print ("WAVE " + waveCount);
+		//print ("WAVE " + waveCount);
+
+
 		yield return new WaitForSeconds (delayNextWave);
 
 		var seqs = spawnWaves[waveCount].spawnSeqs; //get sequences
@@ -101,8 +122,8 @@ public class CombatZone : MonoBehaviour {
 				//var evnt = sq.spawnEvents[eventCount]; //get spawn event
 				int which = (int)evnt.enemyType; //get enemyType of event;
 				var enemy = enemies [which];
-				var pos = sq.pos + evnt.offset; // spawn position = sequence position + event offset;
-				
+				var pos = evnt.offset; // spawn position = sequence position + event offset;
+				print (evnt.offset);
 				GameObject go = (GameObject)Instantiate(enemy, pos, Quaternion.identity);
 				waveEnemies.Add(go);
 				var r = go.AddComponent<RemoveFromSpawnWave>();

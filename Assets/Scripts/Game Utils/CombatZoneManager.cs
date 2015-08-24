@@ -24,7 +24,7 @@ public class CombatZoneManager : MonoBehaviour {
 							e.enemyType = seq.eType;
 							e.equipped = seq.equipped;
 							e.paratrooper = seq.chute;
-							e.offset = seq.offset;
+							e.offset = sq.pos + (seq.offset * i);
 							sq.spawnEvents.Add (e);
 					}
 					

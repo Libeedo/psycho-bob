@@ -1033,6 +1033,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyCS: {fileID: 0}
   t: {fileID: 0}
+  onFire: 0
+  flameHitRef: {fileID: 162210, guid: f5de9ccd91247f9488273e13723c578f, type: 2}
   blownUp: 0
   scoreDeath: 1
   bulletHitClips:
@@ -10864,7 +10866,11 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: flameHitRef
+      value: 
+      objectReference: {fileID: 162210, guid: f5de9ccd91247f9488273e13723c578f, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 149260}

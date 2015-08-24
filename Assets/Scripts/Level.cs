@@ -244,7 +244,21 @@ public class Level : MonoBehaviour {
 		playerCS.gunCS.ReleaseEnemy();
 
 	}
+	public void PausePlayer()
+	{
 
+		playerT.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+		playerCS.gunCS.enabled = false;
+		playerCS.enabled = false;
+		playerT.GetComponent<Animator>().Play ("Idle");
+		playerT.GetComponent<Animator>().SetFloat ("Speed",0);
+	}
+	public void unPausePlayer()
+	{
+
+		playerCS.gunCS.enabled = true;
+		playerCS.enabled = true;
+	}
 	public void KillPlayer()
 	{
 		print ("kill player");
