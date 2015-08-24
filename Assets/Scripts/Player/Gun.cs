@@ -259,8 +259,8 @@ public class Gun : MonoBehaviour
 		rpgGO    = transform.Find ("weapon Transform").Find("bazooka3D").Find("rocket3D").gameObject;
 		punchGO  = transform.Find ("weapon Transform").Find("bazooka3D").Find("punch3D").gameObject;
 
-		weaponWheel = GameObject.Find ("UI").transform.Find("UIweaponWheel").gameObject;//playerT.Find("weaponSelect").gameObject;
-
+		weaponWheel = transform.Find("UIweaponWheel").gameObject;//GameObject.Find ("UI").transform.Find("UIweaponWheel").gameObject;//playerT.Find("weaponSelect").gameObject;
+		weaponWheel.transform.SetParent (GameObject.Find ("UI").transform, false);
 
 
 		bulletShell_ShotPos =transform.Find ("weapon Transform"). transform.Find ("bulletShell_spot");
