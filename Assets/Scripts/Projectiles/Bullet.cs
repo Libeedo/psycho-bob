@@ -11,7 +11,8 @@ public class Bullet : MonoBehaviour
 		int layerMsk1 = 1 << LayerMask.NameToLayer("Enemies");
 		int layerMsk3 = 1 << LayerMask.NameToLayer("Ground");
 		int layerMsk2 = 1 << LayerMask.NameToLayer("Props");
-		groundLayerMsk = layerMsk1 | layerMsk2 | layerMsk3;
+		int layerMsk4 = 1 << LayerMask.NameToLayer("Equipped");
+		groundLayerMsk = layerMsk1 | layerMsk2 | layerMsk3 | layerMsk4;
 		// Destroy the rocket after 2 seconds if it doesn't get destroyed before then.
 		Destroy(gameObject, 4f);
 	}

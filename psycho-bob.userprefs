@@ -1,17 +1,17 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Level.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Projectiles\Explosion.cs">
     <Files>
-      <File FileName="Assets\Scripts\Game Utils\CombatZoneManager.cs" Line="27" Column="45" />
-      <File FileName="Assets\Scripts\Game Utils\CombatZone.cs" Line="125" Column="15" />
+      <File FileName="Assets\Scripts\Player\PlayerControl.cs" Line="428" Column="5" />
+      <File FileName="Assets\Scripts\Game Utils\CombatZoneManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Game Utils\CombatZone.cs" Line="128" Column="34" />
       <File FileName="Assets\Scripts\Enemy\Enemy_Damage.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Level.cs" Line="254" Column="57" />
-      <File FileName="Assets\Scripts\Player\Gun.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Game Utils\Pauser.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Player\CameraFollow.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Enemy\Enemy_Dickbat.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Enemy\Enemy_Soldier.cs" Line="517" Column="31" />
-      <File FileName="Assets\Scripts\Player\PlayerControl.cs" Line="243" Column="26" />
+      <File FileName="Assets\Scripts\Level.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Enemy\Enemy.cs" Line="45" Column="3" />
+      <File FileName="Assets\Scripts\Game Utils\Remover.cs" Line="29" Column="4" />
+      <File FileName="Assets\Scripts\Enemy\Enemy_Soldier.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Enemy\Enemy_Ragdoll.cs" Line="222" Column="5" />
+      <File FileName="Assets\Scripts\Projectiles\Explosion.cs" Line="23" Column="40" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

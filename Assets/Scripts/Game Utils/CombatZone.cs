@@ -125,6 +125,7 @@ public class CombatZone : MonoBehaviour {
 				var pos = evnt.offset; // spawn position = sequence position + event offset;
 				print (evnt.offset);
 				GameObject go = (GameObject)Instantiate(enemy, pos, Quaternion.identity);
+				Level.instance.makeTeleFlash(pos);
 				waveEnemies.Add(go);
 				var r = go.AddComponent<RemoveFromSpawnWave>();
 				r.combatZone = this;

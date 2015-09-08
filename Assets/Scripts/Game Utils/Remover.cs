@@ -22,11 +22,11 @@ public class Remover : MonoBehaviour
 
 			//}
 		}
-		/*else if(col.gameObject.tag == "Explosive")
+		else if(col.gameObject.tag == "Explosive")
 		{
 			//print ("explode");
 			col.transform.GetComponent<Explosive>().Explode();
-		}*/
+		}
 		else if(col.gameObject.tag == "Enemy"  || col.gameObject.tag == "EnemyHead" )
 		{
 			//Enemy es = col.transform.root.GetComponent<Enemy>();

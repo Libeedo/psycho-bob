@@ -51,6 +51,8 @@ public class Level : MonoBehaviour {
 
 	public Pauser pauser;
 
+	public GameObject teleFlashRef;
+
 	void Awake ()
 	{
 		instance = this;
@@ -206,7 +208,11 @@ public class Level : MonoBehaviour {
 		hn.SetActive(false);
 	}
 
-
+	public void makeTeleFlash(Vector2 pos)
+	{
+		GameObject tf = (GameObject)Instantiate(teleFlashRef,pos, Quaternion.identity);
+        Destroy (tf,1f);
+	}
 
 
 

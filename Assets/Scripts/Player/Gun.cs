@@ -1075,6 +1075,7 @@ public class Gun : MonoBehaviour
 			armTargets[1].localPosition = armTargetPos[5];
 			activeWeapon = rpgWeapon;
 		}else if(gunMode == GunMode.PUNCH){ //PUNCH
+			aud.clip = bSFX;
 			StopCoroutine("canShootAgain");
 			canShoot = true;
 			gunMode = GunMode.PUNCH;

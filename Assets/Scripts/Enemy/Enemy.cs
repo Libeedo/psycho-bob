@@ -42,6 +42,7 @@ public class Enemy:MonoBehaviour {
 	protected virtual void Start(){
 		//print ("START");
 		Level.instance.enemies.Add(this); //base class adds soldier or ragdoll child scripts
+
 		//maxHP =   HP;
 		//score = ;//GameObject.Find("Score").GetComponent<Score>();
 		//enemyGO = transform.Find("enemy").gameObject;

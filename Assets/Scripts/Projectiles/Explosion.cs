@@ -6,7 +6,7 @@ public class Explosion : MonoBehaviour
 	//private float bombRadius = 100f;			// Radius within which enemies are killed.
 	public float bombForce = 500f;			// Force that enemies are thrown from the blast.
 	//private float maxBombForce = 100f; //if changed,  change soldiers blownup;
-	public AudioClip boom;					// Audioclip of explosion.
+	//public AudioClip boom;					// Audioclip of explosion.
 	//public AudioClip fuse;					// Audioclip of fuse.
 			// Prefab of explosion effect.
 
@@ -20,13 +20,13 @@ public class Explosion : MonoBehaviour
 	{
 		//bombForce = maxBombForce;
 
-		Destroy (transform.root.gameObject, 1f);
+		Destroy (transform.root.gameObject, 2f);
 	}
 
 	void Start ()
 	{
 		//print ("explosion!!!!!!!!!!!!!!!!!!");
-		AudioSource.PlayClipAtPoint(boom, transform.position);
+		//AudioSource.PlayClipAtPoint(boom, transform.position);
 		//InvokeRepeating("Explode",0f,0.02f);
 		if(enemyExplosion){
 			transform.root.Find ("explosionFireball").Find ("fireBall").gameObject.SetActive(false);
