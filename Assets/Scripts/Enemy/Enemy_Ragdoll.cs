@@ -178,9 +178,9 @@ public class Enemy_Ragdoll : Enemy
 
 			base.BlownUp(headshot,damage,ePos);
 			if(headshot){
-				Instantiate(hitEffect, transform.Find ("head Transform").position, Quaternion.identity);
+				Level.instance.makeHitFX(transform.Find ("head Transform").position);
 			}else{
-				Instantiate(hitEffect, body.position, Quaternion.identity);
+				Level.instance.makeHitFX(body.position);
 			}
 			aliveSwitch = float.MaxValue;
 			//var bForce = damage * 100/12;
@@ -217,9 +217,9 @@ public class Enemy_Ragdoll : Enemy
 			
 			base.BlownUp(headshot,damage,ePos);
 			if(headshot){
-				Instantiate(hitEffect, transform.Find ("head Transform").position, Quaternion.identity);
+				Level.instance.makeHitFX(transform.Find ("head Transform").position);
 			}else{
-				Instantiate(hitEffect, body.position, Quaternion.identity);
+				Level.instance.makeHitFX(body.position);
 			}
 			aliveSwitch = float.MaxValue;
 			//var bForce = damage * 100/12;

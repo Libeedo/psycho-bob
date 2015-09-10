@@ -52,6 +52,7 @@ public class Level : MonoBehaviour {
 	public Pauser pauser;
 
 	public GameObject teleFlashRef;
+	public GameObject hitFXref;
 
 	void Awake ()
 	{
@@ -214,7 +215,11 @@ public class Level : MonoBehaviour {
         Destroy (tf,1f);
 	}
 
-
+	public void makeHitFX(Vector2 pos)
+	{
+		Instantiate(hitFXref,pos, Quaternion.Euler(0, 0, Random.Range(0, 360f)));
+		
+	}
 
 	public float GetPlayerX()
 	{

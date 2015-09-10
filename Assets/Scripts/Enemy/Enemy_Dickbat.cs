@@ -44,7 +44,7 @@ public class Enemy_Dickbat : Enemy {
 	{
 		
 		if(!eDamage.blownUp){//if not just blownup prior
-			Instantiate(hitEffect, transform.position, Quaternion.identity);
+			Level.instance.makeHitFX(transform.position);
 			base.BlownUp(headshot,damage,ePos);
 			if (died) {
 				Death();
@@ -59,7 +59,7 @@ public class Enemy_Dickbat : Enemy {
 	{
 		
 		if(!eDamage.blownUp){//if not just blownup
-			Instantiate(hitEffect, transform.position, Quaternion.identity);
+			Level.instance.makeHitFX(transform.position);
 			base.BlownUp(headshot,damage,ePos);
 			if (died) {
 				Death();

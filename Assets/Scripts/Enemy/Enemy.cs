@@ -37,7 +37,7 @@ public class Enemy:MonoBehaviour {
 
 	public bool facingRight = true;
 
-	public GameObject hitEffect;
+	//public GameObject hitEffect;
 
 	protected virtual void Start(){
 		//print ("START");

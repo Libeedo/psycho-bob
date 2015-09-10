@@ -2553,6 +2553,7 @@ MonoBehaviour:
   score: {fileID: 0}
   pauser: {fileID: 0}
   teleFlashRef: {fileID: 149710, guid: 26610744de911cf48836bcdc77a50363, type: 2}
+  hitFXref: {fileID: 100394, guid: ca122426c74ad864f97e737641154d37, type: 2}
 --- !u!114 &11467358
 MonoBehaviour:
   m_ObjectHideFlags: 1

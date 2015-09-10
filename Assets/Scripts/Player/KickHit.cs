@@ -80,7 +80,7 @@ public class KickHit : MonoBehaviour {
 			OnHit();
 				Vector3 vecc = (col.transform.position - transform.position).normalized * 70;
 			col.GetComponent<Explosive>().Hurt(0,vecc,transform.position);// * bouncePower* 1.2f,transform.position);
-
+			Level.instance.makeHitFX(col.transform.position);
 			//OnHit();
 		}
 		else if(col.tag == "Parachute")

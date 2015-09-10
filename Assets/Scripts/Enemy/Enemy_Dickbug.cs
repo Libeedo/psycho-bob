@@ -220,7 +220,7 @@ public class Enemy_Dickbug : Enemy {
 	{
 		
 		if(!eDamage.blownUp){//if not just blownup
-			Instantiate(hitEffect, transform.position, Quaternion.identity);
+			Level.instance.makeHitFX(transform.position);
 			base.BlownUp(headshot,damage,ePos);
 			switchToRagdoll();
 			Vector3 force = GetBlastDirection(transform.position,ePos);
@@ -240,7 +240,7 @@ public class Enemy_Dickbug : Enemy {
 	{
 		
 		if(!eDamage.blownUp){//if not just blownup
-			Instantiate(hitEffect, transform.position, Quaternion.identity);
+			Level.instance.makeHitFX(transform.position);
 			base.BlownUp(headshot,damage,ePos);
 			switchToRagdoll();
 			Vector3 force = GetBlastDirection(transform.position,ePos);
@@ -259,7 +259,7 @@ public class Enemy_Dickbug : Enemy {
 	}
 	public override void Tripped(bool right,Vector2 vel)
 	{
-		Instantiate(hitEffect, transform.position, Quaternion.identity);
+		Level.instance.makeHitFX(transform.position);
 		float power = 1000f;
 		if(right){
 			power = -1000f;

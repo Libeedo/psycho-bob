@@ -148,7 +148,6 @@ GameObject:
   - 233: {fileID: 23300000}
   - 114: {fileID: 11400014}
   - 82: {fileID: 8200000}
-  - 231: {fileID: 23100000}
   m_Layer: 11
   m_Name: enemy1_deadBody_body
   m_TagString: Enemy
@@ -659,7 +658,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100020}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 188.130966, y: 1153.66663, z: 0}
+  m_LocalPosition: {x: 212.462433, y: 1170.95508, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400016}
@@ -1715,7 +1714,6 @@ MonoBehaviour:
   replenishSpawner: 0
   sortingNum: 0
   facingRight: 1
-  hitEffect: {fileID: 100394, guid: ca122426c74ad864f97e737641154d37, type: 2}
   equipped: 0
   soldier: {fileID: 0}
   deadRob: {fileID: 100008, guid: 443774bb8a7716c4ba1a12862d482907, type: 2}
@@ -6632,20 +6630,6 @@ SpriteRenderer:
   m_SortingOrder: 6
   m_Sprite: {fileID: 21300002, guid: 5f73610f27ff650419320731cff86c53, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
---- !u!231 &23100000
-SpringJoint2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100016}
-  m_Enabled: 0
-  m_EnableCollision: 0
-  m_ConnectedRigidBody: {fileID: 5000018}
-  m_Anchor: {x: 0, y: 1.75}
-  m_ConnectedAnchor: {x: 0, y: -.629999995}
-  m_Distance: .360000014
-  m_DampingRatio: 1
-  m_Frequency: 100
 --- !u!233 &23300000
 HingeJoint2D:
   m_ObjectHideFlags: 1

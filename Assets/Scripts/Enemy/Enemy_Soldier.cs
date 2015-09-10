@@ -383,7 +383,7 @@ public class Enemy_Soldier : Enemy
 		//print ("tripped "+onFire);
 		// Reduce the number of hit points by one.
 		
-		Instantiate(hitEffect, transform.position, Quaternion.identity);
+		Level.instance.makeHitFX(transform.position);
 		float power = 1000f;
 		if(right){
 			power = -1000f;
