@@ -163,6 +163,7 @@ public class PlayerHealth : MonoBehaviour
 		GetComponent<Rigidbody2D>().gravityScale = 1f;
 		//anim.Play("heroSpawn");
 		Level.instance.spawnPoint.Spawn ();
+
 		GetComponent<Animator>().enabled = false;
 		//transform.Find("weapon").GetComponent<Gun>().fixGuns();
 		GetComponent<Animator>().enabled = true;

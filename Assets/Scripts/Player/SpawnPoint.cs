@@ -9,6 +9,12 @@ public class SpawnPoint : MonoBehaviour {
 	{
 		bulbRen = transform.Find ("legs").transform.Find ("joint14").transform.Find ("joint13").transform.Find ("lightbulb").transform.Find ("pSphere1").GetComponent<MeshRenderer> ();
 	}*/
+	private Vector3 teleFlashPos;
+	void Start()
+	{
+		teleFlashPos = transform.position;
+		teleFlashPos.y += 5;
+	}
 	public void EnableSpawn()
 	{
 		if(selected){return;}
@@ -17,7 +23,7 @@ public class SpawnPoint : MonoBehaviour {
 		transform.Find ("light").gameObject.SetActive(true);
 		//bulbRen.material = bulbMats [1];
 		selected = true;
-
+		
 		//audio.Play();
 
 	}
@@ -32,6 +38,7 @@ public class SpawnPoint : MonoBehaviour {
 		//print ("spawn");
 		GetComponent<AudioSource>().Play ();
 		GetComponent<Animator>().Play("spawnPoint spawn");
+		Level.instance.makeTeleFlash(teleFlashPos);
 		//transform.Find("skirt").GetComponent<Animator>().Play("skirtSpawn");
 	}
 }

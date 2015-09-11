@@ -39,8 +39,9 @@ public class PropSpawner : MonoBehaviour {
 		// Instantiate a random enemy.
 		int enemyIndex = Random.Range(0, props.Length);
 		GameObject go = (GameObject)Instantiate(chuteRef, transform.position, transform.rotation);
-		//if(paratrooperMode){
-		go.transform.Find("parachute").GetComponent<Parachute>().attached = Parachute.Attached.PROP;
+		var p = go.transform.Find("parachute");
+		p.GetComponent<Parachute>().attached = Parachute.Attached.PROP;
+		p.GetComponent<Rigidbody2D>().gravityScale = -0.85f;
 
 		GameObject rd = Instantiate(props[enemyIndex], transform.position, Quaternion.identity) as GameObject;
 		HingeJoint2D jnt = go.transform.Find("harness").gameObject.AddComponent<HingeJoint2D>();
@@ -55,8 +56,9 @@ public class PropSpawner : MonoBehaviour {
 		//rd.transform.parent = go.transform;
 		rd.transform.GetComponent<Explosive>().xMode = Explosive.XplodeMode.CHUTE;
 		rd.transform.GetComponent<Explosive>().chuteCS = go.transform.Find("parachute").GetComponent<Parachute>();
-		Destroy (rd,12f);
-		Destroy (go,12f);
+
+		//Destroy (rd,12f);
+		//Destroy (go,12f);
 	}
 
 
