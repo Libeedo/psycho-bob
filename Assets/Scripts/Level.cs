@@ -355,27 +355,35 @@ public class Level : MonoBehaviour {
 		playerCS.enabled = false;
 		nurse.GetComponent<Nurse>().enabled = false;
 		nurse.GetComponent<Rigidbody2D>().isKinematic = true;
+		nurse.GetComponent<Animator>().enabled= false;//Play ("Nurse_Idle");
+		nurse.transform.Find("nurse_body").GetComponent<AudioSource>().enabled = false;
 		var pos = camCS.transform.position;
 		pos.z = -25;
 		camCS.transform.position = pos;
 		camCS.levelZoom = 0;
 		Cursor.visible = false;
 		StartCoroutine(WinLevel2());
+		//GameObject.Find("SPAWN").SetActive(false);
 
-		for (int i = enemies.Count-1; i >= 0; i--)
+
+		/*for (int i = enemies.Count-1; i >= 0; i--)
 		{
 			print (enemies.Count+"  "+enemies[i].gameObject.activeSelf);
 			var e = enemies[i];
 			if(e.gameObject.activeSelf){
 				e.BlownUp(true,20f,transform.position);
 			}
-		}
-		GameObject.Find("SPAWN").SetActive(false);
+		}*/
+
 	}
 	IEnumerator WinLevel2()
 	{
 		yield return new WaitForSeconds(2);
 		MainMenu.instance.CompleteLevel();
+		nurse.SetActive(false);
+		playerT.gameObject.SetActive(false);
+		playerCS.gunCS.gameObject.SetActive(false);
+		camCS.GetComponent<AudioListener>().enabled = true;
 		winPanel.SetActive(true);
 	}
 	public void NextLevel()

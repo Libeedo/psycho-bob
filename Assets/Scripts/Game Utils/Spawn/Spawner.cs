@@ -44,6 +44,7 @@ public class Spawner : MonoBehaviour
 			}else{
 				spawnCount++; 
 				canSpawn = true;
+				Level.instance.makeTeleFlash(transform.position);
 			}
 
 		}else{//infinite

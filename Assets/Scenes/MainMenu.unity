@@ -423,7 +423,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levels:
-  - Tutorial
+  - Tutorial Basic
   - ThunderDome
   - DeathBox
   - Tutorial

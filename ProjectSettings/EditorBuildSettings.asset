@@ -15,3 +15,5 @@ EditorBuildSettings:
     path: Assets/Scenes/DeathBox.unity
   - enabled: 0
     path: Assets/Scenes/Level TEMPLATE.unity
+  - enabled: 1
+    path: Assets/Scenes/Tutorial Basic.unity

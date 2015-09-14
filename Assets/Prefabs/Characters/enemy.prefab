@@ -1392,7 +1392,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100010}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 158.199997, y: 1135.19995, z: 0}
+  m_LocalPosition: {x: 524.428955, y: 1158.17004, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400084}
@@ -2462,7 +2462,7 @@ CircleCollider2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100010}
   m_Enabled: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 0cb77231a430b454fb792ff7ffcc3943, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: -.100000001}
@@ -2829,14 +2829,14 @@ MonoBehaviour:
   replenishSpawner: 0
   sortingNum: 0
   facingRight: 1
-  hitEffect: {fileID: 100394, guid: ca122426c74ad864f97e737641154d37, type: 2}
-  equipped: 3
+  equipped: 0
   explsnRef: {fileID: 100002, guid: 9e2c3a60b3138c5408b8e28724a9cd9a, type: 2}
   chuteRef: {fileID: 100000, guid: 86b8fefb9b5190744b25002c8d8d86bb, type: 2}
   paratrooperMode: 0
   openChuteDelay: 0
   moveSpeed: 10
-  status: 3
+  defaultSpeed: 8
+  status: 0
   ragdollRef: {fileID: 100020, guid: 77380240820b6034cbde74e5cdb2f855, type: 2}
   snipeWalk: 0
   eDamageGOref: {fileID: 100034, guid: ecc6493d68fd07742958aeb4edeaad3d, type: 2}
