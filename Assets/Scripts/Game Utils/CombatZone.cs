@@ -44,7 +44,7 @@ public class CombatZone : MonoBehaviour {
 	{
 		cam = Camera.main;
 		var camm = cam.GetComponent<CameraFollow>();
-		print("startZone "+camm.maxXAndY);
+		//print("startZone "+camm.maxXAndY);
 		levelCameraLimits.max = camm.maxXAndY;
 		levelCameraLimits.min = camm.minXAndY;
 		levelCameraLimits.zoom = camm.levelZoom;

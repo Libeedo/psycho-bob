@@ -799,7 +799,7 @@ public class PlayerControl : MonoBehaviour
 				stateMethod = WallAir;
 
 				anim.Play ("WallSlide");
-				aud.volume  = Mathf.Abs(rigidBody.velocity.x)/25f;
+				aud.volume =  1;//Mathf.Abs(rigidBody.velocity.x)/25f;
 				aud.Play ();
 				onWall = true;
 				offWallCount = maxOffWallCount;

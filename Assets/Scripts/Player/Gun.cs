@@ -353,9 +353,13 @@ public class Gun : MonoBehaviour
 		mousePos.z = -2f;
 		//Vector3 v = new Vector3(mousePos.x,mousePos.y,-2f);
 		if (Vector3.Distance(mousePos,xhair.position)> 0.05f){
-			xhair.position = Vector3.Lerp(xhair.transform.position,mousePos,20f * Time.deltaTime);
-
-
+			//var p = Vector3.Lerp(xhair.transform.position,mousePos,20f * Time.deltaTime);
+			//if(Vector2.Distance(mousePos,transform.position)>5){
+				//print ("too clooooose "+angle);
+				//xhair.position = transform.position + (angle.normalized * 5);//Vector3.Lerp(xhair.transform.position,transform.position + (angle * 5.5f),50f * Time.deltaTime);
+			
+				xhair.position = Vector3.Lerp(xhair.transform.position,mousePos,200 * Time.deltaTime);
+			//}
 		}
 
 		//oldMousePos = mousePos;
@@ -407,7 +411,7 @@ public class Gun : MonoBehaviour
 				angle2 = Mathf.Atan2(diffY, diffX * -1) * Mathf.Rad2Deg;
 				headAngle = Quaternion.Euler(new Vector3(0, 0, angle2));
 			}
-			transform.rotation = angle3;
+			transform.rotation = angle3;//Quaternion.Lerp(transform.rotation,angle3,200 * Time.deltaTime);
 			head.rotation = headAngle;
 		//}
 		
@@ -428,7 +432,7 @@ public class Gun : MonoBehaviour
 
 
 			}else if(gunMode == GunMode.HANDGUN && canShoot){
-
+				//print ("shooooooooooooooooooot");
 				AudioSource.PlayClipAtPoint(hgSFX[UnityEngine.Random.Range (0, hgSFX.Length)], aud.transform.position);
 				//aud.Play ();
 				
@@ -881,10 +885,13 @@ public class Gun : MonoBehaviour
 	}
 	private void Reload()
 	{
+		//print ("relaod");
 		if(activeWeapon.ammo<=0){ //if no ammo for current gun
 			SwitchToWeapon(GunMode.HANDGUN);
+			//print ("reload stopped");
 			return;
 		}
+		StopCoroutine("canShootAgain");
 		reloading = true;
 		anim.SetBool ("shooting",false);
 		canShoot = false;
@@ -923,10 +930,14 @@ public class Gun : MonoBehaviour
 	{
 
 		yield return new WaitForSeconds(activeWeapon.reloadTime);
-		if(activeWeapon.ammo + activeWeapon.clip >= activeWeapon.maxClip){ //if they have enough in the clip + in ammo to fill the clip
+
+		if((activeWeapon.ammo + activeWeapon.clip) >= activeWeapon.maxClip){ //if they have enough in the clip + in ammo to fill the clip
+			//print ("relaod done");
 			activeWeapon.ammo = activeWeapon.ammo - activeWeapon.maxClip +activeWeapon.clip; //subtract a full clip but add what he had in the clip already
 			activeWeapon.clip = activeWeapon.maxClip;
-		}else{                                                             //otherwise put clip + ammo in the clip and make ammo zero
+		}else{ 
+			//print ("relaod done2 "+activeWeapon.ammo + activeWeapon.clip);//otherwise put clip + ammo in the clip and make ammo zero
+			print (activeWeapon.maxClip);
 			activeWeapon.clip = activeWeapon.ammo + activeWeapon.clip;
 			activeWeapon.ammo =0;
 		}
@@ -935,6 +946,7 @@ public class Gun : MonoBehaviour
 		}else if(gunMode==GunMode.PUNCH){
 			punchGO.SetActive(true);
 		}
+		handGunWeapon.ammo = 10000000;
 		canShoot = true;
 		reloading = false;
 		UpdateAmmoDisp();
@@ -1546,8 +1558,8 @@ public class Weapon
 		case Gun.GunMode.HANDGUN:
 
 			clip = maxClip = 8;
-			ammo = int.MaxValue;
-			maxAmmo = int.MaxValue;
+			ammo = maxAmmo = 100000000; //int.MaxValue;
+			//maxAmmo = int.MaxValue;
 			reloadTime = 1.2f;
 			shotPos = weaponT.Find ("handGun3D").Find ("handGun_spot");
 			//bulletShell = bulletShells [0];
