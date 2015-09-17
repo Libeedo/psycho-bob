@@ -10,14 +10,19 @@ public class PlayerHealth : MonoBehaviour
 	private float hurtForce = 700f;				// The force with which the player is pushed when hurt.
 	public float damageAmount = 10f;			// The amount of damage to take when enemies touch the player
 
-	private Image healthBar;			
-	private float lastHitTime;					// The time at which the player was last hit.
+	private Image healthBar;
+	private bool canBeHit = true;
+	//private float lastHitTime;					// The time at which the player was last hit.
 	private Vector3 healthScale;				// The local scale of the health bar initially (with full health).
 	private PlayerControl playerControl;		// Reference to the PlayerControl script.
 	private Animator anim;						// Reference to the Animator on the player
 
 	public AudioClip healthFX;
 	//public Sprite headSpr;
+
+	private int pLayer; //player layer
+	private int eLayer;//enemy layer
+
 	void Awake ()
 	{
 		// Setting up references.
@@ -27,6 +32,9 @@ public class PlayerHealth : MonoBehaviour
 
 		// Getting the intial scale of the healthbar (whilst the player has full health).
 		healthScale = healthBar.transform.localScale;
+
+		pLayer = LayerMask.NameToLayer ("Player");
+		eLayer = LayerMask.NameToLayer ("Enemies");
 	}
 
 
@@ -47,7 +55,7 @@ public class PlayerHealth : MonoBehaviour
 			col.transform.root.GetComponent<Enemy>().HurtPlayer(transform.position); 
 
 		
-		}else if(col.gameObject.tag == "HurtPlayer" || col.gameObject.tag == "Fireball" || col.gameObject.tag == "EnemyFetus")
+		}else if(col.gameObject.tag == "HurtPlayer" || col.gameObject.tag == "Fireball")// || col.gameObject.tag == "EnemyFetus")
 		{
 			Hurt (col.transform);
 
@@ -78,14 +86,15 @@ public class PlayerHealth : MonoBehaviour
 	public void Hurt(Transform enemy)
 	{
 		// ... and if the time exceeds the time of the last hit plus the time between hits...
-		if (Time.time > lastHitTime + repeatDamagePeriod) 
+		if (canBeHit) 
 		{
 			// ... and if the player still has health...
 			if(health > 0f)
 			{
 				// ... take damage and reset the lastHitTime.
 				TakeDamage(enemy); 
-				lastHitTime = Time.time; 
+				StartCoroutine("CanBeHit");
+				//lastHitTime = Time.time; 
 			}
 			// If the player doesn't have health, do some stuff, let him fall into the river to reload the level.
 			else
@@ -94,6 +103,14 @@ public class PlayerHealth : MonoBehaviour
 			}
 		}
 
+	}
+	private IEnumerator CanBeHit()
+	{
+		canBeHit = false;
+		Physics2D.IgnoreLayerCollision(pLayer,eLayer,true);
+		yield return new WaitForSeconds (repeatDamagePeriod);
+		canBeHit = true;
+		Physics2D.IgnoreLayerCollision(pLayer,eLayer,false);
 	}
 	public void Die()
 	{
@@ -142,7 +159,7 @@ public class PlayerHealth : MonoBehaviour
 		// Add a force to the player in the direction of the vector and multiply by the hurtForce.
 		GetComponent<Rigidbody2D>().AddForce(hurtVector * hurtForce);
 
-		// Reduce the player's health by 10.
+
 		health -= damageAmount;
 
 		// Update what the health bar looks like.

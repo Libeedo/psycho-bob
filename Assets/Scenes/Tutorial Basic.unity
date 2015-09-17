@@ -278,7 +278,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 446408, guid: 4f17e74e2b5acf54eac781e71a31c28e, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1129
+      value: 1142.06006
       objectReference: {fileID: 0}
     - target: {fileID: 446408, guid: 4f17e74e2b5acf54eac781e71a31c28e, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1544,6 +1544,10 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: -.992574096
       objectReference: {fileID: 0}
+    - target: {fileID: 21278688, guid: 6aa187bc6339843479c03fdfd71404a3, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ff124cd2b5c4c7b498984c1644816715, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6aa187bc6339843479c03fdfd71404a3, type: 2}
   m_IsPrefabParent: 0
@@ -3059,7 +3063,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 479972, guid: e19077c1d241cdb4f9a46275c94544a4, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1138.44995
+      value: 1151.51001
       objectReference: {fileID: 0}
     - target: {fileID: 479972, guid: e19077c1d241cdb4f9a46275c94544a4, type: 2}
       propertyPath: m_LocalPosition.z
@@ -4440,18 +4444,6 @@ Prefab:
     - target: {fileID: 400000, guid: 64b12b15baf9644af9f0651e6705f0ef, type: 2}
       propertyPath: m_RootOrder
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11462118, guid: 64b12b15baf9644af9f0651e6705f0ef, type: 2}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400000, guid: 64b12b15baf9644af9f0651e6705f0ef, type: 2}
-      propertyPath: maxXAndY.y
-      value: 4400
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400000, guid: 64b12b15baf9644af9f0651e6705f0ef, type: 2}
-      propertyPath: maxXAndY.x
-      value: 900
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 64b12b15baf9644af9f0651e6705f0ef, type: 2}
@@ -7388,7 +7380,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 6
   m_Type: 1
-  m_Color: {r: .948529422, g: .948529422, b: .948529422, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1.23000002
   m_Range: 104.509071
   m_SpotAngle: 30
@@ -8382,7 +8374,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 479972, guid: e19077c1d241cdb4f9a46275c94544a4, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1150
+      value: 1163.06006
       objectReference: {fileID: 0}
     - target: {fileID: 479972, guid: e19077c1d241cdb4f9a46275c94544a4, type: 2}
       propertyPath: m_LocalPosition.z

@@ -77,8 +77,8 @@ public class Bullet : MonoBehaviour
 						// Destroy the rocket.
 						//Destroy (gameObject);
 				}
-		// Otherwise if it hits a bomb crate...
-		else if (col.tag == "Explosive") {
+				// Otherwise if it hits a bomb crate...
+				else if (col.tag == "Explosive") {
 						// ... find the Bomb script and call the Explode function.
 						col.GetComponent<Explosive> ().Hurt (damage, GetComponent<Rigidbody2D>().velocity, transform.position);
 
@@ -94,7 +94,9 @@ public class Bullet : MonoBehaviour
 						col.GetComponent<Deflective> ().Deflect (new Vector2 (GetComponent<Rigidbody2D>().velocity.x * 5f, GetComponent<Rigidbody2D>().velocity.y) * (15f));
 
 						//Vector3 vecc = hit.point - (hit.normal * 10);
-						Vector3 vecc2 = Vector3.Reflect (GetComponent<Rigidbody2D>().velocity, hit.normal);
+			//hit.normal.normalized;
+					print (hit.normal.normalized);
+						Vector2 vecc2 = Vector2.Reflect (GetComponent<Rigidbody2D>().velocity, hit.normal.normalized);
 						GetComponent<Rigidbody2D>().velocity = vecc2;//new Vector2(vecc.x,vecc.y)* 2000f;
 
 						//rigidbody2D.velocity = new Vector2(-rigidbody2D.velocity.x,-rigidbody2D.velocity.y);

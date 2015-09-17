@@ -421,17 +421,22 @@ public class Gun : MonoBehaviour
 
 		// If the fire button is pressed...
 		if (Input.GetButtonDown ("Fire1")) {
-						// If the player is facing right...
+
+			if(!canShoot){
+				return;
+			}
+
+
 			dir = 180f;
 			if (playerCtrl.facingRight) {	
 					dir = 0;
 			}
-			if(gunMode == GunMode.UNARMED && canShoot){
+			if(gunMode == GunMode.UNARMED){// && canShoot){
 
 					StartCoroutine("Grab");
 
 
-			}else if(gunMode == GunMode.HANDGUN && canShoot){
+			}else if(gunMode == GunMode.HANDGUN){//  && canShoot){
 				//print ("shooooooooooooooooooot");
 				AudioSource.PlayClipAtPoint(hgSFX[UnityEngine.Random.Range (0, hgSFX.Length)], aud.transform.position);
 				//aud.Play ();
@@ -466,7 +471,7 @@ public class Gun : MonoBehaviour
 
 
 
-			}else if(gunMode ==GunMode.MACHINEGUN && canShoot){
+			}else if(gunMode ==GunMode.MACHINEGUN){//  && canShoot){
 				AudioSource.PlayClipAtPoint(mgSFX[UnityEngine.Random.Range (0, mgSFX.Length)], aud.transform.position);
 				//aud.Play ();
 				anim.SetTrigger ("Shoot");
@@ -490,7 +495,7 @@ public class Gun : MonoBehaviour
 					Reload();
 				}
 			
-			}else if(gunMode == GunMode.GRENADE && canShoot){
+			}else if(gunMode == GunMode.GRENADE){//  && canShoot){
 				aud.Play();
 				anim.SetTrigger ("Shoot");
 				playerAnim.SetTrigger("Shoot");
@@ -508,7 +513,7 @@ public class Gun : MonoBehaviour
 				}
 				activeWeapon.clip--;
 				Reload ();
-			}else if(gunMode == GunMode.FLAME && canShoot){
+			}else if(gunMode == GunMode.FLAME){//  && canShoot){
 				playerAnim.SetTrigger("Shoot");
 				aud.Play ();
 				flameAud.enabled = true;
@@ -526,7 +531,7 @@ public class Gun : MonoBehaviour
 				if(activeWeapon.clip == 0){
 					Reload();
 				}
-			}else if(gunMode == GunMode.ROCKET && canShoot){
+			}else if(gunMode == GunMode.ROCKET){//  && canShoot){
 				aud.clip = rpgSFX[UnityEngine.Random.Range (0, rpgSFX.Length)];
 				aud.Play();
 				anim.SetTrigger ("Shoot");
@@ -545,7 +550,7 @@ public class Gun : MonoBehaviour
 				}
 				activeWeapon.clip--;
 				Reload ();
-			}else if(gunMode == GunMode.PUNCH && canShoot){
+			}else if(gunMode == GunMode.PUNCH){//  && canShoot){
 				aud.Play();
 				anim.SetTrigger ("Shoot");
 				playerAnim.SetTrigger("Shoot");
@@ -564,7 +569,7 @@ public class Gun : MonoBehaviour
 				}
 				activeWeapon.clip--;
 				Reload ();
-			}else if(gunMode == GunMode.SHOTGUN && canShoot){
+			}else if(gunMode == GunMode.SHOTGUN){//  && canShoot){
 				aud.clip = sgSFX[UnityEngine.Random.Range (0, sgSFX.Length)];
 				aud.Play ();
 				
@@ -590,10 +595,6 @@ public class Gun : MonoBehaviour
 				StartCoroutine(shotGunflareLight());
 				
 				canShoot = false;
-				
-
-				
-				
 				if(!playerCtrl.grounded){
 					playerCtrl.GetComponent<Rigidbody2D>().AddForce(new Vector2 (-angle.x, -angle.y) * 1750f);
 				}
@@ -603,7 +604,7 @@ public class Gun : MonoBehaviour
 				}else{
 					StartCoroutine(canShootAgain(0.75f));
 				}
-			}else if(gunMode == GunMode.STRAT && canShoot){
+			}else if(gunMode == GunMode.STRAT){//  && canShoot){
 				//print ("SHOOT STRAT");
 				anim.SetTrigger("ChargeStrat");
 				//autoCount = Time.time;
