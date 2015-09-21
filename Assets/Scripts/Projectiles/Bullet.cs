@@ -8,11 +8,11 @@ public class Bullet : MonoBehaviour
 	private int groundLayerMsk;
 	void Start () 
 	{
-		int layerMsk1 = 1 << LayerMask.NameToLayer("Enemies");
+		/*int layerMsk1 = 1 << LayerMask.NameToLayer("Enemies");
 		int layerMsk3 = 1 << LayerMask.NameToLayer("Ground");
-		int layerMsk2 = 1 << LayerMask.NameToLayer("Props");
+		int layerMsk2 = 1 << LayerMask.NameToLayer("Props");*/
 		int layerMsk4 = 1 << LayerMask.NameToLayer("Equipped");
-		groundLayerMsk = layerMsk1 | layerMsk2 | layerMsk3 | layerMsk4;
+		groundLayerMsk = layerMsk4;//layerMsk1 | layerMsk2 | layerMsk3 | layerMsk4;
 		// Destroy the rocket after 2 seconds if it doesn't get destroyed before then.
 		Destroy(gameObject, 4f);
 	}
@@ -86,26 +86,34 @@ public class Bullet : MonoBehaviour
 						// Destroy the rocket.
 						Destroy (gameObject);
 				} else if (col.tag == "Deflective") {
-						RaycastHit2D hit = Physics2D.Linecast (transform.position, col.transform.position, groundLayerMsk);
+						//RaycastHit2D hit = Physics2D.Linecast (transform.position, col.transform.position, groundLayerMsk);
 						//Debug.DrawRay(hit.point, hit.normal * 10, Color.red);
-						Debug.DrawLine (hit.point, hit.normal * 5, Color.red);
+						//Debug.DrawLine (hit.point, hit.normal * 5, Color.red);
 						//Destroy (gameObject);
 						//return;
 						col.GetComponent<Deflective> ().Deflect (new Vector2 (GetComponent<Rigidbody2D>().velocity.x * 5f, GetComponent<Rigidbody2D>().velocity.y) * (15f));
 
 						//Vector3 vecc = hit.point - (hit.normal * 10);
 			//hit.normal.normalized;
-					print (hit.normal.normalized);
-						Vector2 vecc2 = Vector2.Reflect (GetComponent<Rigidbody2D>().velocity, hit.normal.normalized);
-						GetComponent<Rigidbody2D>().velocity = vecc2;//new Vector2(vecc.x,vecc.y)* 2000f;
+						Debug.DrawLine (transform.position, transform.right, Color.red,3);
+						RaycastHit2D hit2;
+						
+						if (hit2 = Physics2D.Raycast(transform.position, transform.right,2,groundLayerMsk)){
+								print (hit2.normal+"  "+transform.right);
+								Vector2 vecc2 = Vector2.Reflect (GetComponent<Rigidbody2D>().velocity, hit2.normal);
+								GetComponent<Rigidbody2D>().velocity = vecc2;
+
+								//float angle = Mathf.Atan2 (GetComponent<Rigidbody2D>().velocity.y, GetComponent<Rigidbody2D>().velocity.x) * Mathf.Rad2Deg;
+								//transform.rotation = Quaternion.AngleAxis (angle, Vector3.forward);
+						}
+						//new Vector2(vecc.x,vecc.y)* 2000f;
 
 						//rigidbody2D.velocity = new Vector2(-rigidbody2D.velocity.x,-rigidbody2D.velocity.y);
 
 						//transform.rotation *= Quaternion.AngleAxis( 180, transform.forward );
 
 						//transform.rotation = Quaternion.LookRotation(rigidbody2D.velocity, Vector3.up);
-						float angle = Mathf.Atan2 (GetComponent<Rigidbody2D>().velocity.y, GetComponent<Rigidbody2D>().velocity.x) * Mathf.Rad2Deg;
-						transform.rotation = Quaternion.AngleAxis (angle, Vector3.forward);
+						
 						OnExplode ();
 				} else if (col.tag == "HitZone") {
 						col.GetComponent<HitZone>().hitDel(damage,false);
