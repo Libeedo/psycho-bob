@@ -94,26 +94,30 @@ public class Bullet : MonoBehaviour
 						col.GetComponent<Deflective> ().Deflect (new Vector2 (GetComponent<Rigidbody2D>().velocity.x * 5f, GetComponent<Rigidbody2D>().velocity.y) * (15f));
 
 						//Vector3 vecc = hit.point - (hit.normal * 10);
-			//hit.normal.normalized;
-						Debug.DrawLine (transform.position, transform.right, Color.red,3);
-						RaycastHit2D hit2;
+						//hit.normal.normalized;
 						
-						if (hit2 = Physics2D.Raycast(transform.position, transform.right,2,groundLayerMsk)){
-								print (hit2.normal+"  "+transform.right);
-								Vector2 vecc2 = Vector2.Reflect (GetComponent<Rigidbody2D>().velocity, hit2.normal);
+						RaycastHit2D hit2;
+						//print (transform.right+"    "+transform.position+(-transform.right));
+						if (hit2 = Physics2D.Raycast(transform.position + (-transform.right), transform.right,2,groundLayerMsk)){
+								//print (hit2.normal+"  "+hit2.normal.normalized+"  "+hit2.point);
+								Vector2 vecc2 = Vector2.Reflect (GetComponent<Rigidbody2D>().velocity, hit2.normal.normalized);
 								GetComponent<Rigidbody2D>().velocity = vecc2;
-
-								//float angle = Mathf.Atan2 (GetComponent<Rigidbody2D>().velocity.y, GetComponent<Rigidbody2D>().velocity.x) * Mathf.Rad2Deg;
-								//transform.rotation = Quaternion.AngleAxis (angle, Vector3.forward);
+								
+								var v = GetComponent<Rigidbody2D>().velocity;
+								float angle = Mathf.Atan2 (v.y, v.x) * Mathf.Rad2Deg;
+								transform.rotation = Quaternion.AngleAxis (angle, Vector3.forward);
 						}
+			//Debug.DrawLine ((Vector2)transform.position + (-GetComponent<Rigidbody2D>().velocity), transform.right * 2, Color.red,3);
 						//new Vector2(vecc.x,vecc.y)* 2000f;
 
 						//rigidbody2D.velocity = new Vector2(-rigidbody2D.velocity.x,-rigidbody2D.velocity.y);
 
 						//transform.rotation *= Quaternion.AngleAxis( 180, transform.forward );
 
-						//transform.rotation = Quaternion.LookRotation(rigidbody2D.velocity, Vector3.up);
+						//transform.rotation = Quaternion.LookRotation(GetComponent<Rigidbody2D>().velocity, Vector3.up);
 						
+						//transform.rotation.SetLookRotation(GetComponent<Rigidbody2D>().velocity);
+
 						OnExplode ();
 				} else if (col.tag == "HitZone") {
 						col.GetComponent<HitZone>().hitDel(damage,false);
