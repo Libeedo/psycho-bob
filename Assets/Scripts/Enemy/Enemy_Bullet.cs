@@ -21,7 +21,7 @@ public class Enemy_Bullet : MonoBehaviour {
 		//print (col.tag);
 		// If it hits an enemy...
 		if (col.tag == "Player") {
-			col.GetComponent<PlayerHealth>().Hurt(transform);
+			col.GetComponent<PlayerHealth>().Hurt(false,transform);
 		}
 		speed = 0;
 		Destroy (gameObject,.4f);

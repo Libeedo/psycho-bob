@@ -28,10 +28,10 @@ public class Explosion : MonoBehaviour
 		//print ("explosion!!!!!!!!!!!!!!!!!!");
 		//AudioSource.PlayClipAtPoint(boom, transform.position);
 		//InvokeRepeating("Explode",0f,0.02f);
-		if(enemyExplosion){
-			transform.root.Find ("explosionFireball").Find ("fireBall").gameObject.SetActive(false);
-			transform.root.Find ("explosionFireball").Find ("fireBall blue").gameObject.SetActive(true);
-		}
+		//if(enemyExplosion){
+			//transform.root.Find ("explosionFireball").Find ("fireBall").gameObject.SetActive(false);
+			//transform.root.Find ("explosionFireball").Find ("fireBall blue").gameObject.SetActive(true);
+		//}
 	}
 
 
@@ -54,11 +54,11 @@ public class Explosion : MonoBehaviour
 	void OnTriggerEnter2D (Collider2D col) 
 	{
 		//print (col.tag+"  exploxed "  +col.gameObject.name);
-		if (enemyExplosion) {
+		//if (enemyExplosion) {
 			if(col.tag == "Player" )
 			{
 
-				col.GetComponent<PlayerHealth>().Hurt(transform);
+				col.GetComponent<PlayerHealth>().Hurt(true,transform);
 
 				Vector3 deltaPos = col.transform.position - transform.position;
 				// Apply a force in this direction with a magnitude of bombForce.
@@ -66,10 +66,10 @@ public class Explosion : MonoBehaviour
 				// ... find the Bomb script and call the Explode function.
 				col.GetComponent<Rigidbody2D>().AddForce(force);
 				
-			}
-			return;
-		}
-		if(col.tag == "Enemy" || col.tag == "EnemyHead"){
+			//}
+			//return;
+		//}
+		}else if(col.tag == "Enemy" || col.tag == "EnemyHead"){
 			// Find the Enemy script and set the enemy's health to zero.
 			//col.gameObject.GetComponent<Enemy>().HP = 0;
 			float distance = Vector2.Distance(col.transform.position , transform.position);
@@ -114,7 +114,7 @@ public class Explosion : MonoBehaviour
 			col.GetComponent<DebrisPiece>().Hurt(80);
 			
 		}
-		else if(col.tag == "Player" )
+		/*else if(col.tag == "Player" )
 		{
 
 			Vector3 deltaPos = col.transform.position - transform.position;
@@ -123,7 +123,7 @@ public class Explosion : MonoBehaviour
 			// ... find the Bomb script and call the Explode function.
 			col.GetComponent<Rigidbody2D>().AddForce(force);
 			
-		}
+		}*/
 	}
 
 	/*Vector3 getBlastDiretion(Vector3 colPos,float multiplier)

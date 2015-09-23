@@ -51,13 +51,13 @@ public class PlayerHealth : MonoBehaviour
 				return;
 				
 			}
-			Hurt (col.transform);
+			Hurt (false,col.transform);
 			col.transform.root.GetComponent<Enemy>().HurtPlayer(transform.position); 
 
 		
 		}else if(col.gameObject.tag == "HurtPlayer" || col.gameObject.tag == "Fireball")// || col.gameObject.tag == "EnemyFetus")
 		{
-			Hurt (col.transform);
+			Hurt (false,col.transform);
 
 		}/*else if(col.gameObject.tag == "Pickup")
 		{
@@ -83,37 +83,70 @@ public class PlayerHealth : MonoBehaviour
 		AudioSource.PlayClipAtPoint(healthFX, transform.position);
 		UpdateHealthBar();
 	}
-	public void Hurt(Transform enemy)
+	public void Hurt(bool explosion, Transform enemy)
 	{
 		// ... and if the time exceeds the time of the last hit plus the time between hits...
 		if (canBeHit) 
 		{
 			// ... and if the player still has health...
-			if(health > 0f)
-			{
-				// ... take damage and reset the lastHitTime.
-				TakeDamage(enemy); 
-				StartCoroutine("CanBeHit");
+			//if(health > 0f)
+			//{
+			if(explosion){
+				var dis = Vector2.Distance(transform.position,enemy.position) * 8;
+				damageAmount = 100 - dis;
+			}	
+			TakeDamage(enemy); 
+			StartCoroutine("CanBeHit");
 				//lastHitTime = Time.time; 
-			}
+			//}
 			// If the player doesn't have health, do some stuff, let him fall into the river to reload the level.
-			else
+			if(health < 0f)
 			{
 				Die ();
 			}
 		}
 
 	}
+
+	void TakeDamage (Transform enemy)
+	{
+		
+		
+		// Make sure the player can't jump.
+		playerControl.jump = false;
+		
+		// Create a vector that's from the enemy to the player with an upwards boost.
+		Vector3 hurtVector = (transform.position - enemy.position + Vector3.up).normalized;
+		
+		// Add a force to the player in the direction of the vector and multiply by the hurtForce.
+		GetComponent<Rigidbody2D>().AddForce(hurtVector * hurtForce);
+		
+		
+		health -= damageAmount;
+		
+		// Update what the health bar looks like.
+		UpdateHealthBar();
+		anim.SetTrigger ("Hurt");
+		
+		Level.instance.makePlayerHitNum (transform.position, damageAmount/10);
+		
+		AudioSource.PlayClipAtPoint(ouchClips[Random.Range (0, ouchClips.Length)], transform.position);
+	}
+
 	private IEnumerator CanBeHit()
 	{
 		canBeHit = false;
 		Physics2D.IgnoreLayerCollision(pLayer,eLayer,true);
 		yield return new WaitForSeconds (repeatDamagePeriod);
 		canBeHit = true;
+		damageAmount = 10;
 		Physics2D.IgnoreLayerCollision(pLayer,eLayer,false);
 	}
 	public void Die()
 	{
+		StopCoroutine ("CanBeHit");
+		canBeHit = false;
+		damageAmount = 10;
 		GetComponent<Collider2D>().isTrigger = true;
 		//rigidbody2D.isKinematic = true;
 		if(!playerControl.facingRight){
@@ -124,7 +157,7 @@ public class PlayerHealth : MonoBehaviour
 		playerControl.SaddleDown ();
 		playerControl.enabled = false;
 		Level.instance.KillPlayer();
-
+		canBeHit = true;
 		// Find all of the colliders on the gameobject and set them all to be triggers.
 		/*Collider2D[] cols = GetComponents<Collider2D>();
 				foreach(Collider2D c in cols)
@@ -148,28 +181,7 @@ public class PlayerHealth : MonoBehaviour
 				// ... Trigger the 'Die' animation state
 				*/
 	}
-	void TakeDamage (Transform enemy)
-	{
-		// Make sure the player can't jump.
-		playerControl.jump = false;
 
-		// Create a vector that's from the enemy to the player with an upwards boost.
-		Vector3 hurtVector = (transform.position - enemy.position + Vector3.up).normalized;
-
-		// Add a force to the player in the direction of the vector and multiply by the hurtForce.
-		GetComponent<Rigidbody2D>().AddForce(hurtVector * hurtForce);
-
-
-		health -= damageAmount;
-
-		// Update what the health bar looks like.
-		UpdateHealthBar();
-		anim.SetTrigger ("Hurt");
-
-		Level.instance.makePlayerHitNum (transform.position, 1);
-
-		AudioSource.PlayClipAtPoint(ouchClips[Random.Range (0, ouchClips.Length)], transform.position);
-	}
 	public void Spawn()
 	{
 		//print("player spawn");
