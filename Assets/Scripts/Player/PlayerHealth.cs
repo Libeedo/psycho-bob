@@ -8,7 +8,7 @@ public class PlayerHealth : MonoBehaviour
 	public float repeatDamagePeriod = 4f;		// How frequently the player can be damaged.
 	public AudioClip[] ouchClips;				// Array of clips to play when the player is damaged.
 	private float hurtForce = 700f;				// The force with which the player is pushed when hurt.
-	public float damageAmount = 10f;			// The amount of damage to take when enemies touch the player
+	public float damageAmount = 20f;			// The amount of damage to take when enemies touch the player
 
 	private Image healthBar;
 	private bool canBeHit = true;
@@ -46,7 +46,7 @@ public class PlayerHealth : MonoBehaviour
 		{
 			if(playerControl.sliding)// && Mathf.Abs(playerControl.gameObject.rigidbody2D.velocity.x) >4f)
 			{
-				print("tripped");
+				//print("tripped");
 				col.transform.root.GetComponent<Enemy>().Tripped(playerControl.facingRight, playerControl.gameObject.GetComponent<Rigidbody2D>().velocity);
 				return;
 				
@@ -139,14 +139,14 @@ public class PlayerHealth : MonoBehaviour
 		Physics2D.IgnoreLayerCollision(pLayer,eLayer,true);
 		yield return new WaitForSeconds (repeatDamagePeriod);
 		canBeHit = true;
-		damageAmount = 10;
+		damageAmount = 20;
 		Physics2D.IgnoreLayerCollision(pLayer,eLayer,false);
 	}
 	public void Die()
 	{
 		StopCoroutine ("CanBeHit");
 		canBeHit = false;
-		damageAmount = 10;
+		damageAmount = 20;
 		GetComponent<Collider2D>().isTrigger = true;
 		//rigidbody2D.isKinematic = true;
 		if(!playerControl.facingRight){

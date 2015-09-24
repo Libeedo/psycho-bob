@@ -141,7 +141,8 @@ public class Enemy_Soldier : Enemy
 			//if(!paratrooperMode){
 				snipeCS.StartSniping();
 			if(snipeWalk){
-				InvokeRepeating("switchSnipeWalk",1,2);
+				InvokeRepeating("switchSnipeWalk",1,5);
+
 			}
 			rdGO.transform.Find("enemy1_deadBody_handL").Find ("sniperHand").gameObject.SetActive(true);
 		}
@@ -304,17 +305,19 @@ public class Enemy_Soldier : Enemy
 				moveSpeed = defaultSpeed = 13;
 				enemyA.SetBool ("onFire", true);
 		} else {
-				if (equipped == Equipped.SNIPER) {
+			if (equipped == Equipped.SNIPER) {
 						//enemyA.Play ("enemySnipe");
 						//if(status != eStatus.PARACHUTING){
 						//status = eStatus.SHOOTING;
 						//moveSpeed = 0;
 
 						//}
-						InvokeRepeating ("switchSnipeWalk", 1, 7);
-						//snipeCS.StartSniping();
-
+				if(snipeWalk){
+					InvokeRepeating("switchSnipeWalk",1,2);
+				}else{
+					snipeCS.StartSniping();
 				}
+			}
 		}
 		eDamage.enemyCS = this;
 

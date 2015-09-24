@@ -18,7 +18,9 @@ public class Gun : MonoBehaviour
 
 	private float bulletSpeed = 60f;
 	private float autoCount;			//time between auto shots
-	//private float maxAutoCount = 0.35f;
+	private float maxAutoCount = 0.15f;
+	private int mgShotCount = 0;  //for auto bursts of 3 rounds
+
 
 	private float fireSpeed = 7.5f;
 
@@ -103,6 +105,8 @@ public class Gun : MonoBehaviour
 	private bool canKick  = true;
 	private bool reloading = false;
 	//private float swungCount = 0f;
+
+
 
 	private Weapon activeWeapon;//which weapon object is selected
 
@@ -472,6 +476,7 @@ public class Gun : MonoBehaviour
 
 
 			}else if(gunMode ==GunMode.MACHINEGUN){//  && canShoot){
+
 				AudioSource.PlayClipAtPoint(mgSFX[UnityEngine.Random.Range (0, mgSFX.Length)], aud.transform.position);
 				//aud.Play ();
 				anim.SetTrigger ("Shoot");
@@ -486,6 +491,7 @@ public class Gun : MonoBehaviour
 				//gunFlareLight2.enabled = true;
 				StartCoroutine(flareLight());
 				autoCount = Time.time;
+				mgShotCount++;
 				makeBulletShell();
 				if(!playerCtrl.grounded){
 					playerCtrl.GetComponent<Rigidbody2D>().AddForce(new Vector2 (-angle.x, -angle.y) * 250f);
@@ -642,7 +648,7 @@ public class Gun : MonoBehaviour
 		if(Input.GetButton ("Fire1")){
 			if (gunMode == GunMode.MACHINEGUN && canShoot) {
 				//Debug.Log ("delta time "+Time.deltaTime+"  "+autoCount);
-				if(Time.time - autoCount >= 0.15f)//autoCount < maxAutoCount){
+				if(Time.time - autoCount >= maxAutoCount)//autoCount < maxAutoCount){
 				{
 					AudioSource.PlayClipAtPoint(mgSFX[UnityEngine.Random.Range (0, mgSFX.Length)], aud.transform.position);
 					//aud.clip = mgSFX[UnityEngine.Random.Range (0, mgSFX.Length)];
@@ -661,6 +667,13 @@ public class Gun : MonoBehaviour
 					StartCoroutine(flareLight());
 					gunFlare.Emit (100);
 					makeBulletShell();
+					mgShotCount++;
+					if(mgShotCount >=3){
+						maxAutoCount = 0.5f;
+						mgShotCount = 0;
+					}else{
+						maxAutoCount = 0.15f;
+					}
 					if(!playerCtrl.grounded){
 						playerCtrl.GetComponent<Rigidbody2D>().AddForce(new Vector2 (-angle.x, -angle.y) * 250f);
 					}
@@ -714,6 +727,8 @@ public class Gun : MonoBehaviour
 				smoke.Stop ();
 				InvokeRepeating("flameFXOff",0f,0.1f);
 			}
+			mgShotCount = 0;
+			maxAutoCount = 0.15f;
 		}else if(Input.GetButtonUp ("Fire2")){
 			weaponWheel.SetActive(false);
 
@@ -903,6 +918,8 @@ public class Gun : MonoBehaviour
 			Instantiate(gunClips[0], transform.position, transform.rotation);
 			AudioSource.PlayClipAtPoint(reloadFX[1], transform.position);
 		}else if(gunMode == GunMode.MACHINEGUN){
+			mgShotCount = 0;
+			maxAutoCount = 0.15f;
 			anim.SetTrigger("ReloadMachineGun");
 			Instantiate(gunClips[1], transform.position, transform.rotation);
 			AudioSource.PlayClipAtPoint(reloadFX[1], transform.position);

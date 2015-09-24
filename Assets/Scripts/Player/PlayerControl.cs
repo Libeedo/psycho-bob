@@ -549,7 +549,7 @@ public class PlayerControl : MonoBehaviour
 		Vector2 pos2 = new Vector2 (grabCheck.position.x+(dir*3f),grabCheck.position.y);//-2f);
 		bool cornerGrab = Physics2D.Linecast (grabCheck.position, pos2, 1 << LayerMask.NameToLayer ("Ground"));//Physics2D.Linecast (new Vector2(transform.position.x,transform.position.y+1.2f),	transform.Find ("wallCheck2").transform.position, 1 << LayerMask.NameToLayer ("Ground"));
 		if(!cornerGrab && rigidBody.velocity.y < 0.00001f){
-			print ("CLIMB");
+			//print ("CLIMB");
 			anim.Play ("Climb");
 			//climbing = true;
 			status = Status.CLIMB;
@@ -581,7 +581,7 @@ public class PlayerControl : MonoBehaviour
 
 	void WallJump()
 	{
-		print ("wall jump " + wallJumping);
+		//print ("wall jump " + wallJumping);
 		if(wallJumping){return;}
 		rigidBody.velocity = new Vector2(rigidBody.velocity.x,0f);
 		rigidBody.AddForce (new Vector2 (jumpForce*-dir, jumpForce*0.3f));	
@@ -599,7 +599,7 @@ public class PlayerControl : MonoBehaviour
 
 		int i = UnityEngine.Random.Range (0, jumpFX.Length);
 		AudioSource.PlayClipAtPoint(jumpFX[i], transform.position);
-		print ("wall jump2 " + wallJumping);
+		//print ("wall jump2 " + wallJumping);
 	}
 	IEnumerator SwitchWallJumping()
 	{

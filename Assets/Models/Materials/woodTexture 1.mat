@@ -6,10 +6,10 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: boxing glove GLOW
-  m_Shader: {fileID: 4800000, guid: 3f387b3c7760d5a488b5596b42425701, type: 3}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 5
+  m_Name: woodTexture 1
+  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: _EMISSION _NORMALMAP
+  m_LightmapFlags: 1
   m_CustomRenderQueue: -1
   stringTagMap: {}
   m_SavedProperties:
@@ -19,19 +19,26 @@ Material:
         first:
           name: _MainTex
         second:
-          m_Texture: {fileID: 2800000, guid: 54511d1a5fcd5b445bfd1842b61036d4, type: 3}
+          m_Texture: {fileID: 2800000, guid: d7bf9830d4f4c7445ace5ffccd9139dc, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
         first:
           name: _BumpMap
         second:
-          m_Texture: {fileID: 0}
+          m_Texture: {fileID: 2800000, guid: 1fe58907b31cd224c885ef0e00bfe552, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
         first:
           name: _DetailNormalMap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _DecalTex
         second:
           m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
@@ -80,11 +87,11 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
-          name: _MKGlowTex
+          name: _Detail
         second:
-          m_Texture: {fileID: 2800000, guid: 463790f488c3aca4f99d65aab9c21e65, type: 3}
+          m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 106.358932, y: 0}
+          m_Offset: {x: 0, y: 0}
     m_Floats:
       data:
         first:
@@ -100,10 +107,6 @@ Material:
         second: .5
       data:
         first:
-          name: _Shininess
-        second: .078125
-      data:
-        first:
           name: _Parallax
         second: .0199999996
       data:
@@ -113,7 +116,7 @@ Material:
       data:
         first:
           name: _Glossiness
-        second: 1
+        second: .206
       data:
         first:
           name: _BumpScale
@@ -138,36 +141,12 @@ Material:
         first:
           name: _Metallic
         second: 0
-      data:
-        first:
-          name: _MKGlowPower
-        second: 2.5
-      data:
-        first:
-          name: _MKGlowTexStrength
-        second: 3
-      data:
-        first:
-          name: _MKGlowOffSet
-        second: 0
     m_Colors:
       data:
         first:
           name: _EmissionColor
-        second: {r: 0, g: 0, b: 0, a: 1}
+        second: {r: .345588207, g: .155006483, b: .155006483, a: 1}
       data:
         first:
           name: _Color
         second: {r: 1, g: 1, b: 1, a: 1}
-      data:
-        first:
-          name: _SpecColor
-        second: {r: .5, g: .5, b: .5, a: 1}
-      data:
-        first:
-          name: _MKGlowColor
-        second: {r: 1, g: 1, b: 1, a: 1}
-      data:
-        first:
-          name: _MKGlowTexColor
-        second: {r: 0, g: .660953283, b: .720588207, a: 1}
