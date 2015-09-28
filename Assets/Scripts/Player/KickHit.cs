@@ -62,18 +62,14 @@ public class KickHit : MonoBehaviour {
 			
 			//GetComponent<Animator>().SetTrigger("bounce");
 			
+		
 		}
-		/*else if(col.tag == "EnemyFetus")
-		{
+		else if (col.tag == "Switch"){
+			
 			OnHit();
-			// ... find the Enemy script and call the Hurt function.
-			col.GetComponent<Rigidbody2D>().AddForce(bouncePos);// * bouncePower*50f);
-			//Destroy (col.gameObject);
-			// Call the explosion instantiation.
-			OnHit();
-
-		}*/
-
+			col.transform.GetComponent<LeverTrigger>().TriggerLever();
+			Level.instance.makeHitFX(col.transform.position);
+		}
 		else if(col.tag == "Explosive")
 		{
 			//if(col.transform.rigidbody2D){

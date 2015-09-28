@@ -14,6 +14,8 @@ public class SniperSight : MonoBehaviour {
 	public bool soloMode = false; //soloMode = not attached to soldier (ie dickbat or drone) //needed still? dont have shooting dickbats really anymore
 
 	private Animator headA;
+
+
 	void Awake()
 	{
 		oscCS = GetComponent<Oscillate>();

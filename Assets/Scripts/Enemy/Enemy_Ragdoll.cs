@@ -347,9 +347,11 @@ public class Enemy_Ragdoll : Enemy
 		int i = Random.Range(0, deathFX.Length);
 		AudioSource.PlayClipAtPoint(deathFX[i], transform.position);
 		
-
+		print (headLess);
 		if(!headLess){
-			transform.Find ("head Transform").Find("head").GetComponent<SpriteRenderer>().sprite = Soldier_Sprites.S.getHead(2);
+			var h = transform.Find ("head Transform").Find("head");
+			Destroy(h.GetComponent<Animator>());
+			h.GetComponent<SpriteRenderer>().sprite = Soldier_Sprites.S.getHead(2);
 			Destroy (transform.Find("head Transform").GetComponent<Enemy_Ragdoll_DamageCollider>());
 		}
 
@@ -476,12 +478,12 @@ public class Enemy_Ragdoll : Enemy
 		Level.instance.enemies.Remove(this);
 		transform.position = new Vector3(transform.position.x,transform.position.y,1);
 		hittable = false;
-		if(!headLess){
+		/*if(!headLess){
 
 			Destroy (transform.Find("head Transform").Find("head").GetComponent<Animator>());
 
 
-		}
+		}*/
 
 		yield return new WaitForSeconds(.3f);
 

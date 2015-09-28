@@ -9,8 +9,9 @@ public class Deflective : MonoBehaviour
 	public AudioClip[] soundFX;
 	public void Deflect(Vector2 vel)
 	{
-		GetComponent<AudioSource>().clip = soundFX[Random.Range(0,soundFX.Length)];
-		GetComponent<AudioSource>().Play ();
+		//GetComponent<AudioSource>().clip = soundFX[Random.Range(0,soundFX.Length)];
+		//GetComponent<AudioSource>().Play ();
+		AudioSource.PlayClipAtPoint(soundFX[Random.Range(0,soundFX.Length)],transform.position);//method above is delayed by lever switches animation for some reason
 		if(pushObjectBack){
 			pushObjectRigidBody.AddForce(vel);
 		}

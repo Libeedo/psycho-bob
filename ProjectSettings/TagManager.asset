@@ -28,8 +28,10 @@ TagManager:
   - EnemyRD
   - ExplosionFX
   - ground
-  - groundMove
+  - Switch
   - Obstacle
+  - EnemyFetus
+  - Fire
   layers:
   - Default
   - TransparentFX

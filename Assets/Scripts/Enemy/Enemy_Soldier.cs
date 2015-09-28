@@ -136,14 +136,16 @@ public class Enemy_Soldier : Enemy
 		}else if(equipped == Equipped.SNIPER){
 			//print ("YAYAYA");
 			snipeCS.gameObject.SetActive(true);
-			status = eStatus.SHOOTING;
-			enemyA.Play("enemySnipe");
 			//if(!paratrooperMode){
-				snipeCS.StartSniping();
-			if(snipeWalk){
-				InvokeRepeating("switchSnipeWalk",1,5);
+				//status = eStatus.SHOOTING;
+				//enemyA.Play("enemySnipe");
+				//
+					//snipeCS.StartSniping();
+				if(snipeWalk){
+					InvokeRepeating("switchSnipeWalk",1,5);
 
-			}
+				}
+			//}
 			rdGO.transform.Find("enemy1_deadBody_handL").Find ("sniperHand").gameObject.SetActive(true);
 		}
 
@@ -305,7 +307,7 @@ public class Enemy_Soldier : Enemy
 				moveSpeed = defaultSpeed = 13;
 				enemyA.SetBool ("onFire", true);
 		} else {
-			if (equipped == Equipped.SNIPER) {
+			if (equipped == Equipped.SNIPER && !parachuting) {
 						//enemyA.Play ("enemySnipe");
 						//if(status != eStatus.PARACHUTING){
 						//status = eStatus.SHOOTING;
@@ -316,6 +318,8 @@ public class Enemy_Soldier : Enemy
 					InvokeRepeating("switchSnipeWalk",1,2);
 				}else{
 					snipeCS.StartSniping();
+					status = eStatus.SHOOTING;
+					enemyA.Play ("enemySnipe");
 				}
 			}
 		}
