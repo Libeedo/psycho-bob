@@ -48,6 +48,8 @@
   <ItemGroup>
      <Compile Include="Assets\DynamicTerrainPiece.cs" />
      <Compile Include="Assets\Lava_Flowing_Shader\Scripts\ScrollingUVs_Layers.cs" />
+     <Compile Include="Assets\Scripts\CageCount.cs" />
+     <Compile Include="Assets\Scripts\CageTrigger.cs" />
      <Compile Include="Assets\Scripts\CameraZone.cs" />
      <Compile Include="Assets\Scripts\Cannon.cs" />
      <Compile Include="Assets\Scripts\Drone.cs" />

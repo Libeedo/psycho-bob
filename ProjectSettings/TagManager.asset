@@ -32,6 +32,7 @@ TagManager:
   - Obstacle
   - EnemyFetus
   - Fire
+  - groundMove
   layers:
   - Default
   - TransparentFX
@@ -63,7 +64,7 @@ TagManager:
   - EnemyBullets
   - Nurse
   - PlayerIgnoreGround
-  - 
+  - GroundCage
   - 
   m_SortingLayers:
   - name: Default

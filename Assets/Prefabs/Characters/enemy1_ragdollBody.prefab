@@ -185,6 +185,7 @@ GameObject:
   - 114: {fileID: 11400002}
   - 114: {fileID: 11400016}
   - 114: {fileID: 11400018}
+  - 114: {fileID: 11423340}
   m_Layer: 11
   m_Name: enemy1_ragdollBody
   m_TagString: Enemy
@@ -1814,6 +1815,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 14f11913a7069ab4fbe97e81442aa2a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11423340
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7617a49f9017b6d41a09a96fb86f7fea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &11434844
