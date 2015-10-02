@@ -18,6 +18,8 @@ public class Enemy_Ragdoll : Enemy
 
 	public Transform body;
 
+	public GameObject chute = null;
+
 	private float aliveCount = 0f;  ///how long has he been alive
 	public float aliveSwitch = 5f;//how long before he switches to upright soldier
 
@@ -28,11 +30,16 @@ public class Enemy_Ragdoll : Enemy
 
 	public bool grabbed = false;
 	public AudioClip[] deathFX;
+
+	private Enemy_Ragdoll_DamageCollider dColliderH;
+	private Enemy_Ragdoll_DamageCollider dColliderB;
+
 	void Awake() 
 	{
 	
 		body = transform.Find("enemy1_deadBody_body");
-
+		dColliderH = transform.Find("head Transform").GetComponent<Enemy_Ragdoll_DamageCollider>();
+		dColliderB = body.GetComponent<Enemy_Ragdoll_DamageCollider>();
 		//if (dead) {
 			//StartCoroutine(makeUnHittable());
 		//}
@@ -47,6 +54,7 @@ public class Enemy_Ragdoll : Enemy
 		}else if (equipped == Enemy_Soldier.Equipped.SHIELD){
 			body.Find("shield").gameObject.SetActive(true);
 		}
+
 	}
 	void FixedUpdate ()
 	{
@@ -141,6 +149,9 @@ public class Enemy_Ragdoll : Enemy
 			body.Find ("c4").gameObject.SetActive(false);
 			equipped = Equipped.NOTHING;
 		}
+		dColliderB.fallActivated = true;
+		dColliderH.fallActivated = true;
+		dColliderB.fallTime = dColliderH.fallTime = Time.time;
 		//if(!enemycs.facingRight){
 			//Flip ();
 		//}
@@ -241,12 +252,12 @@ public class Enemy_Ragdoll : Enemy
 		}
 		
 	}
-	public override void Damaged(bool headshot, float damage)
+	public override void Damaged(bool headshot, float damage, Vector2 vel)
 	{
 		
 		if(!eDamage.blownUp){
 			//print ("rd blownup damage "+damage+"  "+force);
-			base.Damaged(headshot,damage);
+			base.Damaged(headshot,damage,vel);
 			//makeNormalHeavy();
 			aliveSwitch = float.MaxValue;
 
@@ -347,16 +358,16 @@ public class Enemy_Ragdoll : Enemy
 		int i = Random.Range(0, deathFX.Length);
 		AudioSource.PlayClipAtPoint(deathFX[i], transform.position);
 		
-		print (headLess);
+
 		if(!headLess){
 			var h = transform.Find ("head Transform").Find("head");
 			Destroy(h.GetComponent<Animator>());
 			h.GetComponent<SpriteRenderer>().sprite = Soldier_Sprites.S.getHead(2);
-			Destroy (transform.Find("head Transform").GetComponent<Enemy_Ragdoll_DamageCollider>());
+			Destroy (dColliderH);
 		}
 
 			
-		Destroy (body.GetComponent<Enemy_Ragdoll_DamageCollider>());
+		Destroy (dColliderB);
 		if(equipped == Equipped.C4){
 			body.Find ("c4").GetComponent<Explosive>().xMode = Explosive.XplodeMode.DEADENEMY;//gameObject.layer = LayerMask.NameToLayer("Bodies");
 
@@ -408,7 +419,7 @@ public class Enemy_Ragdoll : Enemy
 			transform.Find ("head Transform").GetComponent<Rigidbody2D>().velocity = vel;
 		}
 	}
-
+	/*
 	public void AddXForceAll(Vector2 vel){
 		foreach (Transform child in transform) {
 			//child.parent = null;
@@ -423,18 +434,18 @@ public class Enemy_Ragdoll : Enemy
 		
 		
 		
-	}
+	}*/
 	public void AddTorqueAll(int vel,int vel2){
 		foreach (Transform child in transform) {
 			//child.parent = null;
 			//Quaternion randomRotation = Quaternion.Euler(0f, 0f, Random.Range(0f, 360f));
 			//child.transform.rotation = randomRotation;
 			if(child.GetComponent<Rigidbody2D>()){
-				child.GetComponent<Rigidbody2D>().AddTorque(Random.Range(vel,vel2));
+				child.GetComponent<Rigidbody2D>().AddTorque(Random.Range(vel,vel2),ForceMode2D.Impulse);
 			}
 
 		}
-		body.GetComponent<Rigidbody2D>().AddTorque(1000f);
+		body.GetComponent<Rigidbody2D>().AddTorque(100f * Random.Range(vel,vel2));
 		
 		
 	}
@@ -485,13 +496,17 @@ public class Enemy_Ragdoll : Enemy
 
 		}*/
 
+
 		yield return new WaitForSeconds(.3f);
 
 		//push bodies back a  bit
 		//Vector3 v = transform.position;
 		//v.z +=2f;
 		//transform.position = v;
-
+		if(chute){
+			chute.transform.Find("parachute").GetComponent<Parachute>().Hurt(false);
+			chute.transform.Find ("harness").GetComponent<SpriteRenderer>().sortingLayerName = "Background";
+		}
 		//put them on bodies layer
 		foreach (Transform child in transform) {
 			child.gameObject.layer = 21;
@@ -506,15 +521,17 @@ public class Enemy_Ragdoll : Enemy
 
 		foreach (SpriteRenderer sr in GetComponentsInChildren<SpriteRenderer>()) {//foreach (Transform child in transform) {
 			sr.sortingLayerName = "Background";
+
 		}
+
 		GetComponent<FadeColour>().enabled = true;
 
 		eDamage.unHittable();//destroys eDamage gameobject, waits for fire if need be;
 		Destroy(this);//destroy this script
 	}
-	public IEnumerator openChute(GameObject go)
+	public IEnumerator openChute()
 	{
-		//float r = 
+		var go = chute.transform.Find("parachute").gameObject;
 		Animator anim = go.GetComponent<Animator>();
 		yield return new WaitForSeconds(soldier.GetComponent<Enemy_Soldier>().openChuteDelay);
 		Transform harnessT = go.GetComponent<DistanceJoint2D> ().connectedBody.transform;
@@ -536,13 +553,17 @@ public class Enemy_Ragdoll : Enemy
 			//makeNormalHeavy();
 		//}else{
 			switchToEnemy();
-		}
+		}//else{
+			//soldier.GetComponent<Enemy_Soldier>().closeChute();
+		//}
 
 	}
-	public override void chuteHurt(bool fire)
+	public override void chuteHurt()
 	{
 		//makeNormalHeavy();
+		print ("CHUTE DONE");
 		aliveSwitch = float.MaxValue;
+		body.GetComponent<Rigidbody2D>().AddTorque(50f,ForceMode2D.Impulse);
 		//if(soldier){
 			//soldier.GetComponent<Enemy_Soldier>().status = Enemy_Soldier.eStatus.FALLING;
 		//}

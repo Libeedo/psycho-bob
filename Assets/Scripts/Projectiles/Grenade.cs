@@ -26,11 +26,12 @@ public class Grenade : MonoBehaviour
 	{
 		if(col.gameObject.tag == "Debris")//so that grenades can collide with windows and go through, maintaing speed. only way i could get it to collide and go thru
 		{
-
-			col.transform.GetComponent<DebrisPiece>().Hurt(1);
-			//Physics2D.IgnoreCollision(col.gameObject.collider2D,gameObject.collider2D);
-			//print (rigidbody2D.velocity+"  "+speed);
-			GetComponent<Rigidbody2D>().velocity = speed;
+			if(col.transform.GetComponent<DebrisPiece>().glassMode){// to break through glass
+				col.transform.GetComponent<DebrisPiece>().Hurt(1);
+				//Physics2D.IgnoreCollision(col.gameObject.collider2D,gameObject.collider2D);
+				//print (rigidbody2D.velocity+"  "+speed);
+				GetComponent<Rigidbody2D>().velocity = speed;
+			}
 		}
 	}
 	IEnumerator Detonate()

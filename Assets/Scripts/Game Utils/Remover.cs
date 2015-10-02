@@ -32,7 +32,7 @@ public class Remover : MonoBehaviour
 			//Enemy es = col.transform.root.GetComponent<Enemy>();
 			//es.eDamage.scoreDeath = false;
 			//es.closeChute();
-			col.transform.root.GetComponent<Enemy>().Damaged ( false,float.MaxValue);
+			col.transform.root.GetComponent<Enemy>().Damaged ( false,float.MaxValue,Vector2.zero);
 		}
 		else if(col.gameObject.tag == "Vehicle")
 		{

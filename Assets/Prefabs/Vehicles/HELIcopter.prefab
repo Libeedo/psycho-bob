@@ -1144,7 +1144,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100040}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 93.2209091, y: 1016.01556, z: 0}
+  m_LocalPosition: {x: 566, y: 1200, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400074}
@@ -2880,7 +2880,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2997b0b3be260041a3e484bcce60bf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageMode: 1
   bouncePower: 2500
 --- !u!114 &11400010
 MonoBehaviour:
@@ -3051,10 +3050,11 @@ MonoBehaviour:
   - {fileID: 100010, guid: 99cfe18529d03604582d7e0bf6c1d720, type: 2}
   paratrooperMode: 1
   vehicleMode: 1
-  equipped: 3
+  equipped: 5
   randomSquadEquipped: 0
   speed: 0
   randomSpeed: 1
+  openChuteDelay: 0
   spawnSquad: 0
   sniperWalkToggle: 1
 --- !u!114 &11400034

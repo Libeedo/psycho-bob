@@ -161,8 +161,9 @@ public class PlayerControl : MonoBehaviour
 		int layerMsk3 = 1 << LayerMask.NameToLayer("OneWayGround");
 		int layerMsk2 = 1 << LayerMask.NameToLayer("Props");
 		int layerMsk4 = 1 << LayerMask.NameToLayer("Nurse");
-		groundMsk1 = layerMsk1 | layerMsk2 | layerMsk3 | layerMsk4;
-		groundMsk2 = layerMsk1 | layerMsk2 | layerMsk4;//for falling thru OneWayGround
+		int layerMsk5 = 1 << LayerMask.NameToLayer("GroundMotion");
+		groundMsk1 = layerMsk1 | layerMsk2 | layerMsk3 | layerMsk4 | layerMsk5;
+		groundMsk2 = layerMsk1 | layerMsk2 | layerMsk4 | layerMsk5;//for falling thru OneWayGround
 		groundLayerMsk = groundMsk1;
 
 		stateMethod = new State (IdleGround);

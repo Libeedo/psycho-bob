@@ -35,6 +35,7 @@ public class Parachute : MonoBehaviour {
 		chuteDead = true;
 		GetComponent<Collider2D>().enabled = false;
 		GetComponent<Animator>().SetTrigger("dead");
+	
 		transform.parent.Find ("harness").transform.GetComponent<Rigidbody2D>().gravityScale = 0f;
 		//transform.root.Find ("harness").transform.rigidbody2D.mass = 0f;
 		GetComponent<Rigidbody2D>().gravityScale = 0f;
@@ -47,7 +48,7 @@ public class Parachute : MonoBehaviour {
 		{
 		case Attached.ENEMY:
 			if(enemyCS){
-				enemyCS.chuteHurt(fire);
+				enemyCS.chuteHurt();
 			}
 			break;
 		//case Attached.PROP:

@@ -12,11 +12,11 @@ public class VehicleImpactExplosion : MonoBehaviour {
 		}else if(col.transform.tag == "Enemy"){
 			print ("BEAT DOWN");
 			Vector2 vel = vehicleCS.getSpeed();
-			col.transform.root.GetComponent<Enemy>().Damaged (false,Mathf.Abs(vel.x)+Mathf.Abs(vel.y)*20f);//,vel*20f);
+			col.transform.root.GetComponent<Enemy>().Damaged (false,Mathf.Abs(vel.x)+Mathf.Abs(vel.y)*20f,Vector2.zero);//,vel*20f);
 		}else if(col.transform.tag == "EnemyHead"){
 			print ("BEAT DOWN");
 			Vector2 vel = vehicleCS.getSpeed();
-			col.transform.root.GetComponent<Enemy>().Damaged (true,Mathf.Abs(vel.x)+Mathf.Abs(vel.y)*20f);//,vel*20f);
+			col.transform.root.GetComponent<Enemy>().Damaged (true,Mathf.Abs(vel.x)+Mathf.Abs(vel.y)*20f,Vector2.zero);//,vel*20f);
 		}
 	}
 }

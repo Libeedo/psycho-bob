@@ -7,7 +7,12 @@ public class CombatZone : MonoBehaviour {
 
 	public GameObject[] enemies;
 
-	public CameraLimits cameraLimits;
+	private CameraLimits cameraLimits = new CameraLimits();
+
+	public int cameraZoneWidth;
+	public int cameraZoneHeight;
+	public int cameraZoom;
+
 	public GameObject zoneSpawnPoint;
 	private CameraLimits levelCameraLimits = new CameraLimits();
 	[HideInInspector]
@@ -36,12 +41,21 @@ public class CombatZone : MonoBehaviour {
 
 	private Camera cam;
 	
-	// Update is called once per frame
-	//void Update () {
-	
-	//}
+	void Awake()
+	{
+
+
+	}
 	public void StartZone()
 	{
+		//get camerazone basd on offset from origin
+		cameraLimits.min.x = transform.position.x;
+		cameraLimits.min.y = transform.position.y;
+		cameraLimits.max.x = transform.position.x + cameraZoneWidth;
+		cameraLimits.max.y = transform.position.y + cameraZoneHeight;
+		cameraLimits.zoom = cameraZoom;
+		print (cameraLimits.max.x+"  "+cameraLimits.max.y);
+
 		cam = Camera.main;
 		var camm = cam.GetComponent<CameraFollow>();
 		//print("startZone "+camm.maxXAndY);
@@ -123,7 +137,7 @@ public class CombatZone : MonoBehaviour {
 				int which = (int)evnt.enemyType; //get enemyType of event;
 				var enemy = enemies [which];
 				var pos = evnt.offset; // spawn position = sequence position + event offset;
-				print (evnt.offset);
+				//print (evnt.offset);
 				GameObject go = (GameObject)Instantiate(enemy, pos, Quaternion.identity);
 				Level.instance.makeTeleFlash(pos);
 				waveEnemies.Add(go);

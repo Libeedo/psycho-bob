@@ -1,15 +1,20 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\CageTrigger.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Enemy\Enemy_Ragdoll.cs">
     <Files>
-      <File FileName="Assets\Scripts\Enemy\Enemy_Soldier.cs" Line="322" Column="33" />
-      <File FileName="Assets\Scripts\ENVRMT\Deflective.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Player\PlayerControl.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Projectiles\Bullet.cs" Line="37" Column="47" />
-      <File FileName="Assets\Scripts\Enemy\Enemy_Ragdoll.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\CageTrigger.cs" Line="18" Column="25" />
-      <File FileName="Assets\Scripts\LeverTrigger.cs" Line="32" Column="4" />
-      <File FileName="Assets\Scripts\CageCount.cs" Line="13" Column="6" />
+      <File FileName="Assets\Scripts\ENVRMT\ConveyorPlatform.cs" Line="42" Column="69" />
+      <File FileName="Assets\Scripts\Enemy\Enemy_Soldier.cs" Line="562" Column="27" />
+      <File FileName="Assets\Scripts\Enemy\Enemy_Ragdoll.cs" Line="448" Column="47" />
+      <File FileName="Assets\Scripts\CageTrigger.cs" Line="13" Column="77" />
+      <File FileName="Assets\Scripts\CageCount.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Game Utils\EnableTrigger.cs" Line="25" Column="37" />
+      <File FileName="Assets\Scripts\Game Utils\CombatZone.cs" Line="56" Column="34" />
+      <File FileName="Assets\Scripts\Projectiles\Grenade.cs" Line="29" Column="85" />
+      <File FileName="Assets\Scripts\Enemy\ResetPose.cs" Line="34" Column="1" />
+      <File FileName="Assets\Scripts\Enemy\SniperSight.cs" Line="76" Column="121" />
+      <File FileName="Assets\Scripts\Enemy\Enemy_Ragdoll_DamageCollider.cs" Line="30" Column="40" />
+      <File FileName="Assets\Scripts\Enemy\Enemy.cs" Line="123" Column="32" />
+      <File FileName="Assets\Scripts\Parachute.cs" Line="51" Column="23" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

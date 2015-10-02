@@ -73,7 +73,7 @@ public class SniperSight : MonoBehaviour {
 		AudioSource.PlayClipAtPoint(shootFX[Random.Range (0, shootFX.Length-1)], transform.position);
 		//Vector3  playerPos = hit.transform.position;
 		//playerPos.y += 2;
-		Vector3 pos = new Vector3(transform.position.x + (transform.root.transform.localScale.x *3f),transform.position.y);//-2f,0);
+		Vector3 pos = new Vector3(transform.position.x + (transform.root.transform.localScale.x *3f),transform.position.y+1.5f);//-2f,0);
 		//float angle2 = Mathf.Atan2(playerPos.y - pos.y, playerPos.x - pos.x) * Mathf.Rad2Deg;
 		//Quaternion angle3 = Quaternion.Euler(new Vector3(0, 0, angle2));
 

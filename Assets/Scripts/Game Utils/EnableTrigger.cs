@@ -2,17 +2,18 @@
 using System.Collections;
 
 public class EnableTrigger : MonoBehaviour {
-	public GameObject[] gObjects;
-	public bool enable = false;
+	public GameObject[] enableObjects;
+	public GameObject[] disableObjects;
+	//public bool enable = false;
 
 	void OnTriggerEnter2D (Collider2D col)
 	{
 		if(col.tag == "Player")
 		{
 		
-			foreach (GameObject go in gObjects) {
+			foreach (GameObject go in enableObjects) {
 
-				if(enable){
+
 					if(!go.activeSelf){
 						//print (go.name);
 						go.SetActive(true);
@@ -20,7 +21,8 @@ public class EnableTrigger : MonoBehaviour {
 							go.GetComponent<Spawner>().StartSpawn ();
 						}
 					}
-				}else{
+			}
+			foreach (GameObject go in disableObjects) {
 					go.SetActive(false);
 					if(go.GetComponent<Spawner>()){
 						go.GetComponent<Spawner>().StopSpawn ();
@@ -29,7 +31,7 @@ public class EnableTrigger : MonoBehaviour {
 						//.GetComponent<VehicleSpawner>().StopSpawn ();
 					//}
 
-				}
+
 
 			}
 

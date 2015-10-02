@@ -191,6 +191,7 @@ public class PlayerHealth : MonoBehaviour
 		//rigidbody2D.isKinematic = false;
 		GetComponent<Rigidbody2D>().gravityScale = 1f;
 		//anim.Play("heroSpawn");
+		Physics2D.IgnoreLayerCollision(pLayer,eLayer,false);
 		Level.instance.spawnPoint.Spawn ();
 
 		GetComponent<Animator>().enabled = false;

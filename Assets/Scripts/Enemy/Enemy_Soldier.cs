@@ -138,9 +138,11 @@ public class Enemy_Soldier : Enemy
 			snipeCS.gameObject.SetActive(true);
 			//if(!paratrooperMode){
 				//status = eStatus.SHOOTING;
-				//enemyA.Play("enemySnipe");
-				//
-					//snipeCS.StartSniping();
+			if(!paratrooperMode){
+				enemyA.Play("enemySnipe");
+				snipeCS.StartSniping();
+			}
+					//
 				if(snipeWalk){
 					InvokeRepeating("switchSnipeWalk",1,5);
 
@@ -167,25 +169,28 @@ public class Enemy_Soldier : Enemy
 		int layerMsk2 = 1 << LayerMask.NameToLayer("Props");
 		int layerMsk1 = 1 << LayerMask.NameToLayer("Ground");
 		int layerMsk3 = 1 << LayerMask.NameToLayer("OneWayGround");
-		//int layerMsk4 = 1 << LayerMask.NameToLayer("Enemies");
+		int layerMsk4 = 1 << LayerMask.NameToLayer("GroundMotion");
 		//int layerMsk5 = 1 << LayerMask.NameToLayer("Pickups");
-		layerMsk = layerMsk1 | layerMsk2 | layerMsk3;
+		layerMsk = layerMsk1 | layerMsk2 | layerMsk3 | layerMsk4;
 		//shootLayerMsk = layerMsk1 | layerMsk2 |  layerMsk3 | layerMsk4;
 		groundCheck = transform.Find ("groundCheck");
 		//InvokeRepeating("TestShoot", 0f, 4f);
 
+
 		//parachute shit
 		if(paratrooperMode){
-
-			rdGO.SetActive(true);
 			makeChute();
+			parachuting = true;
+			status = eStatus.PARACHUTING;
+			rdGO.SetActive(true);
+
 			switchToRagdoll();
 
 			//rdGO.transform.Rotate (Vector3.forward * 90);
 			//rdCS.makeNormalHeavy();
-			rdCS.StartCoroutine("openChute",chute.transform.Find("parachute").gameObject);
+			rdCS.StartCoroutine("openChute");
 			rdCS.aliveSwitch = 5f;
-			rdCS.AddTorqueAll(5,20);
+			rdCS.AddTorqueAll(-10,10);
 
 		}
 		if (status == eStatus.IDLE) {
@@ -235,6 +240,7 @@ public class Enemy_Soldier : Enemy
 	}
 	void switchToRagdoll()
 	{
+		//print (rb2D.velocity);
 		//print ("SWITCH RD");
 		CancelInvoke();
 		headA.SetBool("ragDollTongue",true);
@@ -252,6 +258,8 @@ public class Enemy_Soldier : Enemy
 		eDamageT.localPosition = Vector2.zero;//enemyT.Find ("enemy1_deadBody_body").transform.position;//new Vector2 (enemyT.position.x, enemyT.position.y + 1.9f);
 		eDamageT.localRotation =  Quaternion.identity;
 		eDamageT.localScale = Vector3.one;
+
+		rdGO.transform.Find ("enemy1_deadBody_body").GetComponent<Rigidbody2D>().AddForce(rb2D.velocity * 400);
 
 		if(chute){
 
@@ -345,11 +353,11 @@ public class Enemy_Soldier : Enemy
 		rdCS.Kicked(headshot,damage,ePos);
 
 	}
-	public override void Damaged(bool headshot, float damage)
+	public override void Damaged(bool headshot, float damage, Vector2 vel)
 	{
 		switchToRagdoll();
-		rdCS.Damaged(headshot,damage);
-
+		rdCS.Damaged(headshot,damage,vel);
+		rdTorsoRB.AddForce(vel);
 	}
 	
 	public override void Flamed(){
@@ -551,7 +559,7 @@ public class Enemy_Soldier : Enemy
 			
 				//print (vel);
 				rdTorsoRB.velocity = vel;//,ForceMode2D.Impulse);
-				rdCS.AddTorqueAll (-80,80);
+				rdCS.AddTorqueAll (-15,15);
 			}
 		}
 	}
@@ -563,7 +571,7 @@ public class Enemy_Soldier : Enemy
 	void makeChute()
 	{
 		chute = Instantiate(chuteRef, new Vector3(transform.position.x,transform.position.y,0.1f), Quaternion.identity) as GameObject;
-		parachuting = true;
+		rdCS.chute = chute;
 		chute.transform.Find ("parachute").GetComponent<Parachute>().enemyCS = this;
 		//chute.transform.parent = eDamage.transform;//so it gets destroyed
 
@@ -576,26 +584,27 @@ public class Enemy_Soldier : Enemy
 		limits.max = 10f;
 		harnessJoint.limits = limits; 
 
-		status = eStatus.PARACHUTING;
+
 		//enemyA.Play("enemyParachute");
 	
 		chute.transform.Find ("parachute").gameObject.SetActive(false);
 
-
+		//chute.transform.parent = headA.transform.parent;//parent it to the head so it gets destroyed but stays active when switching between ragdoll and back
 	}
 
 
-	public override void chuteHurt(bool fire)
+	public override void chuteHurt()
 	{
+		//print ("chute hurt");
 		switchToRagdoll();
 		parachuting = false;
-		rdCS.AddTorqueAll(-30,30);
-		rdCS.AddXForceAll(rb2D.velocity*1.5f);
+		//rdCS.AddTorqueAll(-50,50);
+		//rdCS.AddXForceAll(rb2D.velocity*1.5f);
 		//rdCS.makeNormalHeavy();
-		rdCS.aliveSwitch = float.MaxValue;
+		rdCS.chuteHurt();
 		//status = eStatus.FALLING;
 	}
-	private void closeChute()
+	public void closeChute()
 	{
 		//print ("close Chute");
 		//base.closeChute ();

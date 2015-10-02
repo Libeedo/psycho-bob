@@ -24,7 +24,8 @@ public class CombatZoneManager : MonoBehaviour {
 							e.enemyType = seq.eType;
 							e.equipped = seq.equipped;
 							e.paratrooper = seq.chute;
-							e.offset = sq.pos + (seq.offset * i);
+							Vector2 p = transform.position;
+							e.offset = p + sq.pos + (seq.offset * i);
 							sq.spawnEvents.Add (e);
 					}
 					
@@ -45,7 +46,7 @@ public class Wav
 public class Seq
 {
 	public int amount;
-	public Vector2 pos;
+	public Vector2 pos;//in relation to combatzone origin
 	public CombatZone.EnemyType eType;
 	public Enemy.Equipped equipped;
 	public bool chute;

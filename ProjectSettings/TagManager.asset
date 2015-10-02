@@ -64,8 +64,8 @@ TagManager:
   - EnemyBullets
   - Nurse
   - PlayerIgnoreGround
-  - GroundCage
-  - 
+  - GroundMotion
+  - RagdollTrigger
   m_SortingLayers:
   - name: Default
     uniqueID: 0

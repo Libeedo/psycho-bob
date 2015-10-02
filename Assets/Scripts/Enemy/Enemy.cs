@@ -100,10 +100,10 @@ public class Enemy:MonoBehaviour {
 		eDamage.BlownUp ();
 		
 	}
-	public virtual void Damaged(bool headShot,float damage)
+	public virtual void Damaged(bool headShot,float damage, Vector2 vel)
 	{
 		takeDamage (damage);
-		//eDamage.BlownUp ();
+		eDamage.BlownUp ();
 	}
 	
 	public virtual void Flamed(){
@@ -120,7 +120,7 @@ public class Enemy:MonoBehaviour {
 	{
 		
 	}
-	public virtual void chuteHurt(bool fire)
+	public virtual void chuteHurt()
 	{
 
 	}

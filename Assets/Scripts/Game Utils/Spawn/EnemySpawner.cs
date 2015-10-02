@@ -8,7 +8,8 @@ public class EnemySpawner : Spawner {
 	private GameObject lastSpawn;
 	
 	public bool paratrooperMode = false;  //is parachuting enemy?
-	
+
+
 	public bool vehicleMode = false;
 	
 	public Enemy_Soldier.Equipped equipped = Enemy_Soldier.Equipped.NOTHING;
@@ -20,11 +21,13 @@ public class EnemySpawner : Spawner {
 	public float speed;
 	public bool randomSpeed;// for parachuting, ground speed should always be the same
 	private bool flip = false;	
-	private float openChuteDelay;
+	public float openChuteDelay; // -1 = random
 	public bool spawnSquad;
 	public bool sniperWalkToggle = true; //does the sniper walk then stop and shoot repeatedly
 
 	private AudioSource aud;
+
+
 
 	void Awake()
 	{
@@ -64,7 +67,9 @@ public class EnemySpawner : Spawner {
 			}else{
 				flip = false;
 			}
-			openChuteDelay = Random.Range(.5f,1.6f);
+			if(openChuteDelay<0){
+				openChuteDelay = Random.Range(.5f,1.6f);
+			}
 
 			if(spawnSquad){
 				SpawnSquad();
@@ -92,7 +97,7 @@ public class EnemySpawner : Spawner {
 
 		esCS.snipeWalk = sniperWalkToggle;
 
-		
+		Level.instance.makeTeleFlash(pos);
 		//if replenishing spawncount from the dead add that shit functionality to the enemy
 		if(respawnDead){
 			esCS.spawner = gameObject;
