@@ -43,7 +43,7 @@ public class CombatZone : MonoBehaviour {
 	
 	void Awake()
 	{
-
+		cam = Camera.main;
 
 	}
 	public void StartZone()
@@ -56,7 +56,7 @@ public class CombatZone : MonoBehaviour {
 		cameraLimits.zoom = cameraZoom;
 		print (cameraLimits.max.x+"  "+cameraLimits.max.y);
 
-		cam = Camera.main;
+
 		var camm = cam.GetComponent<CameraFollow>();
 		//print("startZone "+camm.maxXAndY);
 		levelCameraLimits.max = camm.maxXAndY;
@@ -93,9 +93,10 @@ public class CombatZone : MonoBehaviour {
 	}
 	void EndZone()
 	{
-		Camera.main.GetComponent<CameraFollow>().maxXAndY = levelCameraLimits.max;
-		Camera.main.GetComponent<CameraFollow>().minXAndY = levelCameraLimits.min;
-		Camera.main.GetComponent<CameraFollow>().levelZoom = levelCameraLimits.zoom;
+		var camm = cam.GetComponent<CameraFollow>();
+		camm.maxXAndY = levelCameraLimits.max;
+		camm.minXAndY = levelCameraLimits.min;
+		camm.levelZoom = levelCameraLimits.zoom;
 		foreach (AnimationState state in door2Anim) {
 			state.speed = -1;
 		}

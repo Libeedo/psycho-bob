@@ -79,9 +79,9 @@ public class CameraFollow : MonoBehaviour
 				if(Mathf.Abs(transform.position.y - player.position.y) <8f){
 					print("death pan over");
 					deathPan = false;
-					
+					player.gameObject.SetActive(true);
 					player.GetComponent<PlayerHealth>().Spawn();
-					
+					GetComponent<AudioListener>().enabled = false;
 					
 				}
 			}

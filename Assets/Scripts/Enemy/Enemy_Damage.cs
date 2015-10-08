@@ -125,6 +125,27 @@ public class Enemy_Damage :MonoBehaviour{
 		aud.Play();
 	
 	}
+	public void makeBodyBlood()//use a bunch of blood from the bulletholes for hard splat impacts from damage collider
+	{
+		var count = 0;
+		for(int i = 0; i<bulletHoles.Count;i++){
+			int rnd = Random.Range (0, bulletHoles.Count-1);
+			//print ("hole count "+bulletHoleCount+"   "+bulletHoles.Length);
+			var b = bulletHoles[rnd];
+			//b.SetActive(true);
+			bodyBlood = b.transform.Find ("blood").GetComponent<ParticleSystem>();
+			bodyBlood.transform.parent = null;
+			bodyBlood.Emit(160);
+			Destroy(bodyBlood.gameObject,2f);
+			count++;
+			bulletHoles.Remove(b);
+			if(count>3){
+				return;
+			}
+		}
+
+		
+	}
 	public void BlownUp()
 	{
 		//print (enemyCS.gameObject.name);

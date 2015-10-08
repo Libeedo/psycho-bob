@@ -13,7 +13,7 @@ GameObject:
   - 61: {fileID: 6100000}
   - 50: {fileID: 5000000}
   - 114: {fileID: 11400002}
-  - 114: {fileID: 11413544}
+  - 114: {fileID: 11457358}
   m_Layer: 18
   m_Name: pickupCrate
   m_TagString: Pickup
@@ -30,7 +30,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 400002}
   - 212: {fileID: 21200000}
-  - 61: {fileID: 6100002}
   m_Layer: 18
   m_Name: symbol
   m_TagString: Untagged
@@ -45,7 +44,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 122.910004, y: 1158.30005, z: 1}
+  m_LocalPosition: {x: 67.5687714, y: 1143.09021, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400002}
@@ -118,24 +117,11 @@ BoxCollider2D:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Size: {x: 2.01550817, y: 2.01550817}
---- !u!61 &6100002
-BoxCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100002}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 3.24000001, y: 3.19000006}
+  m_Size: {x: 2.01550817, y: 2.01550817}
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -151,7 +137,7 @@ MonoBehaviour:
   awakeDestroyDelay: 10
   findChild: 0
   namedChild: 
---- !u!114 &11413544
+--- !u!114 &11457358
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -159,11 +145,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 949296b2ab619b5469e654d96b82495c, type: 3}
+  m_Script: {fileID: 11500000, guid: 29cb1abbc232cc2499349fb1421d1825, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   pickupMode: 0
-  gunMode: 2
+  gunMode: 1
   howMuch: 5
   symbols:
   - {fileID: 21300004, guid: dfc95d817b761e4469fb7866a6781462, type: 3}
@@ -205,7 +191,19 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: symbols.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: pickupMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 100000}

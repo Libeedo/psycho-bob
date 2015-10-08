@@ -8,10 +8,10 @@ public class LeverTrigger : MonoBehaviour {
 	public delegate void Methods ();
 	public Methods stateMethod;
 	public GameObject targetObject;
-	private AudioSource leverAud;
+	//private AudioSource leverAud;
 	void Start()
 	{
-		leverAud = transform.root.GetComponent<AudioSource>();
+		//leverAud = transform.parent.GetComponent<AudioSource>();
 		stateMethod = woodDoorMethod;
 	}
 
@@ -19,13 +19,13 @@ public class LeverTrigger : MonoBehaviour {
 	{
 		//print (on);
 		if(on){
-			transform.root.transform.GetComponent<Animator>().Play ("LeverSwitchOFF");
+			transform.parent.GetComponent<Animator>().Play ("LeverSwitchOFF");
 			on = false;
 		}else{
-			transform.root.transform.GetComponent<Animator>().Play ("LeverSwitchON");
+			transform.parent.GetComponent<Animator>().Play ("LeverSwitchON");
 			on = true;
 		}
-		leverAud.Play ();
+		//leverAud.Play ();
 		stateMethod();
 	}
 	public void woodDoorMethod()

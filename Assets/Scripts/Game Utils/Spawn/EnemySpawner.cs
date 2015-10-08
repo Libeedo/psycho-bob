@@ -97,11 +97,11 @@ public class EnemySpawner : Spawner {
 
 		esCS.snipeWalk = sniperWalkToggle;
 
-		Level.instance.makeTeleFlash(pos);
+		//Level.instance.makeTeleFlash(pos);
 		//if replenishing spawncount from the dead add that shit functionality to the enemy
 		if(respawnDead){
-			esCS.spawner = gameObject;
-			esCS.replenishSpawner = true;
+			var rfs = go.AddComponent<RemoveFromSpawner>();
+			rfs.spawner = this;
 		}
 	}
 	private void SpawnSquad()

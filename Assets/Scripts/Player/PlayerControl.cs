@@ -67,12 +67,13 @@ public class PlayerControl : MonoBehaviour
 
 	//private bool nearGrabbable = false;
 	private bool grabbing = false;
-	private float grabCount;
+	//private float grabCount;
 
 	private bool canGrab = true;
 	//private bool dropFromGrab = false;
 	//private bool climbing = false;
-	
+	private int climbCount = 0;//
+
 	private RaycastHit2D grabHit;
 	//private Transform climbCorner;
 	// RaycastHit2D grabbedHit;
@@ -210,8 +211,8 @@ public class PlayerControl : MonoBehaviour
 
 			rigidBody.isKinematic = true;// for oneway platform bug, player sinks when collider scales
 
-			boxCollider.size = new Vector2(1,2.4f);
-			boxCollider.offset = new Vector2(0,-0.12f);
+			boxCollider.size = new Vector2(0.75f,2.4f);
+			boxCollider.offset = new Vector2(0,0.03f);
 
 			rigidBody.isKinematic = false;
 		}
@@ -224,7 +225,7 @@ public class PlayerControl : MonoBehaviour
 				stateMethod = IdleGround;
 				anim.Play("Idle");
 			}
-			boxCollider.size = new Vector2(1,4.3f);
+			boxCollider.size = new Vector2(0.75f,4.15f);
 			boxCollider.offset = new Vector2(0,0.9f);
 		}
 		if (Input.GetKeyDown(KeyCode.E) && status == Status.RIDE) {//jump off saddle
@@ -300,7 +301,7 @@ public class PlayerControl : MonoBehaviour
 		if (CheckGrounded ()) {
 			if (jump && !saddleJoint) {
 				//var b = GetComponent<BoxCollider2D>();
-				boxCollider.size = new Vector2 (1, 4.3f);
+				boxCollider.size = new Vector2 (0.75f, 4.15f);
 				boxCollider.offset = new Vector2 (0, 0.9f);
 
 				if (groundHit.transform.GetComponent<PlatformEffector2D> ()) {//if 1 way platform? jump down (crouchJump)
@@ -407,6 +408,14 @@ public class PlayerControl : MonoBehaviour
 	}
 	private void ClimbAir()
 	{
+		climbCount++;
+		if(climbCount>60){
+			status = Status.FALL;
+			stateMethod = FallAir;
+			anim.Play ("Fall");
+			climbCount = 0;
+			return;
+		}
 		//if (CheckAirborne ()) {
 			rigidBody.velocity = new Vector2(0f,30f);
 			//float dir = -1;
@@ -425,7 +434,7 @@ public class PlayerControl : MonoBehaviour
 				
 				rigidBody.velocity = Vector2.zero;//new Vector2(rigidbody2D.velocity.x,0f);
 				rigidBody.AddForce(new Vector2(vel*dir,20f));
-				
+				climbCount = 0;
 			}
 		//}
 	}
@@ -636,6 +645,7 @@ public class PlayerControl : MonoBehaviour
 	}
 	private void CrouchJump()
 	{
+		print("CROUCH JUMP");
 		status = Status.FALL;
 		stateMethod = FallAir;
 		anim.Play ("Fall");
@@ -646,14 +656,15 @@ public class PlayerControl : MonoBehaviour
 	IEnumerator DontCrouchJump()
 	{
 		var c = groundHit.transform.GetComponent<Collider2D> ();
-		//Physics2D.IgnoreCollision (GetComponent<CircleCollider2D> (), c,true);
+		Physics2D.IgnoreCollision (GetComponent<CircleCollider2D> (), c,true);
 		Physics2D.IgnoreCollision (GetComponent<BoxCollider2D> (), c, true);
 		groundLayerMsk = groundMsk2;
 		yield return new WaitForSeconds (0.5f);
-		//Physics2D.IgnoreCollision (GetComponent<CircleCollider2D> (), c,false);
+		Physics2D.IgnoreCollision (GetComponent<CircleCollider2D> (), c,false);
 		Physics2D.IgnoreCollision (GetComponent<BoxCollider2D> (), c, false);
 		groundLayerMsk = groundMsk1;
 	}
+
 	IEnumerator UnstuckCorner()
 	{
 
@@ -679,10 +690,10 @@ public class PlayerControl : MonoBehaviour
 			//groundLayerMsk = groundMsk1;
 
 	}
-	public void Bounce(Vector2 power)
+	public bool Bounce(Vector2 power)
 	{
 		//print ("status "+status);
-		if(onWall || grabbing || status == Status.RIDE){return;}
+		if(onWall || grabbing || status == Status.RIDE){return false;}
 		status = Status.BOUNCE;
 		stateMethod = DoNothing;
 		anim.Play ("Jump");
@@ -693,6 +704,7 @@ public class PlayerControl : MonoBehaviour
 		rigidBody.AddForce (power);
 		stillJumping = true;
 		StartCoroutine(DontBounce());
+		return true;
 	}
 	IEnumerator DontBounce()
 	{

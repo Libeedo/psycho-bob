@@ -464,7 +464,7 @@ public class Gun : MonoBehaviour
 
 				if(!playerCtrl.grounded){
 					//print (angle);
-					playerCtrl.GetComponent<Rigidbody2D>().AddForce(new Vector2 (-angle.x, -angle.y) * 500f);
+					playerCtrl.GetComponent<Rigidbody2D>().AddForce(new Vector2 (-angle.x, -angle.y) * 350f);
 				}
 				activeWeapon.clip--;
 				if(activeWeapon.clip == 0){
@@ -1394,7 +1394,7 @@ public class Gun : MonoBehaviour
 			count++;
 		}
 
-		var puCS = pu.GetComponent<PickupTrigger>();
+		var puCS = pu.GetComponent<Pickup>();
 		//if full of ammo 
 		if(low >= 100){
 			if(playerHealth.health==100){//if full of health
@@ -1404,11 +1404,11 @@ public class Gun : MonoBehaviour
 				puCS.howMuch = weapons[i].pickupAmmo;
 
 			}else{
-				puCS.pickupMode = global::PickupTrigger.PickupMode.HEALTH;
+				puCS.pickupMode = global::Pickup.PickupMode.HEALTH;
 			}
 		}else{ //not full of ammo
 			if(playerHealth.health<low){
-				puCS.pickupMode = global::PickupTrigger.PickupMode.HEALTH;
+				puCS.pickupMode = global::Pickup.PickupMode.HEALTH;
 			}else{
 				puCS.gunMode = gunModes[lowNum+2];
 				puCS.howMuch = weapons[lowNum+2].pickupAmmo;

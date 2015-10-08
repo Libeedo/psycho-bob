@@ -95,6 +95,7 @@
      <Compile Include="Assets\Scripts\Game Utils\Oscillate.cs" />
      <Compile Include="Assets\Scripts\Game Utils\Pauser.cs" />
      <Compile Include="Assets\Scripts\Game Utils\RemoveFromSpawnWave.cs" />
+     <Compile Include="Assets\Scripts\Game Utils\RemoveFromSpawner.cs" />
      <Compile Include="Assets\Scripts\Game Utils\Remover.cs" />
      <Compile Include="Assets\Scripts\Game Utils\Score.cs" />
      <Compile Include="Assets\Scripts\Game Utils\SetParticleSortingLayer.cs" />
@@ -119,6 +120,7 @@
      <Compile Include="Assets\Scripts\Player\GrabEnemyHit.cs" />
      <Compile Include="Assets\Scripts\Player\Gun.cs" />
      <Compile Include="Assets\Scripts\Player\KickHit.cs" />
+     <Compile Include="Assets\Scripts\Player\Pickup.cs" />
      <Compile Include="Assets\Scripts\Player\PickupTrigger.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerControl.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerHealth.cs" />

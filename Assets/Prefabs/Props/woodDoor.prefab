@@ -27,7 +27,7 @@ GameObject:
   - 23: {fileID: 2320774}
   - 61: {fileID: 6199386}
   m_Layer: 0
-  m_Name: woodDoor
+  m_Name: woodDoor3d
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -74,7 +74,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 103826}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 226.059998, y: 1148.18005, z: 7.88000011}
+  m_LocalPosition: {x: 250.204285, y: 1149.34546, z: 7.88000011}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 464048}

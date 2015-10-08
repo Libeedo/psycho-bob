@@ -31,15 +31,19 @@ public class Enemy_Ragdoll : Enemy
 	public bool grabbed = false;
 	public AudioClip[] deathFX;
 
-	private Enemy_Ragdoll_DamageCollider dColliderH;
-	private Enemy_Ragdoll_DamageCollider dColliderB;
+	//private Enemy_Ragdoll_DamageCollider dColliderH;
+	//private Enemy_Ragdoll_DamageCollider dColliderB;
+
+	private float speed = 0;
+	[HideInInspector]
+	public float lastSpeed;
 
 	void Awake() 
 	{
 	
 		body = transform.Find("enemy1_deadBody_body");
-		dColliderH = transform.Find("head Transform").GetComponent<Enemy_Ragdoll_DamageCollider>();
-		dColliderB = body.GetComponent<Enemy_Ragdoll_DamageCollider>();
+		//dColliderH = transform.Find("head Transform").GetComponent<Enemy_Ragdoll_DamageCollider>();
+		//dColliderB = body.GetComponent<Enemy_Ragdoll_DamageCollider>();
 		//if (dead) {
 			//StartCoroutine(makeUnHittable());
 		//}
@@ -69,8 +73,9 @@ public class Enemy_Ragdoll : Enemy
 					switchToEnemy();
 					return;
 				}
-				float speed = Mathf.Abs (body.GetComponent<Rigidbody2D>().velocity.x) + Mathf.Abs (body.GetComponent<Rigidbody2D>().velocity.y);
-				///print (speed);
+				lastSpeed = speed;
+				speed = Mathf.Abs (body.GetComponent<Rigidbody2D>().velocity.x) + Mathf.Abs (body.GetComponent<Rigidbody2D>().velocity.y);
+				//print (speed);
 				if (speed < 0.05) {
 					//print ("enemy RD STOPPED");
 					if(dead){
@@ -149,9 +154,7 @@ public class Enemy_Ragdoll : Enemy
 			body.Find ("c4").gameObject.SetActive(false);
 			equipped = Equipped.NOTHING;
 		}
-		dColliderB.fallActivated = true;
-		dColliderH.fallActivated = true;
-		dColliderB.fallTime = dColliderH.fallTime = Time.time;
+
 		//if(!enemycs.facingRight){
 			//Flip ();
 		//}
@@ -208,7 +211,12 @@ public class Enemy_Ragdoll : Enemy
 			if (died) {
 				Death();
 				DestroyLimbs(force);
-				if(damage>8){
+				if(damage>10){
+					body.GetComponent<SpriteRenderer>().sprite = Soldier_Sprites.S.getBody(2);
+					eDamage.destroyHead();
+					destroyHead();
+					eDamage.makeBodyBlood();
+				}else if(damage>8){
 					body.GetComponent<SpriteRenderer>().sprite = Soldier_Sprites.S.getBody(2);
 					eDamage.damageHead(3);
 				}else if(damage>5){
@@ -265,7 +273,13 @@ public class Enemy_Ragdoll : Enemy
 				Death();
 				
 				DestroyLimbs(Vector2.up);
-				if(damage>8){
+				if(damage>10){
+
+					body.GetComponent<SpriteRenderer>().sprite = Soldier_Sprites.S.getBody(2);
+					eDamage.destroyHead();
+					destroyHead();
+					eDamage.makeBodyBlood();
+				}else if(damage>8){
 					//rdTorsoRB.GetComponent<SpriteRenderer>().sprite = Soldier_Sprites.S.getBody(2);
 					eDamage.damageHead(3);
 				}else if(damage>5){
@@ -363,11 +377,13 @@ public class Enemy_Ragdoll : Enemy
 			var h = transform.Find ("head Transform").Find("head");
 			Destroy(h.GetComponent<Animator>());
 			h.GetComponent<SpriteRenderer>().sprite = Soldier_Sprites.S.getHead(2);
-			Destroy (dColliderH);
+			Destroy (transform.Find("head Transform").GetComponent<Enemy_Ragdoll_DamageCollider>());
+
+
 		}
 
 			
-		Destroy (dColliderB);
+		Destroy (body.GetComponent<Enemy_Ragdoll_DamageCollider>());
 		if(equipped == Equipped.C4){
 			body.Find ("c4").GetComponent<Explosive>().xMode = Explosive.XplodeMode.DEADENEMY;//gameObject.layer = LayerMask.NameToLayer("Bodies");
 
@@ -380,9 +396,7 @@ public class Enemy_Ragdoll : Enemy
 		}
 		Enemy_Soldier es = soldier.GetComponent<Enemy_Soldier>();
 
-		if(es.replenishSpawner && es.spawner){// != null){
-			es.spawner.transform.GetComponent<Spawner>().subtractSpawnCount(1);
-		}
+
 		Level.instance.enemies.Remove(es); // ragdoll CS (this) is removed from enemies List in unHittable
 		//StartCoroutine(makeUnHittable());
 		if(grabbed){

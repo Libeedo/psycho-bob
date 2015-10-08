@@ -16,11 +16,12 @@ public class GenericSpawner : Spawner {
 			int enemyIndex = Random.Range(0, objectsToSpawn.Length);
 			GameObject go = (GameObject)Instantiate(objectsToSpawn[enemyIndex], transform.position, transform.rotation);
 			
+
 			if(respawnDead){
-				var esCS = go.GetComponent<Enemy>();
-				esCS.spawner = gameObject;
-				esCS.replenishSpawner = true;
+				var rfs = go.AddComponent<RemoveFromSpawner>();
+				rfs.spawner = this;
 			}
+			
 		
 		}
 	}

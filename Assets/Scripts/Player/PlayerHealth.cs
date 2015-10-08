@@ -59,20 +59,25 @@ public class PlayerHealth : MonoBehaviour
 		{
 			Hurt (false,col.transform);
 
-		}/*else if(col.gameObject.tag == "Pickup")
+		}else if(col.gameObject.tag == "Pickup")
 		{
-			if(col.gameObject.GetComponent<Pickup>().pickupMode == Pickup.PickupMode.HEALTH){
+			var m = col.gameObject.GetComponent<Pickup>().pickupMode;
+			if(m == Pickup.PickupMode.HEALTH){
 				health += col.gameObject.GetComponent<Pickup>().howMuch;
 				if(health > 100f){
 					health = 100f;
 				}
 				UpdateHealthBar();
-			}else{
-				transform.Find("weapon").GetComponent<Gun>().Pickup(col.gameObject.GetComponent<Pickup>());
-				AudioSource.PlayClipAtPoint(pickupFX[0], transform.position);
+			}else if(m == Pickup.PickupMode.AMMO){
+				var pt = col.gameObject.GetComponent<Pickup>();
+
+				playerControl.gunCS.Pickup(m,pt.gunMode,pt.howMuch);
+				//AudioSource.PlayClipAtPoint(pickupFX[0], transform.position);
+			}else if(m == Pickup.PickupMode.COIN){
+				Level.instance.CollectCoin();
 			}
 			Destroy (col.gameObject);
-		}*/
+		}
 	}
 	public void AddHealth(float add)
 	{

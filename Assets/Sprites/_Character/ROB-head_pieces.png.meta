@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: aca6eb644bec34c0bad9315be31529fa
-timeCreated: 1426551210
+timeCreated: 1444277031
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -18,6 +18,7 @@ TextureImporter:
     21300022: enemyHead_damage3
     21300024: enemyHead_damage4
     21300026: enemyHead_damage5
+    21300028: skullCoin
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -202,6 +203,16 @@ TextureImporter:
         height: 125
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: skullCoin
+      rect:
+        serializedVersion: 2
+        x: 743
+        y: 0
+        width: 279
+        height: 318
+      alignment: 9
+      pivot: {x: .37179029, y: .487020731}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

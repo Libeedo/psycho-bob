@@ -25,15 +25,7 @@ public class Enemy:MonoBehaviour {
 	[HideInInspector]
 	public Transform eDamageT; //the damage fx on his chest transform
 
-
-	//protected Score score;
-	[HideInInspector]
-	public GameObject spawner;
-	[HideInInspector]
-	public bool replenishSpawner = false;
-	
 	public int sortingNum;
-	
 
 	public bool facingRight = true;
 
@@ -133,25 +125,7 @@ public class Enemy:MonoBehaviour {
 	{
 		return null;
 	}
-	/*private void MakeSpritesBlacker()
-	{
-		Color clr = new Color(flameDamage,flameDamage,flameDamage,1f);
-		//print (flameDamage);
-		if (ragdollMode) {
-			foreach (SpriteRenderer sr in rdGO.GetComponentsInChildren<SpriteRenderer>()) {
-				sr.material.color = clr;
-			}
-		} else {
-			headA.transform.Find ("dickMouth").gameObject.SetActive (true);
-			foreach (SpriteRenderer sr in enemyT.GetComponentsInChildren<SpriteRenderer>()) {
-				sr.material.color = clr;
-			}
-			
-			enemyT.transform.Find ("enemy1_deadBody_body").transform.Find ("ass").GetComponent<SpriteRenderer>().material.color = clr;
-			enemyT.transform.Find ("enemy1_deadBody_body").transform.Find ("pants").GetComponent<SpriteRenderer>().material.color = clr;
-			headA.transform.Find ("dickMouth").gameObject.SetActive (false);
-		}
-	}*/
+
 	public virtual void Tripped(bool right,Vector2 vel)
 	{
 		//print ("tripped "+onFire);
@@ -175,28 +149,7 @@ public class Enemy:MonoBehaviour {
 		//print ("enemy dead");
 		//dead = true;
 		died = false;
-		/*if (!ragdollMode){
-			
 
-			switchToRagdoll ();
-			
-		}
-		if(onFire){
-			rdGO.transform.Find ("enemy1_deadBody_body").transform.Find("flame").GetComponent<ParticleSystem>().Play ();
-		}
-		if(blownUp){
-			rdCS.DestroyLimbs(vel);
-			if (Mathf.Abs(vel.x)+Mathf.Abs(vel.y) > 4500f){
-				rdTorsoRB.GetComponent<SpriteRenderer>().sprite = jihadBody;
-			}
-		}
-		rdCS.Death(vel);*/
-		if(replenishSpawner && spawner){// != null){
-			spawner.transform.GetComponent<Spawner>().subtractSpawnCount(1);
-		}
-		//if(scoreDeath){
-			//score.UpdateScore(100,new Vector3(rdTorsoRB.transform.position.x,rdTorsoRB.transform.position.y+8f));
-		//}
 		Level.enemyCount--;
 		//print ("remove");
 

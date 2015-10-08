@@ -50,6 +50,7 @@ public class Spawner : MonoBehaviour
 		}else{//infinite
 			spawnCount++; 
 			canSpawn = true;
+			Level.instance.makeTeleFlash(transform.position);
 		}
 
 			//print ("SPAWN "+canSpawn);
@@ -57,9 +58,9 @@ public class Spawner : MonoBehaviour
 
 
 	}
-	public void subtractSpawnCount(int sub)//subtract from spawnCount when enemy dies so more can spawn from this spawner if spawn max not infinite 
+	public void subtractSpawnCount()//subtract from spawnCount when enemy dies so more can spawn from this spawner if spawn max not infinite 
 	{
-		spawnCount -= sub;
+		spawnCount -= 1;
 	}
 
 }

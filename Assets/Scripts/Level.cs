@@ -53,7 +53,7 @@ public class Level : MonoBehaviour {
 
 	public GameObject teleFlashRef;
 	public GameObject hitFXref;
-
+	private int coinCount;
 	void Awake ()
 	{
 		instance = this;
@@ -233,6 +233,11 @@ public class Level : MonoBehaviour {
 	{
 		return playerT.position;
 	}*/
+	public void CollectCoin()
+	{
+		coinCount++;
+	}
+
 
 	public class HitNumClass
 		
@@ -303,6 +308,7 @@ public class Level : MonoBehaviour {
 	IEnumerator ReloadGame()
 	{		
 		yield return new WaitForSeconds(3);
+		print ("reload");
 		if(lives>0){
 			// ... pause briefly
 			
@@ -312,8 +318,8 @@ public class Level : MonoBehaviour {
 			camCS.deathPan = true;
 
 			playerCS.gunCS.gameObject.SetActive(true);
-			playerT.gameObject.SetActive(true);
-			GameObject.FindGameObjectWithTag("MainCamera").GetComponent<AudioListener>().enabled = false;
+			//playerT.gameObject.SetActive(true);
+			//GameObject.FindGameObjectWithTag("MainCamera").GetComponent<AudioListener>().enabled = false;
 			
 			playerT.GetComponent<PlayerHealth>().health = 100f;
 			//GameObject.FindGameObjectWithTag("HealthBar").SetActive(true);
