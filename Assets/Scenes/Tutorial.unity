@@ -3005,15 +3005,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: bc5cc1a9d604c254dbaa0868530093af, type: 2}
       propertyPath: m_LocalScale.x
-      value: .359533042
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: bc5cc1a9d604c254dbaa0868530093af, type: 2}
       propertyPath: m_LocalScale.y
-      value: .395450979
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: bc5cc1a9d604c254dbaa0868530093af, type: 2}
       propertyPath: m_LocalScale.z
-      value: .452980012
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: bc5cc1a9d604c254dbaa0868530093af, type: 2}
       propertyPath: bouncePower
@@ -5617,8 +5617,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a2e365da162e7746ab6bacefc71bdda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gObjects: []
-  enable: 0
+  enableObjects: []
+  disableObjects: []
 --- !u!61 &646014978
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6891,7 +6891,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100030, guid: 59b9b7b8cf4420540894241a9075568c, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22400022, guid: 59b9b7b8cf4420540894241a9075568c, type: 2}
       propertyPath: m_RootOrder
@@ -7920,11 +7920,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: bc5cc1a9d604c254dbaa0868530093af, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 27.4490814
+      value: 26.5200005
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: bc5cc1a9d604c254dbaa0868530093af, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 93.793335
+      value: 92.3899994
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: bc5cc1a9d604c254dbaa0868530093af, type: 2}
       propertyPath: m_LocalPosition.z
@@ -11331,12 +11331,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a2e365da162e7746ab6bacefc71bdda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gObjects:
+  enableObjects:
+  - {fileID: 1412939278}
+  - {fileID: 1388256428}
   - {fileID: 1580962564}
   - {fileID: 1611136553}
   - {fileID: 2053382958}
-  - {fileID: 1388256428}
-  enable: 1
+  disableObjects: []
 --- !u!1 &1358643631
 GameObject:
   m_ObjectHideFlags: 0
@@ -12048,6 +12049,10 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 61378e4b169a9d848ba5bd6945a4aea9, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1412939278 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100018, guid: 4824b4a0b9bae4c40a24bba98bd1367d, type: 2}
+  m_PrefabInternal: {fileID: 1604179107}
 --- !u!1001 &1415430740
 Prefab:
   m_ObjectHideFlags: 0
@@ -12771,11 +12776,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: bc5cc1a9d604c254dbaa0868530093af, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -134.559998
+      value: -134.860001
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: bc5cc1a9d604c254dbaa0868530093af, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 14.3400002
+      value: 12.7700005
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: bc5cc1a9d604c254dbaa0868530093af, type: 2}
       propertyPath: m_LocalPosition.z
@@ -12799,15 +12804,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: bc5cc1a9d604c254dbaa0868530093af, type: 2}
       propertyPath: m_LocalScale.x
-      value: .355733573
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: bc5cc1a9d604c254dbaa0868530093af, type: 2}
       propertyPath: m_LocalScale.y
-      value: .516535461
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: bc5cc1a9d604c254dbaa0868530093af, type: 2}
       propertyPath: m_LocalScale.z
-      value: .448192954
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: bc5cc1a9d604c254dbaa0868530093af, type: 2}
       propertyPath: bouncePower
@@ -12945,7 +12950,7 @@ Transform:
   - {fileID: 1580962565}
   - {fileID: 1627848872}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
 --- !u!1001 &1522533267
 Prefab:
   m_ObjectHideFlags: 0
@@ -13561,11 +13566,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: bc5cc1a9d604c254dbaa0868530093af, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -61.7299995
+      value: -61.9199982
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: bc5cc1a9d604c254dbaa0868530093af, type: 2}
       propertyPath: m_LocalPosition.y
-      value: .109999999
+      value: -1.51999998
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: bc5cc1a9d604c254dbaa0868530093af, type: 2}
       propertyPath: m_LocalPosition.z
@@ -13589,15 +13594,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: bc5cc1a9d604c254dbaa0868530093af, type: 2}
       propertyPath: m_LocalScale.x
-      value: .488458306
+      value: 1.24258029
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: bc5cc1a9d604c254dbaa0868530093af, type: 2}
       propertyPath: m_LocalScale.y
-      value: .402102411
+      value: 1.24258053
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: bc5cc1a9d604c254dbaa0868530093af, type: 2}
       propertyPath: m_LocalScale.z
-      value: .811639667
+      value: 1.24258053
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: bc5cc1a9d604c254dbaa0868530093af, type: 2}
       propertyPath: bouncePower
@@ -17143,7 +17148,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400018, guid: 63492836d014f27489153c7c4678acb1, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 128.5
+      value: 116.300003
       objectReference: {fileID: 0}
     - target: {fileID: 400018, guid: 63492836d014f27489153c7c4678acb1, type: 2}
       propertyPath: m_LocalPosition.z

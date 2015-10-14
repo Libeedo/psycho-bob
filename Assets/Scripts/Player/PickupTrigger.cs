@@ -3,7 +3,7 @@ using System.Collections;
 
 public class PickupTrigger : Pickup{
 
-	//has to be  WEAPON pickup MODE for trigger
+	//has to be  WEAPON pickup MODE for trigger, 
 	void OnTriggerEnter2D (Collider2D col) 
 	{
 		//print ("hey "+pickupMode);
@@ -14,7 +14,7 @@ public class PickupTrigger : Pickup{
 			//}else if(pickupMode == PickupMode.COIN){
 				//Level.instance.CollectCoin();
 			//}else{
-				col.GetComponent<PlayerControl>().gunCS.Pickup(pickupMode,gunMode,howMuch);
+				col.GetComponent<PlayerControl>().gunCS.PickupItem(pickupMode,gunMode,howMuch);
 
 			//}
 			Destroy(gameObject);
@@ -24,7 +24,7 @@ public class PickupTrigger : Pickup{
 				
 				
 			//}else{
-				Level.instance.GetPlayerTransform().GetComponent<PlayerControl>().gunCS.Pickup(pickupMode,gunMode,howMuch);
+				Level.instance.GetPlayerTransform().GetComponent<PlayerControl>().gunCS.PickupItem(pickupMode,gunMode,howMuch);
 				
 			//}
 			Destroy(gameObject);

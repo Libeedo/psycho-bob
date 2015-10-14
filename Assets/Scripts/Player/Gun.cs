@@ -1418,10 +1418,11 @@ public class Gun : MonoBehaviour
 		//print ("LOW "+lowNum+"  "+low);
 	
 	}
+	//refill from ammo crate
 	public void PickUpAmmoCrate()
 	{
 		if(activeWeapon.ammo<activeWeapon.maxAmmo){
-			Pickup(global::PickupTrigger.PickupMode.AMMO,gunMode,activeWeapon.pickupAmmo);
+			PickupItem(global::PickupTrigger.PickupMode.AMMO,gunMode,activeWeapon.pickupAmmo);
 			return;
 		}
 		//GunMode gm = GunMode.UNARMED;
@@ -1448,13 +1449,13 @@ public class Gun : MonoBehaviour
 				//puCS.gunMode = gunModes[lowNum+2];
 				//puCS.howMuch = weapons[lowNum+2].pickupAmmo;
 			print (gunModes[lowNum+2]);
-			Pickup(global::PickupTrigger.PickupMode.AMMO,gunModes[lowNum+2],weapons[lowNum+2].pickupAmmo);
+			PickupItem(global::PickupTrigger.PickupMode.AMMO,gunModes[lowNum+2],weapons[lowNum+2].pickupAmmo);
 		}
 		//print ("LOW "+lowNum+"  "+low);
 		
 	}
 	//pickup guns or ammo
-	public void Pickup(global::PickupTrigger.PickupMode pickupMode, GunMode gMode, int howMuch)
+	public void PickupItem(global::PickupTrigger.PickupMode pickupMode, GunMode gMode, int howMuch)
 	{
 		//print (pickup);
 		AudioSource.PlayClipAtPoint(reloadFX[0], transform.position);

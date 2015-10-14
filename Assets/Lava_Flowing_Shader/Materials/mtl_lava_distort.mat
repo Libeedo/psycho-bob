@@ -34,8 +34,8 @@ Material:
           name: _LavaTex
         second:
           m_Texture: {fileID: 2800000, guid: 1dd35ae56093b124083a7e7d2fa0a8c5, type: 3}
-          m_Scale: {x: 30, y: 20}
-          m_Offset: {x: .781864882, y: 0}
+          m_Scale: {x: 120, y: 50}
+          m_Offset: {x: 2.41351748, y: 0}
       data:
         first:
           name: _MainTex2
@@ -54,11 +54,11 @@ Material:
       data:
         first:
           name: _DistortX
-        second: .689999998
+        second: 2
       data:
         first:
           name: _DistortY
-        second: .289999992
+        second: .5
       data:
         first:
           name: _RefractTexTiling

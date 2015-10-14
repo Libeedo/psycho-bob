@@ -18,6 +18,7 @@ public class PlayerHealth : MonoBehaviour
 	private Animator anim;						// Reference to the Animator on the player
 
 	public AudioClip healthFX;
+
 	//public Sprite headSpr;
 
 	private int pLayer; //player layer
@@ -61,23 +62,24 @@ public class PlayerHealth : MonoBehaviour
 
 		}else if(col.gameObject.tag == "Pickup")
 		{
-			var m = col.gameObject.GetComponent<Pickup>().pickupMode;
-			if(m == Pickup.PickupMode.HEALTH){
-				health += col.gameObject.GetComponent<Pickup>().howMuch;
-				if(health > 100f){
-					health = 100f;
-				}
-				UpdateHealthBar();
-			}else if(m == Pickup.PickupMode.AMMO){
-				var pt = col.gameObject.GetComponent<Pickup>();
+			PickupItem(col.gameObject.GetComponent<Pickup>());
 
-				playerControl.gunCS.Pickup(m,pt.gunMode,pt.howMuch);
-				//AudioSource.PlayClipAtPoint(pickupFX[0], transform.position);
-			}else if(m == Pickup.PickupMode.COIN){
-				Level.instance.CollectCoin();
-			}
-			Destroy (col.gameObject);
 		}
+	}
+	public void PickupItem(Pickup m)
+	{
+		if(m.pickupMode == Pickup.PickupMode.HEALTH){
+			AddHealth(m.howMuch);
+			
+		}else if(m.pickupMode == Pickup.PickupMode.AMMO){
+
+			
+			playerControl.gunCS.PickupItem(m.pickupMode,m.gunMode,m.howMuch);
+			//AudioSource.PlayClipAtPoint(pickupFX[0], transform.position);
+		}//else if(m.pickupMode == Pickup.PickupMode.COIN){
+			//Level.instance.CollectCoin();
+		//}
+		Destroy (m.gameObject);
 	}
 	public void AddHealth(float add)
 	{

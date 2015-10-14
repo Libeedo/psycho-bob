@@ -18,6 +18,8 @@ public class SaddleTrigger : MonoBehaviour {
 			col.GetComponent<PlayerControl>().SaddleUp(transform.parent.GetComponent<Rigidbody2D>(),nurseCS.facingRight);
 			//col.GetComponent<PlayerControl>().enabled = false;
 			//transform.parent.parent = col.transform;
+		}else if(col.tag == "Pickup"){
+
 		}
 
 	}

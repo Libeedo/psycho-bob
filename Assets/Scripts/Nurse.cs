@@ -78,7 +78,16 @@ public class Nurse : MonoBehaviour {
 		}
 		startPos = transform.position;
 	}
-	
+	void OnCollisionEnter2D (Collision2D col)
+	{
+		
+		if(col.gameObject.tag == "Pickup")
+		{
+			playerCtrl.GetComponent<PlayerHealth>().PickupItem(col.gameObject.GetComponent<Pickup>());
+			
+		}
+	}
+
 	// Update is called once per frame
 	void Update () {
 		//print ("update");
