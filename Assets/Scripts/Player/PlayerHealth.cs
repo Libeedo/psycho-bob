@@ -93,6 +93,7 @@ public class PlayerHealth : MonoBehaviour
 	public void Hurt(bool explosion, Transform enemy)
 	{
 		// ... and if the time exceeds the time of the last hit plus the time between hits...
+		print ("hurt"+canBeHit);
 		if (canBeHit) 
 		{
 			// ... and if the player still has health...
@@ -140,7 +141,7 @@ public class PlayerHealth : MonoBehaviour
 		AudioSource.PlayClipAtPoint(ouchClips[Random.Range (0, ouchClips.Length)], transform.position);
 	}
 
-	private IEnumerator CanBeHit()
+	IEnumerator CanBeHit()
 	{
 		canBeHit = false;
 		Physics2D.IgnoreLayerCollision(pLayer,eLayer,true);
@@ -148,6 +149,7 @@ public class PlayerHealth : MonoBehaviour
 		canBeHit = true;
 		damageAmount = 20;
 		Physics2D.IgnoreLayerCollision(pLayer,eLayer,false);
+		print ("can  hit");
 	}
 	public void Die()
 	{
@@ -159,6 +161,7 @@ public class PlayerHealth : MonoBehaviour
 		if(!playerControl.facingRight){
 			playerControl.Flip();
 		}
+		UpdateHealthBar();
 		//anim.Play("Death");
 		//anim.SetTrigger("Die");
 		playerControl.SaddleDown ();

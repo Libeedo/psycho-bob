@@ -265,7 +265,9 @@ public class Level : MonoBehaviour {
 
 		playerT.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
 		playerCS.gunCS.enabled = false;
+		playerCS.jump = false;
 		playerCS.enabled = false;
+
 		playerT.GetComponent<Animator>().Play ("Idle");
 		playerT.GetComponent<Animator>().SetFloat ("Speed",0);
 	}
@@ -358,6 +360,7 @@ public class Level : MonoBehaviour {
 	}
 	public void WinLevel()
 	{
+		print ("win LEVELLLLLL");
 		playerCS.enabled = false;
 		nurse.GetComponent<Nurse>().enabled = false;
 		nurse.GetComponent<Rigidbody2D>().isKinematic = true;

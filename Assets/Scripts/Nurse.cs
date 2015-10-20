@@ -330,13 +330,14 @@ public class Nurse : MonoBehaviour {
 			anim.Play("Nurse_Idle");
 			//GetComponent<PolygonCollider2D>().enabled = true;
 			GetComponent<Rigidbody2D>().isKinematic = false;
-			gameObject.tag = "Nurse";
+
 			gameObject.layer = LayerMask.NameToLayer("Nurse");
 			var t = transform.position;
 			t.z = 0;
 			transform.position = t;
 			playerCtrl.GetNurseFeet(transform.Find ("nurse_body").Find ("nurse_booty").Find ("bob_footL"),transform.Find ("nurse_body").Find ("bob_footR"));
 		}
+		gameObject.tag = "Nurse";
 		GetComponent<Rigidbody2D>().mass = 1;
 		AudioSource.PlayClipAtPoint(saddleSFX[0],transform.position);
 		transform.Find ("saddleTrigger").gameObject.layer = LayerMask.NameToLayer("TransparentFX");

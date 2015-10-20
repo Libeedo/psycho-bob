@@ -70,7 +70,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c33cb4ff23ba6b547a6dff8b972bda36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyTime: 1.60000002
+  destroyTime: 2
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -87,6 +87,10 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: ec8e34c97ef2ee34395623fb7e4b0054,
         type: 3}
+    - target: {fileID: 0}
+      propertyPath: destroyTime
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 100000}

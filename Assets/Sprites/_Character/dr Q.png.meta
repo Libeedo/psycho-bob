@@ -1,0 +1,143 @@
+fileFormatVersion: 2
+guid: 75208194c4434794aad23d854e8499ad
+timeCreated: 1445203542
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: dr Q_neck
+    21300002: dr Q_backArm
+    21300004: dr Q_armR
+    21300006: dr Q_armL
+    21300008: dr Q_ass
+    21300010: dr Q_legL
+    21300012: dr Q_legR
+    21300014: dr Q_body
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: dr Q_neck
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 930
+        width: 52
+        height: 73
+      alignment: 9
+      pivot: {x: .85508436, y: .110055581}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dr Q_backArm
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 802
+        width: 42
+        height: 63
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dr Q_armR
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 757
+        width: 174
+        height: 260
+      alignment: 9
+      pivot: {x: .464627683, y: .724886358}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dr Q_armL
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 609
+        width: 242
+        height: 141
+      alignment: 9
+      pivot: {x: .115325496, y: .958335519}
+      border: {x: 0, y: 0, z: 0, w: 5}
+    - name: dr Q_ass
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 608
+        width: 142
+        height: 142
+      alignment: 9
+      pivot: {x: .53825593, y: .868486881}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dr Q_legL
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 621
+        width: 71
+        height: 128
+      alignment: 9
+      pivot: {x: .543343544, y: .896695614}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dr Q_legR
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 612
+        width: 85
+        height: 136
+      alignment: 9
+      pivot: {x: .463795394, y: .895988464}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dr Q_body
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 766
+        width: 273
+        height: 258
+      alignment: 9
+      pivot: {x: .615543246, y: .0735778809}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

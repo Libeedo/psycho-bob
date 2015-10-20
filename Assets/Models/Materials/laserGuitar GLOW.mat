@@ -84,7 +84,7 @@ Material:
         second:
           m_Texture: {fileID: 2800000, guid: 463790f488c3aca4f99d65aab9c21e65, type: 3}
           m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 42.2364922, y: 0}
+          m_Offset: {x: 42.9180069, y: 0}
       data:
         first:
           name: _SpecGlossMap

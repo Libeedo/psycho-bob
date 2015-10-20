@@ -8,6 +8,7 @@ public class Enemy_Dickbat : Enemy {
 	private bool canAttack = true;
 
 	public AudioClip[] growlFX;
+	public AudioClip deathFX;
 	private Drone droneCS;
 	protected override void Start()
 	{
@@ -96,6 +97,7 @@ public class Enemy_Dickbat : Enemy {
 		if(eDamage.scoreDeath){
 			Level.instance.score.UpdateScore(100,new Vector3(transform.position.x,transform.position.y+8f));
 		}
+		AudioSource.PlayClipAtPoint(deathFX,transform.position);
 		Level.instance.enemies.Remove(this);
 		GetComponent<Rigidbody2D>().isKinematic = false;
 		GetComponent<Rigidbody2D> ().gravityScale = 1;

@@ -31,7 +31,7 @@ public class Enemy_Damage :MonoBehaviour{
 	private ParticleSystem flames;
 	private ParticleSystem smoke;
 	private GameObject flameLight;
-	public GameObject flameHitRef;
+	//public GameObject flameHitRef;
 
 
 	public bool blownUp = false; //just blown up? dont blow up again?
@@ -182,12 +182,12 @@ public class Enemy_Damage :MonoBehaviour{
 	}
 	void FlameDamage()
 	{
-		//enemyCS.FlameDamage (0.5f);flameHit created below now does its own damage
+		enemyCS.FlameDamage (0.5f);//flameHit created below now does its own damage
 		fireCount--;
 
-		//GameObject e = (GameObject)
-		Instantiate(flameHitRef,t.position, Quaternion.identity);//make flame hit to start other shit on fire
 
+		//GameObject f = (GameObject)Instantiate(flameHitRef,t.position, Quaternion.identity);//make flame hit to start other shit on fire
+		//Physics2D.IgnoreCollision(f.GetComponent<Collider2D>(),enemyCS.GetComponent<Collider2D>
 
 		if(fireCount == 0){
 			fireCount = -1;

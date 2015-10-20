@@ -37,7 +37,7 @@ public class Enemy_Dickbug : Enemy {
 	private GameObject shieldFake;
 
 	public AudioClip[] growlFX;
-
+	public AudioClip deathFX;
 	protected override void Start()
 	{
 		base.Start ();
@@ -296,7 +296,7 @@ public class Enemy_Dickbug : Enemy {
 			Level.instance.score.UpdateScore(100,new Vector3(transform.position.x,transform.position.y+8f));
 		}
 		Level.instance.enemies.Remove(this);
-
+		AudioSource.PlayClipAtPoint(deathFX,transform.position);
 		switchToRagdoll();
 		gameObject.layer = LayerMask.NameToLayer("Bodies");
 		gameObject.tag = "Untagged";

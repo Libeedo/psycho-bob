@@ -157,6 +157,8 @@ public class Gun : MonoBehaviour
 	//where all the hands are on each gun
 	private Vector3[] armTargetPos = new Vector3[8];//arm target positions for all guns
 
+	private SpriteRenderer[] rightHands = new SpriteRenderer[6];
+
 	public AudioClip[] reloadFX;
 
 	public float[] cameraXmaxMin = new float[2];
@@ -168,9 +170,10 @@ public class Gun : MonoBehaviour
 	//private Vector3 oldMousePos = Vector3.zero;
 	void Awake()
 	{
+		var wTransform = transform.Find ("weapon Transform");
 		anim = GetComponent<Animator>();
 
-		aud = transform.Find ("weapon Transform").Find("Audio").GetComponent<AudioSource>();
+		aud = wTransform.Find("Audio").GetComponent<AudioSource>();
 		//aud.clip = hgSFX;
 		ammoDisp = GameObject.Find("ammoClipTXT").GetComponent<Text>();
 		// Setting up the references.
@@ -254,40 +257,40 @@ public class Gun : MonoBehaviour
 		//unarmLGO = playerT.Find ("body").Find("psycho bob_armL").gameObject;//unarmed arms, animated separately
 		//unarmRGO = playerT.Find ("body").Find("psycho bob_armR").gameObject;
 
-		handGunGO = transform.Find ("weapon Transform").Find ("handGun3D").gameObject;
-		bazookaGO = transform.Find ("weapon Transform").Find ("bazooka3D").gameObject;
-		machineGunGO = transform.Find ("weapon Transform").Find ("machineGun3D").gameObject;
-		flameThrowerGO = transform.Find ("weapon Transform").Find ("flameThrower3D").gameObject;
-		shotGunGO = transform.Find ("weapon Transform").Find ("shotGun3D").gameObject;
-		stratGO  = transform.Find ("weapon Transform").Find ("stratGun3D").gameObject;
-		rpgGO    = transform.Find ("weapon Transform").Find("bazooka3D").Find("rocket3D").gameObject;
-		punchGO  = transform.Find ("weapon Transform").Find("bazooka3D").Find("punch3D").gameObject;
+		handGunGO = wTransform.Find ("handGun3D").gameObject;
+		bazookaGO = wTransform.Find ("bazooka3D").gameObject;
+		machineGunGO = wTransform.Find ("machineGun3D").gameObject;
+		flameThrowerGO = wTransform.Find ("flameThrower3D").gameObject;
+		shotGunGO = wTransform.Find ("shotGun3D").gameObject;
+		stratGO  = wTransform.Find ("stratGun3D").gameObject;
+		rpgGO    = wTransform.Find("bazooka3D").Find("rocket3D").gameObject;
+		punchGO  = wTransform.Find("bazooka3D").Find("punch3D").gameObject;
 
 		weaponWheel = transform.Find("UIweaponWheel").gameObject;//GameObject.Find ("UI").transform.Find("UIweaponWheel").gameObject;//playerT.Find("weaponSelect").gameObject;
 		weaponWheel.transform.SetParent (GameObject.Find ("UI").transform, false);
 
 
-		bulletShell_ShotPos =transform.Find ("weapon Transform"). transform.Find ("bulletShell_spot");
+		bulletShell_ShotPos =wTransform. transform.Find ("bulletShell_spot");
 
-		handGunFlare = transform.Find ("weapon Transform").Find ("handGun3D").Find ("handGunFlare").GetComponent<ParticleSystem>(); 
-		handGunFlareLight = transform.Find ("weapon Transform").Find ("handGun3D").Find("handGunFlare light").GetComponent<Light>();
-		//handGunFlareLight2 = transform.Find ("weapon Transform").Find ("handGun3D").Find("handGunFlare light2").GetComponent<Light>();
+		handGunFlare = wTransform.Find ("handGun3D").Find ("handGunFlare").GetComponent<ParticleSystem>(); 
+		handGunFlareLight = wTransform.Find ("handGun3D").Find("handGunFlare light").GetComponent<Light>();
+		//handGunFlareLight2 = wTransform.Find ("handGun3D").Find("handGunFlare light2").GetComponent<Light>();
 
 
-		gunFlare = transform.Find ("weapon Transform").Find ("machineGun3D").Find ("gunFlare").GetComponent<ParticleSystem>(); 
-		gunFlareLight = transform.Find ("weapon Transform").Find ("machineGun3D").Find("gunFlare light").GetComponent<Light>();
-		//gunFlareLight2 = transform.Find ("weapon Transform").Find ("machineGun3D").Find("gunFlare light2").GetComponent<Light>();
+		gunFlare = wTransform.Find ("machineGun3D").Find ("gunFlare").GetComponent<ParticleSystem>(); 
+		gunFlareLight = wTransform.Find ("machineGun3D").Find("gunFlare light").GetComponent<Light>();
+		//gunFlareLight2 = wTransform.Find ("machineGun3D").Find("gunFlare light2").GetComponent<Light>();
 
-		shotGunFlare = transform.Find ("weapon Transform").Find ("shotGun3D").Find ("gunFlare").GetComponent<ParticleSystem>(); 
-		shotGunFlareLight = transform.Find ("weapon Transform").Find ("shotGun3D").Find("gunFlare light").GetComponent<Light>();
-		//shotGunFlareLight2 = transform.Find ("weapon Transform").Find ("shotGun3D").Find("gunFlare light2").GetComponent<Light>();
+		shotGunFlare = wTransform.Find ("shotGun3D").Find ("gunFlare").GetComponent<ParticleSystem>(); 
+		shotGunFlareLight = wTransform.Find ("shotGun3D").Find("gunFlare light").GetComponent<Light>();
+		//shotGunFlareLight2 = wTransform.Find ("shotGun3D").Find("gunFlare light2").GetComponent<Light>();
 
-		flame = transform.Find ("weapon Transform").Find ("flameThrower3D").Find("flame").GetComponent<ParticleSystem>();
-		smoke = transform.Find ("weapon Transform").Find ("flameThrower3D").Find("flameSmoke").GetComponent<ParticleSystem>();
-		flameLight =  transform.Find ("weapon Transform").Find ("flameThrower3D").Find("flameFX").GetComponent<Light>();
+		flame = wTransform.Find ("flameThrower3D").Find("flame").GetComponent<ParticleSystem>();
+		smoke = wTransform.Find ("flameThrower3D").Find("flameSmoke").GetComponent<ParticleSystem>();
+		flameLight =  wTransform.Find ("flameThrower3D").Find("flameFX").GetComponent<Light>();
 		flameAud = flameLight.gameObject.GetComponent<AudioSource>();
 
-		rpgSmoke = transform.Find ("weapon Transform").Find ("bazooka3D").Find("rpgSmoke").GetComponent<ParticleSystem>();
+		rpgSmoke = wTransform.Find ("bazooka3D").Find("rpgSmoke").GetComponent<ParticleSystem>();
 
 		stratLightning = transform.Find ("lightning").gameObject;
 		stratLightning.transform.parent = null;
@@ -327,6 +330,15 @@ public class Gun : MonoBehaviour
 
 		hudGun =GameObject.FindGameObjectWithTag("HUD").transform.Find ("gunHUD").Find ("weaponIMG").GetComponent<UI_WeaponDisplay>();
 
+		rightHands[0] = wTransform.Find("handGun3D").Find ("hands2").GetComponent<SpriteRenderer>();
+		rightHands[1] = wTransform.Find("machineGun3D").Find ("handRmg").GetComponent<SpriteRenderer>();
+		rightHands[2] = wTransform.Find("shotGun3D").Find ("shotgun_grip").Find ("handR").GetComponent<SpriteRenderer>();
+		rightHands[3] = wTransform.Find("stratGun3D").Find ("handRmg").GetComponent<SpriteRenderer>();
+		rightHands[4] = wTransform.Find("flameThrower3D").Find ("handR").GetComponent<SpriteRenderer>();
+		rightHands[5] = wTransform.Find("bazooka3D").Find ("handRbz").GetComponent<SpriteRenderer>();
+		//rightHands[6] = wTransform.Find("").Find ("handR").gameObject;
+		//rightHands[7] = wTransform.Find("").Find ("handR").gameObject;
+		//rightHands[8] = wTransform.Find("").Find ("handR").gameObject;
 		//hero = transform.root.gameObject.transform;
 		bazookaGO.SetActive(false);
 		machineGunGO.SetActive(false);
@@ -425,7 +437,7 @@ public class Gun : MonoBehaviour
 
 		// If the fire button is pressed...
 		if (Input.GetButtonDown ("Fire1")) {
-
+			//print (canShoot);
 			if(!canShoot){
 				return;
 			}
@@ -640,6 +652,7 @@ public class Gun : MonoBehaviour
 			}
 			weaponWheel.transform.localScale = theScale;
 			weaponWheel.SetActive(true);
+			canShoot = false;
 			//InvokeRepeating("WeaponWheelCursor",0,0.1f);
 		
 		}
@@ -735,6 +748,7 @@ public class Gun : MonoBehaviour
 			SwitchWeapons();
 
 			Time.timeScale = 1;
+			canShoot = true;
 		}
 		//RELOAD
 		if (Input.GetButtonDown("Reload") && activeWeapon.clip < activeWeapon.maxClip) {
@@ -1067,7 +1081,8 @@ public class Gun : MonoBehaviour
 			
 			gunMode = GunMode.MACHINEGUN;
 			hudGun.switchWeapon(2);
-			armTargets[0].localPosition = armTargetPos[0];
+			//var v = new Vector3(armTargetPos[0].x - 1,armTargetPos[0].y,armTargetPos[0].z);
+			armTargets[0].localPosition = armTargetPos[0];//v;
 			armTargets[1].localPosition = armTargetPos[1];
 			activeWeapon = machineGunWeapon;
 
@@ -1077,7 +1092,7 @@ public class Gun : MonoBehaviour
 			machineGunGO.transform.Find ("handLmg").gameObject.SetActive(false);
 			machineGunGO.transform.Find ("handL2mg").gameObject.SetActive(true);
 
-			armTargets[0].localPosition = new Vector3(0.17f,-0.8f,armTargets[0].localPosition.z);
+			armTargets[0].localPosition = new Vector3(armTargetPos[0].x + .5f,armTargetPos[0].y - .25f,armTargets[0].localPosition.z);
 			armTargets[1].localPosition = armTargetPos[1];
 			gunMode = GunMode.GRENADE;
 			hudGun.switchWeapon(3);
@@ -1373,6 +1388,37 @@ public class Gun : MonoBehaviour
 		}
 
 	}
+	//for hopping corners.  briefly hide R hands for all guns
+
+	public void HideRHands()
+	{
+		print ("hands wtf");
+		var t = false;
+		rightHands[0].enabled = false;//.SetActive(t);
+		rightHands[1].enabled = false; 
+		rightHands[2].enabled = false;
+		rightHands[3].enabled = false;
+		rightHands[4].enabled = false; 
+		rightHands[5].enabled = false; 
+		/*rightHands[6].SetActive(t); 
+		rightHands[7].SetActive(t); 
+		rightHands[8].SetActive(t); */
+		StartCoroutine("ShowRHands");
+	}
+	IEnumerator ShowRHands()
+	{
+		yield return new WaitForSeconds(0.5f);
+		var t = true;
+		rightHands[0].enabled = true;
+		rightHands[1].enabled = true;
+		rightHands[2].enabled = true; 
+		rightHands[3].enabled = true;
+		rightHands[4].enabled = true;
+		rightHands[5].enabled = true; 
+		/*rightHands[6].SetActive(t); 
+		rightHands[7].SetActive(t); 
+		rightHands[8].SetActive(t); */
+	}
 	//Score code spawns pickup
 	public void SpawnPickup(Vector3 pos)
 	{
@@ -1544,6 +1590,8 @@ public class Gun : MonoBehaviour
 	//	cameraXmaxMin = maxMin;
 	//}
 }
+
+
 
 public class Weapon
 

@@ -262,6 +262,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 448458}
   - 212: {fileID: 21263696}
+  - 82: {fileID: 8236528}
   m_Layer: 10
   m_Name: body
   m_TagString: Untagged
@@ -1401,7 +1402,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 191586}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 179.050003, y: 97.426384, z: 0}
+  m_LocalPosition: {x: 198.675064, y: 1157.59253, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 439728}
@@ -1808,6 +1809,80 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+--- !u!82 &8236528
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 143066}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 6608e36bbff74de47a28af05b147806f, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 400
+  Pan2D: 0
+  rolloffMode: 2
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: .00249999994
+      value: 1
+      inSlope: -3.0782187
+      outSlope: -3.0782187
+      tangentMode: 0
+    - time: .337072611
+      value: .371711612
+      inSlope: -1.00255013
+      outSlope: -1.00255013
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: -.260021418
+      outSlope: -.260021418
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!82 &8241162
 AudioSource:
   m_ObjectHideFlags: 1
@@ -2112,7 +2187,6 @@ MonoBehaviour:
   enemyCS: {fileID: 0}
   t: {fileID: 0}
   onFire: 0
-  flameHitRef: {fileID: 162210, guid: f5de9ccd91247f9488273e13723c578f, type: 2}
   blownUp: 0
   scoreDeath: 1
   bulletHitClips:
@@ -2136,17 +2210,15 @@ MonoBehaviour:
   HP: 4
   eDamage: {fileID: 0}
   eDamageT: {fileID: 0}
-  spawner: {fileID: 0}
-  replenishSpawner: 0
   sortingNum: 0
   facingRight: 1
-  hitEffect: {fileID: 100394, guid: ca122426c74ad864f97e737641154d37, type: 2}
   equipped: 0
   status: 0
   growlFX:
   - {fileID: 8300000, guid: 1ccaeb5298063c743976cad05b3865ca, type: 3}
   - {fileID: 8300000, guid: 4266b9ef90d4e6145bbe23480f20a6a1, type: 3}
   - {fileID: 8300000, guid: d3d8ffa2a3bfce0479fe53e5628dbbe0, type: 3}
+  deathFX: {fileID: 8300000, guid: 2d562b0c30563ff4680c3a5398463938, type: 3}
 --- !u!198 &19803102
 ParticleSystem:
   m_ObjectHideFlags: 1

@@ -38,7 +38,7 @@ public class Enemy_Soldier : Enemy
 	//[HideInInspector]
 	public float moveSpeed = 8;		// The speed the enemy moves at.
 	public float defaultSpeed = 8;
-	
+	private float lastSpeed = 8;
 	
 	private Transform frontCheck;		// Reference to the position of the gameobject used for checking if something is in front.
 
@@ -196,6 +196,7 @@ public class Enemy_Soldier : Enemy
 		if (status == eStatus.IDLE) {
 			enemyA.Play("enemyIdle");
 		}
+		//print (facingRight+"     "+moveSpeed);
 	}
 	
 	void FixedUpdate ()
@@ -363,24 +364,32 @@ public class Enemy_Soldier : Enemy
 	public override void Flamed(){
 		base.Flamed ();
 
-		CancelInvoke("switchSnipeWalk");
-		enemyA.SetBool ("onFire",true);
-		moveSpeed = defaultSpeed = 13;
 			//MakeSpritesBlacker();
 
 	}
-	public override void FlameDamage(float dmg)
+	public override void FlameDamage(float dmg)//enemy damage is passed back and forth between the soldier and the ragdoll, it issues flame damage if on fire.
 	{
 		base.FlameDamage(dmg);
 		if (died) {
 			switchToRagdoll ();//only death that hasnt already switched to ragdoll mode;
 			rdCS.Death();
 			//Death();
+		}else{
+			CancelInvoke("switchSnipeWalk");
+			if(status == eStatus.SHOOTING){
+				status = eStatus.WALKING;
+				
+			}
+			enemyA.SetBool ("onFire",true);
+			if(status != eStatus.PARACHUTING){
+				moveSpeed  = 13;
+			}
 		}
 	}
 	public override void StopFlame()
 	{
 		enemyA.SetBool ("onFire", false);
+		moveSpeed = defaultSpeed;
 	}
 
 	public override Rigidbody2D Grabbed()
@@ -445,7 +454,8 @@ public class Enemy_Soldier : Enemy
 			headA.SetTrigger("DickMouth");
 			headA.GetComponent<SpriteRenderer>().sprite = Soldier_Sprites.S.getHead(3);
 			StartCoroutine("StopHurtPlayer");
-
+			lastSpeed = moveSpeed;
+			moveSpeed = 0;
 			AudioSource.PlayClipAtPoint(growlFX[UnityEngine.Random.Range (0, growlFX.Length)], transform.position);
 		}
 		return true;
@@ -455,6 +465,8 @@ public class Enemy_Soldier : Enemy
 		yield return new WaitForSeconds(.5f);
 		headA.transform.rotation = Quaternion.identity;
 		headA.GetComponent<SpriteRenderer>().sprite = Soldier_Sprites.S.getHead(0);
+		moveSpeed = lastSpeed;
+		print ("WTF MOVESPEED HURT PLAYER");
 	}
 	IEnumerator Jihad()
 	{

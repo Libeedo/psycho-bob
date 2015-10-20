@@ -161,7 +161,9 @@ public class CombatZone : MonoBehaviour {
 					}else{
 						esc.moveSpeed = evnt.speed;
 					}
-
+					if(Random.Range(0,10)>5){
+						esc.Flip();
+					}
 
 				}else if(evnt.enemyType == EnemyType.DICKBUG){
 

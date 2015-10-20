@@ -46,7 +46,7 @@ public class Wav
 public class Seq
 {
 	public int amount;
-	public Vector2 pos;//in relation to combatzone origin
+	public Vector2 pos;//relative to combatzone position
 	public CombatZone.EnemyType eType;
 	public Enemy.Equipped equipped;
 	public bool chute;

@@ -125,6 +125,8 @@ public class PlayerControl : MonoBehaviour
 	[HideInInspector]
 	public Gun gunCS;
 
+
+
 	void Awake ()
 	{
 		//debug2 = transform.Find ("debug");
@@ -423,23 +425,40 @@ public class PlayerControl : MonoBehaviour
 			//dir =1f;
 			//  }
 			
-			Vector2 pos2 = new Vector2 (groundCheck.position.x+(2f*dir),groundCheck.position.y);
-			bool cornerGrab = Physics2D.Linecast (groundCheck.position, pos2, groundLayerMsk);
-			//print ("climb "+cornerGrab);
+		Vector2 pos2 = new Vector2 (transform.position.x+(2f*dir),transform.position.y);//(groundCheck.position.x+(2f*dir),groundCheck.position.y);
+			bool cornerGrab = Physics2D.Linecast (transform.position, pos2, groundLayerMsk);//groundCheck.position, pos2, groundLayerMsk);
+			print ("climb "+cornerGrab);
 			if(!cornerGrab){
-				status = Status.IDLE;
-				stateMethod = IdleGround;
+				boxCollider.size = new Vector2(0.75f,3f);
+				boxCollider.offset = new Vector2(0,1.45f);
+			GetComponent<CircleCollider2D>().enabled = false;
+				status = Status.RIDE;
+				//Status.IDLE;
+				stateMethod = DoNothing;//IdleGround;
 				//climbing = false;
-				float vel = 300f;
+				float vel = 600f;
 				
 				rigidBody.velocity = Vector2.zero;//new Vector2(rigidbody2D.velocity.x,0f);
-				rigidBody.AddForce(new Vector2(vel*dir,20f));
+				rigidBody.AddForce(new Vector2(vel*dir,200f));
 				climbCount = 0;
+				anim.Play ("HopCorner");
+				StartCoroutine("HopCorner");
+				gunCS.HideRHands();
 			}
 		//}
 	}
 	//STATE METHODS END
 
+	IEnumerator HopCorner()
+	{
+		yield return new WaitForSeconds(0.3f);
+		boxCollider.size = new Vector2(0.75f,4.15f);
+		boxCollider.offset = new Vector2(0,0.9f);
+		GetComponent<CircleCollider2D>().enabled = true;
+		//anim.Play("Run");
+		status = Status.IDLE;
+		stateMethod = IdleGround;
+	}
 
 
 
@@ -581,7 +600,7 @@ public class PlayerControl : MonoBehaviour
 				//Vector2 groundPos =wallHit2.point;
 				//Vector2 angle = (groundPos- footPos).normalized;
 				//rigidbody2D.AddForce(angle * 65f);
-				rigidBody.AddForce(new Vector2(0,65f));
+				rigidBody.AddForce(new Vector2(0,61f));
 			}
 		}
 
@@ -932,13 +951,14 @@ public class PlayerControl : MonoBehaviour
 	}
 	public void Spawn()
 	{
-		anim.Play("heroSpawn");
+		//anim.Play("heroSpawn");
 		status = Status.FALL;
 		stateMethod = FallAir;
 		anim.Play ("Fall");
 		legs.rotation  = Quaternion.identity;
 		stillJumping = false;
 		wallJumping = false;
+		jump = false;
 		canGrab = true;
 		anim.SetBool ("grabbing",false);
 		grabbing = false;
@@ -951,6 +971,8 @@ public class PlayerControl : MonoBehaviour
 		grabbing = false;
 		onWall = false;
 		sliding = false;
+		feet[0].Find("kickFoot").gameObject.SetActive(false);
+
 		//StandingOn = null;
 		//_activeLocalPlatformPoint = Vector3.zero;
 	}
