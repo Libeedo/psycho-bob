@@ -53,7 +53,7 @@ public class PlayerHealth : MonoBehaviour
 				
 			}
 			Hurt (false,col.transform);
-			col.transform.root.GetComponent<Enemy>().HurtPlayer(transform.position); 
+
 
 		
 		}else if(col.gameObject.tag == "HurtPlayer" || col.gameObject.tag == "Fireball")// || col.gameObject.tag == "EnemyFetus")
@@ -96,6 +96,7 @@ public class PlayerHealth : MonoBehaviour
 		print ("hurt"+canBeHit);
 		if (canBeHit) 
 		{
+			enemy.GetComponent<Enemy>().HurtPlayer(transform.position); 
 			// ... and if the player still has health...
 			//if(health > 0f)
 			//{

@@ -1,14 +1,17 @@
 fileFormatVersion: 2
 guid: edb515644cc31784a9240c00a5b75bd5
-timeCreated: 1445203040
+timeCreated: 1445398166
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
     21300000: dr Q head_0
+    21300002: dr Q heads_0
+    21300004: dr Q heads_1
+    21300006: dr Q Tongue_1
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     linearTexture: 0
     correctGamma: 0
     fadeOut: 0
@@ -57,8 +60,38 @@ TextureImporter:
         y: 1536
         width: 467
         height: 512
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 9
+      pivot: {x: .53535223, y: .333400488}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dr Q heads_0
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 1472
+        width: 554
+        height: 576
+      alignment: 9
+      pivot: {x: .574501216, y: .390127808}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dr Q heads_1
+      rect:
+        serializedVersion: 2
+        x: 1063
+        y: 1493
+        width: 634
+        height: 555
+      alignment: 9
+      pivot: {x: .547740281, y: .336392581}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dr Q Tongue_1
+      rect:
+        serializedVersion: 2
+        x: 1730
+        y: 1831
+        width: 277
+        height: 137
+      alignment: 9
+      pivot: {x: .937276125, y: .670933187}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

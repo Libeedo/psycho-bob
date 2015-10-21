@@ -1036,8 +1036,8 @@ public class Gun : MonoBehaviour
 		stratGO.SetActive(false);
 		//print (gunMode);
 		if(lastGunMode == GunMode.UNARMED || lastGunMode == GunMode.STRAT){
-			armIK[0].transform.Find ("psycho bob_fArmL").Find ("psycho bob_handL").GetComponent<SpriteRenderer>().enabled = false;
-			armIK[1].transform.Find ("psycho bob_fArmR").Find ("psycho bob_handR").GetComponent<SpriteRenderer>().enabled = false;
+			armIK[0].transform.Find ("psycho bob_fArmL").Find ("psycho bob_handL").gameObject.SetActive(false);//GetComponent<SpriteRenderer>().enabled = false;
+			armIK[1].transform.Find ("psycho bob_fArmR").Find ("psycho bob_handR").gameObject.SetActive(false);//GetComponent<SpriteRenderer>().enabled = false;
 			armIK[0].target = armTargets[0];
 			armIK[1].target = armTargets[1];
 			aud.Stop();
@@ -1047,8 +1047,8 @@ public class Gun : MonoBehaviour
 
 
 		if(gunMode == GunMode.UNARMED){
-			armIK[0].transform.Find ("psycho bob_fArmL").Find ("psycho bob_handL").GetComponent<SpriteRenderer>().enabled = true;
-			armIK[1].transform.Find ("psycho bob_fArmR").Find ("psycho bob_handR").GetComponent<SpriteRenderer>().enabled = true;
+			armIK[0].transform.Find ("psycho bob_fArmL").Find ("psycho bob_handL").gameObject.SetActive(true);//GetComponent<SpriteRenderer>().enabled = true;
+			armIK[1].transform.Find ("psycho bob_fArmR").Find ("psycho bob_handR").gameObject.SetActive(true);//GetComponent<SpriteRenderer>().enabled = true;
 			armIK[0].target = armTargets[2];
 			armIK[1].target = armTargets[3];
 			hudGun.switchWeapon(0);
@@ -1174,7 +1174,7 @@ public class Gun : MonoBehaviour
 		//print ("FLIP  "+playerCtrl.facingRight + "   " + facingRight);
 		if(facingRight){
 			fArmR_SR.sortingOrder = -2; 
-			fArmL_SR.sortingOrder = 2; 
+			fArmL_SR.sortingOrder = 4; 
 			armL_SR.sortingOrder = 1; 
 			armIK[0].target = armTargets[0];
 			armIK[1].target = armTargets[1];
@@ -1229,7 +1229,7 @@ public class Gun : MonoBehaviour
 		if(gunMode == GunMode.UNARMED){//if unarmed switch back the arm targets and return
 
 			fArmR_SR.sortingOrder = -2; 
-			fArmL_SR.sortingOrder = 2; 
+			fArmL_SR.sortingOrder = 4; 
 			armL_SR.sortingOrder = 1; 
 
 			if(grabEnemyJoint){ //but if grabbing enemy switch back arm targets to grab enemy hand IK and return even faster;
@@ -1253,7 +1253,7 @@ public class Gun : MonoBehaviour
 		}
 		if(head.localScale.y ==1f){
 			fArmR_SR.sortingOrder = -2; 
-			fArmL_SR.sortingOrder = 2; 
+			fArmL_SR.sortingOrder = 4; 
 			armL_SR.sortingOrder = 1; 
 			armIK[0].target = armTargets[0];
 			armIK[1].target = armTargets[1];

@@ -38,7 +38,7 @@ public class Enemy_Soldier : Enemy
 	//[HideInInspector]
 	public float moveSpeed = 8;		// The speed the enemy moves at.
 	public float defaultSpeed = 8;
-	private float lastSpeed = 8;
+
 	
 	private Transform frontCheck;		// Reference to the position of the gameobject used for checking if something is in front.
 
@@ -64,7 +64,7 @@ public class Enemy_Soldier : Enemy
 		
 	}
 	public eStatus status = eStatus.WALKING;
-
+	private eStatus lastStatus = eStatus.WALKING;
 	private GameObject rdGO;   //created ragdoll gameobject ref
 	private Rigidbody2D rdTorsoRB; //ragdoll torso rigidbody
 
@@ -454,8 +454,8 @@ public class Enemy_Soldier : Enemy
 			headA.SetTrigger("DickMouth");
 			headA.GetComponent<SpriteRenderer>().sprite = Soldier_Sprites.S.getHead(3);
 			StartCoroutine("StopHurtPlayer");
-			lastSpeed = moveSpeed;
-			moveSpeed = 0;
+			lastStatus = status;
+			status = eStatus.IDLE;
 			AudioSource.PlayClipAtPoint(growlFX[UnityEngine.Random.Range (0, growlFX.Length)], transform.position);
 		}
 		return true;
@@ -465,7 +465,7 @@ public class Enemy_Soldier : Enemy
 		yield return new WaitForSeconds(.5f);
 		headA.transform.rotation = Quaternion.identity;
 		headA.GetComponent<SpriteRenderer>().sprite = Soldier_Sprites.S.getHead(0);
-		moveSpeed = lastSpeed;
+		status = lastStatus;
 		print ("WTF MOVESPEED HURT PLAYER");
 	}
 	IEnumerator Jihad()

@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 75208194c4434794aad23d854e8499ad
-timeCreated: 1445203542
+timeCreated: 1445398056
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -15,7 +15,7 @@ TextureImporter:
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     linearTexture: 0
     correctGamma: 0
     fadeOut: 0
@@ -130,12 +130,12 @@ TextureImporter:
     - name: dr Q_body
       rect:
         serializedVersion: 2
-        x: 322
-        y: 766
-        width: 273
-        height: 258
+        x: 323
+        y: 767
+        width: 284
+        height: 257
       alignment: 9
-      pivot: {x: .615543246, y: .0735778809}
+      pivot: {x: .571944356, y: .0735780001}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
