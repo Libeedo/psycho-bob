@@ -1,0 +1,187 @@
+fileFormatVersion: 2
+guid: 41de7c4caa535d64da0c389f825af65d
+timeCreated: 1445832332
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: assTank_body
+    21300002: assTank_thighR
+    21300004: assTank_thighL
+    21300006: assTank_arm
+    21300008: assTank_fArm
+    21300010: assTank_hand
+    21300012: assTank_legR
+    21300014: assTank_footL
+    21300016: assTank_head
+    21300018: assTank_vag
+    21300020: assTank_flab
+    21300022: BOSS asstank_0
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: assTank_body
+      rect:
+        serializedVersion: 2
+        x: 773
+        y: 9
+        width: 1271
+        height: 1045
+      alignment: 9
+      pivot: {x: .662367046, y: .444705129}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: assTank_thighR
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 1179
+        width: 538
+        height: 546
+      alignment: 9
+      pivot: {x: .561373532, y: .827568948}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: assTank_thighL
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 584
+        width: 410
+        height: 501
+      alignment: 9
+      pivot: {x: .526844621, y: .785592854}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: assTank_arm
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 608
+        width: 295
+        height: 532
+      alignment: 9
+      pivot: {x: .350761801, y: .862049758}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: assTank_fArm
+      rect:
+        serializedVersion: 2
+        x: 603
+        y: 1220
+        width: 225
+        height: 461
+      alignment: 9
+      pivot: {x: .597833931, y: .219470248}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: assTank_hand
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 1801
+        width: 288
+        height: 239
+      alignment: 9
+      pivot: {x: .796176791, y: .361845523}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: assTank_legR
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 19
+        width: 446
+        height: 546
+      alignment: 9
+      pivot: {x: .247052178, y: .86284548}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: assTank_footL
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 30
+        width: 287
+        height: 490
+      alignment: 9
+      pivot: {x: .605461299, y: .870620668}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: assTank_head
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 1340
+        width: 444
+        height: 456
+      alignment: 9
+      pivot: {x: .438027591, y: .325009257}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: assTank_vag
+      rect:
+        serializedVersion: 2
+        x: 1476
+        y: 1296
+        width: 549
+        height: 295
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: assTank_flab
+      rect:
+        serializedVersion: 2
+        x: 1224
+        y: 1061
+        width: 802
+        height: 212
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BOSS asstank_0
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 1802
+        width: 83
+        height: 189
+      alignment: 9
+      pivot: {x: .710285962, y: .83463347}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
