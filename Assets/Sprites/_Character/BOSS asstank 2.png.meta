@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 888af33f980597447ba98063986c212e
-timeCreated: 1445836984
+timeCreated: 1446333698
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -9,6 +9,8 @@ TextureImporter:
     21300004: assTank_glass
     21300006: assTank_gun
     21300008: assTank_podBG
+    21300010: assTank_goPro
+    21300012: assTank_wire
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -84,16 +86,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: assTank_gun
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 468
-        width: 1017
-        height: 469
-      alignment: 9
-      pivot: {x: .226736039, y: .499999881}
-      border: {x: 0, y: 0, z: 0, w: 0}
     - name: assTank_podBG
       rect:
         serializedVersion: 2
@@ -103,6 +95,26 @@ TextureImporter:
         height: 504
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: assTank_goPro
+      rect:
+        serializedVersion: 2
+        x: 1114
+        y: 1904
+        width: 83
+        height: 132
+      alignment: 9
+      pivot: {x: .61562556, y: .153485849}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: assTank_wire
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 1914
+        width: 244
+        height: 99
+      alignment: 9
+      pivot: {x: .0846217424, y: .82084024}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

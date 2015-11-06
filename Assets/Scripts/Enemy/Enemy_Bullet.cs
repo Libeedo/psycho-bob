@@ -2,14 +2,17 @@
 using System.Collections;
 
 public class Enemy_Bullet : MonoBehaviour {
-	private Vector3 moveToPos;
+	public Vector3 moveToPos;
 	private float speed = 12f;
+	public bool findPlayer = false;
 	void Start () {
-		Vector3 plPos = Level.instance.GetPlayerTransform().position;
-		plPos.y += 2;
-		moveToPos = ( plPos-transform.position).normalized * 50000f;
-		//moveToPos =  plPos;//transform.position + (transform.right*80f);
-		Destroy(gameObject,4f);
+		if(findPlayer){
+			Vector3 plPos = Level.instance.GetPlayerTransform().position;
+			plPos.y += 2;
+			moveToPos = ( plPos-transform.position).normalized * 50000f;
+			//moveToPos =  plPos;//transform.position + (transform.right*80f);
+			Destroy(gameObject,4f);
+		}
 	}
 
 	// Update is called once per frame

@@ -1,0 +1,111 @@
+fileFormatVersion: 2
+guid: ebdff99df7062ac42a05c8aa8f2f5882
+timeCreated: 1446331050
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: assTank_barrel
+    100002: assTank_base
+    100004: assTank_dome
+    100006: assTank_glass
+    100008: assTank_tech1
+    100010: assTank_tech2
+    100012: assTank_tech3
+    100014: assTank_tech4
+    100016: //RootNode
+    400000: assTank_barrel
+    400002: assTank_base
+    400004: assTank_dome
+    400006: assTank_glass
+    400008: assTank_tech1
+    400010: assTank_tech2
+    400012: assTank_tech3
+    400014: assTank_tech4
+    400016: //RootNode
+    2300000: assTank_barrel
+    2300002: assTank_base
+    2300004: assTank_dome
+    2300006: assTank_glass
+    2300008: assTank_tech1
+    2300010: assTank_tech2
+    2300012: assTank_tech3
+    2300014: assTank_tech4
+    3300000: assTank_barrel
+    3300002: assTank_base
+    3300004: assTank_dome
+    3300006: assTank_glass
+    3300008: assTank_tech1
+    3300010: assTank_tech2
+    3300012: assTank_tech3
+    3300014: assTank_tech4
+    4300000: assTank_glass
+    4300002: assTank_dome
+    4300004: assTank_base
+    4300006: assTank_tech1
+    4300008: assTank_barrel
+    4300010: assTank_tech2
+    4300012: assTank_tech3
+    4300014: assTank_tech4
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

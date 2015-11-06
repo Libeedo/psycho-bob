@@ -318,7 +318,7 @@ public class Enemy_Dickbug : Enemy {
 		leg2.GetComponent<Rigidbody2D> ().AddTorque (Random.Range (500, 1500));
 		Destroy (gameObject,4f);
 	}
-	public override bool HurtPlayer(Vector3 pos)
+	public override void HurtPlayer(Vector3 pos)
 	{
 
 		status = ebStatus.ATTACK;
@@ -348,7 +348,7 @@ public class Enemy_Dickbug : Enemy {
 		AudioSource.PlayClipAtPoint(growlFX[UnityEngine.Random.Range (0, growlFX.Length)], transform.position);
 
 		StartCoroutine("StopHurtPlayer");
-		return true;
+		//return true;
 	}
 	IEnumerator StopHurtPlayer()
 	{

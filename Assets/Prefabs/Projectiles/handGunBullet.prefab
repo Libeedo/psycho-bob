@@ -28,6 +28,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 482686}
   - 96: {fileID: 9681812}
+  - 114: {fileID: 11432144}
   m_Layer: 17
   m_Name: trail
   m_TagString: Untagged
@@ -42,7 +43,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 206.410004, y: 1158.36475, z: 0}
+  m_LocalPosition: {x: 147.828491, y: 1163.24988, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 482686}
@@ -147,6 +148,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 2
   explosion: {fileID: 100000, guid: a59e7822b30c6ae4097a94a5a36471b5, type: 2}
+--- !u!114 &11432144
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 167688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39c960fbcfe287349bf7f0f08c344cea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sortingLayerName: ForeEffects
+  sortingOrder: 0
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

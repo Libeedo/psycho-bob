@@ -158,9 +158,9 @@ public class Enemy:MonoBehaviour {
 	{
 
 	}
-	public virtual bool HurtPlayer(Vector3 pos)
+	public virtual void HurtPlayer(Vector3 pos)
 	{
-		return true;
+		//return true;
 	}
 	protected Vector3 GetBlastDirection(Vector3 pPos,Vector3 ePos)
 	{

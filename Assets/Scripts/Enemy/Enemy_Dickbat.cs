@@ -1,4 +1,4 @@
-﻿ using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 
 public class Enemy_Dickbat : Enemy {
@@ -109,40 +109,40 @@ public class Enemy_Dickbat : Enemy {
 		//}
 		Destroy (gameObject,1.5f);
 	}
-	public override bool HurtPlayer(Vector3 pos)
+	public override void HurtPlayer(Vector3 pos)
 	{
 		if (canAttack) {
-						canAttack = false;
-						FlipTowardsPlayer ();
-						pos.y += 2f;
-						Vector3 charPos = transform.position;
-			
-						float diffX = pos.x - charPos.x;
-						float diffY = pos.y - charPos.y;
-			
-						float angle2 = Mathf.Atan2 (diffY, diffX) * Mathf.Rad2Deg;
-						//print (angle2);
-						if (angle2 < -40f) {
-								angle2 = -40f;
-						}
-						Quaternion angle3 = Quaternion.Euler (new Vector3 (0, 0, angle2));
-						if (!facingRight) {
-								angle2 = Mathf.Atan2 (diffY, diffX * -1) * Mathf.Rad2Deg;
-								angle3 = Quaternion.Euler (new Vector3 (0, 0, angle2));
-								if (angle2 < -90f) {
-										angle2 = -90f;
-								}
-						}
-						dickT.rotation = angle3;
-						dickA.Play ("enemyShootGun");
-			
-						AudioSource.PlayClipAtPoint(growlFX[UnityEngine.Random.Range (0, growlFX.Length)], transform.position);
-			
-						StartCoroutine ("StopHurtPlayer");
-						return true;
-				} else {
-					return false;
+				canAttack = false;
+				FlipTowardsPlayer ();
+				pos.y += 2f;
+				Vector3 charPos = transform.position;
+	
+				float diffX = pos.x - charPos.x;
+				float diffY = pos.y - charPos.y;
+	
+				float angle2 = Mathf.Atan2 (diffY, diffX) * Mathf.Rad2Deg;
+				//print (angle2);
+				if (angle2 < -40f) {
+						angle2 = -40f;
 				}
+				Quaternion angle3 = Quaternion.Euler (new Vector3 (0, 0, angle2));
+				if (!facingRight) {
+						angle2 = Mathf.Atan2 (diffY, diffX * -1) * Mathf.Rad2Deg;
+						angle3 = Quaternion.Euler (new Vector3 (0, 0, angle2));
+						if (angle2 < -90f) {
+								angle2 = -90f;
+						}
+				}
+				dickT.rotation = angle3;
+				dickA.Play ("enemyShootGun");
+	
+				AudioSource.PlayClipAtPoint(growlFX[UnityEngine.Random.Range (0, growlFX.Length)], transform.position);
+	
+				StartCoroutine ("StopHurtPlayer");
+				//return true;
+		} else {
+			//return false;
+		}
 	}
 	IEnumerator StopHurtPlayer()
 	{

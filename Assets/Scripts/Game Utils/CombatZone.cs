@@ -40,11 +40,21 @@ public class CombatZone : MonoBehaviour {
 	}
 
 	private Camera cam;
-	
+
+	public Boss boss;
+	public GameObject[] enableObjects;
+
+	private delegate IEnumerator PreStartWave();
+	private PreStartWave preStartWave;
+	public int czID = 0;
 	void Awake()
 	{
 		cam = Camera.main;
-
+		if(czID ==0){
+			preStartWave = PreStartWave0;
+		}else if(czID == 1){
+			preStartWave = PreStartWave1;
+		}
 	}
 	public void StartZone()
 	{
@@ -80,18 +90,29 @@ public class CombatZone : MonoBehaviour {
 			door1.GetComponent<Animation>().Play ();
 		}
 		//StartSeq ();
+		foreach(GameObject g in enableObjects){
+			g.SetActive(true);
+		}
 
-		StartCoroutine("PreStartWave");
+		cam.enabled = false;
+		transform.Find("camera").gameObject.GetComponent<Camera>().enabled = true;
+		transform.Find("camera").GetComponent<Animation>().Play();
+		Level.instance.PausePlayer();
+
+		StartCoroutine(preStartWave());
+
 	}
 	public void NextWave()
 	{
 		if(waveCount >= spawnWaves.Count){
-			EndZone();
+			if(!boss){
+				EndZone();
+			}
 		}else{
 			StartCoroutine("StartWave");
 		}
 	}
-	void EndZone()
+	public void EndZone()
 	{
 		var camm = cam.GetComponent<CameraFollow>();
 		camm.maxXAndY = levelCameraLimits.max;
@@ -102,24 +123,12 @@ public class CombatZone : MonoBehaviour {
 		}
 		door2Anim.Rewind();
 		door2Anim.Play();
+		foreach(GameObject g in enableObjects){
+			g.SetActive(false);
+		}
 		Destroy (this);
 	}
-	IEnumerator PreStartWave()
-	{
-		cam.enabled = false;
-		transform.Find("camera").gameObject.GetComponent<Camera>().enabled = true;
-		transform.Find("camera").GetComponent<Animation>().Play();
-		Level.instance.PausePlayer();
-		
-		yield return new WaitForSeconds (1f);
-		door2Anim.Play();
-		yield return new WaitForSeconds (2f);
-		cam.transform.position = transform.Find("camera").position;
-		cam.enabled = true;
-		transform.Find("camera").gameObject.GetComponent<Camera>().enabled = false;
-		Level.instance.unPausePlayer();
-		StartCoroutine("StartWave");
-	}
+
 	IEnumerator StartWave()
 	{
 		//print ("WAVE " + waveCount);
@@ -188,6 +197,39 @@ public class CombatZone : MonoBehaviour {
 			 
 		}
 		waveCount++;
+	}
+
+	IEnumerator PreStartWave0()
+	{
+		yield return new WaitForSeconds (1f);
+		door2Anim.Play();
+		yield return new WaitForSeconds (2f);
+		EndPreStart();
+		
+	}
+	IEnumerator PreStartWave1()
+	{
+		yield return new WaitForSeconds (1f);
+		door2Anim.Play();
+		yield return new WaitForSeconds (1f);
+		boss.gameObject.SetActive(true);
+		boss.GetComponent<Animator>().Play ("assTank_INTRO");
+		yield return new WaitForSeconds (3f);
+		EndPreStart();
+		boss.GetComponent<Boss>().enabled = true;
+		var p = boss.transform.Find("assTank_body").Find("assTank_pod");
+		p.Find ("assTank_turret").gameObject.SetActive(true);
+		p.Find ("assTank_turret animate").gameObject.SetActive(false);
+	}
+	void EndPreStart()
+	{
+		cam.transform.position = transform.Find("camera").position;
+		cam.enabled = true;
+		transform.Find("camera").gameObject.GetComponent<Camera>().enabled = false;
+		Level.instance.unPausePlayer();
+		if(spawnWaves.Count>0){
+			StartCoroutine("StartWave");
+		}
 	}
 
 	//IEnumerator WaveUpdate()

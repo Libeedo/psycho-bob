@@ -9,6 +9,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 419400}
   - 96: {fileID: 9606098}
+  - 114: {fileID: 11415392}
   m_Layer: 17
   m_Name: trail
   m_TagString: Untagged
@@ -59,6 +60,7 @@ GameObject:
   - 114: {fileID: 11400000}
   - 61: {fileID: 6100000}
   - 95: {fileID: 9500000}
+  - 50: {fileID: 5015334}
   m_Layer: 27
   m_Name: enemy_Bullet
   m_TagString: Untagged
@@ -117,6 +119,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 426348}
   m_RootOrder: 1
+--- !u!50 &5015334
+Rigidbody2D:
+  serializedVersion: 2
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 179674}
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: .0500000007
+  m_GravityScale: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!61 &6100000
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -235,6 +253,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4586adc878661b24eb264df8d7e42a9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveToPos: {x: 0, y: 0, z: 0}
+  findPlayer: 1
+--- !u!114 &11415392
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 122656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39c960fbcfe287349bf7f0f08c344cea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sortingLayerName: ForeEffects
+  sortingOrder: 0
 --- !u!212 &21284938
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -267,7 +300,19 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_Size.x
+      value: 28.9899998
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: findPlayer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 179674}

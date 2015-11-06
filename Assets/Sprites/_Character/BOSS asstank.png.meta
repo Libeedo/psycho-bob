@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 41de7c4caa535d64da0c389f825af65d
-timeCreated: 1445832332
+timeCreated: 1446527589
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -145,7 +145,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 904
-        y: 1340
+        y: 1420
         width: 444
         height: 456
       alignment: 9
@@ -155,19 +155,19 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1476
-        y: 1296
+        y: 1415
         width: 549
-        height: 295
+        height: 296
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: assTank_flab
       rect:
         serializedVersion: 2
-        x: 1224
+        x: 1243
         y: 1061
-        width: 802
-        height: 212
+        width: 783
+        height: 319
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}

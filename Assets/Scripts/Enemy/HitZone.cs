@@ -10,6 +10,7 @@ public class HitZone : MonoBehaviour {
 
 
 	public enum ObectType{
+		BOSS,
 		COWMAN,
 		HELICOPTER,
 		PILOT
@@ -18,12 +19,14 @@ public class HitZone : MonoBehaviour {
 
 	void Start()
 	{
-			if (objectType == ObectType.COWMAN) {
-					hitDel = transform.root.GetComponent<Boss_cowMan> ().Hurt;
-			} else if (objectType == ObectType.HELICOPTER) {
-					hitDel = transform.root.GetComponent<Vehicle> ().Hurt;
-			} else if (objectType == ObectType.PILOT) {
-				hitDel = transform.root.GetComponent<Vehicle> ().PilotHurt;
-			}
+		if (objectType == ObectType.BOSS) {
+			hitDel = transform.root.GetComponent<Boss> ().Hurt;
+		} else if (objectType == ObectType.COWMAN) {
+				hitDel = transform.root.GetComponent<Boss_cowMan> ().Hurt;
+		} else if (objectType == ObectType.HELICOPTER) {
+				hitDel = transform.root.GetComponent<Vehicle> ().Hurt;
+		} else if (objectType == ObectType.PILOT) {
+			hitDel = transform.root.GetComponent<Vehicle> ().PilotHurt;
+		}
 	}
 }

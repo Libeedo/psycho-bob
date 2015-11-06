@@ -48,6 +48,8 @@
   <ItemGroup>
      <Compile Include="Assets\DynamicTerrainPiece.cs" />
      <Compile Include="Assets\Lava_Flowing_Shader\Scripts\ScrollingUVs_Layers.cs" />
+     <Compile Include="Assets\Scripts\Boss.cs" />
+     <Compile Include="Assets\Scripts\Boss_AssTank.cs" />
      <Compile Include="Assets\Scripts\CageCount.cs" />
      <Compile Include="Assets\Scripts\CageTrigger.cs" />
      <Compile Include="Assets\Scripts\CameraZone.cs" />
@@ -77,6 +79,7 @@
      <Compile Include="Assets\Scripts\Enemy\Enemy_Soldier.cs" />
      <Compile Include="Assets\Scripts\Enemy\HitColour.cs" />
      <Compile Include="Assets\Scripts\Enemy\HitZone.cs" />
+     <Compile Include="Assets\Scripts\Enemy\HomingSight.cs" />
      <Compile Include="Assets\Scripts\Enemy\ResetPose.cs" />
      <Compile Include="Assets\Scripts\Enemy\SniperSight.cs" />
      <Compile Include="Assets\Scripts\Enemy\Soldier_Sprites.cs" />
@@ -100,6 +103,7 @@
      <Compile Include="Assets\Scripts\Game Utils\Score.cs" />
      <Compile Include="Assets\Scripts\Game Utils\SetParticleSortingLayer.cs" />
      <Compile Include="Assets\Scripts\Game Utils\SetRenderQueue.cs" />
+     <Compile Include="Assets\Scripts\Game Utils\SetTrailRendererSortingLayer.cs" />
      <Compile Include="Assets\Scripts\Game Utils\SimpleCCD.cs" />
      <Compile Include="Assets\Scripts\Game Utils\Spawn\CargoSpawner.cs" />
      <Compile Include="Assets\Scripts\Game Utils\Spawn\EnemySpawner.cs" />

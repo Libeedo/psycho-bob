@@ -60,7 +60,7 @@ public class Enemy_Soldier : Enemy
 		FALLING,
 		SHOOTING,
 		IDLE,
-	
+		ATTACK
 		
 	}
 	public eStatus status = eStatus.WALKING;
@@ -422,8 +422,10 @@ public class Enemy_Soldier : Enemy
 
 	}
 
-	public override bool HurtPlayer(Vector3 pos)
+	public override void HurtPlayer(Vector3 pos)
 	{
+		if(status == eStatus.ATTACK){return;}
+
 		FlipTowardsPlayer();
 		pos.y += 2f;
 		Vector3 charPos = headA.transform.position;
@@ -446,19 +448,19 @@ public class Enemy_Soldier : Enemy
 		}
 		headA.transform.rotation = angle3;
 		if(equipped == Equipped.C4 && !jihadding){
-			
-			StartCoroutine("Jihad");
-			
+
+				StartCoroutine("Jihad");
+
 		}else if(equipped != Equipped.NIL){//jihadding, ignore
 			//Destroy(enemyA);
 			headA.SetTrigger("DickMouth");
 			headA.GetComponent<SpriteRenderer>().sprite = Soldier_Sprites.S.getHead(3);
 			StartCoroutine("StopHurtPlayer");
 			lastStatus = status;
-			status = eStatus.IDLE;
+			status = eStatus.ATTACK;
 			AudioSource.PlayClipAtPoint(growlFX[UnityEngine.Random.Range (0, growlFX.Length)], transform.position);
 		}
-		return true;
+		//return true;
 	}
 	IEnumerator StopHurtPlayer()
 	{
@@ -466,7 +468,7 @@ public class Enemy_Soldier : Enemy
 		headA.transform.rotation = Quaternion.identity;
 		headA.GetComponent<SpriteRenderer>().sprite = Soldier_Sprites.S.getHead(0);
 		status = lastStatus;
-		print ("WTF MOVESPEED HURT PLAYER");
+		//print ("WTF MOVESPEED HURT PLAYER "+status+"  "+lastStatus);
 	}
 	IEnumerator Jihad()
 	{
