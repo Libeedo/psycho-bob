@@ -1392,7 +1392,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100010}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 524.428955, y: 1158.17004, z: 0}
+  m_LocalPosition: {x: 85.7900009, y: 1149.72998, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400084}
@@ -2825,8 +2825,6 @@ MonoBehaviour:
   HP: 10
   eDamage: {fileID: 0}
   eDamageT: {fileID: 0}
-  spawner: {fileID: 0}
-  replenishSpawner: 0
   sortingNum: 0
   facingRight: 1
   equipped: 0

@@ -102,7 +102,7 @@ public class Gun : MonoBehaviour
 
 	//private bool swungHammer = false;
 	private bool canShoot = true;
-	private bool canKick  = true;
+	public bool canKick  = true;
 	private bool reloading = false;
 	//private float swungCount = 0f;
 

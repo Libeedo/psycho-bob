@@ -402,28 +402,11 @@ public class Enemy_Soldier : Enemy
 		}
 		return rdCS.body.GetComponent<Rigidbody2D> ();
 	}
-	public override void Tripped(bool right,Vector2 vel)
-	{
-		//print ("tripped "+onFire);
-		// Reduce the number of hit points by one.
-		
-		Level.instance.makeHitFX(transform.position);
-		float power = 1000f;
-		if(right){
-			power = -1000f;
-		}
-		switchToRagdoll ();
-		rdCS.aliveSwitch = float.MaxValue;
-		//Rigidbody2D bdy = ragdollBody.transform.Find("enemy1_deadBody_body").rigidbody2D;
-		rdGO.transform.Find ("enemy1_deadBody_foot").GetComponent<AudioSource> ().Play ();
-		//set damage
-		rdTorsoRB.AddForce(new Vector2(power,Mathf.Abs(vel.x) * 800f));
-		rdTorsoRB.AddTorque(vel.y * power);
 
-	}
 
 	public override void HurtPlayer(Vector3 pos)
 	{
+		print ("H Player  " + status);
 		if(status == eStatus.ATTACK){return;}
 
 		FlipTowardsPlayer();
@@ -467,8 +450,10 @@ public class Enemy_Soldier : Enemy
 		yield return new WaitForSeconds(.5f);
 		headA.transform.rotation = Quaternion.identity;
 		headA.GetComponent<SpriteRenderer>().sprite = Soldier_Sprites.S.getHead(0);
+		print ("WTF"+status+"  "+lastStatus);
 		status = lastStatus;
-		//print ("WTF MOVESPEED HURT PLAYER "+status+"  "+lastStatus);
+		print ("WTF MOVESPEED HURT PLAYER "+status+"  "+lastStatus);
+
 	}
 	IEnumerator Jihad()
 	{

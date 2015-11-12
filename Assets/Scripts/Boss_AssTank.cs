@@ -12,6 +12,7 @@ public class Boss_AssTank : Boss {
 	private float speed = -0.03f;
 	private float waitTime = 2f;
 	private AudioSource footAud;
+	private int lives = 3;//lives are the different stages/phases the boss goes thru
 	void Start()
 	{
 		drqAnim = transform.Find("assTank_body").Find("assTank_pod").Find("drQ").GetComponent<Animator>();

@@ -143,6 +143,7 @@
      <Compile Include="Assets\Scripts\Projectiles\stratLaser\Line.cs" />
      <Compile Include="Assets\Scripts\VehicleImpactExplosion.cs" />
      <Compile Include="Assets\SimpleParticlePack\Scripts\ParticleTester.cs" />
+     <Compile Include="Assets\SortingLayerExposer.cs" />
      <Compile Include="Assets\StrobeLight.cs" />
      <Compile Include="Assets\_MKGlowSystem\_Demo\Code\MK_DemoControl.cs" />
      <Compile Include="Assets\_MKGlowSystem\_Demo\Code\MK_RotateObject.cs" />

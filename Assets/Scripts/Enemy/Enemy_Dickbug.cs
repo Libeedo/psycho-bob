@@ -257,18 +257,7 @@ public class Enemy_Dickbug : Enemy {
 		}
 		
 	}
-	public override void Tripped(bool right,Vector2 vel)
-	{
-		Level.instance.makeHitFX(transform.position);
-		float power = 1000f;
-		if(right){
-			power = -1000f;
-		}
-		switchToRagdoll ();
-		rb2D.AddForce(new Vector2(power,Mathf.Abs(vel.x) * 400f));
-		rb2D.AddTorque(vel.y * power);
-		
-	}
+
 	//public override void Flamed(){
 		//base.Flamed ();
 		//enemyA.SetBool ("onFire",true);

@@ -126,24 +126,7 @@ public class Enemy:MonoBehaviour {
 		return null;
 	}
 
-	public virtual void Tripped(bool right,Vector2 vel)
-	{
-		//print ("tripped "+onFire);
-		// Reduce the number of hit points by one.
-		
-		
-		/*float power = 1000f;
-		if(right){
-			power = -1000f;
-		}
-		switchToRagdoll ();
-		//Rigidbody2D bdy = ragdollBody.transform.Find("enemy1_deadBody_body").rigidbody2D;
-		rdGO.transform.Find ("enemy1_deadBody_foot").GetComponent<AudioSource> ().Play ();
-		//set damage
-		rdTorsoRB.AddForce(new Vector2(power,Mathf.Abs(vel.x) * 800f));
-		rdTorsoRB.AddTorque(vel.y * power);*/
-		
-	}
+
 	public virtual void Death()
 	{
 		//print ("enemy dead");

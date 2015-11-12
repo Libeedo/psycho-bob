@@ -14,6 +14,7 @@ ModelImporter:
     100012: assTank_tech3
     100014: assTank_tech4
     100016: //RootNode
+    100018: assTank_glassBroken
     400000: assTank_barrel
     400002: assTank_base
     400004: assTank_dome
@@ -23,6 +24,7 @@ ModelImporter:
     400012: assTank_tech3
     400014: assTank_tech4
     400016: //RootNode
+    400018: assTank_glassBroken
     2300000: assTank_barrel
     2300002: assTank_base
     2300004: assTank_dome
@@ -31,6 +33,7 @@ ModelImporter:
     2300010: assTank_tech2
     2300012: assTank_tech3
     2300014: assTank_tech4
+    2300016: assTank_glassBroken
     3300000: assTank_barrel
     3300002: assTank_base
     3300004: assTank_dome
@@ -39,6 +42,7 @@ ModelImporter:
     3300010: assTank_tech2
     3300012: assTank_tech3
     3300014: assTank_tech4
+    3300016: assTank_glassBroken
     4300000: assTank_glass
     4300002: assTank_dome
     4300004: assTank_base
@@ -47,6 +51,7 @@ ModelImporter:
     4300010: assTank_tech2
     4300012: assTank_tech3
     4300014: assTank_tech4
+    4300016: assTank_glassBroken
   materials:
     importMaterials: 1
     materialName: 0

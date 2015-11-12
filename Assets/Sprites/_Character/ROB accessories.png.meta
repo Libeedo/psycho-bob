@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 5f73610f27ff650419320731cff86c53
-timeCreated: 1431654278
+timeCreated: 1447215586
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -82,16 +82,6 @@ TextureImporter:
         height: 350
       alignment: 0
       pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: slide_flame
-      rect:
-        serializedVersion: 2
-        x: 14
-        y: 539
-        width: 356
-        height: 97
-      alignment: 9
-      pivot: {x: .787904203, y: .386064023}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: enemy1 body jihaded2
       rect:

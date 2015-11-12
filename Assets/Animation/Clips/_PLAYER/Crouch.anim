@@ -197,6 +197,37 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
     path: body/psycho bob_neck
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 0, y: 0, z: .0087265363, w: .999961913}
+        inSlope: {x: 0, y: 0, z: -.130895838, w: .00100135803}
+        outSlope: {x: 0, y: 0, z: -.130895838, w: .00100135803}
+        tangentMode: 0
+      - time: .0166666675
+        value: {x: 0, y: 0, z: .00654493878, w: .999978602}
+        inSlope: {x: 0, y: 0, z: -.130896792, w: .000856518745}
+        outSlope: {x: 0, y: 0, z: -.130896792, w: .000856518745}
+        tangentMode: 0
+      - time: .0333333351
+        value: {x: 0, y: 0, z: .00436330959, w: .999990463}
+        inSlope: {x: 0, y: 0, z: -.130898342, w: .000570416392}
+        outSlope: {x: 0, y: 0, z: -.130898342, w: .000570416392}
+        tangentMode: 0
+      - time: .0500000045
+        value: {x: 0, y: 0, z: .00218166015, w: .999997616}
+        inSlope: {x: 0, y: 0, z: -.13089928, w: .000286102266}
+        outSlope: {x: 0, y: 0, z: -.13089928, w: .000286102266}
+        tangentMode: 0
+      - time: .0666666701
+        value: {x: 0, y: 0, z: 0, w: 1}
+        inSlope: {x: 0, y: 0, z: -.130899623, w: .000143051162}
+        outSlope: {x: 0, y: 0, z: -.130899623, w: .000143051162}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: Legs Transform/psycho bob_footR
   m_CompressedRotationCurves: []
   m_PositionCurves:
   - curve:
@@ -328,6 +359,12 @@ AnimationClip:
       customType: 0
       isPPtrCurve: 0
     - path: 425136666
+      attribute: 2
+      script: {fileID: 0}
+      classID: 4
+      customType: 0
+      isPPtrCurve: 0
+    - path: 2641290648
       attribute: 2
       script: {fileID: 0}
       classID: 4
@@ -1396,6 +1433,142 @@ AnimationClip:
     path: head Transform
     classID: 4
     script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0166666675
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0333333351
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0500000045
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0666666701
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalRotation.x
+    path: Legs Transform/psycho bob_footR
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0166666675
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0333333351
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0500000045
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0666666701
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalRotation.y
+    path: Legs Transform/psycho bob_footR
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: .0087265363
+        inSlope: -.130895838
+        outSlope: -.130895838
+        tangentMode: 0
+      - time: .0166666675
+        value: .00654493878
+        inSlope: -.130896792
+        outSlope: -.130896792
+        tangentMode: 0
+      - time: .0333333351
+        value: .00436330959
+        inSlope: -.130898342
+        outSlope: -.130898342
+        tangentMode: 0
+      - time: .0500000045
+        value: .00218166015
+        inSlope: -.13089928
+        outSlope: -.13089928
+        tangentMode: 0
+      - time: .0666666701
+        value: 0
+        inSlope: -.130899623
+        outSlope: -.130899623
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalRotation.z
+    path: Legs Transform/psycho bob_footR
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: .999961913
+        inSlope: .00100135803
+        outSlope: .00100135803
+        tangentMode: 0
+      - time: .0166666675
+        value: .999978602
+        inSlope: .000856518745
+        outSlope: .000856518745
+        tangentMode: 0
+      - time: .0333333351
+        value: .999990463
+        inSlope: .000570416392
+        outSlope: .000570416392
+        tangentMode: 0
+      - time: .0500000045
+        value: .999997616
+        inSlope: .000286102266
+        outSlope: .000286102266
+        tangentMode: 0
+      - time: .0666666701
+        value: 1
+        inSlope: .000143051162
+        outSlope: .000143051162
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalRotation.w
+    path: Legs Transform/psycho bob_footR
+    classID: 4
+    script: {fileID: 0}
   m_EulerEditorCurves:
   - curve:
       serializedVersion: 2
@@ -1737,6 +1910,63 @@ AnimationClip:
       m_PostInfinity: 2
     attribute: localEulerAnglesBaked.z
     path: body/psycho bob_neck
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .0666666701
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: localEulerAnglesBaked.x
+    path: Legs Transform/psycho bob_footR
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .0666666701
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: localEulerAnglesBaked.y
+    path: Legs Transform/psycho bob_footR
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 1
+        inSlope: -14.999999
+        outSlope: -14.999999
+        tangentMode: 10
+      - time: .0666666701
+        value: 0
+        inSlope: -14.999999
+        outSlope: -14.999999
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: localEulerAnglesBaked.z
+    path: Legs Transform/psycho bob_footR
     classID: 4
     script: {fileID: 0}
   m_HasGenericRootTransform: 0

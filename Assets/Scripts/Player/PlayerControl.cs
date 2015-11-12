@@ -17,7 +17,7 @@ public class PlayerControl : MonoBehaviour
 	private bool stillJumping = false;
 				// Amount of force added to move the player left and right.
 	private const float maxMoveForce = 600f;
-	private const float minMoveForce = 200f;
+	private const float minMoveForce = 100f;
 	private float moveForce = minMoveForce;
 
 	public float maxSpeed = 22f;				// The fastest the player can travel in the x axis.
@@ -33,7 +33,7 @@ public class PlayerControl : MonoBehaviour
 	
 	
 	private Transform groundCheck;// A position marking where to check if the player is grounded.
-	private Transform groundCheck2;// A position marking where to check if the player is sliding.
+	private Transform groundCheck2;// A position marking where to check if the player is onAngle.
 	private Transform groundCheckB;// A position marking where to check if the player is only grounded on his back foot
 	private Vector3 groundCheck2Offset = new Vector3(0.35f,0,0);
 
@@ -43,13 +43,17 @@ public class PlayerControl : MonoBehaviour
 
 	[HideInInspector]
 	public bool grounded = false;//back leg grounded
-	private bool grounded2 = false;//front lower ground hit for sliding?
+	private bool grounded2 = false;//front lower ground hit for onAngle?
 	//private bool wasGrounded = false;
 	private RaycastHit2D  groundHit; //back leg ground spot
 	private RaycastHit2D  groundHit2;                 //slide ground spot front lower
 	[HideInInspector]
-	public bool sliding = false;
-	//private float slideAngle;
+	private bool onAngle = false;
+	private bool slideKicking = false;
+	private bool canSlideKick = true;
+	private int slideCount = 0;
+	private int maxSlideCount = 50;
+	private KickHit kickHit;
 
 	//private bool againstWall = false;
 	private bool onWall = false;
@@ -60,7 +64,7 @@ public class PlayerControl : MonoBehaviour
 
 	private float offWallCount;
 	private float awayWallCount;
-	private float maxOffWallCount = 2.2f;//max time he sticks to the wall before sliding down
+	private float maxOffWallCount = 2.2f;//max time he sticks to the wall before onAngle down
 
 	private float maxAwayWallCount = 8f;//amount of time he has to push away to not be on the wall
 	//private Vector2 wallUpPush;//give em a boost when he hit a wall for wallslide
@@ -100,8 +104,9 @@ public class PlayerControl : MonoBehaviour
 	{
 		IDLE,
 		RUN,
-		SLIDE,//angled surfaces  --> trip slide
+		ANGLEMOVE,//angled surfaces  
 		CROUCH,
+		//SLIDEKICK,
 		JUMP,
 		FALL,
 		WALL,  // on the wall
@@ -151,8 +156,8 @@ public class PlayerControl : MonoBehaviour
 		legIK[1] = transform.Find ("body").Find("thighR").GetComponent<SimpleCCD>();
 		//skeleton = transform.Find ("body").transform.Find ("Skeleton").transform;
 
-		//gunCtrl = transform.Find ("weapon").GetComponent<Gun>();
-
+		//gunCS = transform.Find ("weapon").GetComponent<Gun>(); set by Gun
+		kickHit = transform.Find ("kickHit").GetComponent<KickHit>();
 		
 		offWallCount = maxOffWallCount;
 		awayWallCount = maxAwayWallCount;
@@ -187,11 +192,15 @@ public class PlayerControl : MonoBehaviour
 		if(grounded){//back leg hit
 			if(grounded2){//front leg hit lower? should slide?
 
-				trySliding ();//also rotates legs
+				tryAngleMove ();//also rotates legs
 
 			}
-			//StandingOn = groundHit.transform.gameObject;
 
+			//CROUCH BUTTON DOWN?
+
+			if (Input.GetButton ("Crouch") && status != Status.CROUCH) {
+				StartCrouch();
+			}
 
 		}
 
@@ -206,18 +215,7 @@ public class PlayerControl : MonoBehaviour
 			jump = false;
 			stillJumping = false;
 		}
-		if (Input.GetButton ("Crouch") && grounded){//status == Status.IDLE) {
-			anim.Play("Crouch");
-			status = Status.CROUCH;
-			stateMethod = CrouchGround;
-
-			rigidBody.isKinematic = true;// for oneway platform bug, player sinks when collider scales
-
-			boxCollider.size = new Vector2(0.75f,2.4f);
-			boxCollider.offset = new Vector2(0,0.03f);
-
-			rigidBody.isKinematic = false;
-		}
+	
 		if (Input.GetButtonUp ("Crouch") && status == Status.CROUCH) {
 			if(saddleJoint){
 				status = Status.RIDE;
@@ -227,6 +225,8 @@ public class PlayerControl : MonoBehaviour
 				stateMethod = IdleGround;
 				anim.Play("Idle");
 			}
+			slideKicking=false;
+			kickHit.gameObject.SetActive(false);
 			boxCollider.size = new Vector2(0.75f,4.15f);
 			boxCollider.offset = new Vector2(0,0.9f);
 		}
@@ -267,10 +267,10 @@ public class PlayerControl : MonoBehaviour
 			}//else if(Math.Abs(rigidBody.velocity.x) > 0.001f){
 			//rigidBody.velocity = new Vector2(rigidBody.velocity.x * 0.01f,rigidBody.velocity.y);
 			//}
-			if (sliding) {
-					status = Status.SLIDE;	
-					stateMethod = SlideGround;
-					anim.Play ("Slide");
+			if (onAngle) {
+					status = Status.ANGLEMOVE;	
+					stateMethod = AngleMoveGround;
+					//anim.Play ("Slide");
 			}
 			if (jump) {
 					Jump ();
@@ -288,10 +288,10 @@ public class PlayerControl : MonoBehaviour
 					stateMethod = IdleGround;
 					//anim.Play ("Idle");
 			}
-			if (sliding) {
-					status = Status.SLIDE;
-					stateMethod = SlideGround;
-					anim.Play ("Slide");
+			if (onAngle) {
+					status = Status.ANGLEMOVE;
+					stateMethod = AngleMoveGround;
+					//anim.Play ("Slide");
 			}
 			if (jump) {
 					Jump ();
@@ -315,18 +315,46 @@ public class PlayerControl : MonoBehaviour
 			}
 		}
 	}
-	private void SlideGround()
+	private void SlideKickGround()
+	{
+		//if (CheckGrounded ()) {
+
+		if (jump && !saddleJoint) {
+			//var b = GetComponent<BoxCollider2D>();
+			boxCollider.size = new Vector2 (0.75f, 4.15f);
+			boxCollider.offset = new Vector2 (0, 0.9f);
+			slideKicking = false;
+			kickHit.gameObject.SetActive(false);
+			if (groundHit.transform.GetComponent<PlatformEffector2D> ()) {//if 1 way platform? jump down (crouchJump)
+				
+				CrouchJump ();
+			} else {
+				Jump ();
+			}
+		}
+		slideCount++;
+		if(slideCount>maxSlideCount){
+			kickHit.gameObject.SetActive(false);
+			rigidBody.velocity = new Vector2(rigidBody.velocity.x * .2f,rigidBody.velocity.y);
+			slideKicking=false;
+			kickHit.gameObject.SetActive(false);
+			status = Status.CROUCH;
+			stateMethod = CrouchGround;
+			anim.Play("Crouch",0,1);
+		}
+	}
+	private void AngleMoveGround()
 	{
 		if(CheckGrounded()){
-			SlideMove (hVel);
-			trySliding();
-			if(!sliding){
+			AngleMove (hVel);
+			//tryAngleMove();
+			if(!onAngle){
 				status = Status.IDLE;	
 				stateMethod = IdleGround;
 				anim.Play ("Idle");
 			}
 			if(jump){
-				sliding = false;
+				onAngle = false;
 				rigidBody.velocity = new Vector2(rigidBody.velocity.x,0f);//???????????????????
 				Jump ();
 			}
@@ -352,7 +380,7 @@ public class PlayerControl : MonoBehaviour
 			Jumping ();
 		}
 		if(rigidBody.velocity.y < 0.001f){
-			sliding = false;
+			onAngle = false;
 			status = Status.FALL;
 			stateMethod = FallAir;
 			anim.Play ("Fall");
@@ -524,7 +552,7 @@ public class PlayerControl : MonoBehaviour
 		}
 
 	}
-	void SlideMove(float h)
+	void AngleMove(float h)
 	{
 
 		Vector2 footPos =groundCheck.transform.position;
@@ -662,9 +690,46 @@ public class PlayerControl : MonoBehaviour
 			rigidBody.AddForce (new Vector2 (0f, jumpingForce));
 		}
 	}
+	private void SlideKick(float vel)
+	{
+		anim.Play("Slide");
+		kickHit.gameObject.SetActive(true);
+		kickHit.KickStart();
+		stateMethod = SlideKickGround;
+		slideKicking = true;
+
+		rigidBody.AddForce(new Vector2(transform.localScale.x * vel * 15,0));
+		slideCount = 0;
+		maxSlideCount = Mathf.RoundToInt(vel * 1.5f);
+		StartCoroutine("DontSlideKick");
+	}
+	IEnumerator DontSlideKick()
+	{
+		canSlideKick = false;
+		yield return new WaitForSeconds(1);
+		canSlideKick = true;
+	}
+	private void StartCrouch()
+	{
+		var v = Mathf.Abs (rigidBody.velocity.x);
+		if(v>5 && canSlideKick && gunCS.canKick){
+			SlideKick(v);
+		}else{
+			anim.Play("Crouch");
+
+			stateMethod = CrouchGround;
+		}
+		status = Status.CROUCH;
+		//rigidBody.isKinematic = true;// for oneway platform bug, player sinks when collider scales
+		
+		boxCollider.size = new Vector2(0.75f,2.4f);
+		boxCollider.offset = new Vector2(0,0.03f);
+		
+		//rigidBody.isKinematic = false;
+	}
 	private void CrouchJump()
 	{
-		print("CROUCH JUMP");
+		//print("CROUCH JUMP");
 		status = Status.FALL;
 		stateMethod = FallAir;
 		anim.Play ("Fall");
@@ -718,7 +783,7 @@ public class PlayerControl : MonoBehaviour
 		anim.Play ("Jump");
 		//jump = true;
 		legs.rotation  = Quaternion.identity;
-		sliding = false;
+		onAngle = false;
 		rigidBody.velocity = new Vector2 (0f,0f);
 		rigidBody.AddForce (power);
 		stillJumping = true;
@@ -734,27 +799,6 @@ public class PlayerControl : MonoBehaviour
 			stateMethod = JumpAir;
 		}
 	}
-	/*void Climb()
-	{
-		rigidBody.velocity = new Vector2(0f,15f);
-		//float dir = -1;
-		//if(facingRight){
-			//dir =1f;
-		//  }
-		
-		Vector2 pos2 = new Vector2 (groundCheck.position.x+(2f*dir),groundCheck.position.y);
-		bool cornerGrab = Physics2D.Linecast (groundCheck.position, pos2, groundLayerMsk);
-		if(!cornerGrab){
-			status = Status.IDLE;
-			//climbing = false;
-			float vel = 300f;
-
-			rigidBody.velocity = Vector2.zero;//new Vector2(rigidbody2D.velocity.x,0f);
-			rigidBody.AddForce(new Vector2(vel*dir,20f));
-
-		}
-	}*/
-
 
 	void tryGrabbing(){
 		
@@ -767,7 +811,7 @@ public class PlayerControl : MonoBehaviour
 				
 				grabbing = true;
 				jump = false;
-				sliding = false;
+				onAngle = false;
 				//tail.enabled = false;
 				tail.SetActive(false);
 				
@@ -837,7 +881,7 @@ public class PlayerControl : MonoBehaviour
 				offWallCount = maxOffWallCount;
 				awayWallCount = maxAwayWallCount;
 				jump = false;
-				sliding = false;
+				onAngle = false;
 
 				//wallUpPush.x = rigidbody2D.velocity.x;
 				//rigidbody2D.velocity = wallUpPush;
@@ -878,7 +922,7 @@ public class PlayerControl : MonoBehaviour
 		return false;
 	}
 
-	void trySliding(){
+	void tryAngleMove(){
 		//if(groundHit2 = Physics2D.Linecast (new Vector2(transform.position.x + groundCheck2Offset, transform.position.y), groundCheck2.position, 1 << LayerMask.NameToLayer ("Ground"))){
 			float slideAngle;
 			Quaternion rotAngle;
@@ -905,28 +949,15 @@ public class PlayerControl : MonoBehaviour
 		if(slideAngle < -25 && Math.Abs(rigidBody.velocity.x) > 0.05f){
 				//
 
-				sliding =  true;
+				onAngle =  true;
 			}else{
-				sliding = false;
+				onAngle = false;
 
 			} 
 		//}
-		//print (sliding);
+		//print (onAngle);
 	}
-	/*void tryClimb()
-	{
-		//if theres a wall at his feet in front of him
-		if(rigidbody2D.velocity.y < 0f && Physics2D.Linecast (transform.position, groundCheck2.position, 1 << LayerMask.NameToLayer ("Ground"))){
-		
-			//but no wall at this other point higher up and shit  //CLIMB!!
-			rigidbody2D.AddForce(new Vector2(10f*dir,10f));
-				print ("try climb success ");
-				climbing = true;
-				status = Status.CLIMB;
 
-
-		}
-	}*/
 	public void Flip ()
 	{
 		//rigidBody.isKinematic = true;//oneway platform bug // cant use this fix.  fucks up wall jumping
@@ -946,7 +977,12 @@ public class PlayerControl : MonoBehaviour
 		var p = transform.position;
 		p.y += .01f;
 		transform.position = p;
-
+		if(slideKicking){
+			status = Status.IDLE;
+			stateMethod = IdleGround;
+			slideKicking = false;
+			kickHit.gameObject.SetActive(false);
+		}
 		//gunCS.flipElbows(facingRight);
 	}
 	public void Spawn()
@@ -970,7 +1006,7 @@ public class PlayerControl : MonoBehaviour
 		}
 		grabbing = false;
 		onWall = false;
-		sliding = false;
+		onAngle = false;
 		feet[0].Find("kickFoot").gameObject.SetActive(false);
 
 		//StandingOn = null;
@@ -987,6 +1023,7 @@ public class PlayerControl : MonoBehaviour
 		if(facingRight != facingR){
 			Flip();
 		}
+		canSlideKick = false;
 		onWall = false;
 		status = Status.RIDE;
 		stateMethod = DoNothing;
@@ -1023,7 +1060,7 @@ public class PlayerControl : MonoBehaviour
 			//Jump ();
 			status = Status.IDLE;
 			stateMethod = IdleGround;
-
+			canSlideKick = true;
 			rigidBody.AddForce(Vector2.up * 600);
 			Level.instance.ToggleNursePointer(false);
 		}
@@ -1031,7 +1068,7 @@ public class PlayerControl : MonoBehaviour
 	public bool CanKick()
 	{
 		if(status == Status.RIDE){
-			return false;
+			return canSlideKick;//false;
 		}else{
 			return true;
 		}

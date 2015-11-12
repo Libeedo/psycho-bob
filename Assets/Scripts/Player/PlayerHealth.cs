@@ -45,16 +45,17 @@ public class PlayerHealth : MonoBehaviour
 		// If the colliding gameobject is an Enemy...
 		if(col.gameObject.tag == "Enemy" || col.gameObject.tag == "EnemyHead")
 		{
-			if(playerControl.sliding)// && Mathf.Abs(playerControl.gameObject.rigidbody2D.velocity.x) >4f)
+			/*if(playerControl.slideKicking)// && Mathf.Abs(playerControl.gameObject.rigidbody2D.velocity.x) >4f)
 			{
 				//print("tripped");
 				col.transform.root.GetComponent<Enemy>().Tripped(playerControl.facingRight, playerControl.gameObject.GetComponent<Rigidbody2D>().velocity);
 				return;
-				
-			}
-			Hurt (false,col.transform);
-			col.gameObject.GetComponent<Enemy>().HurtPlayer(transform.position); 
+			}*/
+			if(canBeHit){
+				Hurt (false,col.transform);
 
+				col.gameObject.GetComponent<Enemy>().HurtPlayer(transform.position); 
+			}
 		
 		}else if(col.gameObject.tag == "HurtPlayer" || col.gameObject.tag == "Fireball")// || col.gameObject.tag == "EnemyFetus")
 		{
@@ -168,6 +169,7 @@ public class PlayerHealth : MonoBehaviour
 		playerControl.SaddleDown ();
 		playerControl.enabled = false;
 		Level.instance.KillPlayer();
+		Physics2D.IgnoreLayerCollision(pLayer,eLayer,false);
 		canBeHit = true;
 		// Find all of the colliders on the gameobject and set them all to be triggers.
 		/*Collider2D[] cols = GetComponents<Collider2D>();
@@ -202,7 +204,8 @@ public class PlayerHealth : MonoBehaviour
 		//rigidbody2D.isKinematic = false;
 		GetComponent<Rigidbody2D>().gravityScale = 1f;
 		//anim.Play("heroSpawn");
-		Physics2D.IgnoreLayerCollision(pLayer,eLayer,false);
+
+
 		Level.instance.spawnPoint.Spawn ();
 
 		GetComponent<Animator>().enabled = false;

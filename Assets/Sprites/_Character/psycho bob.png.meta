@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 3c8a21a944f3aba46beb1de67fd9cb94
-timeCreated: 1431481400
+timeCreated: 1447209574
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -38,7 +38,7 @@ TextureImporter:
     21300062: psycho bob_headShoot
     21300064: psycho bob_blink
     21300066: psycho bob_kickFoot
-    21300068: sycho bob_kickFootBlur
+    21300068: psycho bob_kickFootBlur
     21300070: psycho bob_handR_barrel2
     21300072: psycho bob_handR_barrel3
     21300074: psycho bob_handR_barrel4
@@ -46,6 +46,7 @@ TextureImporter:
     21300078: psycho bob_zap2
     21300080: psycho bob_zap3
     21300082: psycho bob_zap4
+    21300084: psycho bob_slideFootBlur
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -385,7 +386,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: .290683299, y: .738859415}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: sycho bob_kickFootBlur
+    - name: psycho bob_kickFootBlur
       rect:
         serializedVersion: 2
         x: 0
@@ -464,6 +465,16 @@ TextureImporter:
         height: 144
       alignment: 9
       pivot: {x: .156052977, y: .00318739144}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: psycho bob_slideFootBlur
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 10
+        width: 327
+        height: 116
+      alignment: 9
+      pivot: {x: .903038442, y: .500000119}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

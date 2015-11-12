@@ -90,9 +90,6 @@ public class CombatZone : MonoBehaviour {
 			door1.GetComponent<Animation>().Play ();
 		}
 		//StartSeq ();
-		foreach(GameObject g in enableObjects){
-			g.SetActive(true);
-		}
 
 		cam.enabled = false;
 		transform.Find("camera").gameObject.GetComponent<Camera>().enabled = true;
@@ -220,6 +217,10 @@ public class CombatZone : MonoBehaviour {
 		var p = boss.transform.Find("assTank_body").Find("assTank_pod");
 		p.Find ("assTank_turret").gameObject.SetActive(true);
 		p.Find ("assTank_turret animate").gameObject.SetActive(false);
+		foreach(GameObject g in enableObjects){
+			g.SetActive(true);
+		}
+
 	}
 	void EndPreStart()
 	{
