@@ -11,7 +11,7 @@ public class TriggerDebris : MonoBehaviour
 	//private float[] forceY = new float[] { 200f, 200f, -30f, 200f,-100f, 200f};
 	public float delay;
 	public AudioClip SFX;
-	void Start()
+	public void Break()
 	{
 	
 		foreach (Transform child in transform) {
@@ -19,6 +19,7 @@ public class TriggerDebris : MonoBehaviour
 			//Quaternion randomRotation = Quaternion.Euler(0f, 0f, Random.Range(0f, 360f));
 			//child.transform.rotation = randomRotation;
 			if(child.gameObject.GetComponent<Rigidbody2D>()){
+				child.gameObject.SetActive(true);
 				child.GetComponent<DebrisPiece>().Death ();
 			}
 		}

@@ -5,6 +5,7 @@ public class Boss_AssTank : Boss {
 
 	public CombatZone combatZone;
 
+	private ParticleSystem drqBlood;
 	private Animator drqAnim;
 	private Animator anim;
 
@@ -12,14 +13,21 @@ public class Boss_AssTank : Boss {
 	private float speed = -0.03f;
 	private float waitTime = 2f;
 	private AudioSource footAud;
-	private int lives = 3;//lives are the different stages/phases the boss goes thru
+	private int lives = 2;//lives are the different stages/phases the boss goes thru
+	private delegate void HurtState();
+	private HurtState hurtState;
 	void Start()
 	{
 		drqAnim = transform.Find("assTank_body").Find("assTank_pod").Find("drQ").GetComponent<Animator>();
+		drqBlood = drqAnim.transform.Find ("blood").GetComponent<ParticleSystem>();
 		anim = GetComponent<Animator>();
 		footAud = GetComponent<AudioSource>();
 		//InvokeRepeating("SwitchWalking",5f,1f);
+
+		hurtState = Hurt1;
+
 		StartCoroutine("SwitchWalking");
+
 	}
 	
 	// Update is called once per frame
@@ -65,11 +73,35 @@ public class Boss_AssTank : Boss {
 	public override void Hurt(float dmg, bool explosion)
 	{
 		base.Hurt (dmg,explosion);
-		drqAnim.SetTrigger ("hurt");
+		hurtState();
 		if(dead){
-			combatZone.EndZone();
+			lives--;
+			var p = transform.Find("assTank_body").Find("assTank_pod");
+			if(lives== 0){
+				combatZone.EndZone();
+				p.Find ("assTank_turret").gameObject.SetActive(false);
+				p.Find ("assTank_turret animate").gameObject.SetActive(true);
+				anim.Play ("assTank_DEATH");
+				this.enabled = false;
+			}else if(lives == 1){
+				HP = 20;
+				dead = false;
+
+				p.Find ("glassShatter").GetComponent<TriggerDebris>().Break();
+				p.Find ("assTank_turret").Find ("assTank_glass3D").gameObject.SetActive(false);
+				p.Find ("assTank_turret").Find ("assTank_glassBroken").gameObject.SetActive(true);
+				hurtState = Hurt2;
+			}
 		}
 	}
-
-
+	private void Hurt1()
+	{
+		drqAnim.SetTrigger ("hurt");
+		anim.Play ("assTank_HURT");
+	}
+	private void Hurt2()
+	{
+		drqAnim.SetTrigger ("hurt");
+		drqBlood.Emit(300);
+	}
 }

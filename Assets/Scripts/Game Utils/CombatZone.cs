@@ -46,14 +46,18 @@ public class CombatZone : MonoBehaviour {
 
 	private delegate IEnumerator PreStartWave();
 	private PreStartWave preStartWave;
+	private delegate IEnumerator PreEndZone();
+	private PreStartWave preEndZone;
 	public int czID = 0;
 	void Awake()
 	{
 		cam = Camera.main;
 		if(czID ==0){
 			preStartWave = PreStartWave0;
+			preEndZone = PreEndZone0;
 		}else if(czID == 1){
 			preStartWave = PreStartWave1;
+			preEndZone = PreEndZone1;
 		}
 	}
 	public void StartZone()
@@ -111,6 +115,7 @@ public class CombatZone : MonoBehaviour {
 	}
 	public void EndZone()
 	{
+
 		var camm = cam.GetComponent<CameraFollow>();
 		camm.maxXAndY = levelCameraLimits.max;
 		camm.minXAndY = levelCameraLimits.min;
@@ -123,7 +128,8 @@ public class CombatZone : MonoBehaviour {
 		foreach(GameObject g in enableObjects){
 			g.SetActive(false);
 		}
-		Destroy (this);
+		preEndZone();
+		//Destroy (this);
 	}
 
 	IEnumerator StartWave()
@@ -221,6 +227,18 @@ public class CombatZone : MonoBehaviour {
 			g.SetActive(true);
 		}
 
+	}
+	IEnumerator PreEndZone0()
+	{
+		yield return new WaitForSeconds (0.1f);
+	}
+	IEnumerator PreEndZone1()
+	{
+		transform.Find ("qMobileMaster").gameObject.SetActive(true);
+		yield return new WaitForSeconds (1f);
+		door2Anim.Play();
+
+		
 	}
 	void EndPreStart()
 	{
